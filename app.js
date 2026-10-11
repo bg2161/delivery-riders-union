@@ -747,7 +747,7 @@ const productsCatalog = {
     id: 'cap',
     titleEn: 'Official UDRMM Embroidered Cap',
     titleFil: 'Opisyal na Burdadong Sumbrero ng UDRMM',
-    price: 250,
+    price: 4850,
     img: 'assets/product-caps.jpg',
     getVariant: () => selectedCapColor
   },
@@ -755,7 +755,7 @@ const productsCatalog = {
     id: 'stickers',
     titleEn: 'Reflective Waterproof Sticker Pack (3x)',
     titleFil: 'Reflective Waterproof Sticker Pack (3 Piraso)',
-    price: 120,
+    price: 2450,
     img: 'assets/product-stickers.jpg',
     getVariant: () => 'Pack of 3'
   },
@@ -763,7 +763,7 @@ const productsCatalog = {
     id: 'phone-mount',
     titleEn: 'Heavy-Duty Handlebar Phone Mount',
     titleFil: 'Heavy-Duty Handlebar Phone Mount Case',
-    price: 320,
+    price: 8950,
     img: 'assets/product-phone-mount.jpg',
     getVariant: () => 'Universal Handlebar Clamp'
   }
@@ -832,7 +832,7 @@ function renderCart() {
         <div class="cart-item-info">
           <div class="cart-item-title">${title}</div>
           <div class="cart-item-variant">${item.variant} • Qty: ${item.quantity}</div>
-          <div class="cart-item-price">₱${item.price * item.quantity}</div>
+          <div class="cart-item-price">₱${(item.price * item.quantity).toLocaleString()}</div>
         </div>
         <button class="cart-item-remove" onclick="removeCartItem(${index})" title="Remove item">✕</button>
       </div>
@@ -983,7 +983,7 @@ function showCheckoutModal() {
     return `
       <div style="display: flex; justify-content: space-between; font-size: 0.88rem; margin-bottom: 0.5rem;">
         <span>${title} (${item.variant}) x ${item.quantity}</span>
-        <strong>₱${item.price * item.quantity}</strong>
+        <strong>₱${(item.price * item.quantity).toLocaleString()}</strong>
       </div>
     `;
   }).join('');
