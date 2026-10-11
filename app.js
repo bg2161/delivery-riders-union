@@ -430,9 +430,9 @@ function setupLanguageSwitcher() {
   });
 }
 
-// Countdown to May 1st, 2026 (Labor Day Mobilization)
+// Countdown to May 1st, 2027 (Labor Day Mobilization)
 function setupCountdown() {
-  const targetDate = new Date(2027, 4, 1, 8, 30, 0); // May 1, 2026 at 08:30 AM (Month 4 = May)
+  const targetDate = new Date(2027, 4, 1, 8, 30, 0); // May 1, 2027 at 08:30 AM (Month 4 = May)
 
   function update() {
     const currentTime = new Date().getTime();
@@ -688,7 +688,7 @@ function setupMembershipModal() {
       const city = document.getElementById('member-city').value || 'Metro Manila';
       const size = document.getElementById('member-size').value || 'L';
       
-      const memberId = 'UDRMM-MNL-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const memberId = 'UDRMM-MNL-2027-' + Math.floor(1000 + Math.random() * 9000);
 
       const modalBody = document.getElementById('membership-modal-body');
       if (modalBody) {
@@ -705,7 +705,7 @@ function setupMembershipModal() {
             <div class="member-id-card">
               <div class="mid-header">
                 <span>United Delivery Riders of Metro Manila</span>
-                <span>Active Member 2026</span>
+                <span>Active Member 2027</span>
               </div>
               <div class="mid-name">${name}</div>
               <div style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 10px;">
@@ -916,13 +916,97 @@ function setupCookieAndPrivacy() {
 }
 
 
-// Global Image Fallback & Preload Health Check
+// High-Fidelity Thematic SVG Generator for 100% Visual Resilience
+function getThematicFallback(type) {
+  const svgs = {
+    logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+      <rect width="300" height="300" rx="40" fill="#0038A8"/>
+      <path d="M150 35 L265 115 L265 225 L150 275 L35 225 L35 115 Z" fill="#CE1126" stroke="#FFFFFF" stroke-width="5"/>
+      <circle cx="150" cy="150" r="44" fill="#FCD116"/>
+      <circle cx="150" cy="150" r="26" fill="#CE1126"/>
+      <circle cx="150" cy="150" r="14" fill="#FCD116"/>
+      <text x="150" y="245" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900" text-anchor="middle" letter-spacing="2">U.D.R.M.M.</text>
+    </svg>`,
+    poncho: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+      <rect width="400" height="300" fill="#FFF5F7"/>
+      <rect x="15" y="15" width="370" height="270" rx="16" fill="#FEE8EA" stroke="#FCA5A5" stroke-width="2"/>
+      <path d="M160 70 Q200 45 240 70 L340 150 L290 190 L260 160 L260 260 L140 260 L140 160 L110 190 L60 150 Z" fill="#0038A8"/>
+      <rect x="140" y="180" width="120" height="18" fill="#FCD116"/>
+      <rect x="140" y="212" width="120" height="12" fill="#E2E8F0"/>
+      <circle cx="200" cy="65" r="26" fill="#CE1126"/>
+      <text x="200" y="280" fill="#0038A8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">OFFICIAL UDRMM RAIN PONCHO</text>
+    </svg>`,
+    cap: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+      <rect width="400" height="300" fill="#FFF5F7"/>
+      <rect x="15" y="15" width="370" height="270" rx="16" fill="#EBF2FF" stroke="#93C5FD" stroke-width="2"/>
+      <path d="M130 170 Q130 95 240 95 Q310 95 320 170 Z" fill="#0038A8"/>
+      <path d="M100 170 C100 170 140 195 280 185 C330 180 340 170 340 170 C340 170 310 205 200 205 C130 205 100 170 100 170 Z" fill="#002575"/>
+      <circle cx="230" cy="135" r="18" fill="#FCD116"/>
+      <text x="230" y="140" fill="#0038A8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="900" text-anchor="middle">UDRMM</text>
+      <text x="200" y="270" fill="#0038A8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">EMBROIDERED UNION CAP</text>
+    </svg>`,
+    stickers: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+      <rect width="400" height="300" fill="#FFF5F7"/>
+      <rect x="15" y="15" width="370" height="270" rx="16" fill="#FEF9D9" stroke="#FDE047" stroke-width="2"/>
+      <g transform="translate(65, 65) rotate(-8)">
+        <rect width="105" height="105" rx="12" fill="#0038A8" stroke="#FFFFFF" stroke-width="3"/>
+        <circle cx="52" cy="52" r="30" fill="#FCD116"/>
+        <text x="52" y="57" fill="#0038A8" font-size="12" font-weight="900" text-anchor="middle">RIDER</text>
+      </g>
+      <g transform="translate(195, 55) rotate(6)">
+        <rect width="115" height="115" rx="12" fill="#CE1126" stroke="#FFFFFF" stroke-width="3"/>
+        <text x="57" y="62" fill="#FFFFFF" font-size="13" font-weight="900" text-anchor="middle">SOLIDARITY</text>
+      </g>
+      <text x="200" y="270" fill="#CE1126" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">WATERPROOF STICKER PACK (3X)</text>
+    </svg>`,
+    'phone-mount': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+      <rect width="400" height="300" fill="#FFF5F7"/>
+      <rect x="15" y="15" width="370" height="270" rx="16" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
+      <rect x="150" y="55" width="100" height="170" rx="14" fill="#0F172A" stroke="#334155" stroke-width="4"/>
+      <rect x="160" y="70" width="80" height="135" rx="6" fill="#0284C7"/>
+      <circle cx="200" cy="135" r="20" fill="#FFFFFF" opacity="0.3"/>
+      <rect x="180" y="225" width="40" height="30" rx="4" fill="#475569"/>
+      <text x="200" y="275" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">IPX8 WATERPROOF PHONE MOUNT</text>
+    </svg>`
+  };
+  const rawSvg = svgs[type] || svgs.logo;
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(rawSvg);
+}
+
+// Global Image Fallback & Robust Preload Health Check
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('img').forEach(img => {
     img.addEventListener('error', function() {
-      if (!this.dataset.triedFallback && this.getAttribute('src') && this.getAttribute('src').startsWith('assets/')) {
-        this.dataset.triedFallback = 'true';
-        this.src = './' + this.getAttribute('src');
+      // Step 1: If URL had an issue or was cached negatively by CDN, try clean relative path
+      if (!this.dataset.fallbackStep) {
+        this.dataset.fallbackStep = '1';
+        const rawSrc = this.getAttribute('src') || '';
+        const cleanSrc = rawSrc.split('?')[0].replace(/^\.\//, '');
+        if (cleanSrc && cleanSrc !== rawSrc) {
+          this.src = cleanSrc;
+          return;
+        }
+      }
+      
+      // Step 2: If clean path still failed or offline, deploy crisp thematic SVG fallback
+      if (this.dataset.fallbackStep === '1' || !this.dataset.fallbackStep) {
+        this.dataset.fallbackStep = '2';
+        const src = (this.getAttribute('src') || '').toLowerCase();
+        const alt = (this.getAttribute('alt') || '').toLowerCase();
+        
+        if (src.includes('logo') || alt.includes('emblem') || alt.includes('logo')) {
+          this.src = getThematicFallback('logo');
+        } else if (src.includes('poncho') || alt.includes('poncho') || alt.includes('vestaglia')) {
+          this.src = getThematicFallback('poncho');
+        } else if (src.includes('cap') || alt.includes('cap') || alt.includes('sumbrero')) {
+          this.src = getThematicFallback('cap');
+        } else if (src.includes('sticker') || alt.includes('sticker')) {
+          this.src = getThematicFallback('stickers');
+        } else if (src.includes('phone') || alt.includes('phone') || alt.includes('mount')) {
+          this.src = getThematicFallback('phone-mount');
+        } else {
+          this.src = getThematicFallback('logo');
+        }
       }
     });
   });

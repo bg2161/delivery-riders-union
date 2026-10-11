@@ -3,6 +3,8 @@
 
 Un sito web moderno, interattivo e bilingue (Inglese e Filippino/Tagalog) per il sindacato dei rider di consegna a domicilio di Metro Manila, progettato in conformità al piano di comunicazione e alle linee guida visive fornite.
 
+🌐 **Sito Live su GitHub Pages:** [https://bg2161.github.io/delivery-riders-union/](https://bg2161.github.io/delivery-riders-union/)
+
 ---
 
 ## 🚀 Come Pubblicare i Cambiamenti su GitHub (1 Clic)
@@ -13,90 +15,18 @@ All'interno della cartella trovi lo script automatico:
 Ogni volta che modifichi testi, stili o immagini:
 1. Fai **doppio clic** su `PUSH_SU_GITHUB.command`.
 2. Lo script rileva in automatico tutti i file modificati, crea il commit con data e ora ed esegue il `git push` su GitHub.
-3. Il tuo sito su GitHub Pages (`https://bg2161.github.io/delivery-riders-union/`) si aggiornerà automaticamente dopo pochi istanti!
+3. Il tuo sito su GitHub Pages ([https://bg2161.github.io/delivery-riders-union/](https://bg2161.github.io/delivery-riders-union/)) si aggiornerà automaticamente dopo pochi istanti!
 
 ---
 
-Hai a disposizione due modalità immediate per visualizzare il sito sulla tua macchina:
+## 💻 Come Visualizzare il Sito in Locale
 
-### Metodo 1: Avvio con Server Locale (Consigliato)
-Fai **doppio clic** sul file eseguibile:
-```bash
-Avvia_Sito_UDRMM.command
-```
-Questo script:
-1. Avvia in background un server HTTP nativo e leggero su `http://localhost:8080`.
-2. Apre in automatico la pagina nel tuo browser predefinito (Safari, Chrome, ecc.).
-3. Per chiudere il server, basta chiudere la finestra del Terminale o premere `Ctrl + C`.
+Puoi visualizzare il sito sulla tua macchina in qualsiasi momento:
+- Fai doppio clic sul file **`index.html`** per aprirlo direttamente nel tuo browser preferito (Safari, Chrome, Firefox).
+- Il sito è realizzato al 100% in tecnologia web nativa (HTML5, CSS3, Vanilla JavaScript) senza dipendenze o server esterni.
 
-### Metodo 2: Apertura Diretta Senza Terminale
-Fai doppio clic sul file:
-```html
-index.html
-```
-oppure su:
-```html
-Apri_Sito.html
-```
-Il sito è stato realizzato in pura tecnologia web (HTML5, CSS3, Vanilla JavaScript) senza dipendenze esterne, perciò funziona fluidamente anche aprendo direttamente il file.
-
----
-
-## 🌍 ACCESSO PUBBLICO COMPLETO SU INTERNET (MONDIALE)
-
-Se vuoi che professori, colleghi o utenti esterni possano visualizzare il sito da qualsiasi luogo del mondo (anche da casa propria, su rete dati cellulare 4G/5G, senza essere connessi al tuo Wi-Fi), hai a disposizione una soluzione già pronta a un clic:
-
-### Metodo 1: Script Diretto con Tunnel HTTPS Sicuro (Consigliato - Zero Installazioni)
-Fai doppio clic sul file:
-```bash
-CONDIVIDI_INTERNET_PUBBLICO.command
-```
-- **Come funziona:** Usa il client SSH nativo già integrato nel tuo Mac per creare all'istante un tunnel protetto crittografato (SSL/HTTPS).
-- **Cosa ottieni:** Nella finestra del Terminale comparirà un link pubblico univoco del tipo:
-  `https://xxxxxx.lhr.life`
-- **Come condividerlo:** Invia questo link a chiunque tramite WhatsApp, email o chat. Chiunque nel mondo potrà aprire il sito immediatamente.
-- **Sicurezza & Spegnimento:** Non appena chiudi la finestra del Terminale o premi `Ctrl + C`, il tunnel si disattiva all'istante e il computer torna 100% isolato.
-
----
-
-## 🌐 Condivisione Pubblica su Rete Locale (Server con Limite Max 3 Persone)
-
-È stata creata la sottocartella dedicata:
-📁 **`public_shared_version/`**
-
-Questa versione consente al tuo Mac di fungere da **vero server web** accessibile da altri dispositivi (smartphone, tablet o altri computer).
-
-### 👥 Limite Connessioni (Max 3 Persone):
-- Il server include un controllore di capacità che accetta un massimo di **3 persone connesse contemporaneamente**.
-- Il sito mostra in basso a destra un badge verde con gli utenti attivi in tempo reale (`Server Live: X/3 utenti connessi`).
-- Se un **4° utente** prova a collegarsi, vedrà una schermata di attesa ("Server al Completo 3/3") che controlla automaticamente ogni 3 secondi se si libera un posto.
-- Quando uno dei 3 utenti chiude la pagina, il suo slot si libera istantaneamente.
-
----
-
-### 🔘 Interruttore ON / OFF Semplice (Toggle):
-
-All'interno della cartella principale trovi i seguenti file cliccabili:
-
-1. **`TOGGLE_CONDIVISIONE.command`** (Interruttore Smart):
-   - Se il server è SPENTO: lo **avvia**.
-   - Se il server è ACCESO: lo **spegne**.
-2. **`ATTIVA_CONDIVISIONE.command`**:
-   - Avvia direttamente la condivisione e mostra l'indirizzo IP.
-3. **`DISATTIVA_CONDIVISIONE.command`**:
-   - Spegne all'istante il server e interrompe qualsiasi connessione esterna.
-
----
-
-### 📲 Come Far Accedere gli Altri Utenti:
-
-1. **Stessa Rete Wi-Fi:** Assicurati che i telefoni o i computer dei tuoi colleghi siano collegati alla **stessa rete Wi-Fi** del tuo Mac (oppure al tuo *Hotspot Personale*).
-2. **Avvia la condivisione:** Fai doppio clic su `ATTIVA_CONDIVISIONE.command`.
-3. **Indirizzo da digitare:** Fai aprire il browser (Safari, Chrome) ai tuoi colleghi e digita:
-   ```text
-   http://192.168.129.136:8080
-   ```
-   *(L'IP esatto viene mostrato a schermo all'avvio nel Terminale).*
+> 💡 **Nota Cache del Browser:**
+> Se apri il link GitHub Pages e alcune immagini sembrano non caricarsi subito, è dovuto alla cache del browser che conserva temporaneamente le vecchie richieste. È sufficiente forzare un aggiornamento della pagina premendo `Cmd + Shift + R` su Mac, oppure ricaricando la scheda.
 
 ---
 
@@ -114,6 +44,7 @@ Dato che il sito è un prototipo accademico e che checkout, iscrizioni e adesion
 
 ---
 
+## ✨ Funzionalità del Sito Web
 
 1. **Stile Visivo e Palette di Colori:**
    - **Sfondo rosino morbido:** Tonalità calda e moderna (`#FFF5F7` e sfumature rosa tenue) per evitare un look cupo/scuro, mantenendo un'atmosfera umana e accogliente.
