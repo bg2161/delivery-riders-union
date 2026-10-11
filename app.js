@@ -112,7 +112,7 @@ const translations = {
 
     // Shop & Free Poncho
     shopBadge: "UNION MEMBERSHIP & SOLIDARITY SHOP",
-    shopTitle: "Wear The Struggle. Fund The Movement.",
+    shopTitle: "Wear The Change. Fund The Movement.",
     shopDesc: "Every purchase directly supports UDRMM legal funds, emergency rider medical aid, and community meeting hubs.",
     
     // Hero Poncho Product
@@ -319,7 +319,7 @@ const translations = {
 
     // Shop & Free Poncho
     shopBadge: "KASAPIAN SA UNYON AT SOLIDARITY SHOP",
-    shopTitle: "Isuot ang Paninindigan. Suportahan ang Kilusan.",
+    shopTitle: "Isuot ang Pagbabago. Suportahan ang Kilusan.",
     shopDesc: "Bawat kita ay direktang napupunta sa pondong legal ng UDRMM, tulong medikal sa mga naaksidenteng rider, at mga sentrong pangkomunidad.",
     
     // Hero Poncho Product
