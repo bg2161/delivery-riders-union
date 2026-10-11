@@ -806,7 +806,7 @@ const productsCatalog = {
     titleEn: 'Heavy-Duty Handlebar Phone Mount',
     titleFil: 'Heavy-Duty Handlebar Phone Mount Case',
     price: 380,
-    img: 'assets/product-phone-mount.jpg',
+    img: 'assets/product-phone-mount-v2.jpg?v=2',
     getVariant: () => 'Universal Handlebar Clamp'
   }
 };
