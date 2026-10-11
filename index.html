@@ -752,6 +752,101 @@
     </div>
   </footer>
 
+  <!-- MOBILE NAVIGATION DRAWER & OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true">
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <div class="mobile-nav-header">
+        <a href="#home" class="mobile-nav-brand" id="mobile-nav-brand-link">
+          <img src="assets/logo-square.jpg" alt="UDRMM Union Emblem" width="38" height="38" class="brand-logo-img">
+          <div>
+            <div class="brand-title" style="font-size: 0.95rem;">U.D.R.M.M.</div>
+            <div class="brand-subtitle" style="font-size: 0.7rem;">Metro Manila Rider Union</div>
+          </div>
+        </a>
+        <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation menu">✕</button>
+      </div>
+
+      <div class="mobile-nav-body">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="#home" class="mobile-nav-link active">
+              <span class="mn-icon">🏠</span>
+              <span data-i18n="navHome">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#protest" class="mobile-nav-link mn-protest">
+              <span class="mn-icon">🚨</span>
+              <span data-i18n="navProtest">May 1 Protest</span>
+              <span class="mn-badge">Labor Day 2027</span>
+            </a>
+          </li>
+          <li>
+            <a href="#demands" class="mobile-nav-link">
+              <span class="mn-icon">📋</span>
+              <span data-i18n="navDemands">Our Demands</span>
+            </a>
+          </li>
+          <li>
+            <a href="#shop" class="mobile-nav-link">
+              <span class="mn-icon">🛍️</span>
+              <span data-i18n="navShop">Shop & Poncho</span>
+              <span class="mn-badge-free" data-i18n="freePonchoBadge">FREE PONCHO</span>
+            </a>
+          </li>
+          <li>
+            <a href="#stories" class="mobile-nav-link">
+              <span class="mn-icon">🗣️</span>
+              <span data-i18n="navStories">Rider Stories</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="mobile-nav-link">
+              <span class="mn-icon">ℹ️</span>
+              <span data-i18n="navAbout">About Us</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile CTA: Join Union (Free Poncho) -->
+        <div class="mobile-nav-cta-card">
+          <div class="mn-cta-header">
+            <span class="mn-gift-icon">🎁</span>
+            <div>
+              <strong style="color: var(--ph-blue); font-size: 0.92rem; display: block;">Official Union Membership</strong>
+              <p style="font-size: 0.78rem; color: var(--text-body); margin: 0;" data-i18n="heroPonchoDesc">
+                High-visibility reflective all-weather poncho given to all riders upon registration.
+              </p>
+            </div>
+          </div>
+          <button class="btn-primary open-membership-btn mobile-cta-btn" style="width: 100%; justify-content: center; margin-top: 0.75rem;" data-i18n="btnJoinNav">
+            Join Union (Free Poncho)
+          </button>
+        </div>
+
+        <!-- Quick Language Switcher inside menu -->
+        <div class="mobile-nav-lang-section">
+          <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Wika / Language</span>
+          <div class="lang-selector mobile-lang-selector" role="group" aria-label="Language Selector">
+            <button type="button" class="lang-btn active" data-lang="en">
+              <span>🇬🇧</span> English
+            </button>
+            <button type="button" class="lang-btn" data-lang="fil">
+              <span>🇵🇭</span> Filipino
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-nav-footer">
+        <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+          🇵🇭 UDRMM • Taskforce 2 B.G.G.L. • Manila
+        </p>
+      </div>
+    </div>
+  </div>
+
   <!-- CART SLIDE-OUT DRAWER -->
   <div class="cart-drawer-overlay" id="cart-drawer-overlay">
     <div class="cart-drawer" role="dialog" aria-label="Shopping Bag">

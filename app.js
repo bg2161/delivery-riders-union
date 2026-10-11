@@ -799,31 +799,66 @@ window.closeCheckoutModal = function() {
   if (overlay) overlay.classList.remove('active');
 };
 
-// Mobile Hamburger Menu
+// Mobile Navigation Drawer Controller
 function setupMobileMenu() {
   const toggleBtn = document.getElementById('mobile-menu-btn');
-  const navLinks = document.querySelector('.nav-links');
+  const overlay = document.getElementById('mobile-nav-overlay');
+  const backdrop = document.getElementById('mobile-nav-backdrop');
+  const closeBtn = document.getElementById('mobile-nav-close');
 
-  if (toggleBtn && navLinks) {
-    toggleBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      navLinks.classList.toggle('mobile-open');
-    });
+  if (!toggleBtn || !overlay) return;
 
-    // Close when clicking any nav link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('mobile-open');
-      });
-    });
-
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!navLinks.contains(e.target) && e.target !== toggleBtn && !toggleBtn.contains(e.target)) {
-        navLinks.classList.remove('mobile-open');
-      }
-    });
+  function openMobileMenu() {
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('modal-open');
   }
+
+  function closeMobileMenu() {
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('modal-open');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (overlay.classList.contains('active')) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeMobileMenu);
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close when clicking any nav link inside drawer
+  overlay.querySelectorAll('.mobile-nav-link, #mobile-nav-brand-link').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+
+  // When clicking the CTA inside drawer, close drawer
+  overlay.querySelectorAll('.open-membership-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('active')) {
+      closeMobileMenu();
+    }
+  });
 }
 
 // Simple Toast Notification
