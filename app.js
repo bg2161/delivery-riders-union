@@ -504,13 +504,19 @@ function setupCountdown() {
   setInterval(update, 1000);
 }
 
-// RSVP & Pledge Counter (Persistent, Starts from 0)
+// Global Pledge Counter API Configuration
+// Powered by CountAPI (aggregates real-time hits across all visitors with Cloudflare CDN & CORS)
+const PLEDGE_API_KEY = 'udrmm_metro_manila_riders_solidarity_pledge_counter';
+const PLEDGE_API_URL = 'https://countapi.mileshilliard.com/api/v1';
+
+// RSVP & Global Pledge Counter (Aggregates real-time solidarity pledges from all visitors worldwide)
 function setupRSVP() {
   const rsvpBtn = document.getElementById('btn-rsvp-pledge');
   const countEl = document.getElementById('rsvp-counter-display');
   const badgeBtn = document.getElementById('rsvp-badge-btn');
+  let isPledging = false;
   
-  // Load persisted count from localStorage, defaulting to 0
+  // Load cached count from localStorage as initial fallback, defaulting to 0
   const savedCount = localStorage.getItem('udrmm_pledge_count');
   if (savedCount !== null) {
     const parsed = parseInt(savedCount, 10);
@@ -519,12 +525,17 @@ function setupRSVP() {
     rsvpCount = 0;
   }
 
-  // Load user pledge status
+  // Load user pledge status for this browser
   hasPledged = localStorage.getItem('udrmm_has_pledged') === 'true';
 
-  function renderCount() {
+  function renderCount(triggerAnimation = false) {
     if (countEl) {
       countEl.innerText = rsvpCount.toLocaleString();
+      if (triggerAnimation) {
+        countEl.classList.remove('count-pulse');
+        void countEl.offsetWidth; // Force DOM reflow to re-trigger pulse
+        countEl.classList.add('count-pulse');
+      }
     }
     if (rsvpBtn && hasPledged) {
       rsvpBtn.classList.remove('btn-red');
@@ -533,32 +544,96 @@ function setupRSVP() {
     }
   }
 
-  function handlePledge() {
-    rsvpCount += 1;
-    hasPledged = true;
-    localStorage.setItem('udrmm_pledge_count', rsvpCount.toString());
-    localStorage.setItem('udrmm_has_pledged', 'true');
-    
+  // Fetch real-time global total from external counter API
+  async function fetchGlobalCount() {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+      const res = await fetch(`${PLEDGE_API_URL}/get/${PLEDGE_API_KEY}`, {
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+
+      if (res.ok) {
+        const data = await res.json();
+        if (typeof data.value === 'number') {
+          const prev = rsvpCount;
+          rsvpCount = data.value;
+          localStorage.setItem('udrmm_pledge_count', rsvpCount.toString());
+          renderCount(prev !== rsvpCount && prev > 0);
+        }
+      } else if (res.status === 404) {
+        // Key not yet hit by anyone globally -> count is 0
+        rsvpCount = Math.max(rsvpCount, 0);
+        renderCount();
+      }
+    } catch (err) {
+      // Offline or network timeout: keep existing cached tally
+      console.warn('UDRMM: Using cached pledge count:', err.message);
+    }
+  }
+
+  // Handle solidarity pledge action (increments global counter across all visitors)
+  async function handlePledge() {
+    if (isPledging) return;
+    isPledging = true;
+
+    // Immediately trigger tactile animation on button & counter badge
     if (countEl) {
-      countEl.innerText = rsvpCount.toLocaleString();
       countEl.classList.remove('count-pulse');
-      void countEl.offsetWidth; // Force DOM reflow to re-trigger pulse animation
+      void countEl.offsetWidth;
       countEl.classList.add('count-pulse');
     }
 
-    if (rsvpBtn) {
-      rsvpBtn.classList.remove('btn-red');
-      rsvpBtn.classList.add('btn-secondary');
-      rsvpBtn.innerText = translations[currentLang].btnPledged;
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6000);
+      const res = await fetch(`${PLEDGE_API_URL}/hit/${PLEDGE_API_KEY}`, {
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+
+      if (res.ok) {
+        const data = await res.json();
+        if (typeof data.value === 'number') {
+          rsvpCount = data.value;
+        } else {
+          rsvpCount += 1;
+        }
+      } else {
+        rsvpCount += 1;
+      }
+    } catch (err) {
+      console.warn('UDRMM: API unreachable, incrementing local counter:', err);
+      rsvpCount += 1;
+    } finally {
+      isPledging = false;
     }
 
+    hasPledged = true;
+    localStorage.setItem('udrmm_pledge_count', rsvpCount.toString());
+    localStorage.setItem('udrmm_has_pledged', 'true');
+
+    renderCount(true);
+
     const toastMsg = currentLang === 'en'
-      ? `Salamat! Solidarity pledge recorded (Total: ${rsvpCount.toLocaleString()}).`
-      : `Maraming salamat! Naitala ang iyong pakikiisa (Kabuuan: ${rsvpCount.toLocaleString()}).`;
+      ? `Salamat! Global solidarity pledge recorded (Total: ${rsvpCount.toLocaleString()}).`
+      : `Maraming salamat! Naitala ang iyong pakikiisa sa buong mundo (Kabuuan: ${rsvpCount.toLocaleString()}).`;
     showToast(toastMsg);
   }
 
   renderCount();
+  fetchGlobalCount();
+
+  // Periodically refresh global tally every 30s so visitor sees pledges from other users
+  setInterval(fetchGlobalCount, 30000);
+
+  // Refresh tally immediately when tab regains visibility
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+      fetchGlobalCount();
+    }
+  });
 
   if (rsvpBtn) {
     rsvpBtn.addEventListener('click', handlePledge);
@@ -1026,16 +1101,24 @@ function setupCookieAndPrivacy() {
       localStorage.removeItem('udrmm_cookie_consent');
       localStorage.removeItem('udrmm_pledge_count');
       localStorage.removeItem('udrmm_has_pledged');
-      rsvpCount = 0;
       hasPledged = false;
-      const countEl = document.getElementById('rsvp-counter-display');
-      if (countEl) countEl.innerText = '0';
       const rsvpBtn = document.getElementById('btn-rsvp-pledge');
       if (rsvpBtn) {
         rsvpBtn.classList.remove('btn-secondary');
         rsvpBtn.classList.add('btn-red');
         rsvpBtn.innerText = translations[currentLang].btnPledge;
       }
+      // Re-sync with actual global counter
+      fetch(`${PLEDGE_API_URL}/get/${PLEDGE_API_KEY}`)
+        .then(r => r.ok ? r.json() : null)
+        .then(d => {
+          if (d && typeof d.value === 'number') {
+            rsvpCount = d.value;
+            const countEl = document.getElementById('rsvp-counter-display');
+            if (countEl) countEl.innerText = rsvpCount.toLocaleString();
+          }
+        })
+        .catch(() => {});
       closePrivacyModal();
       if (banner) banner.classList.add('active');
       showToast(currentLang === 'en' ? 'All local data cleared.' : 'Nabura ang lahat ng nakaimbak na datos.');
