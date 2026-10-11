@@ -124,12 +124,17 @@ const translations = {
     accessoriesTitle: "Official Solidarity Accessories",
     accessoriesDesc: "High-durability accessories designed for riders and solidarity allies.",
     
+    itemVestTitle: "Official High-Vis Security Jacket / Safety Vest",
+    itemVestDesc: "Industrial-grade neon yellow security safety vest with dual 3M reflective bands. Features the official union credential badge with scannable QR code on the chest and the rallying slogan 'NO DELIVERY IS WORTH A RIDER'S SAFETY' on the back.",
+    itemVestSizeLbl: "Size:",
+
+    itemStickersTitle: "Official Weatherproof Vinyl Sticker Pack (Yellow & Red)",
+    itemStickersDesc: "Heavy-duty outdoor laminated vinyl stickers in high-vis neon yellow and deep crimson red. Includes the official union emblem and an embedded scannable QR code redirecting to the official UDRMM union platform.",
+    itemStickerVariantLbl: "Pack:",
+
     itemCapTitle: "Official UDRMM Embroidered Cap",
     itemCapDesc: "Durable cotton twill cap featuring the Philippine sun badge, scooter emblem, and the embroidered slogan: 'NO DELIVERY IS WORTH A RIDER'S SAFETY'. Available in Royal Blue and Crimson Red.",
     itemCapColorLbl: "Color:",
-    
-    itemStickersTitle: "Reflective Waterproof Sticker Pack (3x)",
-    itemStickersDesc: "Heavy-duty laminated vinyl stickers. Weatherproof, UV-resistant, and high-visibility reflective. Perfect for delivery bags, helmets, and motorcycles.",
     
     itemPhoneTitle: "Heavy-Duty Handlebar Phone Mount",
     itemPhoneDesc: "100% waterproof sealed case with touchscreen sensitivity, vibration absorption, and secure handlebar clamp. Built for intense rain navigation.",
@@ -315,12 +320,17 @@ const translations = {
     accessoriesTitle: "Mga Opisyal na Gamit ng Unyon",
     accessoriesDesc: "Matitibay na gamit para sa mga rider at tagapagtaguyod ng karapatan sa paggawa.",
     
+    itemVestTitle: "Opisyal na High-Vis Security Jacket / Safety Vest",
+    itemVestDesc: "Maliwanag na neon yellow security safety vest na may dobleng 3M reflective safety bands. May opisyal na credential patch na may scannable QR code sa dibdib at ang panawagang 'NO DELIVERY IS WORTH A RIDER'S SAFETY' sa likod.",
+    itemVestSizeLbl: "Sukat:",
+
+    itemStickersTitle: "Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)",
+    itemStickersDesc: "Matibay at hindi nababasang outdoor laminated vinyl stickers sa neon yellow at malalim na crimson red. Tampok ang opisyal na sagisag ng unyon at scannable QR code papunta sa opisyal na website ng UDRMM.",
+    itemStickerVariantLbl: "Pake:",
+
     itemCapTitle: "Opisyal na Burdadong Sumbrero ng UDRMM",
     itemCapDesc: "Matibay na cotton twill cap na may sagisag ng araw ng Pilipinas, motorsiklo, at burdadong katagang: 'NO DELIVERY IS WORTH A RIDER'S SAFETY'. May kulay na Royal Blue at Crimson Red.",
     itemCapColorLbl: "Kulay:",
-    
-    itemStickersTitle: "Reflective Waterproof Sticker Pack (3 Piraso)",
-    itemStickersDesc: "Matitibay na vinyl sticker na hindi nasisira sa ulan at init. Maliwanag kapag tinamaan ng ilaw. Angkop sa helmet, delivery bag, at motor.",
     
     itemPhoneTitle: "Heavy-Duty Handlebar Phone Mount Case",
     itemPhoneDesc: "100% waterproof na lalagyan ng cellphone na kayang pindutin ang touchscreen. Matibay ang kapit sa manibela kahit maalon at mabaha ang daan.",
@@ -391,6 +401,8 @@ let cart = [];
 let rsvpCount = 0;
 let hasPledged = false;
 let selectedCapColor = 'Blue';
+let selectedVestSize = 'L';
+let selectedStickerVariant = 'Dual Pack (Yellow + Red)';
 
 // Initialize App
 document.addEventListener('DOMContentLoaded', () => {
@@ -406,7 +418,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupRSVP();
   setupCartDrawer();
   setupMembershipModal();
-  setupCapVariants();
+  setupProductVariants();
+  setupProductViewSwitchers();
   setupMobileMenu();
   setupCookieAndPrivacy();
 });
@@ -661,23 +674,103 @@ function setupRSVP() {
   }
 }
 
-// Cap Color Variants
-function setupCapVariants() {
+// Product Variants Controller (Cap Colors, Vest Sizes, Sticker Packs)
+function setupProductVariants() {
+  // Cap Color Variants
   const capDots = document.querySelectorAll('.cap-variant-dot');
-  const label = document.getElementById('selected-cap-color-name');
-  
+  const capLabel = document.getElementById('selected-cap-color-name');
   capDots.forEach(dot => {
-    dot.addEventListener('click', (e) => {
+    dot.addEventListener('click', () => {
       capDots.forEach(d => d.classList.remove('active'));
       dot.classList.add('active');
-      selectedCapColor = dot.getAttribute('data-color');
-      if (label) label.textContent = selectedCapColor;
+      selectedCapColor = dot.getAttribute('data-color') || 'Blue';
+      if (capLabel) capLabel.textContent = selectedCapColor;
+    });
+  });
+
+  // Vest Size Variants
+  const vestBtns = document.querySelectorAll('.vest-size-btn');
+  const vestLabel = document.getElementById('selected-vest-size-name');
+  vestBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      vestBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedVestSize = btn.getAttribute('data-size') || 'L';
+      if (vestLabel) vestLabel.textContent = selectedVestSize;
+    });
+  });
+
+  // Sticker Pack Edition Variants
+  const stickerBtns = document.querySelectorAll('.sticker-variant-btn');
+  const stickerLabel = document.getElementById('selected-sticker-variant-name');
+  const stickerImg = document.getElementById('stickers-main-img');
+  const stickerSwitcher = document.querySelector('.product-view-switcher[data-target="stickers-main-img"]');
+  stickerBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      stickerBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedStickerVariant = btn.getAttribute('data-variant') || 'Dual Pack (Yellow + Red)';
+      if (stickerLabel) stickerLabel.textContent = selectedStickerVariant;
+      
+      // Auto-preview matching sticker image
+      if (stickerImg && stickerSwitcher) {
+        if (selectedStickerVariant.includes('Yellow')) {
+          stickerImg.src = 'assets/sticker-yellow-qr.jpg';
+          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-img') === 'assets/sticker-yellow-qr.jpg'));
+        } else if (selectedStickerVariant.includes('Red')) {
+          stickerImg.src = 'assets/sticker-red-qr.jpg';
+          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-img') === 'assets/sticker-red-qr.jpg'));
+        } else {
+          stickerImg.src = 'assets/product-stickers.jpg';
+          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-img') === 'assets/product-stickers.jpg'));
+        }
+      }
+    });
+  });
+}
+
+// Product Multi-View Image Switchers (Dual, Front, Back, Both, Yellow, Red)
+function setupProductViewSwitchers() {
+  document.querySelectorAll('.product-view-switcher').forEach(switcher => {
+    const targetId = switcher.getAttribute('data-target');
+    const targetImg = document.getElementById(targetId);
+    if (!targetImg) return;
+
+    switcher.querySelectorAll('.view-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        switcher.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const newSrc = btn.getAttribute('data-img');
+        if (newSrc) {
+          targetImg.style.opacity = '0.35';
+          targetImg.src = newSrc;
+          targetImg.onload = () => {
+            targetImg.style.opacity = '1';
+          };
+        }
+      });
     });
   });
 }
 
 // Shopping Cart Logic
 const productsCatalog = {
+  'vest': {
+    id: 'vest',
+    titleEn: 'Official High-Vis Security Jacket / Safety Vest',
+    titleFil: 'Opisyal na High-Vis Security Jacket / Safety Vest',
+    price: 7450,
+    img: 'assets/product-vest.jpg',
+    getVariant: () => `Size: ${selectedVestSize}`
+  },
+  'stickers': {
+    id: 'stickers',
+    titleEn: 'Official Weatherproof Vinyl Sticker Pack (Yellow & Red)',
+    titleFil: 'Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)',
+    price: 2450,
+    img: 'assets/product-stickers.jpg',
+    getVariant: () => selectedStickerVariant
+  },
   'cap': {
     id: 'cap',
     titleEn: 'Official UDRMM Embroidered Cap',
@@ -685,14 +778,6 @@ const productsCatalog = {
     price: 4850,
     img: 'assets/product-caps.jpg',
     getVariant: () => selectedCapColor
-  },
-  'stickers': {
-    id: 'stickers',
-    titleEn: 'Reflective Waterproof Sticker Pack (3x)',
-    titleFil: 'Reflective Waterproof Sticker Pack (3 Piraso)',
-    price: 2450,
-    img: 'assets/product-stickers.jpg',
-    getVariant: () => 'Pack of 3'
   },
   'phone-mount': {
     id: 'phone-mount',
@@ -1142,12 +1227,26 @@ function setupCookieAndPrivacy() {
 function getThematicFallback(type) {
   const svgs = {
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
-      <rect width="300" height="300" rx="40" fill="#0038A8"/>
-      <path d="M150 35 L265 115 L265 225 L150 275 L35 225 L35 115 Z" fill="#CE1126" stroke="#FFFFFF" stroke-width="5"/>
-      <circle cx="150" cy="150" r="44" fill="#FCD116"/>
-      <circle cx="150" cy="150" r="26" fill="#CE1126"/>
-      <circle cx="150" cy="150" r="14" fill="#FCD116"/>
-      <text x="150" y="245" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900" text-anchor="middle" letter-spacing="2">U.D.R.M.M.</text>
+      <rect width="300" height="300" rx="30" fill="#F0E5F8"/>
+      <text x="150" y="42" fill="#111827" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" text-anchor="middle" letter-spacing="4">U . D . R . M . M .</text>
+      <circle cx="165" cy="85" r="9" fill="#111827"/>
+      <path d="M165 94 L150 135 L135 135 L125 150 L165 150 L175 125 Z" fill="#111827"/>
+      <circle cx="115" cy="180" r="16" fill="#111827"/>
+      <circle cx="195" cy="180" r="16" fill="#111827"/>
+      <rect x="100" y="115" width="28" height="28" fill="none" stroke="#111827" stroke-width="4"/>
+      <path d="M110 170 Q150 140 190 170" fill="none" stroke="#111827" stroke-width="8"/>
+      <text x="150" y="228" fill="#111827" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="900" text-anchor="middle">United Delivery Riders</text>
+      <text x="150" y="248" fill="#111827" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="900" text-anchor="middle">of Metro Manila</text>
+      <text x="150" y="275" fill="#4B5563" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="3">MANILA, PHILIPPINES</text>
+    </svg>`,
+    vest: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+      <rect width="400" height="300" fill="#FFF5F7"/>
+      <rect x="15" y="15" width="370" height="270" rx="16" fill="#FEF9D9" stroke="#FDE047" stroke-width="2"/>
+      <path d="M140 50 L160 50 L200 110 L240 50 L260 50 L290 110 L280 250 L120 250 L110 110 Z" fill="#FACC15" stroke="#1F2937" stroke-width="3"/>
+      <rect x="118" y="170" width="164" height="18" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1"/>
+      <rect x="116" y="205" width="168" height="18" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1"/>
+      <rect x="145" y="115" width="22" height="26" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.5"/>
+      <text x="200" y="280" fill="#854D0E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" text-anchor="middle">OFFICIAL SECURITY VEST WITH QR</text>
     </svg>`,
     poncho: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
       <rect width="400" height="300" fill="#FFF5F7"/>
@@ -1170,16 +1269,9 @@ function getThematicFallback(type) {
     stickers: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
       <rect width="400" height="300" fill="#FFF5F7"/>
       <rect x="15" y="15" width="370" height="270" rx="16" fill="#FEF9D9" stroke="#FDE047" stroke-width="2"/>
-      <g transform="translate(65, 65) rotate(-8)">
-        <rect width="105" height="105" rx="12" fill="#0038A8" stroke="#FFFFFF" stroke-width="3"/>
-        <circle cx="52" cy="52" r="30" fill="#FCD116"/>
-        <text x="52" y="57" fill="#0038A8" font-size="12" font-weight="900" text-anchor="middle">RIDER</text>
-      </g>
-      <g transform="translate(195, 55) rotate(6)">
-        <rect width="115" height="115" rx="12" fill="#CE1126" stroke="#FFFFFF" stroke-width="3"/>
-        <text x="57" y="62" fill="#FFFFFF" font-size="13" font-weight="900" text-anchor="middle">SOLIDARITY</text>
-      </g>
-      <text x="200" y="270" fill="#CE1126" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">WATERPROOF STICKER PACK (3X)</text>
+      <circle cx="130" cy="135" r="65" fill="#DBFE01" stroke="#000000" stroke-width="3"/>
+      <circle cx="270" cy="135" r="65" fill="#A10101" stroke="#000000" stroke-width="3"/>
+      <text x="200" y="270" fill="#111827" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">WEATHERPROOF STICKER PACK WITH QR</text>
     </svg>`,
     'phone-mount': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
       <rect width="400" height="300" fill="#FFF5F7"/>
@@ -1218,6 +1310,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (src.includes('logo') || alt.includes('emblem') || alt.includes('logo')) {
           this.src = getThematicFallback('logo');
+        } else if (src.includes('vest') || alt.includes('vest') || alt.includes('security')) {
+          this.src = getThematicFallback('vest');
         } else if (src.includes('poncho') || alt.includes('poncho') || alt.includes('vestaglia')) {
           this.src = getThematicFallback('poncho');
         } else if (src.includes('cap') || alt.includes('cap') || alt.includes('sumbrero')) {
