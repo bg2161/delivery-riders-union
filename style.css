@@ -940,6 +940,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .rsvp-counter-badge {
   text-align: right;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+}
+
+.rsvp-counter-badge:hover {
+  transform: translateY(-2px);
+  background: rgba(206, 17, 38, 0.05);
+}
+
+.rsvp-counter-badge:active {
+  transform: scale(0.96);
 }
 
 .rsvp-counter-badge .rsvp-count-num {
@@ -947,6 +961,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-weight: 900;
   color: var(--ph-red);
   line-height: 1;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.rsvp-counter-badge .rsvp-count-num.count-pulse {
+  animation: rsvpCountPulse 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes rsvpCountPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); color: var(--ph-blue); }
+  100% { transform: scale(1); color: var(--ph-red); }
 }
 
 .rsvp-counter-badge .rsvp-count-label {

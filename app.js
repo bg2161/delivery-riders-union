@@ -545,7 +545,7 @@ const floodHotspotsData = {
 let currentLang = 'en';
 let currentSelectedSpot = 'espana';
 let cart = [];
-let rsvpCount = 3842;
+let rsvpCount = 0;
 let hasPledged = false;
 let selectedCapColor = 'Blue';
 
@@ -636,6 +636,14 @@ function applyLanguage(lang) {
     }
   });
 
+  // Retain pledged state on RSVP button if already clicked
+  if (hasPledged) {
+    const rsvpBtn = document.getElementById('btn-rsvp-pledge');
+    if (rsvpBtn) {
+      rsvpBtn.innerText = dict.btnPledged;
+    }
+  }
+
   // Update language toggle buttons active state
   document.querySelectorAll('.lang-btn').forEach(btn => {
     const btnLang = btn.getAttribute('data-lang');
@@ -700,27 +708,72 @@ function setupCountdown() {
   setInterval(update, 1000);
 }
 
-// RSVP & Pledge Counter
+// RSVP & Pledge Counter (Persistent, Starts from 0)
 function setupRSVP() {
   const rsvpBtn = document.getElementById('btn-rsvp-pledge');
   const countEl = document.getElementById('rsvp-counter-display');
+  const badgeBtn = document.getElementById('rsvp-badge-btn');
   
-  if (countEl) {
-    countEl.innerText = rsvpCount.toLocaleString();
+  // Load persisted count from localStorage, defaulting to 0
+  const savedCount = localStorage.getItem('udrmm_pledge_count');
+  if (savedCount !== null) {
+    const parsed = parseInt(savedCount, 10);
+    rsvpCount = !isNaN(parsed) && parsed >= 0 ? parsed : 0;
+  } else {
+    rsvpCount = 0;
   }
 
+  // Load user pledge status
+  hasPledged = localStorage.getItem('udrmm_has_pledged') === 'true';
+
+  function renderCount() {
+    if (countEl) {
+      countEl.innerText = rsvpCount.toLocaleString();
+    }
+    if (rsvpBtn && hasPledged) {
+      rsvpBtn.classList.remove('btn-red');
+      rsvpBtn.classList.add('btn-secondary');
+      rsvpBtn.innerText = translations[currentLang].btnPledged;
+    }
+  }
+
+  function handlePledge() {
+    rsvpCount += 1;
+    hasPledged = true;
+    localStorage.setItem('udrmm_pledge_count', rsvpCount.toString());
+    localStorage.setItem('udrmm_has_pledged', 'true');
+    
+    if (countEl) {
+      countEl.innerText = rsvpCount.toLocaleString();
+      countEl.classList.remove('count-pulse');
+      void countEl.offsetWidth; // Force DOM reflow to re-trigger pulse animation
+      countEl.classList.add('count-pulse');
+    }
+
+    if (rsvpBtn) {
+      rsvpBtn.classList.remove('btn-red');
+      rsvpBtn.classList.add('btn-secondary');
+      rsvpBtn.innerText = translations[currentLang].btnPledged;
+    }
+
+    const toastMsg = currentLang === 'en'
+      ? `Salamat! Solidarity pledge recorded (Total: ${rsvpCount.toLocaleString()}).`
+      : `Maraming salamat! Naitala ang iyong pakikiisa (Kabuuan: ${rsvpCount.toLocaleString()}).`;
+    showToast(toastMsg);
+  }
+
+  renderCount();
+
   if (rsvpBtn) {
-    rsvpBtn.addEventListener('click', () => {
-      if (!hasPledged) {
-        hasPledged = true;
-        rsvpCount += 1;
-        if (countEl) countEl.innerText = rsvpCount.toLocaleString();
-        
-        rsvpBtn.classList.remove('btn-red');
-        rsvpBtn.classList.add('btn-secondary');
-        rsvpBtn.innerText = translations[currentLang].btnPledged;
-        
-        showToast(currentLang === 'en' ? 'Salamat! Your solidarity pledge is recorded.' : 'Maraming salamat! Naitala ang iyong pakikiisa.');
+    rsvpBtn.addEventListener('click', handlePledge);
+  }
+
+  if (badgeBtn) {
+    badgeBtn.addEventListener('click', handlePledge);
+    badgeBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handlePledge();
       }
     });
   }
@@ -1175,6 +1228,18 @@ function setupCookieAndPrivacy() {
     clearDataBtn.addEventListener('click', () => {
       localStorage.removeItem('udrmm_lang');
       localStorage.removeItem('udrmm_cookie_consent');
+      localStorage.removeItem('udrmm_pledge_count');
+      localStorage.removeItem('udrmm_has_pledged');
+      rsvpCount = 0;
+      hasPledged = false;
+      const countEl = document.getElementById('rsvp-counter-display');
+      if (countEl) countEl.innerText = '0';
+      const rsvpBtn = document.getElementById('btn-rsvp-pledge');
+      if (rsvpBtn) {
+        rsvpBtn.classList.remove('btn-secondary');
+        rsvpBtn.classList.add('btn-red');
+        rsvpBtn.innerText = translations[currentLang].btnPledge;
+      }
       closePrivacyModal();
       if (banner) banner.classList.add('active');
       showToast(currentLang === 'en' ? 'All local data cleared.' : 'Nabura ang lahat ng nakaimbak na datos.');
