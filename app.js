@@ -33,15 +33,15 @@ const translations = {
     // Hero Card
     heroCardTitle: "United We Ride, United We Win",
     heroCardDesc: "Organizing riders from FoodTiger, Grab, Foodpanda, and independent couriers across all 16 cities.",
-    perk1: "Free heavy-duty high-vis waterproof rain poncho",
+    perk1: "Official heavy-duty high-vis gear & safety package included",
     perk2: "Legal aid & emergency suspension support",
     perk3: "Barangay solidarity shelters during typhoons",
     perk4: "Collective bargaining representation with DOLE",
-    freePonchoBadge: "FREE FOR MEMBERS",
+    freePonchoBadge: "INCLUDED WITH DUES",
     heroPonchoTitle: "Official Rain Poncho Included",
     heroPonchoDesc: "High-visibility reflective all-weather poncho given to all riders upon registration.",
     membershipFeeDuesLbl: "Annual Union Dues",
-    membershipFeeLabel: "Includes High-Vis Safety Vest & Stickers (Hardship Waiver Available)",
+    membershipFeeLabel: "Includes High-Vis Safety Vest & Stickers (Annual Dues: ₱150/yr)",
     btnClaimPoncho: "Register & Join Union (₱150/yr)",
 
     // Live Weather & Flood Risk Advisory Widget
@@ -118,13 +118,13 @@ const translations = {
     // Hero Poncho Product
     vestagliaTag: "★ EXCLUSIVE UNION MEMBER BENEFIT",
     vestagliaTitle: "Official Heavy-Duty All-Weather Vestaglia (Rain Poncho)",
-    vestagliaDesc: "Designed specifically for Manila's torrential monsoon conditions. Made with double-sealed Oxford waterproof nylon, 360° neon safety stripes, storm flaps, and the official UDRMM rider chest insignia. Zero cost for all registered union members.",
+    vestagliaDesc: "Designed specifically for Manila's torrential monsoon conditions. Made with double-sealed Oxford waterproof nylon, 360° neon safety stripes, storm flaps, and the official UDRMM rider chest insignia. Included for all registered union members with paid annual dues.",
     vf1: "100% Storm-Proof Waterproof Fabric",
     vf2: "360° Neon & Silver Reflective Safety Bands",
     vf3: "Helmet-Compatible Drawstring Hood",
     vf4: "Reinforced Mobile Phone Chest Pockets",
-    vestagliaPriceLabel: "Included with Union Registration",
-    btnClaimPoncho: "Register to Claim Free Poncho",
+    vestagliaPriceLabel: "Included with ₱150/yr Union Membership",
+    btnClaimPoncho: "Register & Join Union (₱150/yr)",
     
     // Accessories Grid
     accessoriesTitle: "Official Solidarity Accessories",
@@ -183,20 +183,20 @@ const translations = {
     
     // Membership Modal
     modalMemberTitle: "Join United Delivery Riders of Metro Manila",
-    modalMemberSub: "Join the United Delivery Riders of Metro Manila. Annual union dues (₱150 PHP / year) sustain our collective legal defense, helmet stickers, and worker-led campaign.",
-    unionDuesTitle: "💳 Annual Union Dues: ₱150 PHP / year",
-    regDuesNote: "Includes official High-Vis Safety Vest & Waterproof Stickers. Hardship fee waiver available below—no rider is left behind.",
+    modalMemberSub: "Join the United Delivery Riders of Metro Manila. Annual union dues (₱150 PHP / year) are required to sustain our collective legal defense, helmet stickers, and worker-led campaign.",
+    unionDuesTitle: "💳 Annual Union Dues: ₱150 PHP / year (Required)",
+    regDuesNote: "Includes official High-Vis Safety Vest & Waterproof Stickers package upon paid enrollment.",
     modalNameLbl: "Full Name:",
     modalPlatformLbl: "Delivery Platform(s):",
     modalCityLbl: "City / Barangay in Metro Manila:",
     modalPhoneLbl: "Mobile Number (GCash / Contact):",
     modalSizeLbl: "Select Safety Vest / Gear Size:",
-    duesPaymentOptionLbl: "Annual Contribution Plan:",
-    btnSubmitRegistration: "Complete Registration & Join Union",
+    duesPaymentOptionLbl: "Annual Membership Fee (₱150 PHP / year):",
+    btnSubmitRegistration: "Pay ₱150 Dues & Complete Registration",
     
     // Modal Confirmation
     registeredTitle: "Mabuhay! Welcome to UDRMM!",
-    registeredSub: "Your membership registration has been processed. Here is your official Union Digital ID:",
+    registeredSub: "Your membership registration and annual dues payment (₱150 PHP) have been confirmed. Here is your official Union Digital ID:",
     regPonchoNote: "Your Official High-Vis Safety Vest & Waterproof Stickers package will be prepared for pickup at your local Barangay Solidarity Station or coordinated via your mobile contact.",
     
     // GDPR & Cookie Banner
@@ -244,11 +244,11 @@ const translations = {
     perk2: "Tulong legal at suporta kapag na-suspend ang app account",
     perk3: "Barangay solidarity shelters kapag may bagyo",
     perk4: "Representasyon sa pakikipag-usap sa DOLE at kumpanya",
-    freePonchoBadge: "PARA SA MGA KASAPI",
+    freePonchoBadge: "KASAMA SA BUTAW",
     heroPonchoTitle: "Opisyal na Safety Gear Kasama",
     heroPonchoDesc: "Mataas ang visibility na reflective all-weather vest at stickers para sa mga rehistradong rider.",
     membershipFeeDuesLbl: "Taunang Butaw sa Unyon",
-    membershipFeeLabel: "Kasama ang High-Vis Safety Vest at Stickers (May Hardship Waiver)",
+    membershipFeeLabel: "Kasama ang High-Vis Safety Vest at Stickers (Taunang Butaw: ₱150/taon)",
     btnClaimPoncho: "Magrehistro at Sumapi (₱150/taon)",
 
     // Live Weather & Flood Risk Advisory Widget
@@ -325,13 +325,13 @@ const translations = {
     // Hero Poncho Product
     vestagliaTag: "★ NATATANGING BENEPISYO NG KASAPING RIDER",
     vestagliaTitle: "Opisyal na Heavy-Duty All-Weather Vestaglia (Kapote)",
-    vestagliaDesc: "Espesyal na idinisenyo para sa malalakas na habagat at bagyo sa Maynila. Gawa sa double-sealed waterproof Oxford nylon, may 360° neon at reflective bands, storm flaps, at burdadong sagisag ng UDRMM. Libre para sa lahat ng rehistradong miyembro ng unyon.",
+    vestagliaDesc: "Espesyal na idinisenyo para sa malalakas na habagat at bagyo sa Maynila. Gawa sa double-sealed waterproof Oxford nylon, may 360° neon at reflective bands, storm flaps, at burdadong sagisag ng UDRMM. Kasama para sa lahat ng rehistradong miyembro na nagbayad ng taunang butaw.",
     vf1: "100% Hindi Bumabasa kahit Matinding Bagyo",
     vf2: "360° Neon at Silver Reflective Safety Bands",
     vf3: "Kasya sa Helmet ang Tali ng Hood",
     vf4: "Protektadong Bulsa para sa Mobile Phone",
-    vestagliaPriceLabel: "Kasama sa Pagpaparehistro sa Unyon",
-    btnClaimPoncho: "Magparehistro para sa Libreng Kapote",
+    vestagliaPriceLabel: "Kasama sa ₱150/taon na Pagsapi sa Unyon",
+    btnClaimPoncho: "Magrehistro at Sumapi (₱150/taon)",
     
     // Accessories Grid
     accessoriesTitle: "Mga Opisyal na Gamit ng Unyon",
@@ -390,20 +390,20 @@ const translations = {
     
     // Membership Modal
     modalMemberTitle: "Sumapi sa United Delivery Riders of Metro Manila",
-    modalMemberSub: "Sumapi sa United Delivery Riders of Metro Manila. Ang taunang butaw (₱150 PHP / taon) ay pondo para sa tulong-legal, stickers sa helmet, at kampanya ng mga manggagawa.",
-    unionDuesTitle: "💳 Taunang Butaw sa Unyon: ₱150 PHP / taon",
-    regDuesNote: "Kasama ang opisyal na High-Vis Safety Vest at Waterproof Stickers. May hardship fee waiver sa ibaba—walang rider na maiiwan.",
+    modalMemberSub: "Sumapi sa United Delivery Riders of Metro Manila. Ang taunang butaw (₱150 PHP / taon) ay kailangan upang pondohan ang tulong-legal, stickers sa helmet, at kampanya ng mga manggagawa.",
+    unionDuesTitle: "💳 Taunang Butaw sa Unyon: ₱150 PHP / taon (Kailangan)",
+    regDuesNote: "Kasama ang opisyal na High-Vis Safety Vest at Waterproof Stickers package sa bawat bayad na pagsapi.",
     modalNameLbl: "Buong Pangalan:",
     modalPlatformLbl: "Delivery Platform(s):",
     modalCityLbl: "Lungsod / Barangay sa Metro Manila:",
     modalPhoneLbl: "Numero ng Telepono (GCash / Kontak):",
     modalSizeLbl: "Pumili ng Sukat ng Safety Vest / Gear:",
-    duesPaymentOptionLbl: "Plano sa Taunang Kontribusyon:",
-    btnSubmitRegistration: "Kumpletuhin ang Rehistro at Sumapi sa Unyon",
+    duesPaymentOptionLbl: "Taunang Butaw sa Pagsapi (₱150 PHP / taon):",
+    btnSubmitRegistration: "Magbayad ng ₱150 Butaw at Kumpletuhin ang Rehistro",
     
     // Modal Confirmation
     registeredTitle: "Mabuhay! Maligayang Pagdating sa UDRMM!",
-    registeredSub: "Matagumpay na naitala ang iyong pagsapi. Narito ang iyong Opisyal na Digital ID ng Unyon:",
+    registeredSub: "Kumpirmado ang iyong pagsapi at taunang butaw (₱150 PHP). Narito ang iyong Opisyal na Digital ID ng Unyon:",
     regPonchoNote: "Ang iyong Opisyal na High-Vis Safety Vest at Waterproof Stickers ay ihahanda para sa pickup sa iyong Barangay Solidarity Station o ipapadala sa pamamagitan ng iyong kontak.",
     
     // GDPR & Cookie Banner
@@ -961,10 +961,8 @@ function setupMembershipModal() {
       const platform = document.getElementById('member-platform').value || 'FoodTiger';
       const city = document.getElementById('member-city').value || 'Metro Manila';
       const size = document.getElementById('member-size').value || 'L';
-      const duesPlan = document.querySelector('input[name="dues_plan"]:checked')?.value || 'standard';
-      const duesLabel = duesPlan === 'waiver' 
-        ? 'Solidarity Hardship Waiver (₱0 dues)' 
-        : 'Standard Annual Dues: ₱150 PHP / year';
+      const paymentMethod = document.querySelector('input[name="dues_payment_method"]:checked')?.value || 'GCash';
+      const duesLabel = `Paid Membership: ₱150 PHP / year (${paymentMethod})`;
       
       const memberId = 'UDRMM-MNL-2027-' + Math.floor(1000 + Math.random() * 9000);
 
@@ -990,7 +988,7 @@ function setupMembershipModal() {
                 Platform: ${platform} • Area: ${city} • Vest: Size ${size}
               </div>
               <div style="font-size: 0.8rem; color: #FCD34D; font-weight: 600; margin-bottom: 10px;">
-                Plan: ${duesLabel}
+                Status: Paid Member (₱150/yr • ${paymentMethod})
               </div>
               <div class="mid-num">ID: ${memberId}</div>
             </div>
@@ -999,7 +997,7 @@ function setupMembershipModal() {
               <img src="assets/product-vest.jpg" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover;">
               <div>
                 <strong style="color: var(--ph-blue); font-size: 0.95rem; display: block; margin-bottom: 2px;">
-                  🛡️ Official High-Vis Safety Vest & Stickers Reserved!
+                  🛡️ Official High-Vis Safety Vest & Stickers Package Included!
                 </strong>
                 <p style="font-size: 0.82rem; color: var(--text-body); font-weight: normal; margin: 0;">
                   ${translations[currentLang].regPonchoNote}
