@@ -38,12 +38,46 @@ const translations = {
     heroPonchoTitle: "Official Rain Poncho Included",
     heroPonchoDesc: "High-visibility reflective all-weather poncho given to all riders upon registration.",
 
-    // Weather section
-    weatherBadge: "PAGASA MONSOON ADVISORY",
-    weatherTitle: "Metro Manila Weather & Flood Risk Status",
-    weatherDesc: "Current conditions require lower speeds and adjusted delivery expectations. Platforms must suspend automatic delivery time penalties.",
-    weatherTipTitle: "Active Rain Protocol in Effect:",
-    weatherTipDesc: "Flash flood warnings reported along España Blvd, Taft Avenue, and EDSA Ortigas. UDRMM strongly advises all riders to seek shelter and pause non-critical trips during severe flooding.",
+    // Weather & Government Flood Intelligence Hub
+    floodHubTitle: "Official Philippine Government Flood Risk & Weather Intelligence",
+    floodHubSub: "Live telemetry and hazard mapping from DOST-PAGASA, UP Project NOAH, and MMDA. UDRMM pledges that delivery platforms (FoodTiger, Grab) must integrate this official government data into dispatch algorithms to adjust routes, trigger hazard pay, and protect rider lives.",
+    pagasaLevelOrange: "ORANGE WARNING (ACTIVE)",
+    pagasaMetricDesc: "Intense Monsoon Downpour Measured across Metro Manila River Basins",
+    threshOrangeTitle: "Orange Rainfall Alert:",
+    threshOrangeDesc: "Flooding is threatening in low-lying corridors and river basin communities.",
+    threshRiverTitle: "Marikina River Gauge:",
+    threshRiverDesc: "15.8 meters (Alert Level 1 Standby / Sto. Niño Floodgates Monitored).",
+    floodDepthLbl: "Historical Flood Depth",
+    floodOnsetLbl: "Onset Inundation Time",
+    floodRiderImpactLbl: "Motorcycle Passability",
+    spaPledgeTitle: "Required Platform Algorithm Action:",
+    spaEspanaAction: "Mandatory Geo-Fencing Detour: Block order routing through España-UST corridor. Automatically divert orders to elevated bypasses and activate +35% hazard compensation.",
+
+    // Platform Integration Comparison
+    pipBadge: "CORE UNION CAMPAIGN PLEDGE",
+    pipTitle: "The Union Pledge: Algorithmic Integration of Philippine Government Flood Data",
+    pipDesc: "FoodTiger, Grab, and delivery giants use blind, dry-season algorithms that treat Manila as flat and dry even during typhoons. UDRMM pledges to enforce direct API integration of official government flood maps into platform dispatch algorithms to adjust routes, guarantee fair hazard pay, and protect workers.",
+    pipCurrHead: "❌ Current Platform Practice",
+    pipCurrSub: "Blind Dry-Season Dispatch Algorithm",
+    pipCurr1Bold: "Forced Flood Routing:",
+    pipCurr1Text: "Algorithm routes two-wheelers straight through submerged streets (España, Taft) to save 300 meters, causing engine water-lock and crashes.",
+    pipCurr2Bold: "Unfair Surcharge Skimming:",
+    pipCurr2Text: "Platforms charge customers +₱50 to +₱80 \"rain surge fees\" while slashing rider base compensation by 20% in rainy months.",
+    pipCurr3Bold: "Unforgiving Speed Timers:",
+    pipCurr3Text: "Rigid 25-minute ETA countdowns remain active in torrential rains; late deliveries trigger 1-star ratings and algorithmic demerits.",
+    pipCurr4Bold: "Punitive Order Rejection:",
+    pipCurr4Text: "Riders who decline orders through dangerous floodwaters suffer lower Acceptance Rates (AR) and punitive batch de-prioritization.",
+
+    pipPropHead: "✅ UDRMM Platform Pledge",
+    pipPropSub: "Government Data-Integrated Protocol",
+    pipProp1Bold: "Dynamic Safety Geo-Fencing:",
+    pipProp1Text: "Direct API link to Project NOAH & MMDA maps automatically blocks routes intersecting High/Medium hazard zones, detouring riders safely.",
+    pipProp2Bold: "Automated +35% to +50% Hazard Pay:",
+    pipProp2Text: "Live PAGASA rainfall alerts trigger automated hazard pay (+25% Yellow, +35% Orange, +50% Red), passed directly to riders.",
+    pipProp3Bold: "Immunity from Delay Penalties:",
+    pipProp3Text: "Automatic pausing of delivery timers and complete nullification of weather-related 1-star reviews during official rainfall warnings.",
+    pipProp4Bold: "DOLE Labor Advisory 17 Compliance:",
+    pipProp4Text: "Guaranteed statutory right to refuse impassable routes with zero demerits, zero deactivations, and protected account ratings.",
 
     // Protest Section
     protestBadge: "MAY 1, 2027 • LABOR DAY MOBILIZATION",
@@ -70,22 +104,34 @@ const translations = {
     sch4Title: "Charter of Demands Handover & Dialogue",
     sch4Desc: "UDRMM representatives present our 5 Five-Point Collective Demands directly to FoodTiger management and DOLE officials.",
 
-    demandsHeading: "What We Are Demanding vs Current Platform Policy",
-    dem1Title: "Rainy Season Pay Cuts",
-    dem1Current: "Current: Base delivery fee cut by 20% in rainy months.",
-    dem1Proposed: "Demand: +35% Monsoon Hazard Pay per wet-weather delivery.",
-    dem2Title: "Unrealistic Delivery Speeds",
-    dem2Current: "Current: Fixed 25-min timers regardless of flooded streets.",
-    dem2Proposed: "Demand: Dynamic timer adjustments during PAGASA rain alerts.",
+    demandsHeading: "What We Are Demanding vs Platform Policy",
+    dem1Title: "Mandatory Gov't Flood Data Integration",
+    dem1Badge: "PAGASA & NOAH API",
+    dem1Current: "Current: Platforms use blind algorithms that force riders into flooded corridors and cut wet-weather pay by 20%.",
+    dem1Proposed: "Demand: Mandatory API integration of PAGASA/NOAH flood maps to auto-reroute flooded corridors, trigger +35% to +50% hazard pay, and pause speed timers.",
+    dem2Title: "Unrealistic Delivery Speed Timers",
+    dem2Badge: "Safety Timers",
+    dem2Current: "Current: Fixed 25-min timers regardless of flooded streets, leading to 1-star weather penalties.",
+    dem2Proposed: "Demand: Dynamic timer extensions and complete nullification of customer rating penalties during rain alerts.",
     dem3Title: "Arbitrary Account Suspension",
-    dem3Current: "Current: Algorithmic deactivation without human explanation.",
-    dem3Proposed: "Demand: 72-hour formal notice & UDRMM union representation.",
+    dem3Badge: "Due Process",
+    dem3Current: "Current: Algorithmic deactivation without human explanation when riders decline flooded trips.",
+    dem3Proposed: "Demand: 72-hour formal notice, UDRMM representation, and DOLE Labor Advisory 17 right-to-refuse protection.",
     dem4Title: "Safety Gear & Medical Coverage",
-    dem4Current: "Current: 100% equipment & injury expenses borne by rider.",
-    dem4Proposed: "Demand: Free company-issued rain gear & emergency clinic fund.",
+    dem4Badge: "Worker Health",
+    dem4Current: "Current: 100% equipment, poncho, and injury expenses borne entirely by the rider.",
+    dem4Proposed: "Demand: Free company-issued rain ponchos & emergency medical clinic fund in all 16 cities.",
+
+    // The 5 Official Pledges
+    pledgesTitle: "★ THE 5 OFFICIAL UDRMM CAMPAIGN PLEDGES • LABOR DAY 2027",
+    pl1Desc: "<strong>Mandatory Gov't Flood Integration:</strong> Delivery apps must connect to DOST-PAGASA &amp; Project NOAH APIs to auto-reroute flooded streets and trigger +35% to +50% hazard pay.",
+    pl2Desc: "<strong>Abolish Speed Demerits:</strong> Suspend 25-min delivery countdowns and nullify negative customer ratings during official rainfall alerts.",
+    pl3Desc: "<strong>DOLE Right-to-Refuse Protection:</strong> Protect riders from account deactivations or AR penalties when declining dangerous submerged routes.",
+    pl4Desc: "<strong>Human Due Process:</strong> Guarantee 72-hour formal notice and union legal representation before any account suspension.",
+    pl5Desc: "<strong>Free Weather Gear &amp; Shelters:</strong> Provide free high-vis waterproof vestaglia (rain ponchos) and typhoon rest hubs across all 16 cities.",
 
     rsvpTitle: "Pledge Your Solidarity For May 1st, 2027",
-    rsvpSub: "Whether you are a delivery rider or a supportive customer, add your voice to the movement.",
+    rsvpSub: "Whether you are a delivery rider or a supportive customer, endorse the 5 pledges and join the movement.",
     btnPledge: "Pledge Solidarity Now",
     btnPledged: "✓ Pledged Solidarity!",
     rsvpLabel: "Supporters & Riders Pledged",
@@ -215,12 +261,46 @@ const translations = {
     heroPonchoTitle: "Kasama ang Opisyal na Kapote",
     heroPonchoDesc: "Maliwanag at matibay na kapoteng panlaban sa ulan at baha, libreng ibinibigay sa bawat sumaping rider.",
 
-    // Weather section
-    weatherBadge: "PAGASA PAALALA SA TAG-ULAN",
-    weatherTitle: "Lagay ng Panahon at Baha sa Metro Manila",
-    weatherDesc: "Dahil sa malakas na ulan, kailangang bagalan ang takbo at i-adjust ang delivery time. Dapat tanggalin ng mga app platform ang time penalties.",
-    weatherTipTitle: "Aktibong Panuntunan sa Ulan:",
-    weatherTipDesc: "May baha sa España Blvd, Taft Avenue, at EDSA Ortigas. Mahigpit na ipinapayo ng UDRMM na sumilong muna at huwag pilitin ang biyahe sa matinding baha.",
+    // Weather & Government Flood Intelligence Hub
+    floodHubTitle: "Opisyal na Datos ng Pamahalaan Ukol sa Baha at Panahon sa Pilipinas",
+    floodHubSub: "Live telemetry at hazard mapping mula sa DOST-PAGASA, UP Project NOAH, at MMDA. Panata ng UDRMM na dapat i-integrate ng mga app (FoodTiger, Grab) ang opisyal na datos ng gobyerno sa kanilang dispatch algorithms upang baguhin ang mga ruta, magbigay ng tamang hazard pay, at protektahan ang buhay ng mga rider.",
+    pagasaLevelOrange: "ORANGE WARNING (AKTIBO)",
+    pagasaMetricDesc: "Matinding Buhos ng Ulan sa Metro Manila River Basins",
+    threshOrangeTitle: "Orange Rainfall Alert:",
+    threshOrangeDesc: "Nakaambang pagbaha sa mabababang komunidad at paligid ng mga ilog.",
+    threshRiverTitle: "Marikina River Gauge:",
+    threshRiverDesc: "15.8 metro (Alert Level 1 Standby / Binabantayan ang mga Gate sa Sto. Niño).",
+    floodDepthLbl: "Tala ng Lalim ng Baha",
+    floodOnsetLbl: "Bilis ng Pag-apaw",
+    floodRiderImpactLbl: "Kapasidad ng Motorsiklo",
+    spaPledgeTitle: "Hinihinging Aksyon sa Algorithm ng Platform:",
+    spaEspanaAction: "Sapilitang Geo-Fencing Detour: I-block ang mga ruta sa España-UST corridor. Kusang ilihis ang mga delivery sa ligtas na alternatibo at magbigay ng +35% hazard compensation.",
+
+    // Platform Integration Comparison
+    pipBadge: "PANGUNAHING PANATA NG KAMPANYA NG UNYON",
+    pipTitle: "Ang Panata ng Unyon: Pag-integrate ng Datos ng Gobyerno sa Algorithm ng Delivery Apps",
+    pipDesc: "Gumagamit ang FoodTiger, Grab, at mga higanteng kumpanya ng bulag na algorithm na ipinagpapalagay na tuyo ang Maynila kahit may malalakas na bagyo. Nananawagan ang UDRMM na gawing sapilitan ang direct API integration ng opisyal na flood hazard maps ng gobyerno sa mga app upang baguhin ang mga ruta, tiyakin ang makatarungang bayad, at iligtas ang mga manggagawa.",
+    pipCurrHead: "❌ Kasalukuyang Kalakaran ng Platform",
+    pipCurrSub: "Bulag na Dry-Season Dispatch Algorithm",
+    pipCurr1Bold: "Puwersahang Pagdaan sa Baha:",
+    pipCurr1Text: "Ipinapasa ng algorithm ang mga motor sa lubog na kalsada (España, Taft) para lang makatipid ng 300 metro, na nagiging sanhi ng pagkasira ng makina at aksidente.",
+    pipCurr2Bold: "Hindi Makatarungang Surge Fee:",
+    pipCurr2Text: "Naniningil ang mga platform ng dagdag na ₱50 hanggang ₱80 sa mga customer ngunit binabawasan pa ng 20% ang kita ng rider tuwing tag-ulan.",
+    pipCurr3Bold: "Mapanirang Countdown Timers:",
+    pipCurr3Text: "Nanatiling aktibo ang mahigpit na 25-minutong timer kahit bumabagyo; ang pagkaantala ay nagreresulta sa 1-star rating at parusa sa account.",
+    pipCurr4Bold: "Parusa sa Pagtanggi sa Mapanganib na Biyahe:",
+    pipCurr4Text: "Ang mga rider na tumatangging lumusong sa baha ay binababaan ng Acceptance Rate (AR) at tinatanggalan ng prayoridad sa mga darating na order.",
+
+    pipPropHead: "✅ Panata ng UDRMM sa Platform",
+    pipPropSub: "Protokol na Nakakabit sa Datos ng Gobyerno",
+    pipProp1Bold: "Matalinong Safety Geo-Fencing:",
+    pipProp1Text: "Direktang koneksyon sa API ng Project NOAH at MMDA upang kusang i-block ang mga rutang may High/Medium hazard zones at ilihis ang mga rider sa ligtas na daan.",
+    pipProp2Bold: "Kusang +35% hanggang +50% Hazard Pay:",
+    pipProp2Text: "Ang opisyal na babala ng PAGASA ay awtomatikong magdaragdag ng hazard pay (+25% Yellow, +35% Orange, +50% Red) na buong mapupunta sa mga rider.",
+    pipProp3Bold: "Proteksyon Laban sa Parusa sa Oras:",
+    pipProp3Text: "Awtomatikong pag-pause sa delivery timer at pagbura sa anumang mababang rating na dulot ng masamang panahon habang may babala ng ulan.",
+    pipProp4Bold: "Pagsunod sa DOLE Labor Advisory 17:",
+    pipProp4Text: "Garantisadong legal na karapatang tumanggi sa mga lubog na kalsada nang walang bawas sa rating, walang parusa, at walang banta ng suspension.",
 
     // Protest Section
     protestBadge: "MAYO 1, 2027 • ARAW NG PAGGAWA",
@@ -247,22 +327,34 @@ const translations = {
     sch4Title: "Pagsumite ng Talaan ng mga Hiling at Diyalogo",
     sch4Desc: "Opisyal na iaabot ng mga kinatawan ng UDRMM ang Limang Punto ng Kahilingan sa pamunuan ng kumpanya at opisyal ng gobyerno.",
 
-    demandsHeading: "Aming mga Hiling vs Kasalukuyang Patakaran ng Kumpanya",
-    dem1Title: "Bawas-Sahod Tuwing Tag-Ulan",
-    dem1Current: "Kasalukuyan: Binawasan ng 20% ang base fare kahit bumabagyo.",
-    dem1Proposed: "Hiling: +35% Monsoon Hazard Pay sa bawat basang biyahe.",
+    demandsHeading: "Aming mga Hiling vs Patakaran ng Kumpanya",
+    dem1Title: "Sapilitang Pag-integrate ng Datos ng Baha",
+    dem1Badge: "PAGASA & NOAH API",
+    dem1Current: "Kasalukuyan: Gumagamit ang mga app ng bulag na algorithm na pumupuwersa sa mga rider na lumusong sa baha at nagbabawas ng 20% sa sahod.",
+    dem1Proposed: "Hiling: Sapilitang pagsama ng PAGASA/NOAH flood maps sa app upang kusang umiwas sa baha, magbigay ng +35% hanggang +50% hazard pay, at itigil ang mga timer.",
     dem2Title: "Mapanirang Delivery Timers",
-    dem2Current: "Kasalukuyan: 25-minutong timer kahit lubog sa baha ang kalsada.",
-    dem2Proposed: "Hiling: Dynamic adjustment sa oras kapag may rainfall alert ang PAGASA.",
+    dem2Badge: "Oras ng Kaligtasan",
+    dem2Current: "Kasalukuyan: Mahigpit na 25-minutong timer kahit lubog ang daan, na nagdudulot ng 1-star weather penalties.",
+    dem2Proposed: "Hiling: Pagpapahaba sa oras at pagbura sa mga mababang customer rating kapag may babala ng ulan.",
     dem3Title: "Biglaang Pagka-Suspend ng Account",
-    dem3Current: "Kasalukuyan: Kusa kang ibinoblock ng algorithm nang walang paliwanag.",
-    dem3Proposed: "Hiling: 72-oras na abiso at karapatang katawanin ng unyon sa paglilitis.",
+    dem3Badge: "Makatarungang Paglilitis",
+    dem3Current: "Kasalukuyan: Biglaang pag-suspend ng algorithm kapag tumanggi ang rider na dumaan sa baha.",
+    dem3Proposed: "Hiling: 72-oras na abiso, representasyon ng unyon, at proteksyon sa ilalim ng DOLE Labor Advisory 17.",
     dem4Title: "Kagamitang Pangkaligtasan at Medikal",
-    dem4Current: "Kasalukuyan: Sariling gastos ng rider kapag naaksidente o nagkasakit.",
-    dem4Proposed: "Hiling: Libreng kapote mula sa kumpanya at emergency medical assistance fund.",
+    dem4Badge: "Kalusugan ng Manggagawa",
+    dem4Current: "Kasalukuyan: 100% ng gamit, kapote, at gastusin sa aksidente ay sariling sagot ng rider.",
+    dem4Proposed: "Hiling: Libreng kapote mula sa kumpanya at emergency medical assistance fund sa lahat ng 16 na lungsod.",
+
+    // The 5 Official Pledges
+    pledgesTitle: "★ ANG LIMANG OPISYAL NA PANATA NG UDRMM • ARAW NG PAGGAWA 2027",
+    pl1Desc: "<strong>Sapilitang Pag-integrate ng Datos ng Baha:</strong> Dapat ikonekta ang delivery apps sa DOST-PAGASA at Project NOAH APIs upang kusang umiwas sa baha at magbigay ng +35% hanggang +50% hazard pay.",
+    pl2Desc: "<strong>Tanggalin ang Parusa sa Bilis:</strong> Itigil ang 25-minutong countdown at burahin ang negatibong ratings habang may opisyal na rainfall alert.",
+    pl3Desc: "<strong>Proteksyon sa DOLE Right-to-Refuse:</strong> Protektahan ang rider sa suspension o AR penalties kapag tumangging dumaan sa delikadong baha.",
+    pl4Desc: "<strong>Makatarungang Paglilitis sa Tao:</strong> Garantiyang 72-oras na abiso at tulong legal ng unyon bago ang anumang suspension ng account.",
+    pl5Desc: "<strong>Libreng Gamit at Masisilungan:</strong> Libreng matibay at high-vis na vestaglia (kapote) at mga masisilungan tuwing bagyo sa lahat ng 16 lungsod.",
 
     rsvpTitle: "Magpahayag ng Suporta sa Mayo 1, 2027",
-    rsvpSub: "Ikaw man ay rider o mamimiling nagmamalasakit, makiisa sa aming panawagan para sa makatarungang pagtrato.",
+    rsvpSub: "Ikaw man ay rider o mamimiling nagmamalasakit, pirmahan ang 5 panata at sumama sa pagkilos.",
     btnPledge: "Pumirma ng Suporta Ngayon",
     btnPledged: "✓ Nakapirma ng Suporta!",
     rsvpLabel: "Mga Rider at Tagasuportang Nakiisa",
@@ -357,8 +449,101 @@ const translations = {
   }
 };
 
+// Official Philippine Government Flood Corridors Telemetry (Project NOAH & MMDA FCSMO)
+const floodHotspotsData = {
+  espana: {
+    en: {
+      title: "España Boulevard (UST to Antipolo St., Manila)",
+      agency: "Subsided Marsh Basin • MMDA Pumping Station 04 • UP Project NOAH Grid",
+      hazardBadge: "HIGH HAZARD (>1.5m)",
+      hazardClass: "badge-hazard-high",
+      depth: "Knee to Waist (0.6m - 1.2m)",
+      onset: "< 25 Minutes (Rain >30mm/hr)",
+      passability: "⛔ IMPASSABLE (Engine Stall & Hydro-Lock)",
+      action: "Mandatory Geo-Fencing Detour: Block order routing through España-UST corridor. Automatically divert orders to elevated bypasses and activate +35% hazard compensation."
+    },
+    fil: {
+      title: "España Boulevard (UST hanggang Antipolo St., Maynila)",
+      agency: "Mababang Marsh Basin • MMDA Pumping Station 04 • UP Project NOAH Grid",
+      hazardBadge: "MATINDING PANGANIB (>1.5m)",
+      hazardClass: "badge-hazard-high",
+      depth: "Abot-Tuhod hanggang Baywang (0.6m - 1.2m)",
+      onset: "< 25 Minuto (Kapag ulan ay >30mm/oras)",
+      passability: "⛔ HINDI MAAARING DAANAN (Tirik ang Makina at Hydro-Lock)",
+      action: "Sapilitang Geo-Fencing Detour: I-block ang mga ruta sa España-UST corridor. Kusang ilihis ang mga delivery sa mas mataas na alternatibo at magbigay ng +35% hazard compensation."
+    }
+  },
+  taft: {
+    en: {
+      title: "Taft Avenue (UN Ave, Pedro Gil & Quirino, Manila)",
+      agency: "Tidal Bottleneck • MMDA Station 11 & Manila Bay Outfall",
+      hazardBadge: "HIGH HAZARD (0.8m - 1.3m)",
+      hazardClass: "badge-hazard-high",
+      depth: "Gutter to Waist (0.5m - 1.1m)",
+      onset: "15 - 30 Minutes during High Tide + Downpour",
+      passability: "⛔ CRITICAL RISK (Exhaust Submersion & Open Manholes)",
+      action: "Platform Auto-Halt: Suspend dispatch across Taft low-points. Forbid punitive cancellation penalties when riders report water crossing footpegs."
+    },
+    fil: {
+      title: "Taft Avenue (UN Ave, Pedro Gil at Quirino, Maynila)",
+      agency: "Tidal Bottleneck • MMDA Station 11 at Manila Bay Outfall",
+      hazardBadge: "MATINDING PANGANIB (0.8m - 1.3m)",
+      hazardClass: "badge-hazard-high",
+      depth: "Abot-Gutter hanggang Baywang (0.5m - 1.1m)",
+      onset: "15 - 30 Minuto tuwing High Tide at malakas na ulan",
+      passability: "⛔ DELIKADO (Lubog ang Tambutso at mga Bukas na Manhole)",
+      action: "Kusang Pagpigil ng Platform: Pansamantalang itigil ang biyahe sa mababang bahagi ng Taft. Ipagbawal ang parusa sa pagkansela kapag lagpas-tapakan na ang baha."
+    }
+  },
+  araneta: {
+    en: {
+      title: "Araneta Avenue & E. Rodriguez (Quezon City)",
+      agency: "San Juan River Overflow Zone • DOST-PAGASA Gauge • MMDA Basin",
+      hazardBadge: "SEVERE HAZARD (>1.8m)",
+      hazardClass: "badge-hazard-high",
+      depth: "Chest to Roof-Level (>1.5m Submersion)",
+      onset: "< 20 Minutes upon San Juan River spill",
+      passability: "⛔ LIFE-THREATENING (Current Sweeps Two-Wheelers)",
+      action: "Instant Red-Zone Blackout: Full algorithmic shutdown of pickups/dropoffs within 1.5km radius of Araneta underpass during river overflow warnings."
+    },
+    fil: {
+      title: "Araneta Avenue at E. Rodriguez (Lungsod Quezon)",
+      agency: "San Juan River Overflow Zone • DOST-PAGASA Gauge • MMDA Basin",
+      hazardBadge: "NAPAKAPANGANIB (>1.8m)",
+      hazardClass: "badge-hazard-high",
+      depth: "Abot-Dibdib hanggang Bubong (>1.5m Pagbaha)",
+      onset: "< 20 Minuto sa pag-apaw ng Ilog San Juan",
+      passability: "⛔ NAKAMAMATAY (Tinatangay ng Agos ang Motorsiklo)",
+      action: "Agad na Red-Zone Blackout: Kumpletong pag-off ng dispatch sa loob ng 1.5km paligid ng Araneta underpass kapag nagbabala ang PAGASA sa pag-apaw ng ilog."
+    }
+  },
+  edsa: {
+    en: {
+      title: "EDSA Corridors (Ortigas Depression, Camp Aguinaldo, & Taft)",
+      agency: "Highway Gutter Ponding • MMDA FCSMO Pump Station 07",
+      hazardBadge: "MODERATE HAZARD (0.4m - 0.9m)",
+      hazardClass: "badge-hazard-med",
+      depth: "Ankle to Knee (0.3m - 0.7m) with Fast Moving Waves",
+      onset: "Immediate with sudden torrential cloudburst",
+      passability: "⚠️ HIGH RISK (Loss of Traction, Hydroplaning & Bus Wake)",
+      action: "Automatic Speed Timer Leniency: Add +40 minutes to all transit windows traversing EDSA; eliminate late arrival deactivation triggers."
+    },
+    fil: {
+      title: "EDSA Corridors (Ortigas Depression, Camp Aguinaldo, at Taft)",
+      agency: "Highway Gutter Ponding • MMDA FCSMO Pump Station 07",
+      hazardBadge: "KATAMTAMANG PANGANIB (0.4m - 0.9m)",
+      hazardClass: "badge-hazard-med",
+      depth: "Abot-Sakong hanggang Tuhod (0.3m - 0.7m) may malalaking alon",
+      onset: "Agad-agad sa biglaang buhos ng ulan",
+      passability: "⚠️ DELIKADO (Dumudulas ang Gulong at hinahampas ng bus)",
+      action: "Kusang Pagpapalawig ng Oras: Magdagdag ng +40 minuto sa lahat ng biyaheng daraan sa EDSA; tanggalin ang parusa sa huling pagdating."
+    }
+  }
+};
+
 // Application State
 let currentLang = 'en';
+let currentSelectedSpot = 'espana';
 let cart = [];
 let rsvpCount = 3842;
 let hasPledged = false;
@@ -374,6 +559,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   applyLanguage(currentLang);
   setupLanguageSwitcher();
+  setupFloodHotspotSwitcher();
   setupCountdown();
   setupRSVP();
   setupCartDrawer();
@@ -382,6 +568,49 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMobileMenu();
   setupCookieAndPrivacy();
 });
+
+// Update Flood Hotspot Telemetry Display
+function updateFloodHotspotDisplay(spotKey) {
+  if (!floodHotspotsData[spotKey]) return;
+  currentSelectedSpot = spotKey;
+  const langData = floodHotspotsData[spotKey][currentLang] || floodHotspotsData[spotKey].en;
+  
+  const titleEl = document.getElementById('spot-title');
+  const agencyEl = document.getElementById('spot-agency');
+  const hazardEl = document.getElementById('spot-hazard');
+  const depthEl = document.getElementById('spot-depth');
+  const onsetEl = document.getElementById('spot-onset');
+  const passabilityEl = document.getElementById('spot-passability');
+  const actionTextEl = document.getElementById('spot-action-text');
+
+  if (titleEl) titleEl.textContent = langData.title;
+  if (agencyEl) agencyEl.textContent = langData.agency;
+  if (hazardEl) {
+    hazardEl.textContent = langData.hazardBadge;
+    hazardEl.className = `hazard-level-badge ${langData.hazardClass}`;
+  }
+  if (depthEl) depthEl.textContent = langData.depth;
+  if (onsetEl) onsetEl.textContent = langData.onset;
+  if (passabilityEl) passabilityEl.textContent = langData.passability;
+  if (actionTextEl) actionTextEl.textContent = langData.action;
+}
+
+// Setup Flood Hotspot Corridor Buttons
+function setupFloodHotspotSwitcher() {
+  const buttons = document.querySelectorAll('.hotspot-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const spot = e.currentTarget.getAttribute('data-spot');
+      buttons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      e.currentTarget.classList.add('active');
+      e.currentTarget.setAttribute('aria-selected', 'true');
+      updateFloodHotspotDisplay(spot);
+    });
+  });
+}
 
 // Switch Language
 function applyLanguage(lang) {
@@ -416,6 +645,9 @@ function applyLanguage(lang) {
       btn.classList.remove('active');
     }
   });
+
+  // Refresh active flood corridor card in current language
+  updateFloodHotspotDisplay(currentSelectedSpot);
 
   // Re-render cart labels if cart is open
   renderCart();

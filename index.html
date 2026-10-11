@@ -191,32 +191,195 @@
       </div>
     </section>
 
-    <!-- LIVE WEATHER & MONSOON ADVISORY BAR -->
-    <section class="weather-section">
+    <!-- PHILIPPINE GOVERNMENT FLOOD RISK & CLIMATE INTELLIGENCE HUB -->
+    <section class="weather-section" id="flood-intelligence">
       <div class="container">
-        <div class="weather-widget">
-          <div class="weather-status">
-            <div class="weather-icon-box" aria-hidden="true">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 4 14.9" stroke="#0038A8" stroke-width="2" fill="#EBF2FF"></path>
-                <line x1="8" y1="19" x2="8" y2="22" stroke="#CE1126" stroke-width="2.5"></line>
-                <line x1="12" y1="17" x2="12" y2="23" stroke="#0038A8" stroke-width="2.5"></line>
-                <line x1="16" y1="19" x2="16" y2="22" stroke="#CE1126" stroke-width="2.5"></line>
-              </svg>
+        <div class="gov-data-header">
+          <div class="gov-badges-row">
+            <span class="gov-agency-badge badge-pagasa">
+              <span class="gov-dot"></span> DOST-PAGASA Hydro-Met
+            </span>
+            <span class="gov-agency-badge badge-noah">
+              <span class="gov-dot"></span> UP Project NOAH Hazard Maps
+            </span>
+            <span class="gov-agency-badge badge-mmda">
+              <span class="gov-dot"></span> MMDA Flood Control (FCSMO)
+            </span>
+            <span class="gov-agency-badge badge-dole">
+              <span class="gov-dot"></span> DOLE Labor Advisory 17-2022
+            </span>
+          </div>
+          <h2 class="gov-section-title" data-i18n="floodHubTitle">
+            Official Philippine Government Flood Risk & Weather Intelligence
+          </h2>
+          <p class="gov-section-sub" data-i18n="floodHubSub">
+            Live telemetry and hazard mapping from DOST-PAGASA, UP Project NOAH, and MMDA. UDRMM pledges that delivery platforms (FoodTiger, Grab) must integrate this official government data into dispatch algorithms to adjust routes, trigger hazard pay, and protect rider lives.
+          </p>
+        </div>
+
+        <!-- MAIN WEATHER & TELEMETRY GRID -->
+        <div class="flood-hub-grid">
+          <!-- Card 1: PAGASA Live Rainfall & Warning Status -->
+          <div class="flood-card flood-card-pagasa">
+            <div class="fcard-header">
+              <div class="fcard-agency">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0038A8" stroke-width="2"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 4 14.9" stroke="#0038A8" stroke-width="2" fill="#EBF2FF"></path><line x1="8" y1="19" x2="8" y2="22" stroke="#CE1126" stroke-width="2.5"></line><line x1="12" y1="17" x2="12" y2="23" stroke="#0038A8" stroke-width="2.5"></line><line x1="16" y1="19" x2="16" y2="22" stroke="#CE1126" stroke-width="2.5"></line></svg>
+                <span>DOST-PAGASA Rainfall Warning</span>
+              </div>
+              <span class="pagasa-alert-pill orange-alert" data-i18n="pagasaLevelOrange">ORANGE WARNING (ACTIVE)</span>
             </div>
-            <div class="weather-info">
-              <span class="weather-badge" data-i18n="weatherBadge">PAGASA MONSOON ADVISORY</span>
-              <h4 data-i18n="weatherTitle">Metro Manila Weather & Flood Risk Status</h4>
-              <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="weatherDesc">
-                Current conditions require lower speeds and adjusted delivery expectations. Platforms must suspend automatic delivery time penalties.
-              </p>
+            
+            <div class="fcard-body">
+              <div class="rainfall-metric">
+                <div class="metric-value">15 - 30 <span class="unit">mm/hr</span></div>
+                <div class="metric-label" data-i18n="pagasaMetricDesc">Intense Monsoon Downpour Measured across Metro Manila River Basins</div>
+              </div>
+              
+              <div class="pagasa-thresholds">
+                <div class="thresh-item active-thresh">
+                  <span class="thresh-dot dot-orange"></span>
+                  <div>
+                    <strong data-i18n="threshOrangeTitle">Orange Rainfall Alert:</strong>
+                    <span data-i18n="threshOrangeDesc">Flooding is threatening in low-lying corridors and river basin communities.</span>
+                  </div>
+                </div>
+                <div class="thresh-item">
+                  <span class="thresh-dot dot-marikina"></span>
+                  <div>
+                    <strong data-i18n="threshRiverTitle">Marikina River Gauge:</strong>
+                    <span data-i18n="threshRiverDesc">15.8 meters (Alert Level 1 Standby / Sto. Niño Floodgates Monitored).</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="weather-advisory">
-            <h5 data-i18n="weatherTipTitle">Active Rain Protocol in Effect:</h5>
-            <p data-i18n="weatherTipDesc">
-              Flash flood warnings reported along España Blvd, Taft Avenue, and EDSA Ortigas. UDRMM strongly advises all riders to seek shelter and pause non-critical trips during severe flooding.
+
+          <!-- Card 2: Interactive Corridor Flood Hazard Telemetry (Project NOAH & MMDA) -->
+          <div class="flood-card flood-card-hotspots">
+            <div class="fcard-header">
+              <div class="fcard-agency">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#CE1126" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                <span>Project NOAH & MMDA Chronic Flood Corridors</span>
+              </div>
+              <span class="source-tag">1-Meter Resolution Map</span>
+            </div>
+
+            <div class="hotspots-selector" role="tablist" aria-label="Flood Hotspot Corridors">
+              <button type="button" class="hotspot-btn active" data-spot="espana" aria-selected="true">
+                España Blvd
+              </button>
+              <button type="button" class="hotspot-btn" data-spot="taft" aria-selected="false">
+                Taft Ave
+              </button>
+              <button type="button" class="hotspot-btn" data-spot="araneta" aria-selected="false">
+                Araneta Ave
+              </button>
+              <button type="button" class="hotspot-btn" data-spot="edsa" aria-selected="false">
+                EDSA Corridors
+              </button>
+            </div>
+
+            <div class="hotspot-detail-box" id="hotspot-detail-display">
+              <div class="spot-header-row">
+                <div>
+                  <h4 class="spot-title" id="spot-title">España Boulevard (UST to Antipolo St., Manila)</h4>
+                  <div class="spot-coords" id="spot-agency">Subsided Marsh Basin • MMDA Pumping Station 04 • UP Project NOAH Grid</div>
+                </div>
+                <span class="hazard-level-badge badge-hazard-high" id="spot-hazard">HIGH HAZARD (>1.5m)</span>
+              </div>
+
+              <div class="spot-stats-row">
+                <div class="spot-stat">
+                  <span class="ss-label" data-i18n="floodDepthLbl">Historical Flood Depth</span>
+                  <span class="ss-val text-red" id="spot-depth">Knee to Waist (0.6m - 1.2m)</span>
+                </div>
+                <div class="spot-stat">
+                  <span class="ss-label" data-i18n="floodOnsetLbl">Onset Inundation Time</span>
+                  <span class="ss-val text-blue" id="spot-onset">&lt; 25 Minutes (Rain &gt;30mm/hr)</span>
+                </div>
+                <div class="spot-stat">
+                  <span class="ss-label" data-i18n="floodRiderImpactLbl">Motorcycle Passability</span>
+                  <span class="ss-val text-danger" id="spot-passability">⛔ IMPASSABLE (Engine Stall &amp; Hydro-Lock)</span>
+                </div>
+              </div>
+
+              <div class="spot-platform-action" id="spot-action">
+                <span class="spa-icon">🛡️</span>
+                <div>
+                  <strong data-i18n="spaPledgeTitle">Required Platform Algorithm Action:</strong>
+                  <p id="spot-action-text" data-i18n="spaEspanaAction">
+                    Mandatory Geo-Fencing Detour: Block order routing through España-UST corridor. Automatically divert orders to elevated bypasses and activate +35% hazard compensation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- THE PLATFORM INTEGRATION PLEDGE COMPARISON -->
+        <div class="platform-integration-pledge-card">
+          <div class="pip-header">
+            <span class="pip-badge" data-i18n="pipBadge">CORE UNION CAMPAIGN PLEDGE</span>
+            <h3 data-i18n="pipTitle">
+              The Union Pledge: Algorithmic Integration of Philippine Government Flood Data
+            </h3>
+            <p data-i18n="pipDesc">
+              FoodTiger, Grab, and delivery giants use blind, dry-season algorithms that treat Manila as flat and dry even during typhoons. UDRMM pledges to enforce direct API integration of official government flood maps into platform dispatch algorithms to adjust routes, guarantee fair hazard pay, and protect workers.
             </p>
+          </div>
+
+          <div class="pip-comparison-grid">
+            <!-- Left: Current Blind Algorithm -->
+            <div class="pip-col pip-current">
+              <div class="pip-col-head text-danger">
+                <span data-i18n="pipCurrHead">❌ Current Platform Practice</span>
+                <small data-i18n="pipCurrSub">Blind Dry-Season Dispatch Algorithm</small>
+              </div>
+              <ul class="pip-list">
+                <li>
+                  <strong data-i18n="pipCurr1Bold">Forced Flood Routing:</strong>
+                  <span data-i18n="pipCurr1Text">Algorithm routes two-wheelers straight through submerged streets (España, Taft) to save 300 meters, causing engine water-lock and crashes.</span>
+                </li>
+                <li>
+                  <strong data-i18n="pipCurr2Bold">Unfair Surcharge Skimming:</strong>
+                  <span data-i18n="pipCurr2Text">Platforms charge customers +₱50 to +₱80 "rain surge fees" while slashing rider base compensation by 20% in rainy months.</span>
+                </li>
+                <li>
+                  <strong data-i18n="pipCurr3Bold">Unforgiving Speed Timers:</strong>
+                  <span data-i18n="pipCurr3Text">Rigid 25-minute ETA countdowns remain active in torrential rains; late deliveries trigger 1-star ratings and algorithmic demerits.</span>
+                </li>
+                <li>
+                  <strong data-i18n="pipCurr4Bold">Punitive Order Rejection:</strong>
+                  <span data-i18n="pipCurr4Text">Riders who decline orders through dangerous floodwaters suffer lower Acceptance Rates (AR) and punitive batch de-prioritization.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Right: Government-Integrated Union Pledge -->
+            <div class="pip-col pip-proposed">
+              <div class="pip-col-head text-blue">
+                <span data-i18n="pipPropHead">✅ UDRMM Platform Pledge</span>
+                <small data-i18n="pipPropSub">Government Data-Integrated Protocol</small>
+              </div>
+              <ul class="pip-list">
+                <li>
+                  <strong data-i18n="pipProp1Bold">Dynamic Safety Geo-Fencing:</strong>
+                  <span data-i18n="pipProp1Text">Direct API link to Project NOAH &amp; MMDA maps automatically blocks routes intersecting High/Medium hazard zones, detouring riders safely.</span>
+                </li>
+                <li>
+                  <strong data-i18n="pipProp2Bold">Automated +35% to +50% Hazard Pay:</strong>
+                  <span data-i18n="pipProp2Text">Live PAGASA rainfall alerts trigger automated hazard pay (+25% Yellow, +35% Orange, +50% Red), passed directly to riders.</span>
+                </li>
+                <li>
+                  <strong data-i18n="pipProp3Bold">Immunity from Delay Penalties:</strong>
+                  <span data-i18n="pipProp3Text">Automatic pausing of delivery timers and complete nullification of weather-related 1-star reviews during official rainfall warnings.</span>
+                </li>
+                <li>
+                  <strong data-i18n="pipProp4Bold">DOLE Labor Advisory 17 Compliance:</strong>
+                  <span data-i18n="pipProp4Text">Guaranteed statutory right to refuse impassable routes with zero demerits, zero deactivations, and protected account ratings.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -318,72 +481,100 @@
               <span data-i18n="demandsHeading">What We Are Demanding vs Platform Policy</span>
             </h3>
             <div class="demands-list">
-              <div class="demand-item">
+              <div class="demand-item demand-highlight-item">
                 <div class="demand-header">
-                  <span class="demand-core" data-i18n="dem1Title">Rainy Season Pay Cuts</span>
-                  <span class="demand-badge">Hazard Pay</span>
+                  <span class="demand-core" data-i18n="dem1Title">Mandatory Gov't Flood Data Integration</span>
+                  <span class="demand-badge badge-gov-flag" data-i18n="dem1Badge">PAGASA & NOAH API</span>
                 </div>
                 <div class="demand-comparison">
-                  <div class="demand-current" data-i18n="dem1Current">Current: Base delivery fee cut by 20% in rainy months.</div>
-                  <div class="demand-proposed" data-i18n="dem1Proposed">Demand: +35% Monsoon Hazard Pay per wet-weather delivery.</div>
+                  <div class="demand-current" data-i18n="dem1Current">Current: Platforms use blind algorithms that force riders into flooded corridors and cut wet-weather pay by 20%.</div>
+                  <div class="demand-proposed" data-i18n="dem1Proposed">Demand: Mandatory API integration of PAGASA/NOAH flood maps to auto-reroute flooded corridors, trigger +35% to +50% hazard pay, and pause speed timers.</div>
                 </div>
               </div>
 
               <div class="demand-item">
                 <div class="demand-header">
-                  <span class="demand-core" data-i18n="dem2Title">Unrealistic Delivery Speeds</span>
-                  <span class="demand-badge">Safety Timers</span>
+                  <span class="demand-core" data-i18n="dem2Title">Unrealistic Delivery Speed Timers</span>
+                  <span class="demand-badge" data-i18n="dem2Badge">Safety Timers</span>
                 </div>
                 <div class="demand-comparison">
-                  <div class="demand-current" data-i18n="dem2Current">Current: Fixed 25-min timers regardless of flooded streets.</div>
-                  <div class="demand-proposed" data-i18n="dem2Proposed">Demand: Dynamic timer adjustments during PAGASA rain alerts.</div>
+                  <div class="demand-current" data-i18n="dem2Current">Current: Fixed 25-min timers regardless of flooded streets, leading to 1-star weather penalties.</div>
+                  <div class="demand-proposed" data-i18n="dem2Proposed">Demand: Dynamic timer extensions and complete nullification of customer rating penalties during rain alerts.</div>
                 </div>
               </div>
 
               <div class="demand-item">
                 <div class="demand-header">
                   <span class="demand-core" data-i18n="dem3Title">Arbitrary Account Suspension</span>
-                  <span class="demand-badge">Due Process</span>
+                  <span class="demand-badge" data-i18n="dem3Badge">Due Process</span>
                 </div>
                 <div class="demand-comparison">
-                  <div class="demand-current" data-i18n="dem3Current">Current: Algorithmic deactivation without human explanation.</div>
-                  <div class="demand-proposed" data-i18n="dem3Proposed">Demand: 72-hour formal notice & UDRMM union representation.</div>
+                  <div class="demand-current" data-i18n="dem3Current">Current: Algorithmic deactivation without human explanation when riders decline flooded trips.</div>
+                  <div class="demand-proposed" data-i18n="dem3Proposed">Demand: 72-hour formal notice, UDRMM representation, and DOLE Labor Advisory 17 right-to-refuse protection.</div>
                 </div>
               </div>
 
               <div class="demand-item">
                 <div class="demand-header">
                   <span class="demand-core" data-i18n="dem4Title">Safety Gear & Medical Coverage</span>
-                  <span class="demand-badge">Worker Health</span>
+                  <span class="demand-badge" data-i18n="dem4Badge">Worker Health</span>
                 </div>
                 <div class="demand-comparison">
-                  <div class="demand-current" data-i18n="dem4Current">Current: 100% equipment & injury expenses borne by rider.</div>
-                  <div class="demand-proposed" data-i18n="dem4Proposed">Demand: Free company-issued rain gear & emergency clinic fund.</div>
+                  <div class="demand-current" data-i18n="dem4Current">Current: 100% equipment, poncho, and injury expenses borne entirely by the rider.</div>
+                  <div class="demand-proposed" data-i18n="dem4Proposed">Demand: Free company-issued rain ponchos & emergency medical clinic fund in all 16 cities.</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- RSVP & Solidarity Pledge Counter -->
+        <!-- RSVP & Solidarity Pledge Counter with 5 Core Pledges -->
         <div class="protest-rsvp-card">
-          <div class="rsvp-left">
-            <div class="rsvp-icon-circle" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5"></path><path d="M14 10V4a2 2 0 0 0-4 0v6"></path><path d="M10 10.5V6a2 2 0 0 0-4 0v8a5 5 0 0 0 5 5h3a5 5 0 0 0 5-5v-3.5a2 2 0 0 0-4 0" fill="rgba(255,255,255,0.2)"></path></svg>
-            </div>
-            <div class="rsvp-text">
-              <h4 data-i18n="rsvpTitle">Pledge Your Solidarity For May 1st, 2027</h4>
-              <p data-i18n="rsvpSub">Whether you are a delivery rider or a supportive customer, add your voice to the movement.</p>
+          <div class="rsvp-pledges-box">
+            <span class="rsvp-pledges-title" data-i18n="pledgesTitle">★ THE 5 OFFICIAL UDRMM CAMPAIGN PLEDGES • LABOR DAY 2027</span>
+            <div class="pledges-list-grid">
+              <div class="pledge-point">
+                <span class="pl-badge">PLEDGE 1</span>
+                <span data-i18n-html="pl1Desc"><strong>Mandatory Gov't Flood Integration:</strong> Delivery apps must connect to DOST-PAGASA &amp; Project NOAH APIs to auto-reroute flooded streets and trigger +35% to +50% hazard pay.</span>
+              </div>
+              <div class="pledge-point">
+                <span class="pl-badge">PLEDGE 2</span>
+                <span data-i18n-html="pl2Desc"><strong>Abolish Speed Demerits:</strong> Suspend 25-min delivery countdowns and nullify negative customer ratings during official rainfall alerts.</span>
+              </div>
+              <div class="pledge-point">
+                <span class="pl-badge">PLEDGE 3</span>
+                <span data-i18n-html="pl3Desc"><strong>DOLE Right-to-Refuse Protection:</strong> Protect riders from account deactivations or AR penalties when declining dangerous submerged routes.</span>
+              </div>
+              <div class="pledge-point">
+                <span class="pl-badge">PLEDGE 4</span>
+                <span data-i18n-html="pl4Desc"><strong>Human Due Process:</strong> Guarantee 72-hour formal notice and union legal representation before any account suspension.</span>
+              </div>
+              <div class="pledge-point">
+                <span class="pl-badge">PLEDGE 5</span>
+                <span data-i18n-html="pl5Desc"><strong>Free Weather Gear &amp; Shelters:</strong> Provide free high-vis waterproof vestaglia (rain ponchos) and typhoon rest hubs across all 16 cities.</span>
+              </div>
             </div>
           </div>
-          <div class="rsvp-action">
-            <div class="rsvp-counter-badge">
-              <div class="rsvp-count-num" id="rsvp-counter-display">3,842</div>
-              <div class="rsvp-count-label" data-i18n="rsvpLabel">Supporters & Riders Pledged</div>
+
+          <div class="rsvp-action-row">
+            <div class="rsvp-left">
+              <div class="rsvp-icon-circle" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5"></path><path d="M14 10V4a2 2 0 0 0-4 0v6"></path><path d="M10 10.5V6a2 2 0 0 0-4 0v8a5 5 0 0 0 5 5h3a5 5 0 0 0 5-5v-3.5a2 2 0 0 0-4 0" fill="rgba(255,255,255,0.2)"></path></svg>
+              </div>
+              <div class="rsvp-text">
+                <h4 data-i18n="rsvpTitle">Pledge Your Solidarity For May 1st, 2027</h4>
+                <p data-i18n="rsvpSub">Whether you are a delivery rider or a supportive customer, endorse the 5 pledges and join the movement.</p>
+              </div>
             </div>
-            <button class="btn-red" id="btn-rsvp-pledge" data-i18n="btnPledge">
-              Pledge Solidarity Now
-            </button>
+            <div class="rsvp-action">
+              <div class="rsvp-counter-badge">
+                <div class="rsvp-count-num" id="rsvp-counter-display">3,842</div>
+                <div class="rsvp-count-label" data-i18n="rsvpLabel">Supporters & Riders Pledged</div>
+              </div>
+              <button class="btn-red" id="btn-rsvp-pledge" data-i18n="btnPledge">
+                Pledge Solidarity Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
