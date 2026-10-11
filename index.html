@@ -26,7 +26,7 @@
         <img src="assets/logo.png?v=20261011_pink" alt="UDRMM Official Logo" class="brand-logo-img" width="48" height="48" loading="eager" decoding="async">
         <div class="brand-text">
           <span class="brand-title">U.D.R.M.M.</span>
-          <span class="brand-subtitle">United Delivery Riders • Manila</span>
+          <span class="brand-subtitle" data-i18n="brand_subtitle">United Delivery Riders of Metro Manila</span>
         </div>
       </a>
 
@@ -484,12 +484,12 @@
 
               <div class="vestaglia-cta-row">
                 <div class="vestaglia-price-tag">
-                  <span class="price-original">Retail ₱14,850</span>
-                  <span class="price-free">₱0 FREE</span>
-                  <span style="font-size: 0.78rem; color: var(--text-muted);" data-i18n="vestagliaPriceLabel">Included with Union Registration</span>
+                  <span class="price-original" data-i18n="membershipFeeDuesLbl">Annual Union Dues</span>
+                  <span class="price-free">₱150 <span style="font-size: 0.82rem; font-weight: 600;">PHP / yr</span></span>
+                  <span style="font-size: 0.78rem; color: var(--text-muted);" data-i18n="membershipFeeLabel">Includes High-Vis Safety Vest & Stickers (Hardship Waiver Available)</span>
                 </div>
                 <button class="btn-primary open-membership-btn" data-i18n="btnClaimPoncho">
-                  Register to Claim Free Poncho
+                  Register & Join Union (₱150/yr)
                 </button>
               </div>
             </div>
@@ -539,7 +539,7 @@
 
               <div class="product-footer">
                 <div class="product-price">
-                  ₱7,450 <span class="currency">PHP</span>
+                  ₱320 <span class="currency">PHP</span>
                 </div>
                 <button class="btn-add-cart" onclick="addToCart('vest')">
                   <span>🛍️</span>
@@ -579,7 +579,7 @@
 
               <div class="product-footer">
                 <div class="product-price">
-                  ₱2,450 <span class="currency">PHP</span>
+                  ₱120 <span class="currency">PHP</span>
                 </div>
                 <button class="btn-add-cart" onclick="addToCart('stickers')">
                   <span>🛍️</span>
@@ -611,7 +611,7 @@
 
               <div class="product-footer">
                 <div class="product-price">
-                  ₱4,850 <span class="currency">PHP</span>
+                  ₱280 <span class="currency">PHP</span>
                 </div>
                 <button class="btn-add-cart" onclick="addToCart('cap')">
                   <span>🛍️</span>
@@ -637,7 +637,7 @@
 
               <div class="product-footer">
                 <div class="product-price">
-                  ₱8,950 <span class="currency">PHP</span>
+                  ₱380 <span class="currency">PHP</span>
                 </div>
                 <button class="btn-add-cart" onclick="addToCart('phone-mount')">
                   <span>🛍️</span>
@@ -716,52 +716,103 @@
         <div class="about-card">
           <div class="about-grid">
             <div class="about-text">
-              <span class="section-badge badge-blue" data-i18n="aboutBadge">ACADEMIC & CIVIC FRAMEWORK</span>
+              <span class="section-badge badge-blue" data-i18n="aboutBadge">ACADEMIC & CIVIC FRAMEWORK • TASKFORCE 2</span>
               <h3 data-i18n="aboutTitle">Battling Global Giants Locally (B.G.G.L.)</h3>
               <p data-i18n="aboutDesc1">
-                United Delivery Riders of Metro Manila (UDRMM) is a civic project developed by Taskforce 2 for MSM Assignment 2 under the campaign 'Battling Global Giants Locally'. Our goal is to illustrate how grassroots gig workers can organize against multinational platform exploitation.
+                <strong>Battling Global Giants Locally (B.G.G.L.)</strong> is our student Taskforce Crew. The name represents our focus on supporting local workers in their struggle against the power of global platform companies, and the acronym <strong>B.G.G.L.</strong> is formed directly from the initials of the four students comprising this taskforce: <strong>B</strong>eatrice, <strong>G</strong>yeong, <strong>G</strong>eorgia, and <strong>L</strong>ouise.
               </p>
               <p data-i18n="aboutDesc2">
-                By blending local cultural solidarity (bayanihan, barangay community networks) with modern digital campaigning and collective bargaining strategies, we prove that no corporate giant is too large to negotiate with organized labor.
+                <strong>Academic Framework & Fictional Identity:</strong> Within the fictional scenario of our communication campaign, B.G.G.L. acts directly as the internal communication team and union organizers of <strong>United Delivery Riders of Metro Manila (UDRMM)</strong>—a worker-led union fighting for gig food and delivery riders. We are not external consultants or a commercial PR agency; we operate from within the movement.
               </p>
+
+              <!-- Research Evidence & Situation Analysis Cards -->
+              <div class="about-research-grid">
+                <div class="about-research-card">
+                  <h5>📊 DOLE-OSHC Study (2023)</h5>
+                  <p>
+                    A Philippine Department of Labor and Employment study of 130 Metro Manila riders revealed that <strong>91%</strong> have no formal employment contracts, <strong>68%</strong> work &gt;8 hours daily, and <strong>40%</strong> suffered road injuries on duty (Sta Ana et al., 2023).
+                  </p>
+                </div>
+                <div class="about-research-card">
+                  <h5>🛵 Fairwork Philippines (2025)</h5>
+                  <p>
+                    Across ~85,000 riders (Foodpanda ~45k, Grab ~40k), <strong>0 out of 9 platforms</strong> guaranteed local minimum wage after factoring in fuel, phone data, and motorcycle maintenance. Riders bear 100% of operational risks (Fairwork, 2025).
+                  </p>
+                </div>
+              </div>
+
+              <!-- Campaign Targets & Crowdfunding Box -->
+              <div class="about-targets-box">
+                <h5 data-i18n="campaignTargetsHeading">🎯 Campaign Targets & Transparent Union Fund Allocation</h5>
+                <ul class="about-targets-list">
+                  <li class="about-target-item">
+                    <strong>500 Registered Riders</strong>
+                    <span>Union recruitment target across all 16 NCR cities within 6 weeks.</span>
+                  </li>
+                  <li class="about-target-item">
+                    <strong>10,000 Signatures</strong>
+                    <span>Public petition to ban storm delivery penalties before June monsoon rains.</span>
+                  </li>
+                  <li class="about-target-item">
+                    <strong>Target 1: Basic Fund</strong>
+                    <span>Transparent crowdfunding & dues for waterproof stickers, website, and leaflets.</span>
+                  </li>
+                  <li class="about-target-item">
+                    <strong>Target 2: Safety & Aid</strong>
+                    <span>In-person assemblies, Rider Safety Day, and mutual emergency legal defense.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <div class="about-sidebar">
-              <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.75rem;" data-i18n="teamHeading">
-                Taskforce 2 Project Working Group
+              <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.35rem;" data-i18n="teamHeading">
+                Taskforce 2 Working Group
               </h4>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1rem;" data-i18n="teamSub">
+                Ordered by working group responsibilities (Initials: B.G.G.L.):
+              </p>
+              
               <div class="team-list">
+                <!-- 1. Beatrice -->
                 <div class="team-member">
                   <div>
-                    <div class="member-name">Beatrice Augusta Gentile (Bea)</div>
-                    <div style="font-size: 0.76rem; color: var(--text-muted);">Belgium (Italian) • Communication & Society</div>
+                    <div class="member-name">1. Beatrice Augusta Gentile (Bea)</div>
+                    <div style="font-size: 0.76rem; color: var(--text-muted);">Belgium (Italian) • Communication and Society</div>
                   </div>
-                  <span class="member-role" data-i18n="roleDesign">Design & Visual Communication</span>
+                  <span class="member-role" data-i18n="roleDesign">Design & Visual Production</span>
                 </div>
 
+                <!-- 2. Gyeong -->
                 <div class="team-member">
                   <div>
-                    <div class="member-name">Gyeong Park (G)</div>
-                    <div style="font-size: 0.76rem; color: var(--text-muted);">Japan (Korean) • IT & Commerce</div>
+                    <div class="member-name">2. Gyeong Park (G)</div>
+                    <div style="font-size: 0.76rem; color: var(--text-muted);">Japan (Korean) • IT and Commerce</div>
                   </div>
-                  <span class="member-role" data-i18n="roleWriting">Writing & IT Coordination</span>
+                  <span class="member-role" data-i18n="roleWriting">Writing & Report Lead</span>
                 </div>
 
+                <!-- 3. Georgia -->
                 <div class="team-member">
                   <div>
-                    <div class="member-name">Louise Auger</div>
-                    <div style="font-size: 0.76rem; color: var(--text-muted);">France (French) • Agronomy</div>
-                  </div>
-                  <span class="member-role" data-i18n="roleLeadership">Project Leadership & Strategy</span>
-                </div>
-
-                <div class="team-member">
-                  <div>
-                    <div class="member-name">Georgia Selpesi (Gina)</div>
+                    <div class="member-name">3. Georgia Selpesi (Gina)</div>
                     <div style="font-size: 0.76rem; color: var(--text-muted);">Sweden (Greek) • Economics</div>
                   </div>
-                  <span class="member-role" data-i18n="roleComm">Communication & Economics</span>
+                  <span class="member-role" data-i18n="roleComm">Internal & External Comm</span>
                 </div>
+
+                <!-- 4. Louise -->
+                <div class="team-member">
+                  <div>
+                    <div class="member-name">4. Louise Auger</div>
+                    <div style="font-size: 0.76rem; color: var(--text-muted);">France (French) • Agronomy</div>
+                  </div>
+                  <span class="member-role" data-i18n="roleLeadership">Planning & Leadership</span>
+                </div>
+              </div>
+
+              <div style="margin-top: 1rem; padding: 0.75rem; background: var(--bg-card-soft); border: 1px dashed var(--border-light); border-radius: var(--radius-md); font-size: 0.75rem; color: var(--text-muted); line-height: 1.45;">
+                <strong style="color: var(--text-main);">*Collective Duties:</strong> All members participate equally in brainstorming, strategic decision-making, and active engagement on Padlet and Canvas.
               </div>
             </div>
           </div>
@@ -777,7 +828,10 @@
         <div class="footer-brand">
           <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
             <img src="assets/logo.png?v=20261011_pink" alt="UDRMM Official Logo" width="40" height="40" class="brand-logo-img">
-            <h4 style="margin: 0;">U.D.R.M.M.</h4>
+            <div>
+              <h4 style="margin: 0; line-height: 1.2;">U.D.R.M.M.</h4>
+              <div style="font-size: 0.78rem; font-weight: 700; color: #94A3B8;" data-i18n="brand_subtitle">United Delivery Riders of Metro Manila</div>
+            </div>
           </div>
           <p>
             United Delivery Riders of Metro Manila.<br>
@@ -857,7 +911,7 @@
           <img src="assets/logo.png?v=20261011_pink" alt="UDRMM Official Logo" width="38" height="38" class="brand-logo-img">
           <div>
             <div class="brand-title" style="font-size: 0.95rem;">U.D.R.M.M.</div>
-            <div class="brand-subtitle" style="font-size: 0.7rem;">Metro Manila Rider Union</div>
+            <div class="brand-subtitle" style="font-size: 0.7rem;" data-i18n="brand_subtitle">United Delivery Riders of Metro Manila</div>
           </div>
         </a>
         <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation menu">✕</button>
@@ -976,19 +1030,19 @@
       </div>
 
       <div class="modal-body" id="membership-modal-body">
-        <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.25rem;" data-i18n="modalMemberSub">
-          Complete your free registration to join the union and receive your official heavy-duty rain poncho.
+        <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.15rem;" data-i18n="modalMemberSub">
+          Join the United Delivery Riders of Metro Manila. Annual union dues (₱150 PHP / year) sustain our collective legal defense, helmet stickers, and worker-led campaign.
         </p>
 
-        <!-- Free poncho perk alert inside modal -->
-        <div class="free-poncho-notice">
-          <img src="assets/product-poncho.jpg" alt="Official Rain Poncho" width="56" height="56" loading="lazy" decoding="async">
+        <!-- Dues & Gear package banner inside modal -->
+        <div class="free-poncho-notice" style="border-left: 4px solid var(--ph-blue);">
+          <img src="assets/product-vest.jpg" alt="Official Union Gear" width="56" height="56" loading="lazy" decoding="async">
           <div>
-            <strong style="color: var(--ph-blue); font-size: 0.92rem; display: block; margin-bottom: 2px;">
-              🎁 Free High-Vis All-Weather Vestaglia (Rain Poncho)
+            <strong style="color: var(--ph-blue); font-size: 0.92rem; display: block; margin-bottom: 2px;" data-i18n="unionDuesTitle">
+              💳 Annual Union Dues: ₱150 PHP / year
             </strong>
-            <p data-i18n="regPonchoNote" style="font-size: 0.8rem; color: var(--text-body); font-weight: normal; margin: 0;">
-              Included at ₱0 for all registered union members. Select your size below.
+            <p data-i18n="regDuesNote" style="font-size: 0.8rem; color: var(--text-body); font-weight: normal; margin: 0;">
+              Includes official High-Vis Safety Vest & Waterproof Stickers. Hardship fee waiver available below—no rider is left behind.
             </p>
           </div>
         </div>
@@ -1022,7 +1076,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="member-size" data-i18n="modalSizeLbl">Select Rain Poncho Size:</label>
+            <label class="form-label" for="member-size" data-i18n="modalSizeLbl">Select Safety Vest / Gear Size:</label>
             <select id="member-size" class="form-select" required>
               <option value="M">Medium (M) - Height 5'2" to 5'6"</option>
               <option value="L" selected>Large (L) - Height 5'6" to 5'10"</option>
@@ -1031,8 +1085,22 @@
             </select>
           </div>
 
+          <div class="form-group" style="background: rgba(10, 37, 64, 0.04); border-radius: 8px; padding: 0.75rem; border: 1px solid var(--border-light);">
+            <label class="form-label" style="margin-bottom: 0.35rem;" data-i18n="duesPaymentOptionLbl">Annual Contribution Plan:</label>
+            <div style="display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.84rem;">
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="radio" name="dues_plan" id="plan-standard" value="standard" checked>
+                <span><strong>Standard Union Dues: ₱150 PHP / year</strong> (GCash / Maya / In-Person)</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <input type="radio" name="dues_plan" id="plan-waiver" value="waiver">
+                <span style="color: var(--ph-blue);"><strong>Request Solidarity Hardship Waiver (₱0)</strong> — I am in financial difficulty</span>
+              </label>
+            </div>
+          </div>
+
           <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem;" data-i18n="btnSubmitRegistration">
-            Complete Registration & Claim Poncho
+            Complete Registration & Join Union
           </button>
         </form>
       </div>
