@@ -135,7 +135,7 @@ const translations = {
     itemVestSizeLbl: "Size:",
 
     itemStickersTitle: "Official Weatherproof Vinyl Sticker Pack (Yellow & Red)",
-    itemStickersDesc: "Heavy-duty outdoor laminated vinyl stickers in high-vis neon yellow and deep crimson red. Includes the official union emblem and an embedded scannable QR code redirecting to the official UDRMM union platform.",
+    itemStickersDesc: "Heavy-duty outdoor laminated vinyl stickers in high-vis neon yellow and deep crimson red. Features the official union emblem and bold typography, ideal for helmets, motorcycle windshields, and delivery boxes.",
     itemStickerVariantLbl: "Pack:",
 
     itemCapTitle: "Official UDRMM Embroidered Cap",
@@ -342,7 +342,7 @@ const translations = {
     itemVestSizeLbl: "Sukat:",
 
     itemStickersTitle: "Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)",
-    itemStickersDesc: "Matibay at hindi nababasang outdoor laminated vinyl stickers sa neon yellow at malalim na crimson red. Tampok ang opisyal na sagisag ng unyon at scannable QR code papunta sa opisyal na website ng UDRMM.",
+    itemStickersDesc: "Matibay at hindi nababasang outdoor laminated vinyl stickers sa neon yellow at malalim na crimson red. Tampok ang opisyal na sagisag ng unyon at malinaw na disenyo para sa mga helmet, windshield, at delivery box.",
     itemStickerVariantLbl: "Pake:",
 
     itemCapTitle: "Opisyal na Burdadong Sumbrero ng UDRMM",
@@ -1206,13 +1206,13 @@ function setupProductVariants() {
       // Auto-preview matching sticker image
       if (stickerImg && stickerSwitcher) {
         if (selectedStickerVariant.includes('Yellow')) {
-          stickerImg.src = 'assets/sticker-yellow-qr.jpg?v=3';
+          stickerImg.src = 'assets/sticker-yellow-qr.jpg?v=4';
           stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('sticker-yellow-qr')));
         } else if (selectedStickerVariant.includes('Red')) {
-          stickerImg.src = 'assets/sticker-red-qr.jpg?v=3';
+          stickerImg.src = 'assets/sticker-red-qr.jpg?v=4';
           stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('sticker-red-qr')));
         } else {
-          stickerImg.src = 'assets/product-stickers.jpg?v=3';
+          stickerImg.src = 'assets/product-stickers.jpg?v=4';
           stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('product-stickers')));
         }
       }
@@ -1259,7 +1259,7 @@ const productsCatalog = {
     titleEn: 'Official Weatherproof Vinyl Sticker Pack (Yellow & Red)',
     titleFil: 'Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)',
     price: 120,
-    img: 'assets/product-stickers.jpg?v=3',
+    img: 'assets/product-stickers.jpg?v=4',
     getVariant: () => selectedStickerVariant
   },
   'cap': {
@@ -1767,7 +1767,7 @@ function getThematicFallback(type) {
       <rect x="15" y="15" width="370" height="270" rx="16" fill="#FEF9D9" stroke="#FDE047" stroke-width="2"/>
       <circle cx="130" cy="135" r="65" fill="#DBFE01" stroke="#000000" stroke-width="3"/>
       <circle cx="270" cy="135" r="65" fill="#A10101" stroke="#000000" stroke-width="3"/>
-      <text x="200" y="270" fill="#111827" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">WEATHERPROOF STICKER PACK WITH QR</text>
+      <text x="200" y="270" fill="#111827" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">WEATHERPROOF VINYL STICKER PACK</text>
     </svg>`,
     'phone-mount': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
       <rect width="400" height="300" fill="#FFF5F7"/>
