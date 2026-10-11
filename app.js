@@ -24,74 +24,74 @@ const translations = {
     heroTitlePart1: "No delivery is worth a ",
     heroTitleHighlight: "rider's safety.",
     heroSubtitle: "United Delivery Riders of Metro Manila (UDRMM) is an independent, worker-led union fighting against algorithmic pay cuts, wet-season delivery speed penalties, and hazardous working conditions in Metro Manila.",
-    heroCtaJoin: "Become a Member (₱150/yr Dues)",
-    heroCtaProtest: "May 1st Action Hub",
-    statMembers: "Active Riders Enrolled",
-    statHazardPay: "Monsoon Hazard Pay Demand",
-    statCities: "Metro Manila Cities Covered",
+    heroCtaJoin: "Become a member (₱150/yr dues)",
+    heroCtaProtest: "May 1st action hub",
+    statMembers: "Active riders enrolled",
+    statHazardPay: "Monsoon hazard pay demand",
+    statCities: "Metro Manila cities covered",
     
     // Hero Card
-    heroCardTitle: "United We Ride, United We Win",
+    heroCardTitle: "United we ride, united we win",
     heroCardDesc: "Organizing riders from FoodTiger, Grab, Foodpanda, and independent couriers across all 16 cities.",
     perk1: "Official heavy-duty high-vis gear & safety package included",
     perk2: "Legal aid & emergency suspension support",
     perk3: "Barangay solidarity shelters during typhoons",
     perk4: "Collective bargaining representation with DOLE",
     freePonchoBadge: "INCLUDED WITH DUES",
-    heroPonchoTitle: "Official Rain Poncho Included",
+    heroPonchoTitle: "Official rain poncho included",
     heroPonchoDesc: "High-visibility reflective all-weather poncho given to all riders upon registration.",
-    membershipFeeDuesLbl: "Annual Union Dues",
-    membershipFeeLabel: "Includes High-Vis Safety Vest & Stickers (Annual Dues: ₱150/yr)",
-    btnClaimPoncho: "Register & Join Union (₱150/yr)",
+    membershipFeeDuesLbl: "Annual union dues",
+    membershipFeeLabel: "Includes high-vis safety vest & stickers (Annual dues: ₱150/yr)",
+    btnClaimPoncho: "Register & join union (₱150/yr)",
 
     // Live Weather & Flood Risk Advisory Widget
     weatherBadge: "PAGASA & PROJECT NOAH ADVISORY",
     pagasaLevelOrange: "Orange Warning (15-30 mm/hr)",
-    weatherTitle: "Metro Manila Weather & Flood Risk Status",
+    weatherTitle: "Metro Manila weather & flood risk status",
     weatherDesc: "Active monsoon downpour. Flooding threatening España, Taft, and EDSA corridors. Platforms must suspend automatic delivery time penalties.",
-    weatherTipTitle: "Active Rain Protocol in Effect:",
+    weatherTipTitle: "Active rain protocol in effect:",
     weatherTipDesc: "Delivery timers paused; +35% monsoon hazard pay demanded. Riders retain statutory right to refuse submerged routes under DOLE Advisory 17.",
-    weatherPledgeLink: "View Platform Demand #1 →",
+    weatherPledgeLink: "View platform demand #1 →",
 
     // Protest Section
     protestBadge: "MAY 1, 2027 • LABOR DAY MOBILIZATION",
-    protestTitle: "The May 1st, 2027 Rider Unity March & App Freeze",
+    protestTitle: "The May 1st, 2027 rider unity march & app freeze",
     protestDesc: "During the rainy season, platform giants cut pay per order while demanding unchanged dry-season delivery speeds. On May 1st, 2027 (Labor Day), thousands of riders across Metro Manila will unite for a peaceful caravan, dialogue, and 1-hour solidarity app freeze.",
-    countdownHeading: "Countdown to May 1st Mobilization",
+    countdownHeading: "Countdown to May 1st mobilization",
     countdownSub: "Saturday, May 1, 2027 • Assembly at 09:00 AM",
     lblDays: "Days",
     lblHours: "Hours",
     lblMins: "Mins",
     lblSecs: "Secs",
     
-    scheduleHeading: "May 1st Action Schedule (Labor Day 2027)",
+    scheduleHeading: "May 1st action schedule (Labor Day 2027)",
     sch1Time: "09:00 AM",
-    sch1Title: "Twin Assembly Points",
+    sch1Title: "Twin assembly points",
     sch1Desc: "Riders gather at Welcome Rotonda (Quezon City / Manila border) and EDSA Shrine (Ortigas). Distribution of high-vis armbands.",
     sch2Time: "10:00 AM",
-    sch2Title: "Peaceful Motorcade Caravan",
+    sch2Title: "Peaceful motorcade caravan",
     sch2Desc: "Orderly single-lane motorcycle caravan towards corporate headquarters in Bonifacio Global City (BGC) and DOLE NCR.",
     sch3Time: "12:00 PM - 01:00 PM",
-    sch3Title: "Silent App Freeze (1-Hour Boycott)",
+    sch3Title: "Silent app freeze (1-hour boycott)",
     sch3Desc: "Mass app logoff. No orders picked up across participating districts to demonstrate the real economic impact of riders.",
     sch4Time: "02:00 PM",
-    sch4Title: "Charter of Demands Handover & Dialogue",
+    sch4Title: "Charter of demands handover & dialogue",
     sch4Desc: "UDRMM representatives present our 5 Five-Point Collective Demands directly to FoodTiger management and DOLE officials.",
 
-    demandsHeading: "What We Are Demanding vs Platform Policy",
-    dem1Title: "Mandatory Gov't Flood Data Integration",
+    demandsHeading: "What we are demanding vs Platform policy",
+    dem1Title: "Mandatory gov't flood data integration",
     dem1Badge: "PAGASA & NOAH API",
     dem1Current: "Current: Platforms use blind algorithms that force riders into flooded corridors and cut wet-weather pay by 20%.",
     dem1Proposed: "Demand: Mandatory API integration of PAGASA/NOAH flood maps to auto-reroute flooded corridors, trigger +35% to +50% hazard pay, and pause speed timers.",
-    dem2Title: "Unrealistic Delivery Speed Timers",
+    dem2Title: "Unrealistic delivery speed timers",
     dem2Badge: "Safety Timers",
     dem2Current: "Current: Fixed 25-min timers regardless of flooded streets, leading to 1-star weather penalties.",
     dem2Proposed: "Demand: Dynamic timer extensions and complete nullification of customer rating penalties during rain alerts.",
-    dem3Title: "Arbitrary Account Suspension",
+    dem3Title: "Arbitrary account suspension",
     dem3Badge: "Due Process",
     dem3Current: "Current: Algorithmic deactivation without human explanation when riders decline flooded trips.",
     dem3Proposed: "Demand: 72-hour formal notice, UDRMM representation, and DOLE Labor Advisory 17 right-to-refuse protection.",
-    dem4Title: "Safety Gear & Medical Coverage",
+    dem4Title: "Safety gear & medical coverage",
     dem4Badge: "Worker Health",
     dem4Current: "Current: 100% equipment, poncho, and injury expenses borne entirely by the rider.",
     dem4Proposed: "Demand: Free company-issued rain ponchos & emergency medical clinic fund in all 16 cities.",
@@ -104,11 +104,11 @@ const translations = {
     pl4Desc: "<strong>Human Due Process:</strong> Guarantee 72-hour formal notice and union legal representation before any account suspension.",
     pl5Desc: "<strong>Free Weather Gear &amp; Shelters:</strong> Provide free high-vis waterproof vestaglia (rain ponchos) and typhoon rest hubs across all 16 cities.",
 
-    rsvpTitle: "Pledge Your Solidarity For May 1st, 2027",
+    rsvpTitle: "Pledge your solidarity for May 1st, 2027",
     rsvpSub: "Whether you are a delivery rider or a supportive customer, endorse the 5 pledges and join the movement.",
-    btnPledge: "Pledge Solidarity Now",
-    btnPledged: "✓ Pledged Solidarity!",
-    rsvpLabel: "Supporters & Riders Pledged",
+    btnPledge: "Pledge solidarity now",
+    btnPledged: "✓ Pledged solidarity!",
+    rsvpLabel: "Supporters & riders pledged",
 
     // Shop & Free Poncho
     shopBadge: "UNION MEMBERSHIP & SOLIDARITY SHOP",
@@ -117,40 +117,40 @@ const translations = {
     
     // Hero Poncho Product
     vestagliaTag: "★ EXCLUSIVE UNION MEMBER BENEFIT",
-    vestagliaTitle: "Official Heavy-Duty All-Weather Vestaglia (Rain Poncho)",
+    vestagliaTitle: "Official heavy-duty all-weather vestaglia (rain poncho)",
     vestagliaDesc: "Designed specifically for Manila's torrential monsoon conditions. Made with double-sealed Oxford waterproof nylon, 360° neon safety stripes, storm flaps, and the official UDRMM rider chest insignia. Included for all registered union members with paid annual dues.",
-    vf1: "100% Storm-Proof Waterproof Fabric",
-    vf2: "360° Neon & Silver Reflective Safety Bands",
-    vf3: "Helmet-Compatible Drawstring Hood",
-    vf4: "Reinforced Mobile Phone Chest Pockets",
-    vestagliaPriceLabel: "Included with ₱150/yr Union Membership",
-    btnClaimPoncho: "Register & Join Union (₱150/yr)",
+    vf1: "100% storm-proof waterproof fabric",
+    vf2: "360° neon & silver reflective safety bands",
+    vf3: "Helmet-compatible drawstring hood",
+    vf4: "Reinforced mobile phone chest pockets",
+    vestagliaPriceLabel: "Included with ₱150/yr union membership",
+    btnClaimPoncho: "Register & join union (₱150/yr)",
     
     // Accessories Grid
-    accessoriesTitle: "Official Solidarity Accessories",
+    accessoriesTitle: "Official solidarity accessories",
     accessoriesDesc: "High-durability accessories designed for riders and solidarity allies.",
     
-    itemVestTitle: "Official High-Vis Security Jacket / Safety Vest",
+    itemVestTitle: "Official high-vis security jacket / safety vest",
     itemVestDesc: "Industrial-grade neon yellow security safety vest with dual 3M reflective bands. Features the official union credential badge with scannable QR code on the chest and the rallying slogan 'NO DELIVERY IS WORTH A RIDER'S SAFETY' on the back.",
     itemVestSizeLbl: "Size:",
 
-    itemStickersTitle: "Official Weatherproof Vinyl Sticker Pack (Yellow & Red)",
+    itemStickersTitle: "Official weatherproof vinyl sticker pack (Yellow & Red)",
     itemStickersDesc: "Heavy-duty outdoor laminated vinyl stickers in high-vis neon yellow and deep crimson red. Features the official union emblem and bold typography, ideal for helmets, motorcycle windshields, and delivery boxes.",
     itemStickerVariantLbl: "Pack:",
 
-    itemCapTitle: "Official UDRMM Embroidered Cap",
+    itemCapTitle: "Official UDRMM embroidered cap",
     itemCapDesc: "Durable cotton twill cap featuring the Philippine sun badge, scooter emblem, and the embroidered slogan: 'NO DELIVERY IS WORTH A RIDER'S SAFETY'. Available in Royal Blue and Crimson Red.",
     itemCapColorLbl: "Color:",
     
-    itemPhoneTitle: "Heavy-Duty Handlebar Phone Mount",
+    itemPhoneTitle: "Heavy-duty handlebar phone mount",
     itemPhoneDesc: "100% waterproof sealed case with touchscreen sensitivity, vibration absorption, and secure handlebar clamp. Built for intense rain navigation.",
     
-    btnAddCart: "Add to Bag",
+    btnAddCart: "Add to bag",
     btnAdded: "✓ Added!",
     
     // Stories Section
     storiesBadge: "VOICES FROM THE ROAD",
-    storiesTitle: "Why We Organize: Real Rider Stories",
+    storiesTitle: "Why we organize: real rider stories",
     storiesDesc: "Listen to the lived experiences of delivery workers navigating Manila's streets.",
     story1Text: "\"During the July typhoons, floodwaters on España reached knee-deep. A customer gave me a 1-star rating because soup was 8 minutes late. That rating cut my incentives for a week. That is when I knew we needed a union.\"",
     story1Author: "Kuya Jun",
@@ -173,40 +173,40 @@ const translations = {
     roleWriting: "Writing",
     roleComm: "Communication",
     roleLeadership: "Leadership",
-    campaignTargetsHeading: "🎯 Campaign Targets & Transparent Union Fund Allocation",
+    campaignTargetsHeading: "🎯 Campaign targets & transparent union fund allocation",
     
     // Cart Drawer
-    cartTitle: "Your Solidarity Bag",
+    cartTitle: "Your solidarity bag",
     cartEmpty: "Your bag is empty. Add accessories to support the union!",
     subtotalLbl: "Subtotal:",
-    btnCheckout: "Proceed to Order",
+    btnCheckout: "Proceed to order",
     
     // Membership Modal
     modalMemberTitle: "Join United Delivery Riders of Metro Manila",
     modalMemberSub: "Join the United Delivery Riders of Metro Manila. Annual union dues (₱150 PHP / year) are required to sustain our collective legal defense, helmet stickers, and worker-led campaign.",
-    unionDuesTitle: "💳 Annual Union Dues: ₱150 PHP / year (Required)",
-    regDuesNote: "Includes official High-Vis Safety Vest & Waterproof Stickers package upon paid enrollment.",
-    modalNameLbl: "Full Name:",
-    modalPlatformLbl: "Delivery Platform(s):",
+    unionDuesTitle: "💳 Annual union dues: ₱150 PHP / year (Required)",
+    regDuesNote: "Includes official high-vis safety vest & waterproof stickers package upon paid enrollment.",
+    modalNameLbl: "Full name:",
+    modalPlatformLbl: "Delivery platform(s):",
     modalCityLbl: "City / Barangay in Metro Manila:",
-    modalPhoneLbl: "Mobile Number (GCash / Contact):",
-    modalSizeLbl: "Select Safety Vest / Gear Size:",
-    duesPaymentOptionLbl: "Annual Membership Fee (₱150 PHP / year):",
-    btnSubmitRegistration: "Pay ₱150 Dues & Complete Registration",
+    modalPhoneLbl: "Mobile number (GCash / Contact):",
+    modalSizeLbl: "Select safety vest / gear size:",
+    duesPaymentOptionLbl: "Annual membership fee (₱150 PHP / year):",
+    btnSubmitRegistration: "Pay ₱150 dues & complete registration",
     
     // Modal Confirmation
     registeredTitle: "Mabuhay! Welcome to UDRMM!",
     registeredSub: "Your membership registration and annual dues payment (₱150 PHP) have been confirmed. Here is your official Union Digital ID:",
-    regPonchoNote: "Your Official High-Vis Safety Vest & Waterproof Stickers package will be prepared for pickup at your local Barangay Solidarity Station or coordinated via your mobile contact.",
+    regPonchoNote: "Your official high-vis safety vest & waterproof stickers package will be prepared for pickup at your local Barangay Solidarity Station or coordinated via your mobile contact.",
     
     // GDPR & Cookie Banner
     cookieTitle: "Cookie & Data Privacy Notice",
     cookieText: "We value your privacy. As an academic prototype for MSM Assignment 2, this website uses only strictly essential local storage (such as saving your English/Filipino language preference). We do NOT use tracking, profiling, or third-party advertising cookies. All checkout and membership functions are simulated mock-ups.",
-    cookieAcceptBtn: "Accept Essential Only",
-    cookieDetailsBtn: "Privacy Details & Settings",
-    privacyModalTitle: "Data Privacy & GDPR Notice",
+    cookieAcceptBtn: "Accept essential only",
+    cookieDetailsBtn: "Privacy details & settings",
+    privacyModalTitle: "Data privacy & GDPR notice",
     privacyModalSubtitle: "Academic Prototype • MSM Assignment 2 (Taskforce 2)",
-    btnCloseModal: "Close Window"
+    btnCloseModal: "Close window"
   },
 
   fil: {
@@ -1248,7 +1248,7 @@ function setupProductViewSwitchers() {
 const productsCatalog = {
   'vest': {
     id: 'vest',
-    titleEn: 'Official High-Vis Security Jacket / Safety Vest',
+    titleEn: 'Official high-vis security jacket / safety vest',
     titleFil: 'Opisyal na High-Vis Security Jacket / Safety Vest',
     price: 320,
     img: 'assets/product-vest.jpg',
@@ -1256,7 +1256,7 @@ const productsCatalog = {
   },
   'stickers': {
     id: 'stickers',
-    titleEn: 'Official Weatherproof Vinyl Sticker Pack (Yellow & Red)',
+    titleEn: 'Official weatherproof vinyl sticker pack (Yellow & Red)',
     titleFil: 'Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)',
     price: 120,
     img: 'assets/product-stickers.jpg?v=4',
@@ -1264,7 +1264,7 @@ const productsCatalog = {
   },
   'cap': {
     id: 'cap',
-    titleEn: 'Official UDRMM Embroidered Cap',
+    titleEn: 'Official UDRMM embroidered cap',
     titleFil: 'Opisyal na Burdadong Sumbrero ng UDRMM',
     price: 280,
     img: 'assets/product-caps.jpg',
@@ -1272,7 +1272,7 @@ const productsCatalog = {
   },
   'phone-mount': {
     id: 'phone-mount',
-    titleEn: 'Heavy-Duty Handlebar Phone Mount',
+    titleEn: 'Heavy-duty handlebar phone mount',
     titleFil: 'Heavy-Duty Handlebar Phone Mount Case',
     price: 380,
     img: 'assets/product-phone-mount-v2.jpg?v=2',
@@ -1466,7 +1466,7 @@ function setupMembershipModal() {
               <img src="assets/product-vest.jpg" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover;">
               <div>
                 <strong style="color: var(--ph-blue); font-size: 0.95rem; display: block; margin-bottom: 2px;">
-                  🛡️ Official High-Vis Safety Vest & Stickers Package Included!
+                  🛡️ Official high-vis safety vest & stickers package included!
                 </strong>
                 <p style="font-size: 0.82rem; color: var(--text-body); font-weight: normal; margin: 0;">
                   ${translations[currentLang].regPonchoNote}
@@ -1518,7 +1518,7 @@ window.completeCheckout = function(e) {
       <div class="success-card">
         <div class="success-icon-badge">✓</div>
         <h3 style="font-size: 1.4rem; font-weight: 900; color: var(--ph-blue); margin-bottom: 0.5rem;">
-          ${currentLang === 'en' ? 'Solidarity Order Placed!' : 'Natanggap ang Inyong Order ng Pagkakaisa!'}
+          ${currentLang === 'en' ? 'Solidarity order placed!' : 'Natanggap ang Inyong Order ng Pagkakaisa!'}
         </h3>
         <p style="font-size: 0.92rem; color: var(--text-body); margin-bottom: 1rem;">
           ${currentLang === 'en' 
@@ -1526,8 +1526,8 @@ window.completeCheckout = function(e) {
             : 'Salamat sa pagsuporta sa pondo ng unyon! Ipinadala na ang detalye ng order sa iyong cellphone sa pamamagitan ng SMS.'}
         </p>
         <div style="background: var(--bg-card-soft); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem; font-size: 0.85rem; margin-bottom: 1.5rem; text-align: left;">
-          <div><strong>Order Reference:</strong> #UDRMM-${Math.floor(100000 + Math.random() * 900000)}</div>
-          <div><strong>Estimated Dispatch:</strong> Within 48 Hours via Solidarity Courier</div>
+          <div><strong>Order reference:</strong> #UDRMM-${Math.floor(100000 + Math.random() * 900000)}</div>
+          <div><strong>Estimated dispatch:</strong> Within 48 hours via solidarity courier</div>
         </div>
         <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="closeCheckoutModal()">
           ${translations[currentLang].btnCloseModal}
