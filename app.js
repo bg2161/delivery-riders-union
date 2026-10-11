@@ -549,7 +549,10 @@ function setupRSVP() {
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000);
-      const res = await fetch(`${PLEDGE_API_URL}/get/${PLEDGE_API_KEY}`, {
+      const url = `${PLEDGE_API_URL}/get/${PLEDGE_API_KEY}?_t=${Date.now()}`;
+      const res = await fetch(url, {
+        cache: 'no-store',
+        headers: { 'Accept': 'application/json' },
         signal: controller.signal
       });
       clearTimeout(timeoutId);
@@ -560,7 +563,7 @@ function setupRSVP() {
           const prev = rsvpCount;
           rsvpCount = data.value;
           localStorage.setItem('udrmm_pledge_count', rsvpCount.toString());
-          renderCount(prev !== rsvpCount && prev > 0);
+          renderCount(prev !== rsvpCount);
         }
       } else if (res.status === 404) {
         // Key not yet hit by anyone globally -> count is 0
@@ -588,7 +591,10 @@ function setupRSVP() {
     try {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 6000);
-      const res = await fetch(`${PLEDGE_API_URL}/hit/${PLEDGE_API_KEY}`, {
+      const url = `${PLEDGE_API_URL}/hit/${PLEDGE_API_KEY}?_t=${Date.now()}`;
+      const res = await fetch(url, {
+        cache: 'no-store',
+        headers: { 'Accept': 'application/json' },
         signal: controller.signal
       });
       clearTimeout(timeoutId);
@@ -625,10 +631,15 @@ function setupRSVP() {
   renderCount();
   fetchGlobalCount();
 
-  // Periodically refresh global tally every 30s so visitor sees pledges from other users
-  setInterval(fetchGlobalCount, 30000);
+  // Real-time polling every 3s so pledges on phone/other devices reflect immediately on PC
+  setInterval(() => {
+    if (!document.hidden) {
+      fetchGlobalCount();
+    }
+  }, 3000);
 
-  // Refresh tally immediately when tab regains visibility
+  // Instant refresh when user returns to tab or focuses the window
+  window.addEventListener('focus', fetchGlobalCount);
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) {
       fetchGlobalCount();
