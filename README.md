@@ -5,7 +5,17 @@ Un sito web moderno, interattivo e bilingue (Inglese e Filippino/Tagalog) per il
 
 ---
 
-## 🚀 Come Aprire ed Eseguire il Sito (Self-Hosted Locale)
+## 🚀 Come Pubblicare i Cambiamenti su GitHub (1 Clic)
+
+All'interno della cartella trovi lo script automatico:
+👉 **`PUSH_SU_GITHUB.command`**
+
+Ogni volta che modifichi testi, stili o immagini:
+1. Fai **doppio clic** su `PUSH_SU_GITHUB.command`.
+2. Lo script rileva in automatico tutti i file modificati, crea il commit con data e ora ed esegue il `git push` su GitHub.
+3. Il tuo sito su GitHub Pages (`https://bg2161.github.io/delivery-riders-union/`) si aggiornerà automaticamente dopo pochi istanti!
+
+---
 
 Hai a disposizione due modalità immediate per visualizzare il sito sulla tua macchina:
 
