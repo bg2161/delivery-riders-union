@@ -58,14 +58,14 @@ const translations = {
     protestTitle: "The May 1st, 2027 Rider Unity March & App Freeze",
     protestDesc: "During the rainy season, platform giants cut pay per order while demanding unchanged dry-season delivery speeds. On May 1st, 2027 (Labor Day), thousands of riders across Metro Manila will unite for a peaceful caravan, dialogue, and 1-hour solidarity app freeze.",
     countdownHeading: "Countdown to May 1st Mobilization",
-    countdownSub: "Saturday, May 1, 2027 • Assembly at 08:30 AM",
+    countdownSub: "Saturday, May 1, 2027 • Assembly at 09:00 AM",
     lblDays: "Days",
     lblHours: "Hours",
     lblMins: "Mins",
     lblSecs: "Secs",
     
     scheduleHeading: "May 1st Action Schedule (Labor Day 2027)",
-    sch1Time: "08:30 AM",
+    sch1Time: "09:00 AM",
     sch1Title: "Twin Assembly Points",
     sch1Desc: "Riders gather at Welcome Rotonda (Quezon City / Manila border) and EDSA Shrine (Ortigas). Distribution of high-vis armbands.",
     sch2Time: "10:00 AM",
@@ -169,10 +169,10 @@ const translations = {
     aboutDesc2: "By blending local cultural solidarity (bayanihan, barangay community networks) with modern digital campaigning and collective bargaining strategies, we prove that no corporate giant is too large to negotiate with organized labor.",
     teamHeading: "Taskforce 2 Working Group",
     teamSub: "Ordered following the student initials in B.G.G.L. (Beatrice, Gyeong, Georgia, Louise):",
-    roleDesign: "Design & Visual Production",
-    roleWriting: "Writing & Report Lead",
-    roleComm: "Internal & External Comm",
-    roleLeadership: "Planning & Leadership",
+    roleDesign: "Design",
+    roleWriting: "Writing",
+    roleComm: "Communication",
+    roleLeadership: "Leadership",
     campaignTargetsHeading: "🎯 Campaign Targets & Transparent Union Fund Allocation",
     
     // Cart Drawer
@@ -265,14 +265,14 @@ const translations = {
     protestTitle: "Martsa ng Pagkakaisa ng mga Rider sa Mayo 1, 2027",
     protestDesc: "Tuwing tag-ulan, binabawasan ng FoodTiger ang bayad sa bawat delivery ngunit pareho pa rin ang bilis na hinihingi tulad ng tag-init. Sa Mayo 1, 2027 (Araw ng Paggawa), magsasama-sama ang mga rider para sa payapang motorcade caravan, diyalogo, at 1-oras na pag-logoff sa app.",
     countdownHeading: "Oras Bago ang Pagkilos sa Mayo 1",
-    countdownSub: "Sabado, Mayo 1, 2027 • Tipunan sa ganap na 08:30 AM",
+    countdownSub: "Sabado, Mayo 1, 2027 • Tipunan sa ganap na 09:00 AM",
     lblDays: "Araw",
     lblHours: "Oras",
     lblMins: "Minuto",
     lblSecs: "Segundo",
     
     scheduleHeading: "Plano ng Pagkilos sa Mayo 1, 2027",
-    sch1Time: "08:30 AM",
+    sch1Time: "09:00 AM",
     sch1Title: "Dalawang Tipunan",
     sch1Desc: "Pagtitipon sa Welcome Rotonda (QC/Manila) at EDSA Shrine (Ortigas). Pamamahagi ng mga high-visibility armband.",
     sch2Time: "10:00 AM",
@@ -376,10 +376,10 @@ const translations = {
     aboutDesc2: "Sa pamamagitan ng diwa ng bayanihan, tulungan sa barangay, at modernong kampanya sa digital media, pinatutunayan natin na walang kumpanyang higit na makapangyarihan kaysa sa nagkakaisang hanay ng mga manggagawa.",
     teamHeading: "Taskforce 2 Working Group",
     teamSub: "Nakaayos ayon sa mga inisyal ng mag-aaral sa B.G.G.L. (Beatrice, Gyeong, Georgia, Louise):",
-    roleDesign: "Disenyo at Visual Materials",
-    roleWriting: "Pagsusulat at Ulat Lead",
-    roleComm: "Komunikasyon at Ugnayan",
-    roleLeadership: "Pamumuno at Pagpaplano",
+    roleDesign: "Design",
+    roleWriting: "Writing",
+    roleComm: "Communication",
+    roleLeadership: "Leadership",
     campaignTargetsHeading: "🎯 Mga Target ng Kampanya at Malinaw na Alokasyon ng Pondo",
     
     // Cart Drawer
@@ -503,7 +503,7 @@ function setupLanguageSwitcher() {
 
 // Countdown to May 1st, 2027 (Labor Day Mobilization)
 function setupCountdown() {
-  const targetDate = new Date(2027, 4, 1, 8, 30, 0); // May 1, 2027 at 08:30 AM (Month 4 = May)
+  const targetDate = new Date(2027, 4, 1, 9, 0, 0); // May 1, 2027 at 09:00 AM (Month 4 = May)
 
   function update() {
     const currentTime = new Date().getTime();
