@@ -14,7 +14,7 @@ const translations = {
     navHome: "Home",
     navProtest: "May 1 Protest",
     navDemands: "Our Demands",
-    navShop: "Shop & Poncho",
+    navShop: "Membership & Shop",
     navStories: "Rider Stories",
     navAbout: "About Us",
     btnJoinNav: "Join Union (₱150/yr)",
@@ -111,7 +111,7 @@ const translations = {
     rsvpLabel: "Supporters & Riders Pledged",
 
     // Shop & Free Poncho
-    shopBadge: "UNION SOLIDARITY SHOP",
+    shopBadge: "UNION MEMBERSHIP & SOLIDARITY SHOP",
     shopTitle: "Wear The Struggle. Fund The Movement.",
     shopDesc: "Every purchase directly supports UDRMM legal funds, emergency rider medical aid, and community meeting hubs.",
     
@@ -221,7 +221,7 @@ const translations = {
     navHome: "Tahanan",
     navProtest: "Protesta sa Mayo 1",
     navDemands: "Aming Hiling",
-    navShop: "Tindahan at Gamit",
+    navShop: "Kasapian at Tindahan",
     navStories: "Kuwento ng Rider",
     navAbout: "Tungkol sa Amin",
     btnJoinNav: "Sumapi sa Unyon (₱150/taon)",
@@ -318,7 +318,7 @@ const translations = {
     rsvpLabel: "Mga Rider at Tagasuportang Nakiisa",
 
     // Shop & Free Poncho
-    shopBadge: "TINDAHAN NG PAGKAKAISA",
+    shopBadge: "KASAPIAN SA UNYON AT SOLIDARITY SHOP",
     shopTitle: "Isuot ang Paninindigan. Suportahan ang Kilusan.",
     shopDesc: "Bawat kita ay direktang napupunta sa pondong legal ng UDRMM, tulong medikal sa mga naaksidenteng rider, at mga sentrong pangkomunidad.",
     
