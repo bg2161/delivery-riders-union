@@ -599,6 +599,7 @@ function setupRSVP() {
           rsvpCount = data.value;
           localStorage.setItem('udrmm_pledge_count', rsvpCount.toString());
           renderCount(prev !== rsvpCount);
+          checkPledgeMilestones(prev, rsvpCount);
         }
       } else if (res.status === 404) {
         // Key not yet hit by anyone globally -> count is 0
@@ -615,6 +616,7 @@ function setupRSVP() {
   async function handlePledge() {
     if (isPledging) return;
     isPledging = true;
+    const prev = rsvpCount;
 
     // Immediately trigger tactile animation on button & counter badge
     if (countEl) {
@@ -656,6 +658,7 @@ function setupRSVP() {
     localStorage.setItem('udrmm_has_pledged', 'true');
 
     renderCount(true);
+    checkPledgeMilestones(prev, rsvpCount);
 
     const toastMsg = currentLang === 'en'
       ? `Salamat! Global solidarity pledge recorded (Total: ${rsvpCount.toLocaleString()}).`
@@ -664,7 +667,9 @@ function setupRSVP() {
   }
 
   renderCount();
-  fetchGlobalCount();
+  fetchGlobalCount().then(() => {
+    checkPledgeMilestones(0, rsvpCount);
+  });
 
   // Real-time polling every 3s so pledges on phone/other devices reflect immediately on PC
   setInterval(() => {
@@ -686,7 +691,14 @@ function setupRSVP() {
   }
 
   if (badgeBtn) {
-    badgeBtn.addEventListener('click', handlePledge);
+    badgeBtn.addEventListener('click', (e) => {
+      if (e.shiftKey) {
+        const next = rsvpCount < 50 ? 50 : (rsvpCount < 100 ? 100 : (rsvpCount < 200 ? 200 : 50));
+        triggerEasterEgg(next);
+        return;
+      }
+      handlePledge();
+    });
     badgeBtn.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -695,6 +707,463 @@ function setupRSVP() {
     });
   }
 }
+
+// ============================================================================
+// MILESTONE EASTER EGGS (50, 100, 200 Pledges)
+// ============================================================================
+
+let activeEasterEggCleanup = null;
+
+function checkPledgeMilestones(prev, current) {
+  if (typeof current !== 'number' || current <= 0) return;
+  
+  const seen50 = sessionStorage.getItem('udrmm_egg_50') === 'true';
+  const seen100 = sessionStorage.getItem('udrmm_egg_100') === 'true';
+  const seen200 = sessionStorage.getItem('udrmm_egg_200') === 'true';
+
+  if ((prev < 50 && current >= 50) || (current === 50 && !seen50)) {
+    sessionStorage.setItem('udrmm_egg_50', 'true');
+    triggerEasterEgg(50);
+  } else if ((prev < 100 && current >= 100) || (current === 100 && !seen100)) {
+    sessionStorage.setItem('udrmm_egg_100', 'true');
+    triggerEasterEgg(100);
+  } else if ((prev < 200 && current >= 200) || (current === 200 && !seen200)) {
+    sessionStorage.setItem('udrmm_egg_200', 'true');
+    triggerEasterEgg(200);
+  }
+}
+
+function playEasterEggAudio(type) {
+  try {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) return;
+    const ctx = new AudioContextClass();
+    if (ctx.state === 'suspended') ctx.resume();
+    const now = ctx.currentTime;
+
+    if (type === 'caravan') {
+      [0, 0.16].forEach(delay => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(680, now + delay);
+        osc.frequency.exponentialRampToValueAtTime(740, now + delay + 0.08);
+        gain.gain.setValueAtTime(0.18, now + delay);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + delay + 0.12);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + delay);
+        osc.stop(now + delay + 0.13);
+      });
+    } else if (type === 'fireworks') {
+      [0.1, 0.55, 1.1, 1.7, 2.3].forEach((burstTime, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(220 + idx * 30, now + burstTime);
+        osc.frequency.exponentialRampToValueAtTime(50, now + burstTime + 0.28);
+        gain.gain.setValueAtTime(0.2, now + burstTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + burstTime + 0.32);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + burstTime);
+        osc.stop(now + burstTime + 0.33);
+      });
+    } else if (type === 'fanfare') {
+      const notes = [523.25, 659.25, 783.99, 1046.50];
+      notes.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sawtooth';
+        const t = now + idx * 0.16;
+        osc.frequency.setValueAtTime(freq, t);
+        gain.gain.setValueAtTime(0.14, t);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + (idx === 3 ? 0.6 : 0.22));
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(t);
+        osc.stop(t + (idx === 3 ? 0.65 : 0.25));
+      });
+    }
+  } catch (err) {}
+}
+
+function triggerEasterEgg(milestone) {
+  if (activeEasterEggCleanup) {
+    try { activeEasterEggCleanup(); } catch (e) {}
+    activeEasterEggCleanup = null;
+  }
+
+  if (milestone === 50) {
+    triggerCaravanEasterEgg();
+  } else if (milestone === 100) {
+    triggerFireworksEasterEgg();
+  } else if (milestone === 200) {
+    triggerConfettiStormEasterEgg();
+  }
+}
+
+// 1. Milestone 50 Easter Egg: Metro Manila Riders Solidarity Caravan 🛵
+function triggerCaravanEasterEgg() {
+  playEasterEggAudio('caravan');
+
+  const container = document.createElement('div');
+  container.className = 'easter-egg-container';
+  document.body.appendChild(container);
+
+  const banner = document.createElement('div');
+  banner.className = 'easter-egg-banner';
+  banner.innerHTML = `
+    <h4>🛵 50 SOLIDARITY PLEDGES! • RIDERS CARAVAN MOBILIZED! 🇵🇭</h4>
+    <p>50 delivery workers & allies rolling united across Metro Manila!</p>
+  `;
+  banner.onclick = () => { if (activeEasterEggCleanup) activeEasterEggCleanup(); };
+  document.body.appendChild(banner);
+  requestAnimationFrame(() => banner.classList.add('active'));
+
+  for (let i = 0; i < 14; i++) {
+    const el = document.createElement('div');
+    el.className = 'caravan-scooter';
+    const bottomLane = 10 + Math.random() * 32;
+    const duration = 2.8 + Math.random() * 1.6;
+    const delay = i * 0.22;
+    const scale = 0.85 + Math.random() * 0.35;
+    
+    el.style.bottom = `${bottomLane}%`;
+    el.style.animation = `driveAcross ${duration}s cubic-bezier(0.25, 0.1, 0.25, 1) ${delay}s forwards`;
+    el.style.transform = `scale(${scale})`;
+
+    el.innerHTML = `
+      <svg viewBox="0 0 100 70" width="100%" height="100%">
+        <polygon points="75,45 140,30 140,60" fill="rgba(252, 209, 22, 0.25)"/>
+        <rect x="5" y="18" width="28" height="24" rx="3" fill="#CE1126" stroke="#FFFFFF" stroke-width="1.5"/>
+        <text x="19" y="34" fill="#FFFFFF" font-size="7" font-weight="900" text-anchor="middle" font-family="sans-serif">UDRMM</text>
+        <circle cx="48" cy="12" r="8" fill="#111827"/>
+        <path d="M42,12 Q48,6 54,12" stroke="#FCD116" stroke-width="2" fill="none"/>
+        <path d="M40,20 L56,20 L58,40 L38,40 Z" fill="#FCD116"/>
+        <line x1="42" y1="28" x2="56" y2="28" stroke="#FFFFFF" stroke-width="2"/>
+        <path d="M25,48 L55,48 L65,35 L75,45 L80,52" stroke="#0038A8" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <circle cx="25" cy="52" r="10" fill="#1E293B" stroke="#64748B" stroke-width="2"/>
+        <circle cx="25" cy="52" r="4" fill="#E2E8F0"/>
+        <circle cx="75" cy="52" r="10" fill="#1E293B" stroke="#64748B" stroke-width="2"/>
+        <circle cx="75" cy="52" r="4" fill="#E2E8F0"/>
+        <circle cx="78" cy="45" r="3" fill="#FCD116"/>
+        <line x1="33" y1="18" x2="33" y2="4" stroke="#CBD5E1" stroke-width="1.5"/>
+        <polygon points="33,4 20,8 33,12" fill="#0038A8"/>
+      </svg>
+    `;
+    container.appendChild(el);
+  }
+
+  const timeoutId = setTimeout(() => {
+    banner.classList.remove('active');
+    setTimeout(() => {
+      container.remove();
+      banner.remove();
+    }, 600);
+  }, 5600);
+
+  activeEasterEggCleanup = () => {
+    clearTimeout(timeoutId);
+    container.remove();
+    banner.remove();
+  };
+}
+
+// 2. Milestone 100 Easter Egg: Manila Night Sky Fireworks Show 🎆
+function triggerFireworksEasterEgg() {
+  playEasterEggAudio('fireworks');
+
+  const container = document.createElement('div');
+  container.className = 'easter-egg-container';
+  container.style.background = 'radial-gradient(ellipse at bottom, rgba(15, 23, 42, 0.45) 0%, rgba(2, 6, 23, 0.7) 100%)';
+  container.style.transition = 'opacity 0.6s ease';
+  document.body.appendChild(container);
+
+  const canvas = document.createElement('canvas');
+  canvas.className = 'easter-egg-canvas';
+  container.appendChild(canvas);
+
+  const banner = document.createElement('div');
+  banner.className = 'easter-egg-banner';
+  banner.innerHTML = `
+    <h4>🎆 100 SOLIDARITY PLEDGES! • CENTURY OF UNITY REACHED! 🌟</h4>
+    <p>The night sky of Manila blazes in solidarity for rider dignity & fair pay!</p>
+  `;
+  banner.onclick = () => { if (activeEasterEggCleanup) activeEasterEggCleanup(); };
+  document.body.appendChild(banner);
+  requestAnimationFrame(() => banner.classList.add('active'));
+
+  const ctx = canvas.getContext('2d');
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  const onResize = () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  };
+  window.addEventListener('resize', onResize);
+
+  const particles = [];
+  const rockets = [];
+  const colors = ['#FCD116', '#0038A8', '#CE1126', '#FFFFFF', '#38BDF8', '#F59E0B'];
+
+  class Rocket {
+    constructor() {
+      this.x = width * 0.15 + Math.random() * (width * 0.7);
+      this.y = height + 10;
+      this.targetY = height * 0.15 + Math.random() * (height * 0.35);
+      this.speed = 10 + Math.random() * 4;
+      this.color = colors[Math.floor(Math.random() * colors.length)];
+      this.alive = true;
+    }
+    update() {
+      this.y -= this.speed;
+      if (this.y <= this.targetY) {
+        this.alive = false;
+        this.explode();
+      }
+    }
+    explode() {
+      const pCount = 75 + Math.floor(Math.random() * 35);
+      for (let i = 0; i < pCount; i++) {
+        const angle = (Math.PI * 2 / pCount) * i + (Math.random() - 0.5) * 0.2;
+        const vel = 2 + Math.random() * 5.5;
+        particles.push({
+          x: this.x,
+          y: this.y,
+          vx: Math.cos(angle) * vel,
+          vy: Math.sin(angle) * vel,
+          alpha: 1,
+          decay: 0.014 + Math.random() * 0.014,
+          color: Math.random() > 0.3 ? this.color : colors[Math.floor(Math.random() * colors.length)],
+          size: 2 + Math.random() * 2.5
+        });
+      }
+    }
+    draw(c) {
+      c.beginPath();
+      c.arc(this.x, this.y, 3, 0, Math.PI * 2);
+      c.fillStyle = '#FFFFFF';
+      c.fill();
+    }
+  }
+
+  let rocketTimer = 0;
+  let totalSpawned = 0;
+  let animId = null;
+
+  function loop() {
+    ctx.clearRect(0, 0, width, height);
+
+    if (totalSpawned < 14 && ++rocketTimer % 18 === 0) {
+      rockets.push(new Rocket());
+      totalSpawned++;
+    }
+
+    for (let i = rockets.length - 1; i >= 0; i--) {
+      rockets[i].update();
+      if (rockets[i].alive) {
+        rockets[i].draw(ctx);
+      } else {
+        rockets.splice(i, 1);
+      }
+    }
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.07;
+      p.vx *= 0.98;
+      p.alpha -= p.decay;
+
+      if (p.alpha <= 0) {
+        particles.splice(i, 1);
+      } else {
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.fillStyle = p.color;
+        ctx.shadowColor = p.color;
+        ctx.shadowBlur = 8;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    animId = requestAnimationFrame(loop);
+  }
+
+  loop();
+
+  const timeoutId = setTimeout(() => {
+    banner.classList.remove('active');
+    container.style.opacity = '0';
+    setTimeout(() => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener('resize', onResize);
+      container.remove();
+      banner.remove();
+    }, 700);
+  }, 6500);
+
+  activeEasterEggCleanup = () => {
+    clearTimeout(timeoutId);
+    cancelAnimationFrame(animId);
+    window.removeEventListener('resize', onResize);
+    container.remove();
+    banner.remove();
+  };
+}
+
+// 3. Milestone 200 Easter Egg: Confetti Cannon Blast & Golden Storm 🏆⚡
+function triggerConfettiStormEasterEgg() {
+  playEasterEggAudio('fanfare');
+
+  const countBadge = document.getElementById('rsvp-badge-btn');
+  if (countBadge) {
+    countBadge.classList.add('milestone-badge-glow');
+  }
+
+  const container = document.createElement('div');
+  container.className = 'easter-egg-container';
+  document.body.appendChild(container);
+
+  const canvas = document.createElement('canvas');
+  canvas.className = 'easter-egg-canvas';
+  container.appendChild(canvas);
+
+  const banner = document.createElement('div');
+  banner.className = 'easter-egg-banner';
+  banner.style.border = '3px solid #FCD116';
+  banner.innerHTML = `
+    <h4>🏆 200 HEROES OF MANILA! • THE WORKERS' POWER IS UNSTOPPABLE! ⚡🇵🇭</h4>
+    <p>Mass mobilization unlocked • Together we ride to victory this May 1st!</p>
+  `;
+  banner.onclick = () => { if (activeEasterEggCleanup) activeEasterEggCleanup(); };
+  document.body.appendChild(banner);
+  requestAnimationFrame(() => banner.classList.add('active'));
+
+  const ctx = canvas.getContext('2d');
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  const onResize = () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  };
+  window.addEventListener('resize', onResize);
+
+  const pieces = [];
+  const palette = ['#FCD116', '#CE1126', '#0038A8', '#FFFFFF', '#F59E0B', '#10B981'];
+
+  function spawnCannonBlast(originX, originY, angleRad, spreadRad, count) {
+    for (let i = 0; i < count; i++) {
+      const angle = angleRad + (Math.random() - 0.5) * spreadRad;
+      const speed = 14 + Math.random() * 22;
+      pieces.push({
+        x: originX,
+        y: originY,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        sizeW: 8 + Math.random() * 8,
+        sizeH: 12 + Math.random() * 12,
+        color: palette[Math.floor(Math.random() * palette.length)],
+        rotation: Math.random() * Math.PI * 2,
+        rotSpeed: (Math.random() - 0.5) * 0.25,
+        tilt: Math.random() * Math.PI,
+        tiltSpeed: 0.05 + Math.random() * 0.1,
+        isStar: Math.random() > 0.75,
+        alpha: 1,
+        decay: 0.0035 + Math.random() * 0.003
+      });
+    }
+  }
+
+  spawnCannonBlast(0, height * 0.95, -Math.PI / 4, Math.PI / 3.5, 140);
+  spawnCannonBlast(width, height * 0.95, -Math.PI * 0.75, Math.PI / 3.5, 140);
+
+  setTimeout(() => {
+    spawnCannonBlast(width * 0.5, height, -Math.PI / 2, Math.PI / 2.5, 120);
+  }, 700);
+
+  let animId = null;
+
+  function loop() {
+    ctx.clearRect(0, 0, width, height);
+
+    for (let i = pieces.length - 1; i >= 0; i--) {
+      const p = pieces[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.28;
+      p.vx *= 0.985;
+      p.rotation += p.rotSpeed;
+      p.tilt += p.tiltSpeed;
+      p.alpha -= p.decay;
+
+      if (p.alpha <= 0 || p.y > height + 50) {
+        pieces.splice(i, 1);
+      } else {
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, p.alpha);
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation);
+
+        const scaleY = Math.sin(p.tilt);
+
+        if (p.isStar) {
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          for (let s = 0; s < 5; s++) {
+            ctx.lineTo(Math.cos((18 + s * 72) * Math.PI / 180) * p.sizeW,
+                       -Math.sin((18 + s * 72) * Math.PI / 180) * p.sizeW * scaleY);
+            ctx.lineTo(Math.cos((54 + s * 72) * Math.PI / 180) * (p.sizeW / 2),
+                       -Math.sin((54 + s * 72) * Math.PI / 180) * (p.sizeW / 2) * scaleY);
+          }
+          ctx.closePath();
+          ctx.fill();
+        } else {
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.sizeW / 2, (-p.sizeH / 2) * scaleY, p.sizeW, p.sizeH * scaleY);
+        }
+        ctx.restore();
+      }
+    }
+
+    if (pieces.length > 0) {
+      animId = requestAnimationFrame(loop);
+    }
+  }
+
+  loop();
+
+  const timeoutId = setTimeout(() => {
+    banner.classList.remove('active');
+    setTimeout(() => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener('resize', onResize);
+      container.remove();
+      banner.remove();
+      if (countBadge) countBadge.classList.remove('milestone-badge-glow');
+    }, 700);
+  }, 7000);
+
+  activeEasterEggCleanup = () => {
+    clearTimeout(timeoutId);
+    cancelAnimationFrame(animId);
+    window.removeEventListener('resize', onResize);
+    container.remove();
+    banner.remove();
+    if (countBadge) countBadge.classList.remove('milestone-badge-glow');
+  };
+}
+
+window.__triggerEasterEgg = function(milestone) {
+  triggerEasterEgg(milestone);
+};
 
 // Product Variants Controller (Cap Colors, Vest Sizes, Sticker Packs)
 function setupProductVariants() {
