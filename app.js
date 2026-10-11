@@ -915,3 +915,15 @@ function setupCookieAndPrivacy() {
   }
 }
 
+
+// Global Image Fallback & Preload Health Check
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+      if (!this.dataset.triedFallback && this.getAttribute('src') && this.getAttribute('src').startsWith('assets/')) {
+        this.dataset.triedFallback = 'true';
+        this.src = './' + this.getAttribute('src');
+      }
+    });
+  });
+});
