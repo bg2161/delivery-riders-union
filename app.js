@@ -1206,14 +1206,14 @@ function setupProductVariants() {
       // Auto-preview matching sticker image
       if (stickerImg && stickerSwitcher) {
         if (selectedStickerVariant.includes('Yellow')) {
-          stickerImg.src = 'assets/sticker-yellow-qr.jpg';
-          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-img') === 'assets/sticker-yellow-qr.jpg'));
+          stickerImg.src = 'assets/sticker-yellow-qr.jpg?v=3';
+          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('sticker-yellow-qr')));
         } else if (selectedStickerVariant.includes('Red')) {
-          stickerImg.src = 'assets/sticker-red-qr.jpg';
-          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-img') === 'assets/sticker-red-qr.jpg'));
+          stickerImg.src = 'assets/sticker-red-qr.jpg?v=3';
+          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('sticker-red-qr')));
         } else {
-          stickerImg.src = 'assets/product-stickers.jpg';
-          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', b.getAttribute('data-img') === 'assets/product-stickers.jpg'));
+          stickerImg.src = 'assets/product-stickers.jpg?v=3';
+          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('product-stickers')));
         }
       }
     });
@@ -1259,7 +1259,7 @@ const productsCatalog = {
     titleEn: 'Official Weatherproof Vinyl Sticker Pack (Yellow & Red)',
     titleFil: 'Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)',
     price: 120,
-    img: 'assets/product-stickers.jpg',
+    img: 'assets/product-stickers.jpg?v=3',
     getVariant: () => selectedStickerVariant
   },
   'cap': {
