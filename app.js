@@ -131,7 +131,7 @@ const translations = {
     accessoriesDesc: "High-durability accessories designed for riders and solidarity allies.",
     
     itemVestTitle: "Official high-vis security jacket / safety vest",
-    itemVestDesc: "Industrial-grade neon yellow security safety vest with dual 3M reflective bands. Features the official union credential badge with scannable QR code on the chest and the rallying slogan 'NO DELIVERY IS WORTH A RIDER'S SAFETY' on the back.",
+    itemVestDesc: "Industrial-grade neon yellow security safety vest with dual 3M reflective bands. Features the official union emblem on the chest and the rallying slogan 'NO DELIVERY IS WORTH A RIDER'S SAFETY' on the back.",
     itemVestSizeLbl: "Size:",
 
     itemStickersTitle: "Official weatherproof vinyl sticker pack (Yellow & Red)",
@@ -338,7 +338,7 @@ const translations = {
     accessoriesDesc: "Matitibay na gamit para sa mga rider at tagapagtaguyod ng karapatan sa paggawa.",
     
     itemVestTitle: "Opisyal na High-Vis Security Jacket / Safety Vest",
-    itemVestDesc: "Maliwanag na neon yellow security safety vest na may dobleng 3M reflective safety bands. May opisyal na credential patch na may scannable QR code sa dibdib at ang panawagang 'NO DELIVERY IS WORTH A RIDER'S SAFETY' sa likod.",
+    itemVestDesc: "Maliwanag na neon yellow security safety vest na may dobleng 3M reflective safety bands. May opisyal na sagisag ng unyon sa dibdib at ang panawagang 'NO DELIVERY IS WORTH A RIDER'S SAFETY' sa likod.",
     itemVestSizeLbl: "Sukat:",
 
     itemStickersTitle: "Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)",
@@ -783,7 +783,7 @@ const productsCatalog = {
     titleEn: 'Official high-vis security jacket / safety vest',
     titleFil: 'Opisyal na High-Vis Security Jacket / Safety Vest',
     price: 320,
-    img: 'assets/product-vest.jpg',
+    img: 'assets/product-vest.jpg?v=20261012_v8',
     getVariant: () => `Size: ${selectedVestSize}`
   },
   'stickers': {
@@ -995,7 +995,7 @@ function setupMembershipModal() {
             </div>
 
             <div class="free-poncho-notice" style="text-align: left; margin: 1.5rem 0;">
-              <img src="assets/product-vest.jpg" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover;">
+              <img src="assets/product-vest.jpg?v=20261012_v8" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover;">
               <div>
                 <strong style="color: var(--ph-blue); font-size: 0.95rem; display: block; margin-bottom: 2px;">
                   🛡️ Official high-vis safety vest & stickers package included!
@@ -1273,8 +1273,7 @@ function getThematicFallback(type) {
       <path d="M140 50 L160 50 L200 110 L240 50 L260 50 L290 110 L280 250 L120 250 L110 110 Z" fill="#FACC15" stroke="#1F2937" stroke-width="3"/>
       <rect x="118" y="170" width="164" height="18" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1"/>
       <rect x="116" y="205" width="168" height="18" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1"/>
-      <rect x="145" y="115" width="22" height="26" fill="#FFFFFF" stroke="#1F2937" stroke-width="1.5"/>
-      <text x="200" y="280" fill="#854D0E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" text-anchor="middle">OFFICIAL SECURITY VEST WITH QR</text>
+      <text x="200" y="280" fill="#854D0E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" text-anchor="middle">OFFICIAL SECURITY VEST</text>
     </svg>`,
     poncho: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
       <rect width="400" height="300" fill="#FFF5F7"/>
