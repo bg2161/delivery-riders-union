@@ -17,7 +17,7 @@ const translations = {
     navShop: "Membership & Shop",
     navStories: "Rider Stories",
     navAbout: "About Us",
-    btnJoinNav: "Join Union (₱150/yr)",
+    btnJoinNav: "Join UDRMM (₱150/yr)",
     
     // Hero
     heroBadge: "Official Union of Manila Food & Courier Riders",
@@ -224,7 +224,7 @@ const translations = {
     navShop: "Kasapian at Tindahan",
     navStories: "Kuwento ng Rider",
     navAbout: "Tungkol sa Amin",
-    btnJoinNav: "Sumapi sa Unyon (₱150/taon)",
+    btnJoinNav: "Sumapi sa UDRMM (₱150/taon)",
     
     // Hero
     heroBadge: "Opisyal na Unyon ng mga Food at Courier Rider sa Maynila",
