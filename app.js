@@ -26,7 +26,7 @@ const translations = {
     heroSubtitle: "United Delivery Riders of Metro Manila (UDRMM) is an independent, worker-led union fighting against algorithmic pay cuts, wet-season delivery speed penalties, and hazardous working conditions in Metro Manila.",
     heroCtaJoin: "Become a member (₱150/yr dues)",
     heroCtaProtest: "May 1st action hub",
-    statMembers: "Active riders enrolled",
+    statMembers: "Founding members goal",
     statHazardPay: "Monsoon hazard pay demand",
     statCities: "Metro Manila cities covered",
     
@@ -233,7 +233,7 @@ const translations = {
     heroSubtitle: "Ang United Delivery Riders of Metro Manila (UDRMM) ay isang nagsasarili at pinangungunahan ng manggagawang unyon na lumalaban sa bawas-sahod ng algorithm, parusa sa bilis tuwing tag-ulan, at mapanganib na kalagayan sa kalsada.",
     heroCtaJoin: "Maging Kasapi (₱150/taon Butaw)",
     heroCtaProtest: "Sentro ng Pagkilos sa Mayo 1",
-    statMembers: "Aktibong Kasaping Rider",
+    statMembers: "Layuning bilang ng kasapi",
     statHazardPay: "Hiling na Monsoon Hazard Pay",
     statCities: "Mga Lungsod sa Metro Manila",
     
