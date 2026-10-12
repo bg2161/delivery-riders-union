@@ -163,7 +163,7 @@ const translations = {
     story3Role: "UDRMM Manila Chapter Leader",
 
     // About Section
-    aboutBadge: "ACADEMIC & CIVIC FRAMEWORK",
+    aboutBadge: "ACADEMIC FRAMEWORK",
     aboutTitle: "Battling Global Giants Locally (B.G.G.L.)",
     aboutDesc1: "United Delivery Riders of Metro Manila (UDRMM) is a civic project developed by Taskforce 2 for MSM Assignment 2 under the campaign 'Battling Global Giants Locally'. Our goal is to illustrate how grassroots gig workers can organize against multinational platform exploitation.",
     aboutDesc2: "By blending local cultural solidarity (bayanihan, barangay community networks) with modern digital campaigning and collective bargaining strategies, we prove that no corporate giant is too large to negotiate with organized labor.",
@@ -370,7 +370,7 @@ const translations = {
     story3Role: "Lider ng UDRMM Manila Chapter",
 
     // About Section
-    aboutBadge: "AKADEMIKONG BALANGKAS AT PROYEKTO",
+    aboutBadge: "AKADEMIKONG BALANGKAS",
     aboutTitle: "Battling Global Giants Locally (B.G.G.L.)",
     aboutDesc1: "Ang United Delivery Riders of Metro Manila (UDRMM) ay isang proyektong pangkomunikasyon na binuo ng Taskforce 2 para sa MSM Assignment 2 sa ilalim ng temang 'Battling Global Giants Locally'. Layunin nitong ipakita kung paano makakapag-organisa ang mga gig worker laban sa pang-aabuso ng mga multinasyunal na platform.",
     aboutDesc2: "Sa pamamagitan ng diwa ng bayanihan, tulungan sa barangay, at modernong kampanya sa digital media, pinatutunayan natin na walang kumpanyang higit na makapangyarihan kaysa sa nagkakaisang hanay ng mga manggagawa.",
