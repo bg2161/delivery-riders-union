@@ -17,14 +17,14 @@ const translations = {
     navShop: "Membership & Shop",
     navStories: "Rider Stories",
     navAbout: "About Us",
-    btnJoinNav: "Join UDRMM (₱150/yr)",
+    btnJoinNav: "Join UDRMM (₱350/yr)",
     
     // Hero
     heroBadge: "Official Union of Manila Food & Courier Riders",
     heroTitlePart1: "No delivery is worth a ",
     heroTitleHighlight: "rider's safety.",
     heroSubtitle: "United Delivery Riders of Metro Manila (UDRMM) is an independent, worker-led union fighting against algorithmic pay cuts, wet-season delivery speed penalties, and hazardous working conditions in Metro Manila.",
-    heroCtaJoin: "Become a member (₱150/yr dues)",
+    heroCtaJoin: "Become a member (₱350/yr dues)",
     heroCtaProtest: "May 1st action hub",
     statMembers: "Founding members goal",
     statHazardPay: "Monsoon hazard pay demand",
@@ -41,8 +41,8 @@ const translations = {
     heroPonchoTitle: "Official rain poncho included",
     heroPonchoDesc: "High-visibility reflective all-weather poncho given to all riders upon registration.",
     membershipFeeDuesLbl: "Already included in annual union dues",
-    membershipFeeLabel: "Includes high-vis safety vest & stickers (Annual dues: ₱150/yr)",
-    btnClaimPoncho: "Register & join union (₱150/yr)",
+    membershipFeeLabel: "Includes high-vis safety vest & stickers (Annual dues: ₱350/yr)",
+    btnClaimPoncho: "Register & join union (₱350/yr)",
 
     // Live Weather & Flood Risk Advisory Widget
     weatherBadge: "PAGASA & PROJECT NOAH ADVISORY",
@@ -123,8 +123,8 @@ const translations = {
     vf2: "360° neon & silver reflective safety bands",
     vf3: "Helmet-compatible drawstring hood",
     vf4: "Reinforced mobile phone chest pockets",
-    vestagliaPriceLabel: "Included with ₱150/yr union membership",
-    btnClaimPoncho: "Register & join union (₱150/yr)",
+    vestagliaPriceLabel: "Included with ₱350/yr union membership",
+    btnClaimPoncho: "Register & join union (₱350/yr)",
     
     // Accessories Grid
     accessoriesTitle: "Official solidarity accessories",
@@ -183,20 +183,20 @@ const translations = {
     
     // Membership Modal
     modalMemberTitle: "Join United Delivery Riders of Metro Manila",
-    modalMemberSub: "Join the United Delivery Riders of Metro Manila. Annual union dues (₱150 PHP / year) are required to sustain our collective legal defense, helmet stickers, and worker-led campaign.",
-    unionDuesTitle: "💳 Annual union dues: ₱150 PHP / year (Required)",
+    modalMemberSub: "Join the United Delivery Riders of Metro Manila. Annual union dues (₱350 PHP / year) are required to sustain our collective legal defense, helmet stickers, and worker-led campaign.",
+    unionDuesTitle: "💳 Annual union dues: ₱350 PHP / year (Required)",
     regDuesNote: "Includes official high-vis safety vest & waterproof stickers package upon paid enrollment.",
     modalNameLbl: "Full name:",
     modalPlatformLbl: "Delivery platform(s):",
     modalCityLbl: "City / Barangay in Metro Manila:",
     modalPhoneLbl: "Mobile phone:",
     modalSizeLbl: "Select safety vest / gear size:",
-    duesPaymentOptionLbl: "Annual membership fee (₱150 PHP / year):",
-    btnSubmitRegistration: "Pay ₱150 dues & complete registration",
+    duesPaymentOptionLbl: "Annual membership fee (₱350 PHP / year):",
+    btnSubmitRegistration: "Pay ₱350 dues & complete registration",
     
     // Modal Confirmation
     registeredTitle: "Mabuhay! Welcome to UDRMM!",
-    registeredSub: "Your membership registration and annual dues payment (₱150 PHP) have been confirmed. Here is your official Union Digital ID:",
+    registeredSub: "Your membership registration and annual dues payment (₱350 PHP) have been confirmed. Here is your official Union Digital ID:",
     regPonchoNote: "Your official high-vis safety vest & waterproof stickers package will be prepared for pickup at the UDRMM office or coordinated via your mobile phone.",
     
     // GDPR & Cookie Banner
@@ -224,14 +224,14 @@ const translations = {
     navShop: "Kasapian at Tindahan",
     navStories: "Kuwento ng Rider",
     navAbout: "Tungkol sa Amin",
-    btnJoinNav: "Sumapi sa UDRMM (₱150/taon)",
+    btnJoinNav: "Sumapi sa UDRMM (₱350/taon)",
     
     // Hero
     heroBadge: "Opisyal na Unyon ng mga Food at Courier Rider sa Maynila",
     heroTitlePart1: "Walang order ang katumbas ng ",
     heroTitleHighlight: "kaligtasan ng rider.",
     heroSubtitle: "Ang United Delivery Riders of Metro Manila (UDRMM) ay isang nagsasarili at pinangungunahan ng manggagawang unyon na lumalaban sa bawas-sahod ng algorithm, parusa sa bilis tuwing tag-ulan, at mapanganib na kalagayan sa kalsada.",
-    heroCtaJoin: "Maging Kasapi (₱150/taon Butaw)",
+    heroCtaJoin: "Maging Kasapi (₱350/taon Butaw)",
     heroCtaProtest: "Sentro ng Pagkilos sa Mayo 1",
     statMembers: "Layuning bilang ng kasapi",
     statHazardPay: "Hiling na Monsoon Hazard Pay",
@@ -248,8 +248,8 @@ const translations = {
     heroPonchoTitle: "Opisyal na Safety Gear Kasama",
     heroPonchoDesc: "Mataas ang visibility na reflective all-weather vest at stickers para sa mga rehistradong rider.",
     membershipFeeDuesLbl: "Kasama na sa taunang butaw sa unyon",
-    membershipFeeLabel: "Kasama ang High-Vis Safety Vest at Stickers (Taunang Butaw: ₱150/taon)",
-    btnClaimPoncho: "Magrehistro at Sumapi (₱150/taon)",
+    membershipFeeLabel: "Kasama ang High-Vis Safety Vest at Stickers (Taunang Butaw: ₱350/taon)",
+    btnClaimPoncho: "Magrehistro at Sumapi (₱350/taon)",
 
     // Live Weather & Flood Risk Advisory Widget
     weatherBadge: "PAALALA NG PAGASA AT PROJECT NOAH",
@@ -330,8 +330,8 @@ const translations = {
     vf2: "360° Neon at Silver Reflective Safety Bands",
     vf3: "Kasya sa Helmet ang Tali ng Hood",
     vf4: "Protektadong Bulsa para sa Mobile Phone",
-    vestagliaPriceLabel: "Kasama sa ₱150/taon na Pagsapi sa Unyon",
-    btnClaimPoncho: "Magrehistro at Sumapi (₱150/taon)",
+    vestagliaPriceLabel: "Kasama sa ₱350/taon na Pagsapi sa Unyon",
+    btnClaimPoncho: "Magrehistro at Sumapi (₱350/taon)",
     
     // Accessories Grid
     accessoriesTitle: "Mga Opisyal na Gamit ng Unyon",
@@ -390,20 +390,20 @@ const translations = {
     
     // Membership Modal
     modalMemberTitle: "Sumapi sa United Delivery Riders of Metro Manila",
-    modalMemberSub: "Sumapi sa United Delivery Riders of Metro Manila. Ang taunang butaw (₱150 PHP / taon) ay kailangan upang pondohan ang tulong-legal, stickers sa helmet, at kampanya ng mga manggagawa.",
-    unionDuesTitle: "💳 Taunang Butaw sa Unyon: ₱150 PHP / taon (Kailangan)",
+    modalMemberSub: "Sumapi sa United Delivery Riders of Metro Manila. Ang taunang butaw (₱350 PHP / taon) ay kailangan upang pondohan ang tulong-legal, stickers sa helmet, at kampanya ng mga manggagawa.",
+    unionDuesTitle: "💳 Taunang Butaw sa Unyon: ₱350 PHP / taon (Kailangan)",
     regDuesNote: "Kasama ang opisyal na High-Vis Safety Vest at Waterproof Stickers package sa bawat bayad na pagsapi.",
     modalNameLbl: "Buong Pangalan:",
     modalPlatformLbl: "Delivery Platform(s):",
     modalCityLbl: "Lungsod / Barangay sa Metro Manila:",
     modalPhoneLbl: "Numero ng Telepono:",
     modalSizeLbl: "Pumili ng Sukat ng Safety Vest / Gear:",
-    duesPaymentOptionLbl: "Taunang Butaw sa Pagsapi (₱150 PHP / taon):",
-    btnSubmitRegistration: "Magbayad ng ₱150 Butaw at Kumpletuhin ang Rehistro",
+    duesPaymentOptionLbl: "Taunang Butaw sa Pagsapi (₱350 PHP / taon):",
+    btnSubmitRegistration: "Magbayad ng ₱350 Butaw at Kumpletuhin ang Rehistro",
     
     // Modal Confirmation
     registeredTitle: "Mabuhay! Maligayang Pagdating sa UDRMM!",
-    registeredSub: "Kumpirmado ang iyong pagsapi at taunang butaw (₱150 PHP). Narito ang iyong Opisyal na Digital ID ng Unyon:",
+    registeredSub: "Kumpirmado ang iyong pagsapi at taunang butaw (₱350 PHP). Narito ang iyong Opisyal na Digital ID ng Unyon:",
     regPonchoNote: "Ang iyong opisyal na high-vis safety vest at waterproof stickers ay ihahanda para sa pickup sa opisina ng UDRMM o ipapadala sa pamamagitan ng iyong mobile phone.",
     
     // GDPR & Cookie Banner
@@ -963,7 +963,7 @@ function setupMembershipModal() {
       const city = document.getElementById('member-city').value || 'Metro Manila';
       const size = document.getElementById('member-size').value || 'L';
       const paymentMethod = document.querySelector('input[name="dues_payment_method"]:checked')?.value || 'GCash';
-      const duesLabel = `Paid Membership: ₱150 PHP / year (${paymentMethod})`;
+      const duesLabel = `Paid Membership: ₱350 PHP / year (${paymentMethod})`;
       
       const memberId = 'UDRMM-MNL-2027-' + Math.floor(1000 + Math.random() * 9000);
 
@@ -986,10 +986,10 @@ function setupMembershipModal() {
               </div>
               <div class="mid-name">${name}</div>
               <div style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 6px;">
-                Platform: ${platform} • Area: ${city} • Vest: Size ${size}
+                 Platform: ${platform} • Area: ${city} • Vest: Size ${size}
               </div>
               <div style="font-size: 0.8rem; color: #FCD34D; font-weight: 600; margin-bottom: 10px;">
-                Status: Paid Member (₱150/yr • ${paymentMethod})
+                Status: Paid Member (₱350/yr • ${paymentMethod})
               </div>
               <div class="mid-num">ID: ${memberId}</div>
             </div>
