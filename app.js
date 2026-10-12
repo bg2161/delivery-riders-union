@@ -40,7 +40,7 @@ const translations = {
     freePonchoBadge: "INCLUDED WITH DUES",
     heroPonchoTitle: "Official rain poncho included",
     heroPonchoDesc: "High-visibility reflective all-weather poncho given to all riders upon registration.",
-    membershipFeeDuesLbl: "Annual union dues",
+    membershipFeeDuesLbl: "Already included in annual union dues",
     membershipFeeLabel: "Includes high-vis safety vest & stickers (Annual dues: ₱150/yr)",
     btnClaimPoncho: "Register & join union (₱150/yr)",
 
@@ -247,7 +247,7 @@ const translations = {
     freePonchoBadge: "KASAMA SA BUTAW",
     heroPonchoTitle: "Opisyal na Safety Gear Kasama",
     heroPonchoDesc: "Mataas ang visibility na reflective all-weather vest at stickers para sa mga rehistradong rider.",
-    membershipFeeDuesLbl: "Taunang Butaw sa Unyon",
+    membershipFeeDuesLbl: "Kasama na sa taunang butaw sa unyon",
     membershipFeeLabel: "Kasama ang High-Vis Safety Vest at Stickers (Taunang Butaw: ₱150/taon)",
     btnClaimPoncho: "Magrehistro at Sumapi (₱150/taon)",
 

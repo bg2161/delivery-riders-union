@@ -1331,8 +1331,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .price-original {
   font-size: 0.85rem;
-  text-decoration: line-through;
-  color: var(--text-muted);
+  font-weight: 700;
+  color: var(--ph-blue);
+  margin-bottom: 0.15rem;
 }
 
 .price-free {
