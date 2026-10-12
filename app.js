@@ -55,7 +55,7 @@ const translations = {
 
     // Protest Section
     protestBadge: "MAY 1, 2027 • LABOR DAY MOBILIZATION",
-    protestTitle: "The May 1st, 2027 rider unity march & app freeze",
+    protestTitle: "The May 1st, 2027 Rider Unity March & App freeze",
     protestDesc: "During the rainy season, platform giants cut pay per order while demanding unchanged dry-season delivery speeds. On May 1st, 2027 (Labor Day), thousands of riders across Metro Manila will unite for a peaceful caravan, dialogue, and 1-hour solidarity app freeze.",
     countdownHeading: "Countdown to May 1st mobilization",
     countdownSub: "Saturday, May 1, 2027 • Assembly at 09:00 AM",
