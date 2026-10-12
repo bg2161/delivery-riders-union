@@ -197,7 +197,7 @@ const translations = {
     // Modal Confirmation
     registeredTitle: "Mabuhay! Welcome to UDRMM!",
     registeredSub: "Your membership registration and annual dues payment (₱150 PHP) have been confirmed. Here is your official Union Digital ID:",
-    regPonchoNote: "Your official high-vis safety vest & waterproof stickers package will be prepared for pickup at your local Barangay Solidarity Station or coordinated via your mobile contact.",
+    regPonchoNote: "Your official high-vis safety vest & waterproof stickers package will be prepared for pickup at the UDRMM office or coordinated via your mobile phone.",
     
     // GDPR & Cookie Banner
     cookieTitle: "Cookie & Data Privacy Notice",
@@ -404,7 +404,7 @@ const translations = {
     // Modal Confirmation
     registeredTitle: "Mabuhay! Maligayang Pagdating sa UDRMM!",
     registeredSub: "Kumpirmado ang iyong pagsapi at taunang butaw (₱150 PHP). Narito ang iyong Opisyal na Digital ID ng Unyon:",
-    regPonchoNote: "Ang iyong Opisyal na High-Vis Safety Vest at Waterproof Stickers ay ihahanda para sa pickup sa iyong Barangay Solidarity Station o ipapadala sa pamamagitan ng iyong kontak.",
+    regPonchoNote: "Ang iyong opisyal na high-vis safety vest at waterproof stickers ay ihahanda para sa pickup sa opisina ng UDRMM o ipapadala sa pamamagitan ng iyong mobile phone.",
     
     // GDPR & Cookie Banner
     cookieTitle: "Paunawa sa Cookie at Privacy ng Datos",
