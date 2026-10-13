@@ -16,6 +16,7 @@ const translations = {
     navDemands: "Our Demands",
     navShop: "Membership & Shop",
     navStories: "Rider Stories",
+    navPartners: "Partners",
     navAbout: "About Us",
     btnJoinNav: "Join UDRMM (₱350/yr)",
     
@@ -155,12 +156,52 @@ const translations = {
     story1Text: "\"During the July typhoons, floodwaters on España reached knee-deep. A customer gave me a 1-star rating because soup was 8 minutes late. That rating cut my incentives for a week. That is when I knew we needed a union.\"",
     story1Author: "Kuya Jun",
     story1Role: "FoodTiger Rider, Pasig City (4 Years)",
-    story2Text: "\"The official high-vis rain poncho from UDRMM literally saved my life last month in heavy mist along C-5. Drivers can finally see us. More than gear, the union gives us our self-respect back.\"",
+    story2Text: "\"The official high-vis rain poncho from UDRMM literally saved my life last month in heavy mist along C-5. Drivers can finally see us. I truly recommend it to anyone working in this field.\"",
     story2Author: "Ate Maria",
     story2Role: "Courier & Food Delivery Rider, Quezon City",
     story3Text: "\"FoodTiger tells us we are 'independent partners'. But partners don't get their pay slashed without a word. On May 1st, 2027, we are not asking for charity—we are asking for dignity.\"",
     story3Author: "Kuya Roland",
     story3Role: "UDRMM Manila Chapter Leader",
+
+    // Partners Section
+    partnersBadge: "SOLIDARITY & LEGITIMACY",
+    partnersTitle: "Our partners & institutional allies",
+    partnersDesc: "Accredited labor federations, legal defense clinics, and research institutions standing with Metro Manila delivery couriers.",
+    filterAll: "All allies",
+    filterLabor: "Labor federations",
+    filterLegal: "Legal defense",
+    filterResearch: "Academic research",
+    filterCommunity: "Community solidarity",
+    catLabor: "Labor federation",
+    catLegal: "Legal defense",
+    catResearch: "Academic research",
+    catCommunity: "Community solidarity",
+    statusAccredited: "Accredited ally",
+    statusLegal: "Legal aid partner",
+    statusResearch: "Research partner",
+    statusCommunity: "Solidarity host",
+    roleSentro: "⚖️ DOLE dialogues",
+    roleItf: "🌏 Global network",
+    roleKagulong: "📢 May 1 co-convener",
+    roleCtuhr: "⚖️ Rapid-response legal",
+    roleIlaw: "📑 Strategic litigation",
+    roleAhrc: "🎓 Pro-bono clinic",
+    roleFairwork: "🔍 Decent work audit",
+    roleIbon: "💰 Living wage data",
+    roleClc: "🌧️ Typhoon rest shelters",
+    partnerSentroDesc: "Major Philippine national labor center organizing transport and logistics couriers; co-leads tripartite DOLE negotiations and collective bargaining advocacy against unfair algorithmic deactivations.",
+    partnerItfDesc: "Global democratic federation of 18M+ transport workers; coordinates international campaigns against multinational platform tech giants and supports cross-border labor rights.",
+    partnerKagulongDesc: "Pioneering Metro Manila two-wheel delivery couriers alliance; co-organizer of the May 1st Rider Unity Caravan, safety protocols, and mutual aid stations.",
+    partnerCtuhrDesc: "Independent human rights NGO documenting platform labor abuses and providing free legal representation for riders unjustly deactivated or blacklisted by platform dispatch algorithms.",
+    partnerIlawDesc: "Global network of trade union labor attorneys advising on statutory social protections, reclassification of gig riders, and algorithmic transparency challenges.",
+    partnerAhrcDesc: "University legal clinic providing pro-bono consultation, grievance mediation, and policy drafting support for the national Magna Carta for Delivery Workers.",
+    partnerFairworkDesc: "Academic initiative evaluating digital platform companies against international decent work standards, documenting net wages after fuel inflation and road hazards.",
+    partnerIbonDesc: "Independent research institute calculating the realistic family living wage (₱1,197/day in NCR) and documenting fuel cost inflation squeezing motorcycle courier take-home pay.",
+    partnerClcDesc: "Inter-faith and community alliance providing emergency monsoon sanctuaries, dry clothing, hot meals, and motorcycle staging rest stops along EDSA and Welcome Rotonda.",
+    partnersCtaTitle: "Are you an organization supporting delivery workers?",
+    partnersCtaDesc: "We welcome trade union affiliates, paralegal clinics, university research groups, and community solidarity networks fighting for dignity in the platform economy.",
+    btnViewPartnersPage: "View dedicated partners directory",
+    btnJoinAsAlly: "Join union solidarity network",
 
     // About Section
     aboutBadge: "ACADEMIC FRAMEWORK",
@@ -223,6 +264,7 @@ const translations = {
     navDemands: "Aming Hiling",
     navShop: "Kasapian at Tindahan",
     navStories: "Kuwento ng Rider",
+    navPartners: "Mga Kasosyo",
     navAbout: "Tungkol sa Amin",
     btnJoinNav: "Sumapi sa UDRMM (₱350/taon)",
     
@@ -362,12 +404,52 @@ const translations = {
     story1Text: "\"Noong bagyo ng Hulyo, abot-tuhod ang baha sa España. Na-late ako ng walong minuto sa sopas, binigyan ako ng customer ng 1 star. Nawala ang incentive ko ng isang linggo. Doon ko napagtanto na kailangan namin ng unyon.\"",
     story1Author: "Kuya Jun",
     story1Role: "FoodTiger Rider, Pasig City (4 Taon)",
-    story2Text: "\"Yung opisyal na kapote ng UDRMM ang nagligtas sa akin sa makapal na ambon sa C-5. Nakikita na kami ng mga dambuhalang trak. Higit sa gamit, ibinalik sa amin ng unyon ang aming dangal bilang tao.\"",
+    story2Text: "\"Yung opisyal na kapote ng UDRMM ang nagligtas sa akin sa makapal na ambon sa C-5. Nakikita na kami ng mga dambuhalang trak. Talagang inirerekomenda ko ito sa sinumang nagtatrabaho sa larangang ito.\"",
     story2Author: "Ate Maria",
     story2Role: "Courier at Food Rider, Lungsod Quezon",
     story3Text: "\"Sabi ng FoodTiger 'partner' daw kami. Pero sa totoo lang, walang kapangyarihan ang partner kapag binawasan ang delivery fee nang walang paabiso. Sa Mayo 1, 2027, hindi kami humihingi ng awa—hustisya ang aming sigaw.\"",
     story3Author: "Kuya Roland",
     story3Role: "Lider ng UDRMM Manila Chapter",
+
+    // Partners Section
+    partnersBadge: "PAGKAKAISA AT LEHITIMASYON",
+    partnersTitle: "Aming mga kasosyo at kaalyadong institusyon",
+    partnersDesc: "Mga akreditadong pederasyon ng paggawa, tanggapan ng tulong-legal, at institusyon ng pananaliksik na sumusuporta sa mga delivery rider sa Metro Manila.",
+    filterAll: "Lahat ng kaalyado",
+    filterLabor: "Pederasyon ng paggawa",
+    filterLegal: "Tulong legal",
+    filterResearch: "Pananaliksik",
+    filterCommunity: "Pakikiisa ng komunidad",
+    catLabor: "Pederasyon ng paggawa",
+    catLegal: "Tulong legal",
+    catResearch: "Pananaliksik",
+    catCommunity: "Pakikiisa ng komunidad",
+    statusAccredited: "Akreditadong kaalyado",
+    statusLegal: "Kasosyo sa tulong-legal",
+    statusResearch: "Kasosyo sa pananaliksik",
+    statusCommunity: "Tahanan ng pagkakaisa",
+    roleSentro: "⚖️ Diyalogo sa DOLE",
+    roleItf: "🌏 Pandaigdigang network",
+    roleKagulong: "📢 Kasamang nag-oorganisa sa Mayo 1",
+    roleCtuhr: "⚖️ Mabilisang tulong-legal",
+    roleIlaw: "📑 Estratehikong paglilitis",
+    roleAhrc: "🎓 Pro-bono legal clinic",
+    roleFairwork: "🔍 Pagsusuri sa disenteng trabaho",
+    roleIbon: "💰 Datos sa living wage",
+    roleClc: "🌧️ Silungan tuwing may bagyo",
+    partnerSentroDesc: "Pangunahing pambansang sentro ng manggagawa sa Pilipinas na nag-oorganisa sa sektor ng transportasyon; nangunguna sa pakikipag-usap sa DOLE at collective bargaining laban sa hindi makatarungang deactivation.",
+    partnerItfDesc: "Pandaigdigang pederasyon ng mahigit 18 milyong manggagawa sa transportasyon; nag-uugnay ng mga kampanya laban sa mga multinational platform app.",
+    partnerKagulongDesc: "Pangunahing samahan ng mga nakamotorsiklong rider sa Metro Manila; kasamang nag-oorganisa ng Motorcade Caravan sa Mayo 1 at mga estasyon ng tulungan.",
+    partnerCtuhrDesc: "Malayang samahan para sa karapatang pantao na nagtatala ng paglabag sa mga rider at nagbibigay ng libreng tulong-legal laban sa biglaang pagkakatanggal sa app.",
+    partnerIlawDesc: "Pandaigdigang samahan ng mga abugado ng manggagawa na nagbibigay ng payo sa proteksyong panlipunan at transparency sa algorithm ng delivery.",
+    partnerAhrcDesc: "Legal clinic ng unibersidad na nagbibigay ng libreng konsultasyon, pamamagitan sa alitan, at pagsusulong ng Magna Carta for Delivery Workers.",
+    partnerFairworkDesc: "Akademikong inisyatiba na sumusuri sa mga digital platform batay sa pamantayan ng disenteng trabaho at totoong kita matapos ang bawas sa krudo.",
+    partnerIbonDesc: "Malayang institusyon sa pananaliksik na nagtatala ng tunay na family living wage (₱1,197/araw sa NCR) at epekto ng taas-presyo ng gasolina sa mga rider.",
+    partnerClcDesc: "Samahan ng simbahan at manggagawa na nagbibigay ng silungan, mainit na pagkain, at ligtas na hintayan kapag may malakas na ulan at baha sa EDSA at Welcome Rotonda.",
+    partnersCtaTitle: "Organisasyon ka ba na nais sumuporta sa mga delivery rider?",
+    partnersCtaDesc: "Bukas kami sa pakikipagtulungan sa mga unyon, paralegal clinic, mananaliksik sa unibersidad, at grupo sa komunidad na lumalaban para sa dangal ng mga manggagawa.",
+    btnViewPartnersPage: "Tingnan ang direktoryo ng mga kasosyo",
+    btnJoinAsAlly: "Sumali sa network ng pagkakaisa",
 
     // About Section
     aboutBadge: "AKADEMIKONG BALANGKAS",
@@ -444,6 +526,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupProductViewSwitchers();
   setupMobileMenu();
   setupCookieAndPrivacy();
+  setupPartnerFilters();
 });
 
 // Switch Language
@@ -1354,3 +1437,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Category Filter Handling for Partners & Institutional Allies
+function setupPartnerFilters() {
+  const filterBtns = document.querySelectorAll('.partner-filter-btn');
+  const partnerCards = document.querySelectorAll('.partner-card');
+  if (!filterBtns.length || !partnerCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      partnerCards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
