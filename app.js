@@ -8,7 +8,7 @@ const translations = {
     alertLink: "View May 1 Details & Demands →",
     
     // Brand
-    brand_subtitle: "United Delivery Riders of Metro Manila",
+    brand_subtitle: "United Delivery Riders<br>of Metro Manila",
 
     // Nav
     navHome: "Home",
@@ -304,7 +304,7 @@ const translations = {
     alertLink: "Tingnan ang Detalye at mga Hiling sa Mayo 1 →",
     
     // Brand
-    brand_subtitle: "United Delivery Riders of Metro Manila",
+    brand_subtitle: "United Delivery Riders<br>of Metro Manila",
 
     // Nav
     navHome: "Tahanan",
