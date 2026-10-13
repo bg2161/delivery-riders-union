@@ -37,6 +37,7 @@
           <li><a href="#protest" class="nav-link highlight" data-i18n="navProtest">May 1 Protest</a></li>
           <li><a href="#demands" class="nav-link" data-i18n="navDemands">Our Demands</a></li>
           <li><a href="#shop" class="nav-link" data-i18n="navShop">Membership & Shop</a></li>
+          <li><a href="#transparency" class="nav-link" data-i18n="navTransparency">Transparency</a></li>
           <li><a href="#stories" class="nav-link" data-i18n="navStories">Rider Stories</a></li>
           <li><a href="#partners" class="nav-link" data-i18n="navPartners">Partners</a></li>
           <li><a href="#about" class="nav-link" data-i18n="navAbout">About Us</a></li>
@@ -375,10 +376,15 @@
           </div>
         </div>
 
-        <!-- RSVP & Solidarity Pledge Counter with 5 Core Pledges -->
-        <div class="protest-rsvp-card">
+        <!-- Official Public Petition Card: Collect 10,000 signatures before June -->
+        <div class="protest-rsvp-card petition-card" id="petition">
+          <div class="petition-header-badge-row">
+            <span class="petition-goal-tag">🎯 CAMPAIGN PETITION GOAL</span>
+            <span class="petition-deadline-tag" data-i18n="petitionDeadlineTag">Deadline: Before the heavy rains start (by June 2027)</span>
+          </div>
+
           <div class="rsvp-pledges-box">
-            <span class="rsvp-pledges-title" data-i18n="pledgesTitle">★ THE 5 OFFICIAL UDRMM CAMPAIGN PLEDGES • LABOR DAY 2027</span>
+            <span class="rsvp-pledges-title" data-i18n="pledgesTitle">★ THE 5 OFFICIAL UDRMM CAMPAIGN PLEDGES &amp; PETITION DEMANDS</span>
             <div class="pledges-list-grid">
               <div class="pledge-point">
                 <span class="pl-badge">PLEDGE 1</span>
@@ -403,23 +409,46 @@
             </div>
           </div>
 
+          <!-- Petition Signature Goal Tracker -->
+          <div class="petition-tracker-box">
+            <div class="petition-tracker-header">
+              <div>
+                <strong class="petition-tracker-title" data-i18n="petitionTrackerTitle">Goal: Collect 10,000 petition signatures on the website before the heavy rains start (by June)</strong>
+                <p class="petition-tracker-sub" data-i18n="petitionTrackerSub">Sign the free public petition to demand mandatory flood app integration, storm hazard pay, and zero weather speed demerits.</p>
+              </div>
+              <div class="petition-stats-pill">
+                <span class="petition-count-highlight" id="petition-count-highlight">0</span>
+                <span class="petition-count-target">/ 10,000 signatures</span>
+              </div>
+            </div>
+            
+            <div class="petition-progress-bar-wrap" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10000" aria-label="10,000 petition signatures progress">
+              <div class="petition-progress-bar-fill" id="petition-progress-fill" style="width: 0%;"></div>
+            </div>
+            
+            <div class="petition-progress-meta">
+              <span data-i18n="petitionFreeBadge">✍️ 100% Free public petition • Open to riders &amp; customers (No payment required)</span>
+              <span id="petition-progress-percent">0% achieved</span>
+            </div>
+          </div>
+
           <div class="rsvp-action-row">
             <div class="rsvp-left">
-              <div class="rsvp-icon-circle" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5"></path><path d="M14 10V4a2 2 0 0 0-4 0v6"></path><path d="M10 10.5V6a2 2 0 0 0-4 0v8a5 5 0 0 0 5 5h3a5 5 0 0 0 5-5v-3.5a2 2 0 0 0-4 0" fill="rgba(255,255,255,0.2)"></path></svg>
+              <div class="rsvp-icon-circle" aria-hidden="true" style="font-size: 1.5rem;">
+                ✍️
               </div>
               <div class="rsvp-text">
-                <h4 data-i18n="rsvpTitle">Pledge your solidarity for May 1st, 2027</h4>
-                <p data-i18n="rsvpSub">Whether you are a delivery rider or a supportive customer, endorse the 5 pledges and join the movement.</p>
+                <h4 data-i18n="rsvpTitle">Sign the public petition: protect delivery riders before the heavy rains</h4>
+                <p data-i18n="rsvpSub">Whether you are a delivery rider, customer, or ally, add your signature to demand safety and fair pay before June. 100% free.</p>
               </div>
             </div>
             <div class="rsvp-action">
-              <div class="rsvp-counter-badge" id="rsvp-badge-btn" role="button" tabindex="0" title="Click to pledge solidarity">
+              <div class="rsvp-counter-badge" id="rsvp-badge-btn" role="button" tabindex="0" title="Click to view signatures count">
                 <div class="rsvp-count-num" id="rsvp-counter-display">0</div>
-                <div class="rsvp-count-label" data-i18n="rsvpLabel">Supporters & riders pledged</div>
+                <div class="rsvp-count-label" data-i18n="rsvpLabel">Signatures collected</div>
               </div>
-              <button class="btn-red" id="btn-rsvp-pledge" data-i18n="btnPledge">
-                Pledge solidarity now
+              <button type="button" class="btn-red" id="btn-rsvp-pledge" data-i18n="btnPledge">
+                Sign petition (Free)
               </button>
             </div>
           </div>
@@ -644,6 +673,170 @@
                   <span>🛍️</span>
                   <span data-i18n="btnAddCart">Add to bag</span>
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSPARENCY & GRASSROOTS GOVERNANCE -->
+    <section class="transparency-section" id="transparency">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge badge-blue" data-i18n="transparencyBadge">FINANCIAL TRANSPARENCY &amp; DEMOCRACY</span>
+          <h2 class="section-title" data-i18n="transparencyTitle">How we use our funds &amp; organize together</h2>
+          <p class="section-desc" data-i18n="transparencyDesc">
+            100% worker-led. Every peso from union dues and merchandise proceeds is accounted for, democratically decided, and directed back to rider safety and mutual defense.
+          </p>
+        </div>
+
+        <div class="transparency-grid">
+          <!-- CARD 1: FUND ALLOCATION -->
+          <div class="transparency-card">
+            <div class="transparency-card-header">
+              <div class="transparency-icon">💳</div>
+              <div>
+                <h3 class="transparency-card-title" data-i18n="transCard1Title">Transparent union fund allocation</h3>
+                <span class="transparency-card-sub" data-i18n="transCard1Sub">Where every ₱350 annual union dues and solidarity proceeds go</span>
+              </div>
+            </div>
+
+            <div class="fund-breakdown-list">
+              <!-- Item 1: 35% Emergency Fund -->
+              <div class="fund-item">
+                <div class="fund-item-header">
+                  <span class="fund-item-title" data-i18n="fundItem1Title">Emergency rider medical &amp; typhoon relief fund</span>
+                  <span class="fund-item-pct pct-red">35% (₱122.50)</span>
+                </div>
+                <div class="fund-bar-bg">
+                  <div class="fund-bar-fill fill-red" style="width: 35%;"></div>
+                </div>
+                <p class="fund-item-desc" data-i18n="fundItem1Desc">
+                  Direct cash assistance for road crash injuries, hospitalization support, emergency towing during floods, and typhoon food packs when apps freeze orders.
+                </p>
+              </div>
+
+              <!-- Item 2: 30% Safety Gear -->
+              <div class="fund-item">
+                <div class="fund-item-header">
+                  <span class="fund-item-title" data-i18n="fundItem2Title">High-vis safety gear &amp; member packages</span>
+                  <span class="fund-item-pct">30% (₱105.00)</span>
+                </div>
+                <div class="fund-bar-bg">
+                  <div class="fund-bar-fill" style="width: 30%;"></div>
+                </div>
+                <p class="fund-item-desc" data-i18n="fundItem2Desc">
+                  Procuring and distributing high-visibility reflective safety vests, heavy-duty rain ponchos, and waterproof helmet stickers issued to every registered member.
+                </p>
+              </div>
+
+              <!-- Item 3: 15% Legal Defense -->
+              <div class="fund-item">
+                <div class="fund-item-header">
+                  <span class="fund-item-title" data-i18n="fundItem3Title">Legal defense &amp; anti-deactivation clinic</span>
+                  <span class="fund-item-pct">15% (₱52.50)</span>
+                </div>
+                <div class="fund-bar-bg">
+                  <div class="fund-bar-fill fill-yellow" style="width: 15%;"></div>
+                </div>
+                <p class="fund-item-desc" data-i18n="fundItem3Desc">
+                  Filing formal DOLE Single Entry Approach (SEnA) complaints, rapid-response documentation of algorithmic lockouts, and union conciliation representation.
+                </p>
+              </div>
+
+              <!-- Item 4: 10% Face-to-Face Meetings -->
+              <div class="fund-item">
+                <div class="fund-item-header">
+                  <span class="fund-item-title" data-i18n="fundItem4Title">Grassroots face-to-face meetings &amp; assemblies</span>
+                  <span class="fund-item-pct">10% (₱35.00)</span>
+                </div>
+                <div class="fund-bar-bg">
+                  <div class="fund-bar-fill fill-green" style="width: 10%;"></div>
+                </div>
+                <p class="fund-item-desc" data-i18n="fundItem4Desc">
+                  Community hall rentals, sound system logistics, and meeting refreshments for regular local face-to-face rider assemblies across all 16 Metro Manila cities.
+                </p>
+              </div>
+
+              <!-- Item 5: 10% Campaign Materials -->
+              <div class="fund-item">
+                <div class="fund-item-header">
+                  <span class="fund-item-title" data-i18n="fundItem5Title">Campaign materials, education &amp; mobilization</span>
+                  <span class="fund-item-pct">10% (₱35.00)</span>
+                </div>
+                <div class="fund-bar-bg">
+                  <div class="fund-bar-fill fill-slate" style="width: 10%;"></div>
+                </div>
+                <p class="fund-item-desc" data-i18n="fundItem5Desc">
+                  Printed rider rights primers, leaflets at courier hubs, megaphones, banners, and safety marshal logistics for the May 1st Rider Unity Caravan.
+                </p>
+              </div>
+            </div>
+
+            <div class="transparency-audit-note">
+              <span>📋</span>
+              <span data-i18n="auditNote"><strong>Strict Governance Rule:</strong> Zero executive salaries. 100% of union dues and shop proceeds are directly reinvested in rider welfare and democratic organizing. Audited books are presented at every general assembly.</span>
+            </div>
+          </div>
+
+          <!-- CARD 2: GRASSROOTS DEMOCRACY & RESOURCES -->
+          <div class="transparency-card">
+            <div class="transparency-card-header">
+              <div class="transparency-icon icon-red">🤝</div>
+              <div>
+                <h3 class="transparency-card-title" data-i18n="transCard2Title">Grassroots democracy &amp; community resources</h3>
+                <span class="transparency-card-sub" data-i18n="transCard2Sub">Regular face-to-face assemblies and institutional support</span>
+              </div>
+            </div>
+
+            <!-- Face-to-face meeting feature box -->
+            <div class="meeting-feature-box">
+              <div class="meeting-feature-title">
+                <span>👥</span>
+                <span data-i18n="meetingTitle">Regular face-to-face meetings</span>
+              </div>
+              <p class="meeting-feature-desc" data-i18n="meetingDesc">
+                UDRMM organizes regular face-to-face meetings to discuss issues, make decisions, and plan collective actions. We practice direct worker democracy: no decisions are made top-down by distant executives. Every campaign strategy, negotiation mandate, and solidarity initiative is debated and voted on directly by riders on the ground.
+              </p>
+            </div>
+
+            <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.85rem;" data-i18n="resourcesTitle">
+              Our shared institutional &amp; community resources
+            </h4>
+
+            <div class="resource-blocks-grid">
+              <!-- Resource 1: National Labour Group & NGO Support -->
+              <div class="resource-block">
+                <span class="resource-block-icon">🏛️</span>
+                <div>
+                  <div class="resource-block-title" data-i18n="resLaborTitle">National labour group &amp; local labour-rights NGO</div>
+                  <p class="resource-block-desc" data-i18n="resLaborDesc">
+                    We receive <strong>legal advice</strong> from pro-bono labor attorneys, <strong>volunteer support</strong> for campaign logistics, dedicated <strong>meeting spaces</strong> for leadership strategy, and <strong>limited financial support</strong> for emergency printing and solidarity projects.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Resource 2: Barangay Community Networks -->
+              <div class="resource-block">
+                <span class="resource-block-icon">🏘️</span>
+                <div>
+                  <div class="resource-block-title" data-i18n="resBarangayTitle">Barangay community centers &amp; local networks</div>
+                  <p class="resource-block-desc" data-i18n="resBarangayDesc">
+                    Local barangay covered courts and community halls provide accessible <strong>meeting spaces</strong> for neighborhood chapter assemblies, while grassroots community networks serve as an essential <strong>information relay</strong> for severe weather advisories, rest stop staging, and union mobilizations.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Resource 3: Peer Rider Mutual Aid -->
+              <div class="resource-block">
+                <span class="resource-block-icon">🛵</span>
+                <div>
+                  <div class="resource-block-title" data-i18n="resMutualTitle">Rider-to-rider peer mutual aid</div>
+                  <p class="resource-block-desc" data-i18n="resMutualDesc">
+                    Roadside emergency mechanic assistance, flat-tire rescue networks, battery jump-starts, and real-time flood reporting coordinated by riders via Messenger and WhatsApp community broadcast groups.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1058,6 +1251,8 @@
           <ul class="footer-links">
             <li><a href="#protest">May 1 Caravan</a></li>
             <li><a href="#demands">Five-Point Demands</a></li>
+            <li><a href="#petition" data-i18n="navPetition">10,000 Petition</a></li>
+            <li><a href="#transparency" data-i18n="navTransparency">Transparency & Funds</a></li>
             <li><a href="#stories">Rider Stories</a></li>
             <li><a href="#partners" data-i18n="navPartners">Partners</a></li>
             <li><a href="#shop" data-i18n="navShop">Membership & Shop</a></li>
@@ -1132,12 +1327,24 @@
               <span class="mn-icon">📋</span>
               <span data-i18n="navDemands">Our Demands</span>
             </a>
+          <li>
+            <a href="#petition" class="mobile-nav-link">
+              <span class="mn-icon">✍️</span>
+              <span data-i18n="navPetition">10,000 Petition</span>
+              <span class="mn-badge-free">FREE</span>
+            </a>
           </li>
           <li>
             <a href="#shop" class="mobile-nav-link">
               <span class="mn-icon">🛍️</span>
               <span data-i18n="navShop">Membership & Shop</span>
               <span class="mn-badge-free">JOIN & GEAR</span>
+            </a>
+          </li>
+          <li>
+            <a href="#transparency" class="mobile-nav-link">
+              <span class="mn-icon">📊</span>
+              <span data-i18n="navTransparency">Transparency</span>
             </a>
           </li>
           <li>
@@ -1218,6 +1425,74 @@
         <button class="btn-primary" style="width: 100%; justify-content: center;" id="btn-checkout" data-i18n="btnCheckout">
           Proceed to order
         </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLIC PETITION SIGNATURE MODAL (10,000 SIGNATURES GOAL) -->
+  <div class="modal-overlay" id="petition-modal-overlay">
+    <div class="modal-card" role="dialog" aria-labelledby="modal-petition-title">
+      <div class="modal-header">
+        <h3 id="modal-petition-title" data-i18n="modalPetitionTitle">Sign the public petition: protect delivery riders</h3>
+        <button class="btn-close" id="close-petition-btn" aria-label="Close dialog">✕</button>
+      </div>
+
+      <div class="modal-body" id="petition-modal-body">
+        <div class="petition-modal-banner">
+          <div class="petition-modal-badge">🎯 CAMPAIGN PETITION GOAL • 100% FREE TO SIGN</div>
+          <p style="font-size: 0.88rem; color: var(--text-body); margin: 0.35rem 0 0;" data-i18n="modalPetitionSub">
+            Our goal is to <strong>collect 10,000 petition signatures on the website before the heavy rains start (by June)</strong>. Add your voice to demand mandatory flood app integration, storm hazard pay, and an immediate end to rain speed penalties.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card-soft); border-left: 3px solid var(--ph-blue); padding: 0.7rem 0.9rem; border-radius: var(--radius-sm); margin: 0.85rem 0 1.15rem; font-size: 0.82rem; color: var(--text-muted); line-height: 1.45;">
+          ℹ️ <strong style="color: var(--text-main);" data-i18n="petitionFreeNote">Signing is 100% free and open to everyone.</strong> <span data-i18n="petitionNotDuesNote">This is a public solidarity petition for riders, customers, and allies. It is not union membership registration and requires zero fees.</span>
+        </div>
+
+        <form id="petition-form">
+          <div class="form-group">
+            <label class="form-label" for="petition-name" data-i18n="modalNameLbl">Full name:</label>
+            <input type="text" id="petition-name" class="form-input" required placeholder="e.g. Maria Santos" autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="petition-contact" data-i18n="petitionContactLbl">Email address or mobile phone:</label>
+            <input type="text" id="petition-contact" class="form-input" required placeholder="e.g. maria@email.com or 0917-XXX-XXXX">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="petition-role" data-i18n="petitionRoleLbl">I am signing as a:</label>
+            <select id="petition-role" class="form-select" required>
+              <option value="Delivery rider">Delivery rider (FoodTiger, Grab, Foodpanda, etc.)</option>
+              <option value="App customer / Consumer" selected>App customer / Consumer</option>
+              <option value="Student / Academic">Student / Academic ally</option>
+              <option value="Community advocate">Community advocate / Labor supporter</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="petition-city" data-i18n="modalCityLbl">City / Barangay in Metro Manila:</label>
+            <input type="text" id="petition-city" class="form-input" required placeholder="e.g. Quezon City, Manila, Pasig...">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="petition-comment" data-i18n="petitionCommentLbl">Message of solidarity (optional):</label>
+            <textarea id="petition-comment" class="form-input" rows="2" placeholder="e.g. No delivery is worth risking a rider's safety in floods!"></textarea>
+          </div>
+
+          <div class="form-group" style="margin-top: 0.5rem;">
+            <label style="display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.83rem; color: var(--text-body); cursor: pointer; line-height: 1.45;">
+              <input type="checkbox" id="petition-endorse-check" checked required style="margin-top: 3px; accent-color: var(--ph-red);">
+              <span data-i18n="petitionConsentLbl">I endorse the 5 official UDRMM campaign pledges and authorize adding my signature to the 10,000 goal petition presented to platform companies and DOLE before June.</span>
+            </label>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <button type="submit" class="btn-red" style="width: 100%; justify-content: center; padding: 0.85rem;" data-i18n="btnSubmitPetition">
+              ✍️ Add my signature for free
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

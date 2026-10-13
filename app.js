@@ -15,9 +15,11 @@ const translations = {
     navProtest: "May 1 Protest",
     navDemands: "Our Demands",
     navShop: "Membership & Shop",
+    navTransparency: "Transparency",
     navStories: "Rider Stories",
     navPartners: "Partners",
     navAbout: "About Us",
+    navPetition: "10,000 Petition",
     btnJoinNav: "Join UDRMM (₱350/yr)",
     
     // Hero
@@ -97,19 +99,23 @@ const translations = {
     dem4Current: "Current: 100% equipment, poncho, and injury expenses borne entirely by the rider.",
     dem4Proposed: "Demand: Free company-issued rain ponchos & emergency medical clinic fund in all 16 cities.",
 
-    // The 5 Official Pledges
-    pledgesTitle: "★ THE 5 OFFICIAL UDRMM CAMPAIGN PLEDGES • LABOR DAY 2027",
+    // The 5 Official Pledges & 10,000 Signatures Public Petition
+    petitionDeadlineTag: "Deadline: Before the heavy rains start (by June 2027)",
+    pledgesTitle: "★ THE 5 OFFICIAL UDRMM CAMPAIGN PLEDGES & PETITION DEMANDS",
     pl1Desc: "<strong>Mandatory Gov't Flood Integration:</strong> Delivery apps must connect to DOST-PAGASA &amp; Project NOAH APIs to auto-reroute flooded streets and trigger +35% to +50% hazard pay.",
     pl2Desc: "<strong>Abolish Speed Demerits:</strong> Suspend 25-min delivery countdowns and nullify negative customer ratings during official rainfall alerts.",
     pl3Desc: "<strong>DOLE Right-to-Refuse Protection:</strong> Protect riders from account deactivations or AR penalties when declining dangerous submerged routes.",
     pl4Desc: "<strong>Human Due Process:</strong> Guarantee 72-hour formal notice and union legal representation before any account suspension.",
     pl5Desc: "<strong>Free Weather Gear &amp; Shelters:</strong> Provide free high-vis waterproof vestaglia (rain ponchos) and typhoon rest hubs across all 16 cities.",
 
-    rsvpTitle: "Pledge your solidarity for May 1st, 2027",
-    rsvpSub: "Whether you are a delivery rider or a supportive customer, endorse the 5 pledges and join the movement.",
-    btnPledge: "Pledge solidarity now",
-    btnPledged: "✓ Pledged solidarity!",
-    rsvpLabel: "Supporters & riders pledged",
+    petitionTrackerTitle: "Goal: Collect 10,000 petition signatures on the website before the heavy rains start (by June)",
+    petitionTrackerSub: "Sign the free public petition to demand mandatory flood app integration, storm hazard pay, and zero weather speed demerits.",
+    petitionFreeBadge: "✍️ 100% Free public petition • Open to riders & customers (No payment required)",
+    rsvpTitle: "Sign the public petition: protect delivery riders before the heavy rains",
+    rsvpSub: "Whether you are a delivery rider, customer, or ally, add your signature to demand safety and fair pay before June. 100% free.",
+    btnPledge: "Sign petition (Free)",
+    btnPledged: "✓ Petition signed",
+    rsvpLabel: "Signatures collected",
 
     // Shop & Free Poncho
     shopBadge: "UNION MEMBERSHIP & SOLIDARITY SHOP",
@@ -203,6 +209,48 @@ const translations = {
     btnViewPartnersPage: "View dedicated partners directory",
     btnJoinAsAlly: "Join union solidarity network",
 
+    // Transparency & Grassroots Governance
+    transparencyBadge: "FINANCIAL TRANSPARENCY & DEMOCRACY",
+    transparencyTitle: "How we use our funds & organize together",
+    transparencyDesc: "100% worker-led. Every peso from union dues and merchandise proceeds is accounted for, democratically decided, and directed back to rider safety and mutual defense.",
+    transCard1Title: "Transparent union fund allocation",
+    transCard1Sub: "Where every ₱350 annual union dues and solidarity proceeds go",
+    fundItem1Title: "Emergency rider medical & typhoon relief fund",
+    fundItem1Desc: "Direct cash assistance for road crash injuries, hospitalization support, emergency towing during floods, and typhoon food packs when apps freeze orders.",
+    fundItem2Title: "High-vis safety gear & member packages",
+    fundItem2Desc: "Procuring and distributing high-visibility reflective safety vests, heavy-duty rain ponchos, and waterproof helmet stickers issued to every registered member.",
+    fundItem3Title: "Legal defense & anti-deactivation clinic",
+    fundItem3Desc: "Filing formal DOLE Single Entry Approach (SEnA) complaints, rapid-response documentation of algorithmic lockouts, and union conciliation representation.",
+    fundItem4Title: "Grassroots face-to-face meetings & assemblies",
+    fundItem4Desc: "Community hall rentals, sound system logistics, and meeting refreshments for regular local face-to-face rider assemblies across all 16 Metro Manila cities.",
+    fundItem5Title: "Campaign materials, education & mobilization",
+    fundItem5Desc: "Printed rider rights primers, leaflets at courier hubs, megaphones, banners, and safety marshal logistics for the May 1st Rider Unity Caravan.",
+    auditNote: "Strict Governance Rule: Zero executive salaries. 100% of union dues and shop proceeds are directly reinvested in rider welfare and democratic organizing. Audited books are presented at every general assembly.",
+    transCard2Title: "Grassroots democracy & community resources",
+    transCard2Sub: "Regular face-to-face assemblies and institutional support",
+    meetingTitle: "Regular face-to-face meetings",
+    meetingDesc: "UDRMM organizes regular face-to-face meetings to discuss issues, make decisions, and plan collective actions. We practice direct worker democracy: no decisions are made top-down by distant executives. Every campaign strategy, negotiation mandate, and solidarity initiative is debated and voted on directly by riders on the ground.",
+    resourcesTitle: "Our shared institutional & community resources",
+    resLaborTitle: "National labour group & local labour-rights NGO",
+    resLaborDesc: "We receive legal advice from pro-bono labor attorneys, volunteer support for campaign logistics, dedicated meeting spaces for leadership strategy, and limited financial support for emergency printing and solidarity projects.",
+    resBarangayTitle: "Barangay community centers & local networks",
+    resBarangayDesc: "Local barangay covered courts and community halls provide accessible meeting spaces for neighborhood chapter assemblies, while grassroots community networks serve as an essential information relay for severe weather advisories, rest stop staging, and union mobilizations.",
+    resMutualTitle: "Rider-to-rider peer mutual aid",
+    resMutualDesc: "Roadside emergency mechanic assistance, flat-tire rescue networks, battery jump-starts, and real-time flood reporting coordinated by riders via Messenger and WhatsApp community broadcast groups.",
+
+    // Public Petition Modal
+    modalPetitionTitle: "Sign the public petition: protect delivery riders",
+    modalPetitionSub: "Our goal is to collect 10,000 petition signatures on the website before the heavy rains start (by June). Add your voice to demand mandatory flood app integration, storm hazard pay, and an immediate end to rain speed penalties.",
+    petitionFreeNote: "Signing is 100% free and open to everyone.",
+    petitionNotDuesNote: "This is a public solidarity petition for riders, customers, and allies. It is not union membership registration and requires zero fees.",
+    petitionContactLbl: "Email address or mobile phone:",
+    petitionRoleLbl: "I am signing as a:",
+    petitionCommentLbl: "Message of solidarity (optional):",
+    petitionConsentLbl: "I endorse the 5 official UDRMM campaign pledges and authorize adding my signature to the 10,000 goal petition presented to platform companies and DOLE before June.",
+    btnSubmitPetition: "✍️ Add my signature for free",
+    petitionSuccessTitle: "Maraming salamat! Signature recorded!",
+    petitionSuccessSub: "Your name has been added to our public petition. Together we are marching toward our goal of 10,000 signatures before the June monsoon heavy rains.",
+
     // About Section
     aboutBadge: "ACADEMIC FRAMEWORK",
     aboutTitle: "Battling Global Giants Locally (B.G.G.L.)",
@@ -263,9 +311,11 @@ const translations = {
     navProtest: "Protesta sa Mayo 1",
     navDemands: "Aming Hiling",
     navShop: "Kasapian at Tindahan",
+    navTransparency: "Katapatan at Pondo",
     navStories: "Kuwento ng Rider",
     navPartners: "Mga Kasosyo",
     navAbout: "Tungkol sa Amin",
+    navPetition: "Petisyon (10,000)",
     btnJoinNav: "Sumapi sa UDRMM (₱350/taon)",
     
     // Hero
@@ -345,19 +395,23 @@ const translations = {
     dem4Current: "Kasalukuyan: 100% ng gamit, kapote, at gastusin sa aksidente ay sariling sagot ng rider.",
     dem4Proposed: "Hiling: Libreng kapote mula sa kumpanya at emergency medical assistance fund sa lahat ng 16 na lungsod.",
 
-    // The 5 Official Pledges
-    pledgesTitle: "★ ANG LIMANG OPISYAL NA PANATA NG UDRMM • ARAW NG PAGGAWA 2027",
+    // The 5 Official Pledges & 10,000 Signatures Public Petition
+    petitionDeadlineTag: "Takdang Araw: Bago magsimula ang malalakas na ulan (pagsapit ng Hunyo 2027)",
+    pledgesTitle: "★ ANG 5 OPISYAL NA PANGAKO NG KAMPANYA AT MGA HILING SA PETISYON",
     pl1Desc: "<strong>Sapilitang Pag-integrate ng Datos ng Baha:</strong> Dapat ikonekta ang delivery apps sa DOST-PAGASA at Project NOAH APIs upang kusang umiwas sa baha at magbigay ng +35% hanggang +50% hazard pay.",
     pl2Desc: "<strong>Tanggalin ang Parusa sa Bilis:</strong> Itigil ang 25-minutong countdown at burahin ang negatibong ratings habang may opisyal na rainfall alert.",
     pl3Desc: "<strong>Proteksyon sa DOLE Right-to-Refuse:</strong> Protektahan ang rider sa suspension o AR penalties kapag tumangging dumaan sa delikadong baha.",
     pl4Desc: "<strong>Makatarungang Paglilitis sa Tao:</strong> Garantiyang 72-oras na abiso at tulong legal ng unyon bago ang anumang suspension ng account.",
     pl5Desc: "<strong>Libreng Gamit at Masisilungan:</strong> Libreng matibay at high-vis na vestaglia (kapote) at mga masisilungan tuwing bagyo sa lahat ng 16 lungsod.",
 
-    rsvpTitle: "Magpahayag ng Suporta sa Mayo 1, 2027",
-    rsvpSub: "Ikaw man ay rider o mamimiling nagmamalasakit, pirmahan ang 5 panata at sumama sa pagkilos.",
-    btnPledge: "Pumirma ng Suporta Ngayon",
-    btnPledged: "✓ Nakapirma ng Suporta!",
-    rsvpLabel: "Mga Rider at Tagasuportang Nakiisa",
+    petitionTrackerTitle: "Layunin: Makakalap ng 10,000 pirma sa petisyon sa website bago magsimula ang tag-ulan (sa Hunyo)",
+    petitionTrackerSub: "Pirmahan ang libreng petisyon upang hilingin ang flood map integration, hazard pay, at pagpapatigil sa speed penalties tuwing may bagyo.",
+    petitionFreeBadge: "✍️ 100% Libreng pampublikong petisyon • Bukas sa mga rider at kostumer (Walang bayad)",
+    rsvpTitle: "Pirmahan ang pampublikong petisyon: protektahan ang mga delivery rider bago ang tag-ulan",
+    rsvpSub: "Rider ka man, kostumer, o taga-suporta, idagdag ang iyong pirma bago sumapit ang Hunyo. 100% libre.",
+    btnPledge: "Pirmahan ang petisyon (Libre)",
+    btnPledged: "✓ Napirmahan na ang petisyon",
+    rsvpLabel: "Mga nakalap na pirma",
 
     // Shop & Free Poncho
     shopBadge: "KASAPIAN SA UNYON AT SOLIDARITY SHOP",
@@ -450,6 +504,48 @@ const translations = {
     partnersCtaDesc: "Bukas kami sa pakikipagtulungan sa mga unyon, paralegal clinic, mananaliksik sa unibersidad, at grupo sa komunidad na lumalaban para sa dangal ng mga manggagawa.",
     btnViewPartnersPage: "Tingnan ang direktoryo ng mga kasosyo",
     btnJoinAsAlly: "Sumali sa network ng pagkakaisa",
+
+    // Transparency & Grassroots Governance
+    transparencyBadge: "KATAPATAN SA PONDO AT DEMOKRASYA",
+    transparencyTitle: "Paano namin ginagamit ang pondo at sama-samang nag-oorganisa",
+    transparencyDesc: "100% pinamumunuan ng mga manggagawa. Bawat sentimo mula sa butaw at benta ay malinaw na naitatala, pinagpapasyahan ng mga miyembro, at ibinabalik sa kaligtasan ng rider.",
+    transCard1Title: "Malinaw na alokasyon ng pondo ng unyon",
+    transCard1Sub: "Kung saan napupunta ang bawat ₱350 taunang butaw at tulong ng mga taga-suporta",
+    fundItem1Title: "Pondo para sa aksidente, ospital at tulong sa bagyo",
+    fundItem1Desc: "Direktang tulong-pinansyal sa mga naaksidente sa kalsada, pampaospital, towing sa baha, at relief packs kapag bawal bumiyahe dahil sa bagyo.",
+    fundItem2Title: "High-vis safety gear at pakete ng kasapi",
+    fundItem2Desc: "Paggawa at pamamahagi ng reflective vest, matibay na kapote, at helmet stickers na ibinibigay sa bawat rehistradong kasapi.",
+    fundItem3Title: "Tulong-legal at tanggapan laban sa arbitraryong suspension",
+    fundItem3Desc: "Paghahain ng reklamo sa DOLE SEnA, pagtatala ng mga biglaang lock out sa app, at legal na representasyon sa pakikipag-ayos.",
+    fundItem4Title: "Harapang pagpupulong at asamblea sa komunidad",
+    fundItem4Desc: "Upa sa bulwagan, sound system, at pagkain para sa regular na harapang pagtitipon ng mga rider sa 16 na lungsod ng Metro Manila.",
+    fundItem5Title: "Materyales sa kampanya, edukasyon at pagkilos sa Mayo 1",
+    fundItem5Desc: "Polyeto sa karapatan ng rider, banner, megaphone, at koordinasyon para sa mapayapang Caravan sa Araw ng Paggawa.",
+    auditNote: "Mahigpit na Panuntunan: Walang suweldo ang mga pinuno. 100% ng butaw ay ibinabalik sa kapakanan ng rider. Iniuulat ang audited financial report sa bawat asamblea.",
+    transCard2Title: "Demokrasya mula sa ibaba at mga yamang pangkomunidad",
+    transCard2Sub: "Regular na harapang pagpupulong at suporta ng mga kaalyado",
+    meetingTitle: "Regular na harapang pagpupulong",
+    meetingDesc: "Nag-oorganisa ang UDRMM ng regular na harapang pagpupulong upang talakayin ang mga isyu, magpasya, at magplano ng sama-samang pagkilos. Tunay na demokrasya ang umiiral: walang desisyong nanggagaling lamang sa itaas. Ang bawat hakbang at plano ay pinagbobotohan ng mga mismong rider sa kalsada.",
+    resourcesTitle: "Aming mga kasamang yaman at suporta mula sa komunidad",
+    resLaborTitle: "Pambansang grupo ng paggawa at lokal na NGO para sa karapatan",
+    resLaborDesc: "Tinatanggap namin ang payong legal mula sa mga volunteer na abogado, suporta sa boluntaryo, espasyo para sa pagpupulong, at limitadong tulong-pinansyal para sa emergency printing.",
+    resBarangayTitle: "Mga Barangay community center at lokal na network",
+    resBarangayDesc: "Ang mga covered court at barangay hall ay nagbibigay ng ligtas na espasyo sa pagpupulong, habang ang komunidad ay tumutulong sa pagpapalaganap ng impormasyon ukol sa baha at mga panawagan.",
+    resMutualTitle: "Damayan at tulungan ng kapwa rider",
+    resMutualDesc: "Tulong sa sirang motorsiklo sa daan, rescue sa vulcanizing, jump-start ng baterya, at mabilisang ulat sa baha sa pamamagitan ng GCash, Messenger, at WhatsApp broadcast.",
+
+    // Public Petition Modal
+    modalPetitionTitle: "Pirmahan ang pampublikong petisyon para sa kaligtasan ng mga rider",
+    modalPetitionSub: "Ang aming layunin ay makakalap ng 10,000 pirma sa petisyon sa website bago magsimula ang tag-ulan (sa Hunyo). Makiisa sa panawagang protektahan ang mga rider.",
+    petitionFreeNote: "100% libre at bukas sa lahat ang pagpirma.",
+    petitionNotDuesNote: "Ito ay pampublikong petisyon para sa mga rider, mamimili, at taga-suporta. Hindi ito rehistro ng kasapian at walang anumang bayad.",
+    petitionContactLbl: "Email address o numero ng telepono:",
+    petitionRoleLbl: "Pumipirma ako bilang:",
+    petitionCommentLbl: "Mensahe ng pakikiisa (opsyonal):",
+    petitionConsentLbl: "Ipinapahayag ko ang aking pagsuporta sa 5 opisyal na hiling ng UDRMM at pinapahintulutan ang pagsama ng aking pirma sa 10,000 petisyon bago ang Hunyo.",
+    btnSubmitPetition: "✍️ Idagdag ang aking pirma nang libre",
+    petitionSuccessTitle: "Maraming salamat! Naitala ang iyong pirma!",
+    petitionSuccessSub: "Naidagdag na ang iyong pangalan sa aming pampublikong petisyon patungo sa target na 10,000 bago sumapit ang tag-ulan sa Hunyo.",
 
     // About Section
     aboutBadge: "AKADEMIKONG BALANGKAS",
@@ -655,6 +751,20 @@ function setupRSVP() {
         countEl.classList.add('count-pulse');
       }
     }
+    const highlightEl = document.getElementById('petition-count-highlight');
+    if (highlightEl) {
+      highlightEl.innerText = rsvpCount.toLocaleString();
+    }
+    const progressFill = document.getElementById('petition-progress-fill');
+    if (progressFill) {
+      const pct = Math.min(100, Math.max(1, (rsvpCount / 10000) * 100));
+      progressFill.style.width = pct + '%';
+    }
+    const percentEl = document.getElementById('petition-progress-percent');
+    if (percentEl) {
+      const pct = Math.min(100, (rsvpCount / 10000) * 100);
+      percentEl.innerText = pct.toFixed(1) + '% achieved';
+    }
     if (rsvpBtn && hasPledged) {
       rsvpBtn.classList.remove('btn-red');
       rsvpBtn.classList.add('btn-secondary');
@@ -684,22 +794,19 @@ function setupRSVP() {
           renderCount(prev !== rsvpCount);
         }
       } else if (res.status === 404) {
-        // Key not yet hit by anyone globally -> count is 0
         rsvpCount = Math.max(rsvpCount, 0);
         renderCount();
       }
     } catch (err) {
-      // Offline or network timeout: keep existing cached tally
       console.warn('UDRMM: Using cached pledge count:', err.message);
     }
   }
 
-  // Handle solidarity pledge action (increments global counter across all visitors)
+  // Handle solidarity petition signature (increments global counter across all visitors)
   async function handlePledge() {
     if (isPledging) return;
     isPledging = true;
 
-    // Immediately trigger tactile animation on button & counter badge
     if (countEl) {
       countEl.classList.remove('count-pulse');
       void countEl.offsetWidth;
@@ -741,22 +848,22 @@ function setupRSVP() {
     renderCount(true);
 
     const toastMsg = currentLang === 'en'
-      ? `Salamat! Global solidarity pledge recorded (Total: ${rsvpCount.toLocaleString()}).`
-      : `Maraming salamat! Naitala ang iyong pakikiisa sa buong mundo (Kabuuan: ${rsvpCount.toLocaleString()}).`;
+      ? `Salamat! Petition signature recorded (Total: ${rsvpCount.toLocaleString()} towards 10,000 goal).`
+      : `Maraming salamat! Naitala ang iyong pirma sa petisyon (Kabuuan: ${rsvpCount.toLocaleString()} patungo sa 10,000).`;
     showToast(toastMsg);
   }
 
   renderCount();
   fetchGlobalCount();
 
-  // Real-time polling every 3s so pledges on phone/other devices reflect immediately on PC
+  // Real-time polling every 3s so signatures reflect immediately
   setInterval(() => {
     if (!document.hidden) {
       fetchGlobalCount();
     }
   }, 3000);
 
-  // Instant refresh when user returns to tab or focuses the window
+  // Instant refresh when user returns to tab
   window.addEventListener('focus', fetchGlobalCount);
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) {
@@ -764,16 +871,103 @@ function setupRSVP() {
     }
   });
 
+  // Modal Setup for Petition
+  const petitionModal = document.getElementById('petition-modal-overlay');
+  const closePetitionBtn = document.getElementById('close-petition-btn');
+  const petitionForm = document.getElementById('petition-form');
+  const petitionModalBody = document.getElementById('petition-modal-body');
+
+  function openPetitionModal(e) {
+    if (e) e.preventDefault();
+    if (petitionModal) petitionModal.classList.add('active');
+  }
+
+  function closePetitionModal() {
+    if (petitionModal) petitionModal.classList.remove('active');
+  }
+
   if (rsvpBtn) {
-    rsvpBtn.addEventListener('click', handlePledge);
+    rsvpBtn.addEventListener('click', openPetitionModal);
   }
 
   if (badgeBtn) {
-    badgeBtn.addEventListener('click', handlePledge);
+    badgeBtn.addEventListener('click', openPetitionModal);
     badgeBtn.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        handlePledge();
+        openPetitionModal();
+      }
+    });
+  }
+
+  if (closePetitionBtn) {
+    closePetitionBtn.addEventListener('click', closePetitionModal);
+  }
+
+  if (petitionModal) {
+    petitionModal.addEventListener('click', (e) => {
+      if (e.target === petitionModal) closePetitionModal();
+    });
+  }
+
+  if (petitionForm) {
+    petitionForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('petition-name')?.value || 'Solidarity Supporter';
+      const role = document.getElementById('petition-role')?.value || 'App customer / Consumer';
+      const city = document.getElementById('petition-city')?.value || 'Metro Manila';
+      const comment = document.getElementById('petition-comment')?.value || '';
+
+      await handlePledge();
+
+      const sigId = 'PET-2027-' + Math.floor(1000 + Math.random() * 9000);
+      const pct = Math.min(100, ((rsvpCount / 10000) * 100)).toFixed(1);
+
+      if (petitionModalBody) {
+        petitionModalBody.innerHTML = `
+          <div class="success-card">
+            <div class="success-icon-badge">✍️</div>
+            <h3 style="font-size: 1.4rem; font-weight: 900; color: var(--text-main); margin-bottom: 0.5rem;">
+              ${translations[currentLang].petitionSuccessTitle}
+            </h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+              ${translations[currentLang].petitionSuccessSub}
+            </p>
+
+            <div style="background: #FFFFFF; border: 2px solid var(--ph-blue-border); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem; text-align: left;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <strong style="color: var(--ph-blue); font-size: 1rem;">${name}</strong>
+                <span style="font-size: 0.76rem; background: var(--ph-blue-light); color: var(--ph-blue); padding: 2px 8px; border-radius: 999px; font-weight: 700;">${sigId}</span>
+              </div>
+              <div style="font-size: 0.82rem; color: var(--text-body); margin-bottom: 0.35rem;">
+                Role: <strong>${role}</strong> • Location: <strong>${city}</strong>
+              </div>
+              ${comment ? `<div style="font-size: 0.8rem; font-style: italic; color: var(--text-muted); border-left: 2px solid var(--ph-red); padding-left: 8px; margin-top: 6px;">"${comment}"</div>` : ''}
+              <div style="margin-top: 0.85rem; padding-top: 0.65rem; border-top: 1px solid var(--border-light); font-size: 0.82rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
+                <span>Total signatures: <strong style="color: var(--ph-red); font-size: 0.95rem;">${rsvpCount.toLocaleString()}</strong></span>
+                <span style="color: var(--ph-blue); font-weight: 700;">${pct}% of 10,000 goal</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.25rem;">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+                Share on Facebook
+              </a>
+              <button type="button" class="btn-secondary" style="font-size: 0.85rem; padding: 0.5rem 1rem;" onclick="navigator.clipboard?.writeText(window.location.href); alert('Petition link copied!');">
+                📋 Copy petition link
+              </button>
+            </div>
+
+            <div style="border-top: 1px solid var(--border-light); padding-top: 1rem; font-size: 0.82rem; color: var(--text-muted);">
+              Are you a delivery rider wanting to become a full member with high-vis gear?
+              <div style="margin-top: 0.5rem;">
+                <button type="button" class="btn-primary open-membership-btn" onclick="document.getElementById('petition-modal-overlay').classList.remove('active'); document.getElementById('membership-modal-overlay').classList.add('active');" style="font-size: 0.82rem; padding: 0.5rem 1.15rem;">
+                  Join UDRMM (₱350/yr)
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
       }
     });
   }
