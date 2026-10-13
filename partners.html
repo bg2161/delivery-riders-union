@@ -12,22 +12,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261013_v7">
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="top-bar" role="region" aria-label="Mobilization Alert">
-    <div class="container top-bar-content">
-      <span class="pulse-dot" aria-hidden="true"></span>
-      <span class="alert-text" data-i18n="alertText">🚨 MAY 1, 2027 NATIONAL MOBILIZATION (Labor Day): Metro Manila Riders Caravan & App Freeze.</span>
-      <a href="index.html#protest" class="alert-link" data-i18n="alertLink">View May 1 Details & Demands →</a>
+  <!-- Top Emergency & Mobilization Bar -->
+  <aside class="top-alert-bar" aria-label="Mobilization Alert">
+    <div class="top-alert-content">
+      <span class="alert-tag">Action Alert</span>
+      <span data-i18n="alertText">🚨 MAY 1, 2027 NATIONAL MOBILIZATION (Labor Day): Metro Manila Riders Caravan & App Freeze.</span>
+      <a href="index.html#protest" class="top-alert-link" data-i18n="alertLink">View May 1 Details & Demands →</a>
     </div>
-  </div>
+  </aside>
 
   <!-- Header & Navigation -->
-  <header class="site-header">
-    <div class="container header-container">
+  <header class="navbar">
+    <div class="container nav-container">
       <!-- Brand / Logo -->
       <a href="index.html#home" class="brand" aria-label="UDRMM Home">
         <img src="assets/logo.png?v=20261011_pink" alt="UDRMM Official Logo" width="46" height="46" class="brand-logo-img">
@@ -69,10 +69,12 @@
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </button>
       </div>
     </div>

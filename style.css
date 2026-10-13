@@ -87,18 +87,22 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 /* Top Notification / Emergency Alert Bar */
-.top-alert-bar {
+.top-alert-bar,
+.top-bar {
   background: linear-gradient(90deg, #CE1126 0%, #B50C1F 60%, #0038A8 100%);
   color: #FFFFFF;
   font-size: 0.88rem;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem clamp(1.25rem, 3.5vw, 3.5rem);
   text-align: center;
   position: relative;
   z-index: 101;
   box-shadow: 0 2px 8px rgba(206, 17, 38, 0.2);
 }
 
-.top-alert-content {
+.top-alert-content,
+.top-bar-content {
+  max-width: 1720px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +131,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 /* Navigation */
-.navbar {
+.navbar,
+.site-header {
   position: sticky;
   top: 0;
   background: rgba(255, 245, 247, 0.94);
@@ -136,12 +141,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   border-bottom: 1px solid var(--border-subtle);
   z-index: 100;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
-.nav-container {
+.navbar .nav-container,
+.site-header .header-container {
+  max-width: 1720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3.5vw, 3.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: clamp(1rem, 2vw, 2.5rem);
   height: 74px;
 }
 
@@ -151,6 +163,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   gap: 0.85rem;
   text-decoration: none;
   color: var(--text-main);
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
@@ -160,6 +173,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   object-fit: cover;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
   border: 2px solid var(--bg-card);
+  flex-shrink: 0;
 }
 
 .brand-text {
@@ -173,6 +187,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   letter-spacing: 0.5px;
   color: var(--ph-blue);
   line-height: 1.15;
+  white-space: nowrap;
 }
 
 .brand-subtitle {
@@ -180,23 +195,40 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.2px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.navbar nav[aria-label="Main Navigation"],
+.site-header nav[aria-label="Main Navigation"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  justify-content: center;
+  gap: clamp(0.75rem, 1.4vw, 1.85rem);
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--text-body);
   font-weight: 600;
-  font-size: 0.94rem;
+  font-size: clamp(0.86rem, 0.92vw, 0.96rem);
   position: relative;
   transition: color 0.2s ease;
-  padding: 0.4rem 0.2rem;
+  padding: 0.45rem 0.35rem;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -216,7 +248,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: clamp(0.6rem, 0.9vw, 1rem);
+  flex-shrink: 0;
+}
+
+.nav-actions .btn-primary.open-membership-btn,
+.nav-actions .header-join-btn {
+  padding: 0.6rem 1.15rem;
+  font-size: 0.88rem;
+  white-space: nowrap;
 }
 
 /* Language Switcher Pill */
@@ -2153,15 +2193,24 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 992px) {
+/* Mid-size Desktop: Hide subtitle to keep 8 nav links spacious */
+@media (max-width: 1260px) {
+  .brand-subtitle {
+    display: none;
+  }
+}
+
+/* Tablet & Mobile: Switch to mobile navigation drawer */
+@media (max-width: 1080px) {
   .nav-links {
     display: none !important;
   }
   .mobile-menu-btn {
     display: flex !important;
   }
-  .btn-primary.open-membership-btn {
-    display: none; /* Accessible inside mobile drawer to prevent navbar wrapping */
+  .nav-actions .btn-primary.open-membership-btn,
+  .nav-actions .header-join-btn {
+    display: none !important; /* Accessible inside mobile drawer to prevent navbar wrapping */
   }
   .hero-grid {
     grid-template-columns: 1fr;
@@ -2553,7 +2602,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   background: rgba(255, 255, 255, 0.7);
 }
 
-@media (min-width: 993px) {
+@media (min-width: 1081px) {
   .mobile-nav-overlay {
     display: none !important;
   }
@@ -2592,7 +2641,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     gap: 0.45rem;
   }
 
-  .btn-primary.open-membership-btn {
+  .nav-actions .btn-primary.open-membership-btn,
+  .nav-actions .header-join-btn {
     display: none; /* Shown in mobile drawer to save header space */
   }
 
