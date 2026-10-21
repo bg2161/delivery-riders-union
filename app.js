@@ -108,11 +108,11 @@ const translations = {
     pl4Desc: "<strong>Human Due Process:</strong> Guarantee 72-hour formal notice and union legal representation before any account suspension.",
     pl5Desc: "<strong>Free Weather Gear &amp; Shelters:</strong> Provide free high-vis waterproof vestaglia (rain ponchos) and typhoon rest hubs across all 16 cities.",
 
-    petitionTrackerTitle: "Goal: Collect 10,000 petition signatures on the website before the heavy rains start (by June)",
+    petitionTrackerTitle: "Goal: Collect 10,000 petition signatures on the website before the heavy rains start (by June 2027)",
     petitionTrackerSub: "Sign the free public petition to demand mandatory flood app integration, storm hazard pay, and zero weather speed demerits.",
-    petitionFreeBadge: "✍️ 100% Free public petition • Open to riders & customers (No payment required)",
+    petitionFreeBadge: "✍️ 100% Free public petition (No payment required)",
     rsvpTitle: "Sign the public petition: protect delivery riders before the heavy rains",
-    rsvpSub: "Whether you are a delivery rider, customer, or ally, add your signature to demand safety and fair pay before June. 100% free.",
+    rsvpSub: "Whether you are a delivery rider, customer, or ally, add your signature to demand safety and fair pay before June 2027. 100% free.",
     btnPledge: "Sign petition (Free)",
     btnPledged: "✓ Petition signed",
     rsvpLabel: "Signatures collected",
@@ -234,16 +234,16 @@ const translations = {
 
     // Public Petition Modal
     modalPetitionTitle: "Sign the public petition: protect delivery riders",
-    modalPetitionSub: "Our goal is to collect 10,000 petition signatures on the website before the heavy rains start (by June). Add your voice to demand mandatory flood app integration, storm hazard pay, and an immediate end to rain speed penalties.",
+    modalPetitionSub: "Our goal is to collect 10,000 petition signatures on the website before the heavy rains start (by June 2027). Add your voice to demand mandatory flood app integration, storm hazard pay, and an immediate end to rain speed penalties.",
     petitionFreeNote: "Signing is 100% free and open to everyone.",
     petitionNotDuesNote: "This is a public solidarity petition for riders, customers, and allies. It is not union membership registration and requires zero fees.",
     petitionContactLbl: "Email address or mobile phone:",
     petitionRoleLbl: "I am signing as a:",
     petitionCommentLbl: "Message of solidarity (optional):",
-    petitionConsentLbl: "I endorse the 5 official UDRMM campaign pledges and authorize adding my signature to the 10,000 goal petition presented to platform companies and DOLE before June.",
+    petitionConsentLbl: "I endorse the 5 official UDRMM campaign pledges and authorize adding my signature to the 10,000 goal petition presented to platform companies and DOLE before June 2027.",
     btnSubmitPetition: "✍️ Add my signature for free",
     petitionSuccessTitle: "Maraming salamat! Signature recorded!",
-    petitionSuccessSub: "Your name has been added to our public petition. Together we are marching toward our goal of 10,000 signatures before the June monsoon heavy rains.",
+    petitionSuccessSub: "Your name has been added to our public petition. Together we are marching toward our goal of 10,000 signatures before the June 2027 monsoon heavy rains.",
 
     // About Section
     aboutBadge: "ACADEMIC FRAMEWORK",
@@ -405,11 +405,11 @@ const translations = {
     pl4Desc: "<strong>Makatarungang Paglilitis sa Tao:</strong> Garantiyang 72-oras na abiso at tulong legal ng unyon bago ang anumang suspension ng account.",
     pl5Desc: "<strong>Libreng Gamit at Masisilungan:</strong> Libreng matibay at high-vis na vestaglia (kapote) at mga masisilungan tuwing bagyo sa lahat ng 16 lungsod.",
 
-    petitionTrackerTitle: "Layunin: Makakalap ng 10,000 pirma sa petisyon sa website bago magsimula ang tag-ulan (sa Hunyo)",
+    petitionTrackerTitle: "Layunin: Makakalap ng 10,000 pirma sa petisyon sa website bago magsimula ang tag-ulan (sa Hunyo 2027)",
     petitionTrackerSub: "Pirmahan ang libreng petisyon upang hilingin ang flood map integration, hazard pay, at pagpapatigil sa speed penalties tuwing may bagyo.",
-    petitionFreeBadge: "✍️ 100% Libreng pampublikong petisyon • Bukas sa mga rider at kostumer (Walang bayad)",
+    petitionFreeBadge: "✍️ 100% Libreng pampublikong petisyon (Walang bayad)",
     rsvpTitle: "Pirmahan ang pampublikong petisyon: protektahan ang mga delivery rider bago ang tag-ulan",
-    rsvpSub: "Rider ka man, kostumer, o taga-suporta, idagdag ang iyong pirma bago sumapit ang Hunyo. 100% libre.",
+    rsvpSub: "Rider ka man, kostumer, o taga-suporta, idagdag ang iyong pirma bago sumapit ang Hunyo 2027. 100% libre.",
     btnPledge: "Pirmahan ang petisyon (Libre)",
     btnPledged: "✓ Napirmahan na ang petisyon",
     rsvpLabel: "Mga nakalap na pirma",
@@ -531,16 +531,16 @@ const translations = {
 
     // Public Petition Modal
     modalPetitionTitle: "Pirmahan ang pampublikong petisyon para sa kaligtasan ng mga rider",
-    modalPetitionSub: "Ang aming layunin ay makakalap ng 10,000 pirma sa petisyon sa website bago magsimula ang tag-ulan (sa Hunyo). Makiisa sa panawagang protektahan ang mga rider.",
+    modalPetitionSub: "Ang aming layunin ay makakalap ng 10,000 pirma sa petisyon sa website bago magsimula ang tag-ulan (sa Hunyo 2027). Makiisa sa panawagang protektahan ang mga rider.",
     petitionFreeNote: "100% libre at bukas sa lahat ang pagpirma.",
     petitionNotDuesNote: "Ito ay pampublikong petisyon para sa mga rider, mamimili, at taga-suporta. Hindi ito rehistro ng kasapian at walang anumang bayad.",
     petitionContactLbl: "Email address o numero ng telepono:",
     petitionRoleLbl: "Pumipirma ako bilang:",
     petitionCommentLbl: "Mensahe ng pakikiisa (opsyonal):",
-    petitionConsentLbl: "Ipinapahayag ko ang aking pagsuporta sa 5 opisyal na hiling ng UDRMM at pinapahintulutan ang pagsama ng aking pirma sa 10,000 petisyon bago ang Hunyo.",
+    petitionConsentLbl: "Ipinapahayag ko ang aking pagsuporta sa 5 opisyal na hiling ng UDRMM at pinapahintulutan ang pagsama ng aking pirma sa 10,000 petisyon bago ang Hunyo 2027.",
     btnSubmitPetition: "✍️ Idagdag ang aking pirma nang libre",
     petitionSuccessTitle: "Maraming salamat! Naitala ang iyong pirma!",
-    petitionSuccessSub: "Naidagdag na ang iyong pangalan sa aming pampublikong petisyon patungo sa target na 10,000 bago sumapit ang tag-ulan sa Hunyo.",
+    petitionSuccessSub: "Naidagdag na ang iyong pangalan sa aming pampublikong petisyon patungo sa target na 10,000 bago sumapit ang tag-ulan sa Hunyo 2027.",
 
     // About Section
     aboutBadge: "AKADEMIKONG BALANGKAS",
