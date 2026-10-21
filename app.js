@@ -29,7 +29,7 @@ const translations = {
     heroSubtitle: "United Delivery Riders of Metro Manila (UDRMM) is an independent, worker-led union fighting against algorithmic pay cuts, wet-season delivery speed penalties, and hazardous working conditions in Metro Manila.",
     heroCtaJoin: "Join UDRMM or make a donation",
     heroCtaProtest: "May 1st action hub",
-    statMembers: "Registered union members goal",
+    statMembers: "Registered Union members goal",
     statHazardPay: "Monsoon hazard pay demand",
     statCities: "Metro Manila cities covered",
     
@@ -106,7 +106,7 @@ const translations = {
     pl2Desc: "<strong>Abolish Speed Demerits:</strong> Suspend 25-min delivery countdowns and nullify negative customer ratings during official rainfall alerts.",
     pl3Desc: "<strong>DOLE Right-to-Refuse Protection:</strong> Protect riders from account deactivations or AR penalties when declining dangerous submerged routes.",
     pl4Desc: "<strong>Human Due Process:</strong> Guarantee 72-hour formal notice and union legal representation before any account suspension.",
-    pl5Desc: "<strong>Free Weather Gear &amp; Shelters:</strong> Provide free high-vis waterproof vestaglia (rain ponchos) and typhoon rest hubs across all 16 cities.",
+    pl5Desc: "<strong>Free Weather Gear &amp; Shelters:</strong> Provide free high-vis waterproof all-weather jackets and typhoon rest hubs across all 16 cities.",
 
     petitionTrackerTitle: "Goal: Collect 10,000 petition signatures on the website before the heavy rains start (by June 2027)",
     petitionTrackerSub: "Sign the free public petition to demand mandatory flood app integration, storm hazard pay, and zero weather speed demerits.",
@@ -124,7 +124,7 @@ const translations = {
     
     // Hero Poncho Product
     vestagliaTag: "★ EXCLUSIVE UNION MEMBER BENEFIT",
-    vestagliaTitle: "Official heavy-duty all-weather vestaglia (rain poncho)",
+    vestagliaTitle: "Official all-weather jacket",
     vestagliaDesc: "Designed specifically for Manila's torrential monsoon conditions. Made with double-sealed Oxford waterproof nylon, 360° neon safety stripes, storm flaps, and the official UDRMM rider chest insignia. Included for all registered union members with paid annual dues.",
     vf1: "100% storm-proof waterproof fabric",
     vf2: "360° neon & silver reflective safety bands",
@@ -403,7 +403,7 @@ const translations = {
     pl2Desc: "<strong>Tanggalin ang Parusa sa Bilis:</strong> Itigil ang 25-minutong countdown at burahin ang negatibong ratings habang may opisyal na rainfall alert.",
     pl3Desc: "<strong>Proteksyon sa DOLE Right-to-Refuse:</strong> Protektahan ang rider sa suspension o AR penalties kapag tumangging dumaan sa delikadong baha.",
     pl4Desc: "<strong>Makatarungang Paglilitis sa Tao:</strong> Garantiyang 72-oras na abiso at tulong legal ng unyon bago ang anumang suspension ng account.",
-    pl5Desc: "<strong>Libreng Gamit at Masisilungan:</strong> Libreng matibay at high-vis na vestaglia (kapote) at mga masisilungan tuwing bagyo sa lahat ng 16 lungsod.",
+    pl5Desc: "<strong>Libreng Gamit at Masisilungan:</strong> Libreng matibay at high-vis na all-weather jacket at mga masisilungan tuwing bagyo sa lahat ng 16 lungsod.",
 
     petitionTrackerTitle: "Layunin: Makakalap ng 10,000 pirma sa petisyon sa website bago magsimula ang tag-ulan (sa Hunyo 2027)",
     petitionTrackerSub: "Pirmahan ang libreng petisyon upang hilingin ang flood map integration, hazard pay, at pagpapatigil sa speed penalties tuwing may bagyo.",
@@ -421,7 +421,7 @@ const translations = {
     
     // Hero Poncho Product
     vestagliaTag: "★ NATATANGING BENEPISYO NG KASAPING RIDER",
-    vestagliaTitle: "Opisyal na Heavy-Duty All-Weather Vestaglia (Kapote)",
+    vestagliaTitle: "Opisyal na all-weather jacket",
     vestagliaDesc: "Espesyal na idinisenyo para sa malalakas na habagat at bagyo sa Maynila. Gawa sa double-sealed waterproof Oxford nylon, may 360° neon at reflective bands, storm flaps, at burdadong sagisag ng UDRMM. Kasama para sa lahat ng rehistradong miyembro na nagbayad ng taunang butaw.",
     vf1: "100% Hindi Bumabasa kahit Matinding Bagyo",
     vf2: "360° Neon at Silver Reflective Safety Bands",
