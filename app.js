@@ -274,19 +274,19 @@ const translations = {
     modalMemberTitle: "Join United Delivery Riders of Metro Manila",
     modalMemberSub: "Join the United Delivery Riders of Metro Manila. Annual union dues (₱350 PHP / year) are required to sustain our collective legal defense, helmet stickers, and worker-led campaign.",
     unionDuesTitle: "💳 Annual union dues: ₱350 PHP / year (Required)",
-    regDuesNote: "Includes official high-vis safety vest & waterproof stickers package upon paid enrollment.",
+    regDuesNote: "Includes official high-vis all-weather jacket & waterproof stickers package upon paid enrollment.",
     modalNameLbl: "Full name:",
     modalPlatformLbl: "Delivery platform(s):",
     modalCityLbl: "City / Barangay in Metro Manila:",
     modalPhoneLbl: "Mobile phone:",
-    modalSizeLbl: "Select safety vest / gear size:",
+    modalSizeLbl: "Select all-weather jacket / gear size:",
     duesPaymentOptionLbl: "Annual membership fee (₱350 PHP / year):",
     btnSubmitRegistration: "Pay ₱350 dues & complete registration",
     
     // Modal Confirmation
     registeredTitle: "Mabuhay! Welcome to UDRMM!",
     registeredSub: "Your membership registration and annual dues payment (₱350 PHP) have been confirmed. Here is your official Union Digital ID:",
-    regPonchoNote: "Your official high-vis safety vest & waterproof stickers package will be prepared for pickup at the UDRMM office or coordinated via your mobile phone.",
+    regPonchoNote: "Your official high-vis jacket & waterproof stickers package will be prepared for pickup at the UDRMM office or coordinated via your mobile phone.",
     
     // GDPR & Cookie Banner
     cookieTitle: "Cookie & Data Privacy Notice",
@@ -570,19 +570,19 @@ const translations = {
     modalMemberTitle: "Sumapi sa United Delivery Riders of Metro Manila",
     modalMemberSub: "Sumapi sa United Delivery Riders of Metro Manila. Ang taunang butaw (₱350 PHP / taon) ay kailangan upang pondohan ang tulong-legal, stickers sa helmet, at kampanya ng mga manggagawa.",
     unionDuesTitle: "💳 Taunang Butaw sa Unyon: ₱350 PHP / taon (Kailangan)",
-    regDuesNote: "Kasama ang opisyal na High-Vis Safety Vest at Waterproof Stickers package sa bawat bayad na pagsapi.",
+    regDuesNote: "Kasama ang opisyal na high-vis all-weather jacket at waterproof stickers package sa bawat bayad na pagsapi.",
     modalNameLbl: "Buong Pangalan:",
     modalPlatformLbl: "Delivery Platform(s):",
     modalCityLbl: "Lungsod / Barangay sa Metro Manila:",
     modalPhoneLbl: "Numero ng Telepono:",
-    modalSizeLbl: "Pumili ng Sukat ng Safety Vest / Gear:",
+    modalSizeLbl: "Pumili ng Sukat ng All-Weather Jacket / Gear:",
     duesPaymentOptionLbl: "Taunang Butaw sa Pagsapi (₱350 PHP / taon):",
     btnSubmitRegistration: "Magbayad ng ₱350 Butaw at Kumpletuhin ang Rehistro",
     
     // Modal Confirmation
     registeredTitle: "Mabuhay! Maligayang Pagdating sa UDRMM!",
     registeredSub: "Kumpirmado ang iyong pagsapi at taunang butaw (₱350 PHP). Narito ang iyong Opisyal na Digital ID ng Unyon:",
-    regPonchoNote: "Ang iyong opisyal na high-vis safety vest at waterproof stickers ay ihahanda para sa pickup sa opisina ng UDRMM o ipapadala sa pamamagitan ng iyong mobile phone.",
+    regPonchoNote: "Ang iyong opisyal na high-vis jacket at waterproof stickers ay ihahanda para sa pickup sa opisina ng UDRMM o ipapadala sa pamamagitan ng iyong mobile phone.",
     
     // GDPR & Cookie Banner
     cookieTitle: "Paunawa sa Cookie at Privacy ng Datos",
@@ -1263,7 +1263,7 @@ function setupMembershipModal() {
               </div>
               <div class="mid-name">${name}</div>
               <div style="font-size: 0.85rem; color: #E2E8F0; margin: 4px 0 6px;">
-                 Platform: ${platform} • Area: ${city} • Vest: Size ${size}
+                 Platform: ${platform} • Area: ${city} • Jacket: Size ${size}
               </div>
               <div style="font-size: 0.8rem; color: #FCD34D; font-weight: 600; margin-bottom: 10px;">
                 Status: Paid Member (₱350/yr • ${paymentMethod})
@@ -1272,10 +1272,10 @@ function setupMembershipModal() {
             </div>
 
             <div class="free-poncho-notice" style="text-align: left; margin: 1.5rem 0;">
-              <img src="assets/product-vest.jpg?v=20261012_v8" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover;">
+              <img src="assets/product-poncho.jpg" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover; border-radius: 8px;">
               <div>
                 <strong style="color: var(--ph-blue); font-size: 0.95rem; display: block; margin-bottom: 2px;">
-                  🛡️ Official high-vis safety vest & stickers package included!
+                  🛡️ Official high-vis jacket & stickers package included!
                 </strong>
                 <p style="font-size: 0.82rem; color: var(--text-body); font-weight: normal; margin: 0;">
                   ${translations[currentLang].regPonchoNote}
