@@ -29,7 +29,7 @@ const translations = {
     heroSubtitle: "United Delivery Riders of Metro Manila (UDRMM) is an independent, worker-led union fighting against algorithmic pay cuts, wet-season delivery speed penalties, and hazardous working conditions in Metro Manila.",
     heroCtaJoin: "Join UDRMM or make a donation",
     heroCtaProtest: "May 1st action hub",
-    statMembers: "Registered Union members goal",
+    statMembers: "Registered Union Members Goal",
     statHazardPay: "Monsoon hazard pay demand",
     statCities: "Metro Manila cities covered",
     
@@ -630,6 +630,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function applyLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('udrmm_lang', lang);
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.lang = (lang === 'fil' ? 'tl' : 'en');
   
   const dict = translations[lang];
   if (!dict) return;

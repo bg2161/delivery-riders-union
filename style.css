@@ -54,8 +54,12 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 105px;
+  scroll-padding-top: 85px;
   font-size: 16px;
+}
+
+html[data-lang="fil"] {
+  scroll-padding-top: 105px;
 }
 
 body {
@@ -149,13 +153,20 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 0.55rem clamp(1rem, 2.5vw, 3rem);
+  padding: 0 clamp(1rem, 2.5vw, 3rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  height: 74px;
+  transition: all 0.3s ease;
+}
+
+html[data-lang="fil"] .navbar .nav-container,
+html[data-lang="fil"] .site-header .header-container {
   min-height: 86px;
   height: auto;
+  padding: 0.55rem clamp(1rem, 2.5vw, 3rem);
 }
 
 .brand {
@@ -247,22 +258,41 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .nav-actions {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 0.35rem;
+  align-items: center;
+  gap: clamp(0.4rem, 0.7vw, 0.75rem);
   flex-shrink: 0;
+  transition: all 0.25s ease;
 }
 
 .nav-actions-top {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 0.5rem;
+  gap: clamp(0.4rem, 0.7vw, 0.75rem);
 }
 
 .nav-actions .btn-primary.open-membership-btn,
 .nav-actions .header-join-btn {
+  padding: 0.5rem clamp(0.65rem, 0.9vw, 1rem);
+  font-size: clamp(0.8rem, 0.85vw, 0.88rem);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Filipino Language Specific: Header layout with blue button placed below shopping bag on the right */
+html[data-lang="fil"] .nav-actions {
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+html[data-lang="fil"] .nav-actions-top {
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+html[data-lang="fil"] .nav-actions .btn-primary.open-membership-btn,
+html[data-lang="fil"] .nav-actions .header-join-btn {
   padding: 0.38rem 0.95rem;
   font-size: 0.8rem;
   font-weight: 700;
@@ -288,16 +318,22 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .lang-btn {
   border: none;
   background: transparent;
-  padding: 4px 10px;
-  font-size: 0.8rem;
+  padding: 5px 11px;
+  font-size: 0.82rem;
   font-weight: 700;
   border-radius: var(--radius-pill);
   cursor: pointer;
   color: var(--text-muted);
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   transition: all 0.2s ease;
+}
+
+html[data-lang="fil"] .lang-btn {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  gap: 4px;
 }
 
 .lang-btn.active {
@@ -316,8 +352,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   position: relative;
   background: #FFFFFF;
   border: 1.5px solid var(--border-subtle);
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -326,6 +362,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   color: var(--text-main);
   transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
+}
+
+html[data-lang="fil"] .cart-btn {
+  width: 38px;
+  height: 38px;
 }
 
 .cart-btn:hover {
@@ -2212,21 +2253,26 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 /* RESPONSIVE DESIGN */
 /* Tablet & Mobile: Switch to mobile navigation drawer */
 @media (max-width: 992px) {
-  html {
+  html,
+  html[data-lang="fil"] {
     scroll-padding-top: 75px;
   }
   .navbar .nav-container,
-  .site-header .header-container {
+  .site-header .header-container,
+  html[data-lang="fil"] .navbar .nav-container,
+  html[data-lang="fil"] .site-header .header-container {
     min-height: 68px;
     height: auto;
     padding: 0.5rem 1rem;
   }
-  .nav-actions {
+  .nav-actions,
+  html[data-lang="fil"] .nav-actions {
     flex-direction: row;
     align-items: center;
     gap: 0.5rem;
   }
-  .nav-actions-top {
+  .nav-actions-top,
+  html[data-lang="fil"] .nav-actions-top {
     gap: 0.5rem;
   }
   .nav-links {
@@ -2236,7 +2282,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     display: flex !important;
   }
   .nav-actions .btn-primary.open-membership-btn,
-  .nav-actions .header-join-btn {
+  .nav-actions .header-join-btn,
+  html[data-lang="fil"] .nav-actions .btn-primary.open-membership-btn,
+  html[data-lang="fil"] .nav-actions .header-join-btn {
     display: none !important; /* Accessible inside mobile drawer to prevent navbar wrapping */
   }
   .hero-grid {
@@ -2646,7 +2694,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     padding: 0.5rem 0;
   }
   
-  .nav-container {
+  .nav-container,
+  html[data-lang="fil"] .nav-container {
     min-height: 60px;
     height: auto;
     padding: 0 1rem;
@@ -2665,15 +2714,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     font-size: 0.68rem;
   }
 
-  .nav-actions {
+  .nav-actions,
+  html[data-lang="fil"] .nav-actions {
     flex-direction: row;
     align-items: center;
     gap: 0.45rem;
   }
 
   .nav-actions .btn-primary.open-membership-btn,
-  .nav-actions .header-join-btn {
-    display: none; /* Shown in mobile drawer to save header space */
+  .nav-actions .header-join-btn,
+  html[data-lang="fil"] .nav-actions .btn-primary.open-membership-btn,
+  html[data-lang="fil"] .nav-actions .header-join-btn {
+    display: none !important; /* Shown in mobile drawer to save header space */
   }
 
   .mobile-menu-btn {
