@@ -1887,15 +1887,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   gap: 1rem;
 }
 
+.bg-credit,
 .mimi-credit {
   font-size: 0.62rem;
-  color: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.12); /* quasi invisibile */
   letter-spacing: 0.4px;
   user-select: none;
   margin-top: 4px;
   transition: color 0.3s ease;
 }
 
+.bg-credit:hover,
 .mimi-credit:hover {
   color: rgba(255, 255, 255, 0.45);
 }
