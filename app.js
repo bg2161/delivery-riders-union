@@ -30,7 +30,6 @@ const translations = {
     heroCtaJoin: "Join UDRMM or make a donation",
     heroCtaProtest: "May 1st action hub",
     statMembers: "Registered Union Members Goal",
-    statHazardPay: "Monsoon hazard pay demand",
     statCities: "Metro Manila cities covered",
     
     // Hero Card
@@ -52,9 +51,6 @@ const translations = {
     pagasaLevelOrange: "Orange Warning (15-30 mm/hr)",
     weatherTitle: "Metro Manila weather & flood risk status",
     weatherDesc: "Active monsoon downpour. Flooding threatening España, Taft, and EDSA corridors. Platforms must suspend automatic delivery time penalties.",
-    weatherTipTitle: "Active rain protocol in effect:",
-    weatherTipDesc: "Delivery timers paused; +35% monsoon hazard pay demanded. Riders retain statutory right to refuse submerged routes under DOLE Advisory 17.",
-    weatherPledgeLink: "View platform demand #1 →",
 
     // Protest Section
     protestBadge: "MAY 1, 2027 • LABOR DAY MOBILIZATION",
@@ -327,7 +323,6 @@ const translations = {
     heroCtaJoin: "Sumapi sa UDRMM o mag-ambag",
     heroCtaProtest: "Sentro ng Pagkilos sa Mayo 1",
     statMembers: "Target na rehistradong kasapi ng unyon",
-    statHazardPay: "Hiling na Monsoon Hazard Pay",
     statCities: "Mga Lungsod sa Metro Manila",
     
     // Hero Card
@@ -349,9 +344,6 @@ const translations = {
     pagasaLevelOrange: "Orange Warning (15-30 mm/oras)",
     weatherTitle: "Lagay ng Panahon at Baha sa Metro Manila",
     weatherDesc: "Malakas na buhos ng habagat. May banta ng baha sa España, Taft, at EDSA. Dapat tanggalin ng mga app platform ang time penalties.",
-    weatherTipTitle: "Aktibong Panuntunan sa Ulan:",
-    weatherTipDesc: "Itigil ang delivery timers; ipinaglalaban ang +35% hazard pay. May karapatang tumanggi sa baha sa ilalim ng DOLE Advisory 17.",
-    weatherPledgeLink: "Tingnan ang Hiling #1 →",
 
     // Protest Section
     protestBadge: "MAYO 1, 2027 • ARAW NG PAGGAWA",

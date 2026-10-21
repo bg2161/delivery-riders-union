@@ -560,8 +560,9 @@ html[data-lang="fil"] .cart-btn {
 
 .hero-stats-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 440px;
+  gap: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1.5px dashed var(--border-subtle);
 }
@@ -1090,9 +1091,7 @@ html[data-lang="fil"] .cart-btn {
   border: 1.5px solid var(--border-subtle);
   padding: 1.5rem 1.75rem;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
-  display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: 1.75rem;
+  display: flex;
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -1105,8 +1104,7 @@ html[data-lang="fil"] .cart-btn {
   display: flex;
   align-items: flex-start;
   gap: 1.15rem;
-  padding-right: 1.5rem;
-  border-right: 1.5px solid var(--border-light);
+  width: 100%;
 }
 
 .weather-icon-box {
@@ -2308,14 +2306,13 @@ html[data-lang="fil"] .cart-btn {
     grid-template-columns: 1fr 1fr;
   }
   .weather-widget {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    padding: 1.25rem;
   }
   .weather-status {
     border-right: none;
-    border-bottom: 1.5px solid var(--border-light);
+    border-bottom: none;
     padding-right: 0;
-    padding-bottom: 1.15rem;
+    padding-bottom: 0;
   }
 }
 
