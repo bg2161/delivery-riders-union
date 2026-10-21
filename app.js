@@ -253,7 +253,6 @@ const translations = {
     roleWriting: "Writing",
     roleComm: "Communication",
     roleLeadership: "Leadership",
-    campaignTargetsHeading: "🎯 Campaign targets & transparent union fund allocation",
     
     // Cart Drawer
     cartTitle: "Your solidarity bag",
@@ -547,7 +546,6 @@ const translations = {
     roleWriting: "Writing",
     roleComm: "Communication",
     roleLeadership: "Leadership",
-    campaignTargetsHeading: "🎯 Mga Target ng Kampanya at Malinaw na Alokasyon ng Pondo",
     
     // Cart Drawer
     cartTitle: "Iyong Bag ng Pagkakaisa",
