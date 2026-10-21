@@ -3067,243 +3067,576 @@ img {
 }
 
 /* ==========================================================================
-   PARTNERS & ALLIES SECTION
+   COMMUNITY SOLIDARITY POT (FUNDING POT) SECTION
    ========================================================================== */
-.partners-section {
+.funding-pot-section {
   padding: 5.5rem 0;
-  background: var(--bg-card);
+  background: linear-gradient(180deg, #FDF8F5 0%, #FFFFFF 100%);
   position: relative;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
 }
 
-.partners-filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  justify-content: center;
-  margin: 2rem 0 3rem;
-}
-
-.partner-filter-btn {
-  background: #FFFFFF;
-  border: 1.5px solid var(--border-subtle);
-  color: var(--text-muted);
-  font-size: 0.88rem;
-  font-weight: 700;
-  padding: 0.55rem 1.15rem;
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-  transition: all 0.25s ease;
-  font-family: inherit;
-}
-
-.partner-filter-btn:hover {
-  border-color: var(--ph-blue);
-  color: var(--ph-blue);
-  background: var(--ph-blue-light);
-  transform: translateY(-1px);
-}
-
-.partner-filter-btn.active {
-  background: var(--ph-blue);
-  color: #FFFFFF;
-  border-color: var(--ph-blue);
-  box-shadow: 0 4px 12px rgba(0, 56, 168, 0.25);
-}
-
-.partners-grid {
+.funding-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 2.25rem;
+  align-items: start;
+  margin-top: 2.5rem;
 }
 
-.partner-card {
+/* Left Card: Pot Status & Impact */
+.funding-status-card {
   background: #FFFFFF;
   border-radius: var(--radius-lg);
   border: 1.5px solid var(--border-light);
-  padding: 1.75rem;
+  padding: 2.25rem;
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.25s ease;
-  position: relative;
+  gap: 1.75rem;
 }
 
-.partner-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--ph-blue-border);
-}
-
-.partner-card-header {
+.pot-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pot-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(206, 17, 38, 0.08);
+  border: 1.5px solid rgba(206, 17, 38, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.pot-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: var(--ph-red);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.pot-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--text-main);
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* Pot Live Counter Box */
+.pot-counter-box {
+  background: linear-gradient(135deg, #0A2540 0%, #1A365D 100%);
+  border-radius: var(--radius-md);
+  padding: 1.65rem;
+  color: #FFFFFF;
+  box-shadow: 0 10px 25px rgba(10, 37, 64, 0.18);
+}
+
+.pot-stat-row {
+  display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   gap: 1rem;
   margin-bottom: 1rem;
-}
-
-.partner-icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: var(--ph-blue-light);
-  color: var(--ph-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  flex-shrink: 0;
-  border: 1px solid var(--ph-blue-border);
-}
-
-.partner-icon-box.icon-red {
-  background: var(--ph-red-light);
-  color: var(--ph-red);
-  border-color: var(--ph-red-border);
-}
-
-.partner-icon-box.icon-yellow {
-  background: var(--ph-yellow-light);
-  color: var(--ph-yellow-dark);
-  border-color: #F8DF84;
-}
-
-.partner-icon-box.icon-slate {
-  background: #F1F5F9;
-  color: #475569;
-  border-color: #CBD5E1;
-}
-
-.partner-category-tag {
-  font-size: 0.72rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-pill);
-  background: var(--bg-card-soft);
-  color: var(--text-muted);
-  border: 1px solid var(--border-light);
-}
-
-.partner-card-title {
-  font-size: 1.18rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin-bottom: 0.25rem;
-  line-height: 1.3;
-}
-
-.partner-card-full-name {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-style: italic;
-  margin-bottom: 0.9rem;
-  line-height: 1.35;
-}
-
-.partner-card-desc {
-  font-size: 0.875rem;
-  color: var(--text-body);
-  line-height: 1.55;
-  margin-bottom: 1.25rem;
-  flex: 1;
-}
-
-.partner-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-light);
-  margin-top: auto;
-}
-
-.partner-role-pill {
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: var(--ph-blue);
-  background: var(--ph-blue-light);
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius-sm);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.partner-status-badge {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #15803D;
-  background: #DCFCE7;
-  padding: 0.25rem 0.55rem;
-  border-radius: var(--radius-pill);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.partner-status-badge::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #16A34A;
-}
-
-.partners-cta-box {
-  background: linear-gradient(135deg, #FFF5F7 0%, #EBF2FF 100%);
-  border: 2px dashed var(--ph-blue-border);
-  border-radius: var(--radius-lg);
-  padding: 2.25rem;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.partners-cta-title {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin-bottom: 0.5rem;
-}
-
-.partners-cta-desc {
-  font-size: 0.92rem;
-  color: var(--text-body);
-  margin-bottom: 1.5rem;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.5;
-}
-
-.partners-cta-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-  .partners-grid {
+.pot-amount-label {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.pot-amount-val {
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #FCD34D;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.pot-currency {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #E2E8F0;
+  margin-left: 0.25rem;
+}
+
+.pot-goal-box {
+  text-align: right;
+}
+
+.pot-goal-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+}
+
+.pot-goal-val {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.pot-progress-track {
+  width: 100%;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.85rem;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.pot-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #CE1126 0%, #F59E0B 55%, #10B981 100%);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.pot-progress-text {
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.pot-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: #CBD5E1;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pot-days-tag {
+  background: rgba(206, 17, 38, 0.35);
+  color: #FECACA;
+  border: 1px solid rgba(206, 17, 38, 0.5);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Impact Breakdown */
+.pot-impact-box {
+  background: var(--bg-card-soft);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+}
+
+.pot-impact-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.9rem;
+}
+
+.pot-impact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.pot-impact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.84rem;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+.impact-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.impact-dot.dot-red { background: #CE1126; box-shadow: 0 0 6px rgba(206, 17, 38, 0.4); }
+.impact-dot.dot-blue { background: #0038A8; box-shadow: 0 0 6px rgba(0, 56, 168, 0.4); }
+.impact-dot.dot-yellow { background: #F59E0B; box-shadow: 0 0 6px rgba(245, 158, 11, 0.4); }
+.impact-dot.dot-green { background: #10B981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.4); }
+
+.pot-transparency-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-light);
+  padding-top: 0.75rem;
+}
+
+.pot-transparency-hint a {
+  color: var(--ph-blue);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Right Card: Interactive Donation Form */
+.donation-form-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--border-light);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.donation-card-header {
+  margin-bottom: 1.4rem;
+}
+
+.donation-card-header h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.donation-card-header p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Donation Frequency Toggle */
+.freq-toggle-group {
+  display: flex;
+  background: var(--bg-card-soft);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  gap: 4px;
+  border: 1px solid var(--border-light);
+  margin-bottom: 1.35rem;
+}
+
+.freq-btn {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-align: center;
+}
+
+.freq-btn.active {
+  background: #FFFFFF;
+  color: var(--ph-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Presets Grid */
+.donation-presets-label {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.6rem;
+}
+
+.donation-presets-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+
+.preset-btn {
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  position: relative;
+}
+
+.preset-btn:hover {
+  border-color: var(--ph-blue);
+  background: var(--ph-blue-light);
+  transform: translateY(-2px);
+}
+
+.preset-btn.active {
+  background: #EFF6FF;
+  border-color: var(--ph-blue);
+  box-shadow: 0 0 0 2px rgba(0, 56, 168, 0.2);
+}
+
+.preset-php {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--text-main);
+  line-height: 1.15;
+}
+
+.preset-btn.active .preset-php {
+  color: var(--ph-blue);
+}
+
+.preset-badge {
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 3px;
+  line-height: 1;
+}
+
+.preset-badge.badge-popular {
+  color: var(--ph-red);
+  font-weight: 800;
+}
+
+/* Custom Amount Field */
+.custom-amount-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.curr-prefix {
+  position: absolute;
+  left: 1rem;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--ph-blue);
+  pointer-events: none;
+}
+
+.curr-suffix {
+  position: absolute;
+  right: 1rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.custom-amount-input {
+  padding-left: 2.2rem;
+  padding-right: 3.5rem;
+  font-weight: 800;
+  font-size: 1.05rem;
+  height: 48px;
+}
+
+/* Payment Method Pills */
+.payment-method-pills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+.pay-method-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.pay-method-pill:hover {
+  border-color: var(--ph-blue);
+  background: var(--bg-card-soft);
+}
+
+.pay-method-pill:has(input:checked) {
+  border-color: var(--ph-blue);
+  background: #EFF6FF;
+  box-shadow: 0 0 0 1px var(--ph-blue);
+}
+
+.pay-method-pill input[type="radio"] {
+  accent-color: var(--ph-blue);
+  cursor: pointer;
+}
+
+/* Donor Details */
+.donor-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.anonymous-checkbox-row {
+  margin: 0.4rem 0 0.85rem;
+}
+
+.btn-submit-donation {
+  width: 100%;
+  justify-content: center;
+  padding: 0.95rem 1.5rem;
+  font-size: 1.02rem;
+  font-weight: 800;
+  background: var(--ph-red);
+  color: #FFFFFF;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px rgba(206, 17, 38, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-submit-donation:hover {
+  background: #A50E1E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(206, 17, 38, 0.45);
+}
+
+.donation-disclaimer {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.85rem;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   MODAL MODE TABS & SUPPORTER CONTROLS
+   ========================================================================== */
+.modal-mode-tabs {
+  display: flex;
+  background: var(--bg-card-soft);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  gap: 4px;
+  border: 1.5px solid var(--border-light);
+  margin-bottom: 1.15rem;
+}
+
+.modal-mode-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.65rem 0.8rem;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.84rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.modal-mode-tab:hover {
+  color: var(--text-main);
+}
+
+.modal-mode-tab.active#modal-tab-rider {
+  background: var(--ph-blue);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 56, 168, 0.25);
+}
+
+.modal-mode-tab.active#modal-tab-supporter {
+  background: var(--ph-red);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(206, 17, 38, 0.25);
+}
+
+.modal-intro-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.15rem;
+  line-height: 1.5;
+}
+
+.modal-presets-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.4rem;
+}
+
+.modal-preset-btn {
+  padding: 0.55rem 0.25rem;
+}
+
+.modal-preset-btn .preset-php {
+  font-size: 0.95rem;
+}
+
+.modal-preset-btn .preset-badge {
+  font-size: 0.6rem;
+}
+
+/* Responsive queries */
+@media (max-width: 900px) {
+  .funding-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .donation-presets-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .donor-details-grid {
     grid-template-columns: 1fr;
   }
-  .partners-filter-bar {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
+  .payment-method-pills {
+    grid-template-columns: 1fr;
   }
-  .partner-filter-btn {
-    white-space: nowrap;
-    flex-shrink: 0;
+  .pot-amount-val {
+    font-size: 1.85rem;
+  }
+  .modal-presets-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

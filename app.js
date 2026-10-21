@@ -17,17 +17,17 @@ const translations = {
     navShop: "Membership & Shop",
     navTransparency: "Transparency",
     navStories: "Rider Stories",
-    navPartners: "Partners",
+    navFundingPot: "Funding Pot",
     navAbout: "About Us",
     navPetition: "10,000 Petition",
-    btnJoinNav: "Join UDRMM (₱350/yr)",
+    btnJoinNav: "Join UDRMM or make a donation",
     
     // Hero
     heroBadge: "Official Union of Manila Food & Courier Riders",
     heroTitlePart1: "No delivery is worth a ",
     heroTitleHighlight: "rider's safety.",
     heroSubtitle: "United Delivery Riders of Metro Manila (UDRMM) is an independent, worker-led union fighting against algorithmic pay cuts, wet-season delivery speed penalties, and hazardous working conditions in Metro Manila.",
-    heroCtaJoin: "Become a member (₱350/yr dues)",
+    heroCtaJoin: "Join UDRMM or make a donation",
     heroCtaProtest: "May 1st action hub",
     statMembers: "Registered union members",
     statHazardPay: "Monsoon hazard pay demand",
@@ -45,7 +45,7 @@ const translations = {
     heroPonchoDesc: "High-visibility reflective all-weather poncho given to all riders upon registration.",
     membershipFeeDuesLbl: "Already included in annual union dues",
     membershipFeeLabel: "Includes high-vis safety vest & stickers (Annual dues: ₱350/yr)",
-    btnClaimPoncho: "Register & join union (₱350/yr)",
+    btnClaimPoncho: "Join UDRMM or make a donation",
 
     // Live Weather & Flood Risk Advisory Widget
     weatherBadge: "PAGASA & PROJECT NOAH ADVISORY",
@@ -169,45 +169,39 @@ const translations = {
     story3Author: "Kuya Roland",
     story3Role: "UDRMM Manila Chapter Leader",
 
-    // Partners Section
-    partnersBadge: "SOLIDARITY & LEGITIMACY",
-    partnersTitle: "Our partners & institutional allies",
-    partnersDesc: "Accredited labor federations, legal defense clinics, and research institutions standing with Metro Manila delivery couriers.",
-    filterAll: "All allies",
-    filterLabor: "Labor federations",
-    filterLegal: "Legal defense",
-    filterResearch: "Academic research",
-    filterCommunity: "Community solidarity",
-    catLabor: "Labor federation",
-    catLegal: "Legal defense",
-    catResearch: "Academic research",
-    catCommunity: "Community solidarity",
-    statusAccredited: "Accredited ally",
-    statusLegal: "Legal aid partner",
-    statusResearch: "Research partner",
-    statusCommunity: "Solidarity host",
-    roleSentro: "⚖️ DOLE dialogues",
-    roleItf: "🌏 Global network",
-    roleKagulong: "📢 May 1 co-convener",
-    roleCtuhr: "⚖️ Rapid-response legal",
-    roleIlaw: "📑 Strategic litigation",
-    roleAhrc: "🎓 Pro-bono clinic",
-    roleFairwork: "🔍 Decent work audit",
-    roleIbon: "💰 Living wage data",
-    roleClc: "🌧️ Typhoon rest shelters",
-    partnerSentroDesc: "Major Philippine national labor center organizing transport and logistics couriers; co-leads tripartite DOLE negotiations and collective bargaining advocacy against unfair algorithmic deactivations.",
-    partnerItfDesc: "Global democratic federation of 18M+ transport workers; coordinates international campaigns against multinational platform tech giants and supports cross-border labor rights.",
-    partnerKagulongDesc: "Pioneering Metro Manila two-wheel delivery couriers alliance; co-organizer of the May 1st Rider Unity Caravan, safety protocols, and mutual aid stations.",
-    partnerCtuhrDesc: "Independent human rights NGO documenting platform labor abuses and providing free legal representation for riders unjustly deactivated or blacklisted by platform dispatch algorithms.",
-    partnerIlawDesc: "Global network of trade union labor attorneys advising on statutory social protections, reclassification of gig riders, and algorithmic transparency challenges.",
-    partnerAhrcDesc: "University legal clinic providing pro-bono consultation, grievance mediation, and policy drafting support for the national Magna Carta for Delivery Workers.",
-    partnerFairworkDesc: "Academic initiative evaluating digital platform companies against international decent work standards, documenting net wages after fuel inflation and road hazards.",
-    partnerIbonDesc: "Independent research institute calculating the realistic family living wage (₱1,197/day in NCR) and documenting fuel cost inflation squeezing motorcycle courier take-home pay.",
-    partnerClcDesc: "Inter-faith and community alliance providing emergency monsoon sanctuaries, dry clothing, hot meals, and motorcycle staging rest stops along EDSA and Welcome Rotonda.",
-    partnersCtaTitle: "Are you an organization supporting delivery workers?",
-    partnersCtaDesc: "We welcome trade union affiliates, paralegal clinics, university research groups, and community solidarity networks fighting for dignity in the platform economy.",
-    btnViewPartnersPage: "View dedicated partners directory",
-    btnJoinAsAlly: "Join union solidarity network",
+    // Community Solidarity Pot (Funding Pot) Section
+    fundingBadge: "COMMUNITY SOLIDARITY POT",
+    fundingTitle: "Support our battles & May 1 mobilization",
+    fundingDesc: "You don't need to be a delivery rider to stand with our cause. Anyone—consumers, allies, students, and community supporters—can contribute directly to our union fighting pot. Every peso powers our May 1st strike caravan, emergency typhoon relief, and collective legal defense.",
+    potBadge: "MAY 1 MOBILIZATION & TYPHOON FUND",
+    potTitle: "Community fighting pot",
+    potRaisedLbl: "Total raised so far:",
+    potGoalLbl: "Target goal:",
+    potSupportersCount: "grassroots contributors",
+    potDeadline: "🎯 Deadline: May 1, 2027",
+    potImpactTitle: "How your contribution is directly put to work:",
+    impactItem1: "<strong>35% May 1 Strike Logistics:</strong> Sound truck, hydration stations &amp; rally marshals across EDSA.",
+    impactItem2: "<strong>30% Typhoon &amp; Flood Relief:</strong> Emergency towing subsidies and food packs for stranded riders.",
+    impactItem3: "<strong>20% Legal Defense Desk:</strong> Retainer assistance for DOLE complaints against app deactivations.",
+    impactItem4: "<strong>15% Young Courier Safety:</strong> Free high-vis decals and emergency repair toolkit kits.",
+    potTransparencyLink: "Full accounting published in our <a href=\"#transparency\">Transparency section</a> below.",
+    donateCardTitle: "Make a solidarity contribution",
+    donateCardSub: "Choose a preset amount or enter any amount you wish to contribute online.",
+    freqOneTime: "One-time gift",
+    freqMonthly: "Monthly solidarity pledge",
+    presetAmountLbl: "Select amount (PHP):",
+    preset100Badge: "Rally Kit",
+    preset250Badge: "Caravan Fuel",
+    preset500Badge: "Popular • Safety",
+    preset1000Badge: "Legal Defense",
+    preset2500Badge: "Sound Truck",
+    customAmountLbl: "Or enter custom amount:",
+    potPaymentMethodLbl: "Payment method:",
+    donorNameLbl: "Your name:",
+    donorContactLbl: "Email or mobile:",
+    donorAnonymousLbl: "Keep my name anonymous on the public contributor list",
+    donorMessageLbl: "Solidarity message for riders (optional):",
+    donationDisclaimer: "🔒 100% transparent. No app fees deducted. All simulated online transactions directly support worker mutual aid.",
 
     // Transparency & Grassroots Governance
     transparencyBadge: "FINANCIAL TRANSPARENCY & DEMOCRACY",
@@ -270,9 +264,14 @@ const translations = {
     subtotalLbl: "Subtotal:",
     btnCheckout: "Proceed to order",
     
-    // Membership Modal
-    modalMemberTitle: "Join United Delivery Riders of Metro Manila",
+    // Membership Modal & Supporter Donation
+    modalMemberTitle: "Join UDRMM or make a donation",
+    tabRiderMember: "Rider membership (₱350/yr)",
+    tabSupporterDonation: "Donate as supporter",
     modalMemberSub: "Join the United Delivery Riders of Metro Manila. Annual union dues (₱350 PHP / year) are required to sustain our collective legal defense, helmet stickers, and worker-led campaign.",
+    modalSupporterSub: "You don't need to be a delivery rider to stand with our cause. Anyone—consumers, allies, and supporters—can donate online to fund our May 1st strike caravan, typhoon emergency aid, and courier legal defense.",
+    modalSupporterBannerTitle: "Community supporter donation",
+    modalSupporterBannerDesc: "100% of your contribution powers worker mutual aid, storm relief, and the May 1st mobilization. No platform or delivery rider duties required.",
     unionDuesTitle: "💳 Annual union dues: ₱350 PHP / year (Required)",
     regDuesNote: "Includes official high-vis all-weather jacket & waterproof stickers package upon paid enrollment.",
     modalNameLbl: "Full name:",
@@ -287,6 +286,8 @@ const translations = {
     registeredTitle: "Mabuhay! Welcome to UDRMM!",
     registeredSub: "Your membership registration and annual dues payment (₱350 PHP) have been confirmed. Here is your official Union Digital ID:",
     regPonchoNote: "Your official high-vis jacket & waterproof stickers package will be prepared for pickup at the UDRMM office or coordinated via your mobile phone.",
+    supporterSuccessTitle: "Maraming salamat! Solidarity donation received!",
+    supporterSuccessSub: "Your contribution directly powers our May 1st mobilization, typhoon mutual aid, and courier legal defense. Here is your official Supporter Digital Certificate:",
     
     // GDPR & Cookie Banner
     cookieTitle: "Cookie & Data Privacy Notice",
@@ -313,17 +314,17 @@ const translations = {
     navShop: "Kasapian at Tindahan",
     navTransparency: "Katapatan at Pondo",
     navStories: "Kuwento ng Rider",
-    navPartners: "Mga Kasosyo",
+    navFundingPot: "Pondo ng Unyon",
     navAbout: "Tungkol sa Amin",
     navPetition: "Petisyon (10,000)",
-    btnJoinNav: "Sumapi sa UDRMM (₱350/taon)",
+    btnJoinNav: "Sumapi sa UDRMM o mag-ambag",
     
     // Hero
     heroBadge: "Opisyal na Unyon ng mga Food at Courier Rider sa Maynila",
     heroTitlePart1: "Walang order ang katumbas ng ",
     heroTitleHighlight: "kaligtasan ng rider.",
     heroSubtitle: "Ang United Delivery Riders of Metro Manila (UDRMM) ay isang nagsasarili at pinangungunahan ng manggagawang unyon na lumalaban sa bawas-sahod ng algorithm, parusa sa bilis tuwing tag-ulan, at mapanganib na kalagayan sa kalsada.",
-    heroCtaJoin: "Maging Kasapi (₱350/taon Butaw)",
+    heroCtaJoin: "Sumapi sa UDRMM o mag-ambag",
     heroCtaProtest: "Sentro ng Pagkilos sa Mayo 1",
     statMembers: "Mga rehistradong kasapi ng unyon",
     statHazardPay: "Hiling na Monsoon Hazard Pay",
@@ -341,7 +342,7 @@ const translations = {
     heroPonchoDesc: "Mataas ang visibility na reflective all-weather vest at stickers para sa mga rehistradong rider.",
     membershipFeeDuesLbl: "Kasama na sa taunang butaw sa unyon",
     membershipFeeLabel: "Kasama ang High-Vis Safety Vest at Stickers (Taunang Butaw: ₱350/taon)",
-    btnClaimPoncho: "Magrehistro at Sumapi (₱350/taon)",
+    btnClaimPoncho: "Sumapi sa UDRMM o mag-ambag",
 
     // Live Weather & Flood Risk Advisory Widget
     weatherBadge: "PAALALA NG PAGASA AT PROJECT NOAH",
@@ -465,45 +466,39 @@ const translations = {
     story3Author: "Kuya Roland",
     story3Role: "Lider ng UDRMM Manila Chapter",
 
-    // Partners Section
-    partnersBadge: "PAGKAKAISA AT LEHITIMASYON",
-    partnersTitle: "Aming mga kasosyo at kaalyadong institusyon",
-    partnersDesc: "Mga akreditadong pederasyon ng paggawa, tanggapan ng tulong-legal, at institusyon ng pananaliksik na sumusuporta sa mga delivery rider sa Metro Manila.",
-    filterAll: "Lahat ng kaalyado",
-    filterLabor: "Pederasyon ng paggawa",
-    filterLegal: "Tulong legal",
-    filterResearch: "Pananaliksik",
-    filterCommunity: "Pakikiisa ng komunidad",
-    catLabor: "Pederasyon ng paggawa",
-    catLegal: "Tulong legal",
-    catResearch: "Pananaliksik",
-    catCommunity: "Pakikiisa ng komunidad",
-    statusAccredited: "Akreditadong kaalyado",
-    statusLegal: "Kasosyo sa tulong-legal",
-    statusResearch: "Kasosyo sa pananaliksik",
-    statusCommunity: "Tahanan ng pagkakaisa",
-    roleSentro: "⚖️ Diyalogo sa DOLE",
-    roleItf: "🌏 Pandaigdigang network",
-    roleKagulong: "📢 Kasamang nag-oorganisa sa Mayo 1",
-    roleCtuhr: "⚖️ Mabilisang tulong-legal",
-    roleIlaw: "📑 Estratehikong paglilitis",
-    roleAhrc: "🎓 Pro-bono legal clinic",
-    roleFairwork: "🔍 Pagsusuri sa disenteng trabaho",
-    roleIbon: "💰 Datos sa living wage",
-    roleClc: "🌧️ Silungan tuwing may bagyo",
-    partnerSentroDesc: "Pangunahing pambansang sentro ng manggagawa sa Pilipinas na nag-oorganisa sa sektor ng transportasyon; nangunguna sa pakikipag-usap sa DOLE at collective bargaining laban sa hindi makatarungang deactivation.",
-    partnerItfDesc: "Pandaigdigang pederasyon ng mahigit 18 milyong manggagawa sa transportasyon; nag-uugnay ng mga kampanya laban sa mga multinational platform app.",
-    partnerKagulongDesc: "Pangunahing samahan ng mga nakamotorsiklong rider sa Metro Manila; kasamang nag-oorganisa ng Motorcade Caravan sa Mayo 1 at mga estasyon ng tulungan.",
-    partnerCtuhrDesc: "Malayang samahan para sa karapatang pantao na nagtatala ng paglabag sa mga rider at nagbibigay ng libreng tulong-legal laban sa biglaang pagkakatanggal sa app.",
-    partnerIlawDesc: "Pandaigdigang samahan ng mga abugado ng manggagawa na nagbibigay ng payo sa proteksyong panlipunan at transparency sa algorithm ng delivery.",
-    partnerAhrcDesc: "Legal clinic ng unibersidad na nagbibigay ng libreng konsultasyon, pamamagitan sa alitan, at pagsusulong ng Magna Carta for Delivery Workers.",
-    partnerFairworkDesc: "Akademikong inisyatiba na sumusuri sa mga digital platform batay sa pamantayan ng disenteng trabaho at totoong kita matapos ang bawas sa krudo.",
-    partnerIbonDesc: "Malayang institusyon sa pananaliksik na nagtatala ng tunay na family living wage (₱1,197/araw sa NCR) at epekto ng taas-presyo ng gasolina sa mga rider.",
-    partnerClcDesc: "Samahan ng simbahan at manggagawa na nagbibigay ng silungan, mainit na pagkain, at ligtas na hintayan kapag may malakas na ulan at baha sa EDSA at Welcome Rotonda.",
-    partnersCtaTitle: "Organisasyon ka ba na nais sumuporta sa mga delivery rider?",
-    partnersCtaDesc: "Bukas kami sa pakikipagtulungan sa mga unyon, paralegal clinic, mananaliksik sa unibersidad, at grupo sa komunidad na lumalaban para sa dangal ng mga manggagawa.",
-    btnViewPartnersPage: "Tingnan ang direktoryo ng mga kasosyo",
-    btnJoinAsAlly: "Sumali sa network ng pagkakaisa",
+    // Pondo ng Pagkakaisa ng Komunidad
+    fundingBadge: "PONDO NG PAGKAKAISA NG KOMUNIDAD",
+    fundingTitle: "Suportahan ang aming laban at pagkilos sa Mayo 1",
+    fundingDesc: "Hindi mo kailangang maging delivery rider upang makiisa sa aming laban. Kahit sino—kostumer, kaalyado, estudyante, at tagasuporta ng komunidad—ay maaaring mag-ambag nang direkta sa pondo ng unyon. Bawat piso ay nagpapatakbo sa ating motorcade caravan sa Mayo 1, tulong sa bagyo, at depensang legal.",
+    potBadge: "PONDO PARA SA MAYO 1 AT BAGYO",
+    potTitle: "Pondo ng pagkakaisa ng komunidad",
+    potRaisedLbl: "Kabuuang nalikom:",
+    potGoalLbl: "Target na pondo:",
+    potSupportersCount: "mga nag-ambag mula sa komunidad",
+    potDeadline: "🎯 Takdang Araw: Mayo 1, 2027",
+    potImpactTitle: "Kung paano direktang ginagamit ang inyong ambag:",
+    impactItem1: "<strong>35% Logistika sa Mayo 1:</strong> Sound truck, hydration stations at rally marshals sa kahabaan ng EDSA.",
+    impactItem2: "<strong>30% Ayuda sa Baha at Bagyo:</strong> Subsidiya sa towing at food packs para sa mga stranded na rider.",
+    impactItem3: "<strong>20% Legal Defense Desk:</strong> Tulong sa pormal na reklamo sa DOLE laban sa deactivation ng mga app.",
+    impactItem4: "<strong>15% Kaligtasan ng mga Rider:</strong> Libreng high-vis decals at toolkit para sa emergency repair sa kalsada.",
+    potTransparencyLink: "Buong ulat sa pananalapi sa aming <a href=\"#transparency\">Seksyon ng Katapatan</a> sa ibaba.",
+    donateCardTitle: "Mag-ambag para sa pagkakaisa",
+    donateCardSub: "Pumili ng halaga o maglagay ng nais mong i-ambag online.",
+    freqOneTime: "Isahang ambag",
+    freqMonthly: "Buwanang pangakong ambag",
+    presetAmountLbl: "Pumili ng halaga (PHP):",
+    preset100Badge: "Rally Kit",
+    preset250Badge: "Krudong Caravan",
+    preset500Badge: "Mabenta • Kaligtasan",
+    preset1000Badge: "Tulong Legal",
+    preset2500Badge: "Sound Truck",
+    customAmountLbl: "O maglagay ng ibang halaga:",
+    potPaymentMethodLbl: "Paraan ng pagbabayad:",
+    donorNameLbl: "Iyong pangalan:",
+    donorContactLbl: "Email o cellphone:",
+    donorAnonymousLbl: "Panatilihing hindi nakikita ang aking pangalan sa pampublikong listahan",
+    donorMessageLbl: "Mensahe ng pakikiisa para sa mga rider (opsyonal):",
+    donationDisclaimer: "🔒 100% tapat. Walang bawas ng komersyal na app. Ang lahat ng transaksyon ay direktang sumusuporta sa tulungan ng manggagawa.",
 
     // Transparency & Grassroots Governance
     transparencyBadge: "KATAPATAN SA PONDO AT DEMOKRASYA",
@@ -566,9 +561,14 @@ const translations = {
     subtotalLbl: "Kabuuan:",
     btnCheckout: "Magpatuloy sa Pag-order",
     
-    // Membership Modal
-    modalMemberTitle: "Sumapi sa United Delivery Riders of Metro Manila",
+    // Membership Modal & Supporter Donation
+    modalMemberTitle: "Sumapi sa UDRMM o mag-ambag",
+    tabRiderMember: "Pagsapi bilang rider (₱350/taon)",
+    tabSupporterDonation: "Mag-ambag bilang tagasuporta",
     modalMemberSub: "Sumapi sa United Delivery Riders of Metro Manila. Ang taunang butaw (₱350 PHP / taon) ay kailangan upang pondohan ang tulong-legal, stickers sa helmet, at kampanya ng mga manggagawa.",
+    modalSupporterSub: "Hindi mo kailangang maging delivery rider upang makiisa. Kahit sino ay maaaring mag-ambag online para sa May 1 caravan, ayuda sa bagyo, at tulong-legal sa mga courier.",
+    modalSupporterBannerTitle: "Ambag ng tagasuporta ng komunidad",
+    modalSupporterBannerDesc: "100% ng inyong tulong ay direktang napupunta sa mutual aid ng mga manggagawa, saklolo sa baha, at mobilisasyon sa Mayo 1.",
     unionDuesTitle: "💳 Taunang Butaw sa Unyon: ₱350 PHP / taon (Kailangan)",
     regDuesNote: "Kasama ang opisyal na high-vis all-weather jacket at waterproof stickers package sa bawat bayad na pagsapi.",
     modalNameLbl: "Buong Pangalan:",
@@ -583,6 +583,8 @@ const translations = {
     registeredTitle: "Mabuhay! Maligayang Pagdating sa UDRMM!",
     registeredSub: "Kumpirmado ang iyong pagsapi at taunang butaw (₱350 PHP). Narito ang iyong Opisyal na Digital ID ng Unyon:",
     regPonchoNote: "Ang iyong opisyal na high-vis jacket at waterproof stickers ay ihahanda para sa pickup sa opisina ng UDRMM o ipapadala sa pamamagitan ng iyong mobile phone.",
+    supporterSuccessTitle: "Maraming salamat! Natanggap ang inyong ambag!",
+    supporterSuccessSub: "Ang iyong tulong ay direktang sumusuporta sa pagkilos sa Mayo 1, saklolo sa baha, at depensang legal. Narito ang iyong Opisyal na Digital Certificate ng Tagasuporta:",
     
     // GDPR & Cookie Banner
     cookieTitle: "Paunawa sa Cookie at Privacy ng Datos",
@@ -622,7 +624,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupProductViewSwitchers();
   setupMobileMenu();
   setupCookieAndPrivacy();
-  setupPartnerFilters();
+  setupFundingPot();
 });
 
 // Switch Language
@@ -1206,12 +1208,108 @@ function closeCartDrawer() {
   if (overlay) overlay.classList.remove('active');
 }
 
-// Membership Registration Modal & Free Poncho
+// Membership Registration Modal & Supporter Donation
 function setupMembershipModal() {
   const openButtons = document.querySelectorAll('.open-membership-btn');
   const modalOverlay = document.getElementById('membership-modal-overlay');
   const closeModalBtn = document.getElementById('close-membership-btn');
   const form = document.getElementById('membership-form');
+
+  // Mode tabs
+  const tabRider = document.getElementById('modal-tab-rider');
+  const tabSupporter = document.getElementById('modal-tab-supporter');
+  const descRider = document.getElementById('modal-desc-rider');
+  const descSupporter = document.getElementById('modal-desc-supporter');
+  const bannerRider = document.getElementById('modal-rider-banner');
+  const bannerSupporter = document.getElementById('modal-supporter-banner');
+  const supporterAmountSection = document.getElementById('modal-supporter-amount-section');
+  const groupPlatform = document.getElementById('group-member-platform');
+  const groupSize = document.getElementById('group-member-size');
+  const groupSupporterMsg = document.getElementById('group-supporter-msg');
+  const groupRiderPay = document.getElementById('group-rider-payment');
+  const groupSupporterPay = document.getElementById('group-supporter-payment');
+  const btnText = document.getElementById('membership-btn-text');
+  const disclaimer = document.getElementById('modal-supporter-disclaimer');
+  const customAmountInput = document.getElementById('modal-custom-amount');
+  const presetBtns = document.querySelectorAll('.modal-preset-btn');
+
+  let activeMode = 'rider'; // 'rider' | 'supporter'
+  let modalSelectedAmount = 500;
+
+  function updateModalSubmitBtn() {
+    if (!btnText) return;
+    if (activeMode === 'rider') {
+      btnText.textContent = currentLang === 'en' 
+        ? 'Pay ₱350 dues & complete registration' 
+        : 'Magbayad ng ₱350 Butaw at Kumpletuhin ang Rehistro';
+    } else {
+      btnText.textContent = currentLang === 'en'
+        ? `Donate ₱${modalSelectedAmount.toLocaleString()} as Community Supporter`
+        : `Mag-ambag ng ₱${modalSelectedAmount.toLocaleString()} bilang Tagasuporta`;
+    }
+  }
+
+  function setMode(mode) {
+    activeMode = mode;
+    if (mode === 'rider') {
+      if (tabRider) { tabRider.classList.add('active'); tabRider.setAttribute('aria-selected', 'true'); }
+      if (tabSupporter) { tabSupporter.classList.remove('active'); tabSupporter.setAttribute('aria-selected', 'false'); }
+      if (descRider) descRider.style.display = 'block';
+      if (descSupporter) descSupporter.style.display = 'none';
+      if (bannerRider) bannerRider.style.display = 'flex';
+      if (bannerSupporter) bannerSupporter.style.display = 'none';
+      if (supporterAmountSection) supporterAmountSection.style.display = 'none';
+      if (groupPlatform) groupPlatform.style.display = 'block';
+      if (groupSize) groupSize.style.display = 'block';
+      if (groupSupporterMsg) groupSupporterMsg.style.display = 'none';
+      if (groupRiderPay) groupRiderPay.style.display = 'block';
+      if (groupSupporterPay) groupSupporterPay.style.display = 'none';
+      if (disclaimer) disclaimer.style.display = 'none';
+    } else {
+      if (tabSupporter) { tabSupporter.classList.add('active'); tabSupporter.setAttribute('aria-selected', 'true'); }
+      if (tabRider) { tabRider.classList.remove('active'); tabRider.setAttribute('aria-selected', 'false'); }
+      if (descRider) descRider.style.display = 'none';
+      if (descSupporter) descSupporter.style.display = 'block';
+      if (bannerRider) bannerRider.style.display = 'none';
+      if (bannerSupporter) bannerSupporter.style.display = 'flex';
+      if (supporterAmountSection) supporterAmountSection.style.display = 'block';
+      if (groupPlatform) groupPlatform.style.display = 'none';
+      if (groupSize) groupSize.style.display = 'none';
+      if (groupSupporterMsg) groupSupporterMsg.style.display = 'block';
+      if (groupRiderPay) groupRiderPay.style.display = 'none';
+      if (groupSupporterPay) groupSupporterPay.style.display = 'block';
+      if (disclaimer) disclaimer.style.display = 'block';
+    }
+    updateModalSubmitBtn();
+  }
+
+  if (tabRider) tabRider.addEventListener('click', () => setMode('rider'));
+  if (tabSupporter) tabSupporter.addEventListener('click', () => setMode('supporter'));
+
+  // Preset buttons in modal
+  presetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      presetBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      modalSelectedAmount = parseInt(btn.dataset.amount, 10) || 500;
+      if (customAmountInput) customAmountInput.value = '';
+      updateModalSubmitBtn();
+    });
+  });
+
+  // Custom amount input in modal
+  if (customAmountInput) {
+    customAmountInput.addEventListener('input', () => {
+      const val = parseInt(customAmountInput.value, 10);
+      if (val && val > 0) {
+        presetBtns.forEach(b => b.classList.remove('active'));
+        modalSelectedAmount = val;
+      } else {
+        modalSelectedAmount = 500;
+      }
+      updateModalSubmitBtn();
+    });
+  }
 
   openButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -1235,17 +1333,18 @@ function setupMembershipModal() {
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('member-name').value || 'Kasaping Rider';
-      const platform = document.getElementById('member-platform').value || 'FoodTiger';
-      const city = document.getElementById('member-city').value || 'Metro Manila';
-      const size = document.getElementById('member-size').value || 'L';
-      const paymentMethod = document.querySelector('input[name="dues_payment_method"]:checked')?.value || 'GCash';
-      const duesLabel = `Paid Membership: ₱350 PHP / year (${paymentMethod})`;
-      
-      const memberId = 'UDRMM-MNL-2027-' + Math.floor(1000 + Math.random() * 9000);
-
       const modalBody = document.getElementById('membership-modal-body');
-      if (modalBody) {
+      if (!modalBody) return;
+
+      const name = document.getElementById('member-name')?.value || (currentLang === 'en' ? 'Community Ally' : 'Kasaping Kaalyado');
+
+      if (activeMode === 'rider') {
+        const platform = document.getElementById('member-platform')?.value || 'FoodTiger';
+        const city = document.getElementById('member-city')?.value || 'Metro Manila';
+        const size = document.getElementById('member-size')?.value || 'L';
+        const paymentMethod = document.querySelector('input[name="dues_payment_method"]:checked')?.value || 'GCash';
+        const memberId = 'UDRMM-MNL-2027-' + Math.floor(1000 + Math.random() * 9000);
+
         modalBody.innerHTML = `
           <div class="success-card">
             <div class="success-icon-badge">✓</div>
@@ -1272,13 +1371,64 @@ function setupMembershipModal() {
             </div>
 
             <div class="free-poncho-notice" style="text-align: left; margin: 1.5rem 0;">
-              <img src="assets/product-poncho.jpg" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover; border-radius: 8px;">
+              <img src="assets/product-vest.jpg?v=20261012_v8" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover; border-radius: 8px;">
               <div>
                 <strong style="color: var(--ph-blue); font-size: 0.95rem; display: block; margin-bottom: 2px;">
                   🛡️ Official high-vis jacket & stickers package included!
                 </strong>
                 <p style="font-size: 0.82rem; color: var(--text-body); font-weight: normal; margin: 0;">
                   ${translations[currentLang].regPonchoNote}
+                </p>
+              </div>
+            </div>
+
+            <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="document.getElementById('membership-modal-overlay').classList.remove('active')">
+              ${translations[currentLang].btnCloseModal}
+            </button>
+          </div>
+        `;
+      } else {
+        // Supporter Donation Mode
+        const paymentMethod = document.querySelector('input[name="modal_supporter_pay"]:checked')?.value || 'GCash';
+        const donorRef = 'UDRMM-DONOR-' + Math.floor(100000 + Math.random() * 900000);
+        const solidarityMsg = document.getElementById('modal-supporter-message')?.value || '';
+
+        // Add to live funding pot
+        updateLivePotDisplay(modalSelectedAmount);
+
+        modalBody.innerHTML = `
+          <div class="success-card">
+            <div class="success-icon-badge" style="background: var(--ph-red); color: #fff;">❤️</div>
+            <h3 style="font-size: 1.4rem; font-weight: 900; color: var(--text-main); margin-bottom: 0.5rem;">
+              ${translations[currentLang].supporterSuccessTitle}
+            </h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+              ${translations[currentLang].supporterSuccessSub}
+            </p>
+
+            <div class="member-id-card" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border: 1.5px solid #FCD34D;">
+              <div class="mid-header">
+                <span style="color: #FCD34D;">★ UDRMM Community Solidarity Donor</span>
+                <span>May 1 Mobilization Fund</span>
+              </div>
+              <div class="mid-name">${name}</div>
+              <div style="font-size: 0.95rem; color: #FFFFFF; font-weight: 800; margin: 6px 0;">
+                Solidarity Gift: ₱${modalSelectedAmount.toLocaleString()} PHP (${paymentMethod})
+              </div>
+              ${solidarityMsg ? `<div style="font-size: 0.82rem; font-style: italic; color: #E2E8F0; margin-bottom: 8px;">"${solidarityMsg}"</div>` : ''}
+              <div class="mid-num" style="color: #94A3B8;">Reference: ${donorRef}</div>
+            </div>
+
+            <div class="free-poncho-notice" style="text-align: left; margin: 1.5rem 0; border-left: 4px solid var(--ph-red); background: rgba(206, 17, 38, 0.05);">
+              <span style="font-size: 1.8rem; line-height: 1;">🍯</span>
+              <div>
+                <strong style="color: var(--ph-red); font-size: 0.92rem; display: block; margin-bottom: 2px;">
+                  ${currentLang === 'en' ? 'Direct grassroots impact' : 'Direktang bunga sa komunidad'}
+                </strong>
+                <p style="font-size: 0.8rem; color: var(--text-body); margin: 0;">
+                  ${currentLang === 'en' 
+                    ? `Your ₱${modalSelectedAmount.toLocaleString()} gift has been added to our live Community Fighting Pot. It directly finances sound trucks, emergency flood rescue, and courier legal defense.`
+                    : `Ang inyong ₱${modalSelectedAmount.toLocaleString()} na ambag ay naidagdag sa ating live Pondo ng Komunidad. Direktang popondohan nito ang sound truck, saklolo sa baha, at depensang legal.`}
                 </p>
               </div>
             </div>
@@ -1632,33 +1782,147 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Category Filter Handling for Partners & Institutional Allies
-function setupPartnerFilters() {
-  const filterBtns = document.querySelectorAll('.partner-filter-btn');
-  const partnerCards = document.querySelectorAll('.partner-card');
-  if (!filterBtns.length || !partnerCards.length) return;
+// Live Funding Pot State & Controller
+let potCurrentRaised = 184500;
+const potGoalTarget = 250000;
+let potCurrentDonors = 1428;
 
-  filterBtns.forEach(btn => {
+function updateLivePotDisplay(addedAmount) {
+  if (typeof addedAmount === 'number' && addedAmount > 0) {
+    potCurrentRaised += addedAmount;
+    potCurrentDonors += 1;
+  }
+  const display = document.getElementById('pot-raised-display');
+  const donorsDisplay = document.getElementById('pot-donors-count');
+  const bar = document.getElementById('pot-progress-bar');
+  const pctText = document.getElementById('pot-progress-pct');
+
+  const pct = Math.min(100, Math.round((potCurrentRaised / potGoalTarget) * 100));
+
+  if (display) display.innerHTML = `₱${potCurrentRaised.toLocaleString()} <span class="pot-currency">PHP</span>`;
+  if (donorsDisplay) donorsDisplay.textContent = potCurrentDonors.toLocaleString();
+  if (bar) bar.style.width = `${pct}%`;
+  if (pctText) pctText.textContent = `${pct}%`;
+}
+
+// Funding Pot Interactive Controls & Donation Handler
+function setupFundingPot() {
+  const form = document.getElementById('funding-pot-form');
+  const presetBtns = document.querySelectorAll('#funding-pot-form .preset-btn');
+  const customInput = document.getElementById('custom-pot-amount');
+  const freqBtns = document.querySelectorAll('.freq-btn');
+  const submitBtnText = document.getElementById('donate-btn-text');
+
+  let selectedAmount = 500;
+  let selectedFreq = 'one-time';
+
+  function updatePotSubmitLabel() {
+    if (!submitBtnText) return;
+    const isEn = currentLang === 'en';
+    if (selectedFreq === 'one-time') {
+      submitBtnText.textContent = isEn
+        ? `Donate ₱${selectedAmount.toLocaleString()} to the Union Pot`
+        : `Mag-ambag ng ₱${selectedAmount.toLocaleString()} sa Pondo ng Unyon`;
+    } else {
+      submitBtnText.textContent = isEn
+        ? `Pledge ₱${selectedAmount.toLocaleString()} / month to the Union Pot`
+        : `Pangakong ₱${selectedAmount.toLocaleString()} / buwan sa Pondo`;
+    }
+  }
+
+  // Frequency toggle (one-time vs monthly)
+  freqBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
-
-      filterBtns.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
+      freqBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-
-      partnerCards.forEach(card => {
-        const cat = card.getAttribute('data-category');
-        if (filter === 'all' || cat === filter) {
-          card.style.display = 'flex';
-          card.style.opacity = '1';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      selectedFreq = btn.dataset.freq || 'one-time';
+      updatePotSubmitLabel();
     });
   });
+
+  // Preset buttons
+  presetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      presetBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedAmount = parseInt(btn.dataset.amount, 10) || 500;
+      if (customInput) customInput.value = '';
+      updatePotSubmitLabel();
+    });
+  });
+
+  // Custom amount input
+  if (customInput) {
+    customInput.addEventListener('input', () => {
+      const val = parseInt(customInput.value, 10);
+      if (val && val > 0) {
+        presetBtns.forEach(b => b.classList.remove('active'));
+        selectedAmount = val;
+      } else {
+        selectedAmount = 500;
+      }
+      updatePotSubmitLabel();
+    });
+  }
+
+  // Global donation handler
+  window.handlePotDonation = function(e) {
+    if (e) e.preventDefault();
+    const donorNameInput = document.getElementById('donor-name');
+    const donorContactInput = document.getElementById('donor-contact');
+    const isAnonymous = document.getElementById('donor-anonymous')?.checked;
+    const donorMsg = document.getElementById('donor-message')?.value || '';
+    const paymentMethod = document.querySelector('input[name="pot_payment"]:checked')?.value || 'GCash';
+
+    const displayName = isAnonymous 
+      ? (currentLang === 'en' ? 'Anonymous Solidarity Ally' : 'Hindi Nagpakilalang Kaalyado')
+      : (donorNameInput?.value?.trim() || (currentLang === 'en' ? 'Community Ally' : 'Kasaping Kaalyado'));
+
+    const receiptRef = 'UDRMM-POT-' + Math.floor(100000 + Math.random() * 900000);
+
+    // Update live counters
+    updateLivePotDisplay(selectedAmount);
+
+    const formCard = document.querySelector('.donation-form-card');
+    if (formCard) {
+      formCard.innerHTML = `
+        <div class="success-card" style="text-align: center; padding: 1rem 0;">
+          <div class="success-icon-badge" style="background: var(--ph-red); color: #FFFFFF; font-size: 1.6rem; width: 56px; height: 56px; margin: 0 auto 1.25rem;">✊</div>
+          <h3 style="font-size: 1.45rem; font-weight: 900; color: var(--text-main); margin-bottom: 0.4rem;">
+            ${currentLang === 'en' ? 'Solidarity contribution confirmed!' : 'Kumpirmado ang inyong ambag sa unyon!'}
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.4rem;">
+            ${currentLang === 'en' 
+              ? `Thank you, ${displayName}! Your ₱${selectedAmount.toLocaleString()} solidarity gift directly funds our May 1st mobilization and emergency rider mutual aid.`
+              : `Maraming salamat, ${displayName}! Ang inyong ₱${selectedAmount.toLocaleString()} na ambag ay direktang popondo sa pagkilos sa Mayo 1 at tulong-saklolo sa mga rider.`}
+          </p>
+
+          <div class="pot-counter-box" style="text-align: left; margin-bottom: 1.5rem; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border: 1px solid rgba(252, 211, 77, 0.4);">
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: #FCD34D; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 4px;">
+              ★ Official Electronic Receipt
+            </div>
+            <div style="font-size: 1.25rem; font-weight: 900; color: #FFFFFF; margin-bottom: 8px;">
+              ₱${selectedAmount.toLocaleString()} PHP <span style="font-size: 0.85rem; color: #94A3B8; font-weight: normal;">(${selectedFreq} • ${paymentMethod})</span>
+            </div>
+            <div style="font-size: 0.84rem; color: #CBD5E1; margin-bottom: 4px;">
+              <strong>Contributor:</strong> ${displayName}
+            </div>
+            <div style="font-size: 0.84rem; color: #CBD5E1; margin-bottom: 4px;">
+              <strong>Receipt reference:</strong> #${receiptRef}
+            </div>
+            ${donorMsg ? `<div style="font-size: 0.82rem; color: #F8FAFC; font-style: italic; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1);">"${donorMsg}"</div>` : ''}
+          </div>
+
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.45;">
+            🔒 Simulated academic transaction recorded. Every contribution is transparently audited and accounted for by the UDRMM financial governance committee.
+          </div>
+
+          <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" onclick="window.location.reload()">
+            ${currentLang === 'en' ? 'Make another contribution' : 'Mag-ambag muli'}
+          </button>
+        </div>
+      `;
+    }
+  };
 }
 
