@@ -41,8 +41,8 @@ const translations = {
     perk3: "Barangay solidarity shelters during typhoons",
     perk4: "Collective bargaining representation with DOLE",
     freePonchoBadge: "INCLUDED WITH DUES",
-    heroPonchoTitle: "Official rain poncho included",
-    heroPonchoDesc: "High-visibility reflective all-weather poncho given to all riders upon registration.",
+    heroPonchoTitle: "Official all-weather jacket included",
+    heroPonchoDesc: "High-visibility reflective all-weather jacket given to all riders upon registration.",
     membershipFeeDuesLbl: "Already included in annual union dues",
     membershipFeeLabel: "Includes high-vis safety vest & stickers (Annual dues: ₱350/yr)",
     btnClaimPoncho: "Join UDRMM or make a donation",
@@ -96,8 +96,8 @@ const translations = {
     dem3Proposed: "Demand: 72-hour formal notice, UDRMM representation, and DOLE Labor Advisory 17 right-to-refuse protection.",
     dem4Title: "Safety gear & medical coverage",
     dem4Badge: "Worker Health",
-    dem4Current: "Current: 100% equipment, poncho, and injury expenses borne entirely by the rider.",
-    dem4Proposed: "Demand: Free company-issued rain ponchos & emergency medical clinic fund in all 16 cities.",
+    dem4Current: "Current: 100% equipment, weather gear, and injury expenses borne entirely by the rider.",
+    dem4Proposed: "Demand: Free company-issued all-weather jackets & emergency medical clinic fund in all 16 cities.",
 
     // The 5 Official Pledges & 10,000 Signatures Public Petition
     petitionDeadlineTag: "Deadline: Before the heavy rains start (by June 2027)",
@@ -162,7 +162,7 @@ const translations = {
     story1Text: "\"During the July typhoons, floodwaters on España reached knee-deep. A customer gave me a 1-star rating because soup was 8 minutes late. That rating cut my incentives for a week. That is when I knew we needed a union.\"",
     story1Author: "Kuya Jun",
     story1Role: "FoodTiger Rider, Pasig City (4 Years)",
-    story2Text: "\"The official high-vis rain poncho from UDRMM literally saved my life last month in heavy mist along C-5. Drivers can finally see us. I truly recommend it to anyone working in this field.\"",
+    story2Text: "\"The official high-vis all-weather jacket from UDRMM literally saved my life last month in heavy mist along C-5. Drivers can finally see us. I truly recommend it to anyone working in this field.\"",
     story2Author: "Ate Maria",
     story2Role: "Courier & Food Delivery Rider, Quezon City",
     story3Text: "\"FoodTiger tells us we are 'independent partners'. But partners don't get their pay slashed without a word. On May 1st, 2027, we are not asking for charity—we are asking for dignity.\"",
@@ -212,7 +212,7 @@ const translations = {
     fundItem1Title: "Emergency rider medical & typhoon relief fund",
     fundItem1Desc: "Direct cash assistance for road crash injuries, hospitalization support, emergency towing during floods, and typhoon food packs when apps freeze orders.",
     fundItem2Title: "High-vis safety gear & member packages",
-    fundItem2Desc: "Procuring and distributing high-visibility reflective safety vests, heavy-duty rain ponchos, and waterproof helmet stickers issued to every registered member.",
+    fundItem2Desc: "Procuring and distributing high-visibility reflective safety vests, all-weather jackets, and waterproof helmet stickers issued to every registered member.",
     fundItem3Title: "Legal defense & anti-deactivation clinic",
     fundItem3Desc: "Filing formal DOLE Single Entry Approach (SEnA) complaints, rapid-response documentation of algorithmic lockouts, and union conciliation representation.",
     fundItem4Title: "Grassroots face-to-face meetings & assemblies",
@@ -394,7 +394,7 @@ const translations = {
     dem4Title: "Kagamitang Pangkaligtasan at Medikal",
     dem4Badge: "Kalusugan ng Manggagawa",
     dem4Current: "Kasalukuyan: 100% ng gamit, kapote, at gastusin sa aksidente ay sariling sagot ng rider.",
-    dem4Proposed: "Hiling: Libreng kapote mula sa kumpanya at emergency medical assistance fund sa lahat ng 16 na lungsod.",
+    dem4Proposed: "Hiling: Libreng all-weather jacket mula sa kumpanya at emergency medical assistance fund sa lahat ng 16 na lungsod.",
 
     // The 5 Official Pledges & 10,000 Signatures Public Petition
     petitionDeadlineTag: "Takdang Araw: Bago magsimula ang malalakas na ulan (pagsapit ng Hunyo 2027)",
@@ -509,7 +509,7 @@ const translations = {
     fundItem1Title: "Pondo para sa aksidente, ospital at tulong sa bagyo",
     fundItem1Desc: "Direktang tulong-pinansyal sa mga naaksidente sa kalsada, pampaospital, towing sa baha, at relief packs kapag bawal bumiyahe dahil sa bagyo.",
     fundItem2Title: "High-vis safety gear at pakete ng kasapi",
-    fundItem2Desc: "Paggawa at pamamahagi ng reflective vest, matibay na kapote, at helmet stickers na ibinibigay sa bawat rehistradong kasapi.",
+    fundItem2Desc: "Paggawa at pamamahagi ng reflective vest, all-weather jacket, at helmet stickers na ibinibigay sa bawat rehistradong kasapi.",
     fundItem3Title: "Tulong-legal at tanggapan laban sa arbitraryong suspension",
     fundItem3Desc: "Paghahain ng reklamo sa DOLE SEnA, pagtatala ng mga biglaang lock out sa app, at legal na representasyon sa pakikipag-ayos.",
     fundItem4Title: "Harapang pagpupulong at asamblea sa komunidad",
@@ -1708,7 +1708,7 @@ function getThematicFallback(type) {
       <rect x="140" y="180" width="120" height="18" fill="#FCD116"/>
       <rect x="140" y="212" width="120" height="12" fill="#E2E8F0"/>
       <circle cx="200" cy="65" r="26" fill="#CE1126"/>
-      <text x="200" y="280" fill="#0038A8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">OFFICIAL UDRMM RAIN PONCHO</text>
+      <text x="200" y="280" fill="#0038A8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" text-anchor="middle">OFFICIAL UDRMM ALL-WEATHER JACKET</text>
     </svg>`,
     cap: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
       <rect width="400" height="300" fill="#FFF5F7"/>
