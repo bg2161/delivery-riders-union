@@ -37,7 +37,6 @@
           <li><a href="#protest" class="nav-link highlight" data-i18n="navProtest">May 1 Protest</a></li>
           <li><a href="#demands" class="nav-link" data-i18n="navDemands">Our Demands</a></li>
           <li><a href="#shop" class="nav-link" data-i18n="navShop">Membership & Shop</a></li>
-          <li><a href="#funding-pot" class="nav-link" data-i18n="navFundingPot">Funding Pot</a></li>
           <li><a href="#transparency" class="nav-link" data-i18n="navTransparency">Transparency</a></li>
           <li><a href="#stories" class="nav-link" data-i18n="navStories">Rider Stories</a></li>
           <li><a href="#about" class="nav-link" data-i18n="navAbout">About Us</a></li>
@@ -680,192 +679,6 @@
       </div>
     </section>
 
-    <!-- FUNDING POT (COMMUNITY SOLIDARITY & MOBILIZATION FUND) -->
-    <section class="funding-pot-section" id="funding-pot">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-badge badge-red" data-i18n="fundingBadge">COMMUNITY SOLIDARITY POT</span>
-          <h2 class="section-title" data-i18n="fundingTitle">Support our battles &amp; May 1 mobilization</h2>
-          <p class="section-desc" data-i18n="fundingDesc">
-            You don't need to be a delivery rider to stand with our cause. Anyone—consumers, allies, students, and community supporters—can contribute directly to our union fighting pot. Every peso powers our May 1st strike caravan, emergency typhoon relief, and collective legal defense.
-          </p>
-        </div>
-
-        <div class="funding-grid">
-          <!-- LEFT CARD: LIVE POT PROGRESS & IMPACT ALLOCATION -->
-          <div class="funding-status-card">
-            <div class="pot-header">
-              <div class="pot-icon">🍯</div>
-              <div>
-                <span class="pot-badge" data-i18n="potBadge">MAY 1 MOBILIZATION &amp; TYPHOON FUND</span>
-                <h3 class="pot-title" data-i18n="potTitle">Community fighting pot</h3>
-              </div>
-            </div>
-
-            <!-- Live Pot Counter -->
-            <div class="pot-counter-box">
-              <div class="pot-stat-row">
-                <div>
-                  <div class="pot-amount-label" data-i18n="potRaisedLbl">Total raised so far:</div>
-                  <div class="pot-amount-val" id="pot-raised-display">₱184,500 <span class="pot-currency">PHP</span></div>
-                </div>
-                <div class="pot-goal-box">
-                  <span class="pot-goal-label" data-i18n="potGoalLbl">Target goal:</span>
-                  <span class="pot-goal-val">₱250,000</span>
-                </div>
-              </div>
-
-              <!-- Animated Progress Bar -->
-              <div class="pot-progress-track">
-                <div class="pot-progress-bar" id="pot-progress-bar" style="width: 74%;">
-                  <span class="pot-progress-text" id="pot-progress-pct">74%</span>
-                </div>
-              </div>
-
-              <div class="pot-meta-row">
-                <span><strong id="pot-donors-count">1,428</strong> <span data-i18n="potSupportersCount">grassroots contributors</span></span>
-                <span class="pot-days-tag" data-i18n="potDeadline">🎯 Deadline: May 1, 2027</span>
-              </div>
-            </div>
-
-            <!-- Impact Allocation Breakdown -->
-            <div class="pot-impact-box">
-              <h4 class="pot-impact-title" data-i18n="potImpactTitle">How your contribution is directly put to work:</h4>
-              <ul class="pot-impact-list">
-                <li>
-                  <span class="impact-dot dot-red"></span>
-                  <span data-i18n-html="impactItem1"><strong>35% May 1 Strike Logistics:</strong> Sound truck, hydration stations &amp; rally marshals across EDSA.</span>
-                </li>
-                <li>
-                  <span class="impact-dot dot-blue"></span>
-                  <span data-i18n-html="impactItem2"><strong>30% Typhoon &amp; Flood Relief:</strong> Emergency towing subsidies and food packs for stranded riders.</span>
-                </li>
-                <li>
-                  <span class="impact-dot dot-yellow"></span>
-                  <span data-i18n-html="impactItem3"><strong>20% Legal Defense Desk:</strong> Retainer assistance for DOLE complaints against app deactivations.</span>
-                </li>
-                <li>
-                  <span class="impact-dot dot-green"></span>
-                  <span data-i18n-html="impactItem4"><strong>15% Young Courier Safety:</strong> Free high-vis decals and emergency repair toolkit kits.</span>
-                </li>
-              </ul>
-              <div class="pot-transparency-hint">
-                <span>📊</span>
-                <span data-i18n-html="potTransparencyLink">Full accounting published in our <a href="#transparency">Transparency section</a> below.</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- RIGHT CARD: INTERACTIVE DONATION FORM -->
-          <div class="donation-form-card">
-            <div class="donation-card-header">
-              <h3 data-i18n="donateCardTitle">Make a solidarity contribution</h3>
-              <p data-i18n="donateCardSub">Choose a preset amount or enter any amount you wish to contribute online.</p>
-            </div>
-
-            <form id="funding-pot-form" class="donation-form" onsubmit="handlePotDonation(event)">
-              <!-- Donation Frequency Toggle -->
-              <div class="freq-toggle-group">
-                <button type="button" class="freq-btn active" data-freq="one-time" data-i18n="freqOneTime">One-time gift</button>
-                <button type="button" class="freq-btn" data-freq="monthly" data-i18n="freqMonthly">Monthly solidarity pledge</button>
-              </div>
-
-              <!-- Suggested Presets -->
-              <div class="donation-presets-label" data-i18n="presetAmountLbl">Select amount (PHP):</div>
-              <div class="donation-presets-grid">
-                <button type="button" class="preset-btn" data-amount="100">
-                  <span class="preset-php">₱100</span>
-                  <span class="preset-badge" data-i18n="preset100Badge">Rally Kit</span>
-                </button>
-                <button type="button" class="preset-btn" data-amount="250">
-                  <span class="preset-php">₱250</span>
-                  <span class="preset-badge" data-i18n="preset250Badge">Caravan Fuel</span>
-                </button>
-                <button type="button" class="preset-btn active" data-amount="500">
-                  <span class="preset-php">₱500</span>
-                  <span class="preset-badge badge-popular" data-i18n="preset500Badge">Popular • Safety</span>
-                </button>
-                <button type="button" class="preset-btn" data-amount="1000">
-                  <span class="preset-php">₱1,000</span>
-                  <span class="preset-badge" data-i18n="preset1000Badge">Legal Defense</span>
-                </button>
-                <button type="button" class="preset-btn" data-amount="2500">
-                  <span class="preset-php">₱2,500</span>
-                  <span class="preset-badge" data-i18n="preset2500Badge">Sound Truck</span>
-                </button>
-              </div>
-
-              <!-- Custom Amount Input -->
-              <div class="form-group custom-amount-group">
-                <label for="custom-pot-amount" class="form-label" data-i18n="customAmountLbl">Or enter custom amount:</label>
-                <div class="custom-amount-input-wrap">
-                  <span class="curr-prefix">₱</span>
-                  <input type="number" id="custom-pot-amount" class="form-input custom-amount-input" min="20" step="10" placeholder="e.g. 350, 750, 5000">
-                  <span class="curr-suffix">PHP</span>
-                </div>
-              </div>
-
-              <!-- Payment Method Selection -->
-              <div class="form-group">
-                <label class="form-label" data-i18n="potPaymentMethodLbl">Payment method:</label>
-                <div class="payment-method-pills">
-                  <label class="pay-method-pill">
-                    <input type="radio" name="pot_payment" value="GCash" checked>
-                    <span><strong>GCash</strong> E-Wallet</span>
-                  </label>
-                  <label class="pay-method-pill">
-                    <input type="radio" name="pot_payment" value="Maya">
-                    <span><strong>Maya</strong></span>
-                  </label>
-                  <label class="pay-method-pill">
-                    <input type="radio" name="pot_payment" value="GrabPay">
-                    <span><strong>GrabPay</strong></span>
-                  </label>
-                  <label class="pay-method-pill">
-                    <input type="radio" name="pot_payment" value="Card / Bank">
-                    <span><strong>Card / Bank</strong></span>
-                  </label>
-                </div>
-              </div>
-
-              <!-- Contributor Details -->
-              <div class="donor-details-grid">
-                <div class="form-group">
-                  <label for="donor-name" class="form-label" data-i18n="donorNameLbl">Your name:</label>
-                  <input type="text" id="donor-name" class="form-input" placeholder="e.g. Maria Santos">
-                </div>
-                <div class="form-group">
-                  <label for="donor-contact" class="form-label" data-i18n="donorContactLbl">Email or mobile:</label>
-                  <input type="text" id="donor-contact" class="form-input" required placeholder="e.g. 0917-XXX-XXXX">
-                </div>
-              </div>
-
-              <div class="anonymous-checkbox-row">
-                <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.84rem; cursor: pointer;">
-                  <input type="checkbox" id="donor-anonymous">
-                  <span data-i18n="donorAnonymousLbl">Keep my name anonymous on the public contributor list</span>
-                </label>
-              </div>
-
-              <div class="form-group">
-                <label for="donor-message" class="form-label" data-i18n="donorMessageLbl">Solidarity message for riders (optional):</label>
-                <input type="text" id="donor-message" class="form-input" placeholder="e.g. Mabuhay ang mga delivery riders! Laban!">
-              </div>
-
-              <button type="submit" class="btn-primary btn-submit-donation" id="btn-submit-donation">
-                <span>✊</span>
-                <span id="donate-btn-text">Donate ₱500 to the Union Pot</span>
-              </button>
-
-              <div class="donation-disclaimer" data-i18n="donationDisclaimer">
-                🔒 100% transparent. No app fees deducted. All simulated online transactions directly support worker mutual aid.
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- TRANSPARENCY & GRASSROOTS GOVERNANCE -->
     <section class="transparency-section" id="transparency">
       <div class="container">
@@ -1248,7 +1061,6 @@
             <li><a href="#petition" data-i18n="navPetition">10,000 Petition</a></li>
             <li><a href="#transparency" data-i18n="navTransparency">Transparency & Funds</a></li>
             <li><a href="#stories">Rider Stories</a></li>
-            <li><a href="#funding-pot" data-i18n="navFundingPot">Funding Pot</a></li>
             <li><a href="#shop" data-i18n="navShop">Membership & Shop</a></li>
           </ul>
         </div>
@@ -1334,13 +1146,6 @@
               <span class="mn-icon">🛍️</span>
               <span data-i18n="navShop">Membership & Shop</span>
               <span class="mn-badge-free">JOIN & GEAR</span>
-            </a>
-          </li>
-          <li>
-            <a href="#funding-pot" class="mobile-nav-link">
-              <span class="mn-icon">🍯</span>
-              <span data-i18n="navFundingPot">Funding Pot</span>
-              <span class="mn-badge-free">DONATE</span>
             </a>
           </li>
           <li>

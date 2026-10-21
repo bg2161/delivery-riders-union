@@ -131,7 +131,7 @@ const translations = {
     vf3: "Helmet-compatible drawstring hood",
     vf4: "Reinforced mobile phone chest pockets",
     vestagliaPriceLabel: "Included with ₱350/yr union membership",
-    btnClaimPoncho: "Register & join union (₱350/yr)",
+    btnClaimPoncho: "Join UDRMM or make a donation",
     
     // Accessories Grid
     accessoriesTitle: "Official solidarity accessories",
@@ -428,7 +428,7 @@ const translations = {
     vf3: "Kasya sa Helmet ang Tali ng Hood",
     vf4: "Protektadong Bulsa para sa Mobile Phone",
     vestagliaPriceLabel: "Kasama sa ₱350/taon na Pagsapi sa Unyon",
-    btnClaimPoncho: "Magrehistro at Sumapi (₱350/taon)",
+    btnClaimPoncho: "Sumapi sa UDRMM o mag-ambag",
     
     // Accessories Grid
     accessoriesTitle: "Mga Opisyal na Gamit ng Unyon",
@@ -624,7 +624,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupProductViewSwitchers();
   setupMobileMenu();
   setupCookieAndPrivacy();
-  setupFundingPot();
 });
 
 // Switch Language
@@ -1805,124 +1804,4 @@ function updateLivePotDisplay(addedAmount) {
   if (pctText) pctText.textContent = `${pct}%`;
 }
 
-// Funding Pot Interactive Controls & Donation Handler
-function setupFundingPot() {
-  const form = document.getElementById('funding-pot-form');
-  const presetBtns = document.querySelectorAll('#funding-pot-form .preset-btn');
-  const customInput = document.getElementById('custom-pot-amount');
-  const freqBtns = document.querySelectorAll('.freq-btn');
-  const submitBtnText = document.getElementById('donate-btn-text');
-
-  let selectedAmount = 500;
-  let selectedFreq = 'one-time';
-
-  function updatePotSubmitLabel() {
-    if (!submitBtnText) return;
-    const isEn = currentLang === 'en';
-    if (selectedFreq === 'one-time') {
-      submitBtnText.textContent = isEn
-        ? `Donate ₱${selectedAmount.toLocaleString()} to the Union Pot`
-        : `Mag-ambag ng ₱${selectedAmount.toLocaleString()} sa Pondo ng Unyon`;
-    } else {
-      submitBtnText.textContent = isEn
-        ? `Pledge ₱${selectedAmount.toLocaleString()} / month to the Union Pot`
-        : `Pangakong ₱${selectedAmount.toLocaleString()} / buwan sa Pondo`;
-    }
-  }
-
-  // Frequency toggle (one-time vs monthly)
-  freqBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      freqBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedFreq = btn.dataset.freq || 'one-time';
-      updatePotSubmitLabel();
-    });
-  });
-
-  // Preset buttons
-  presetBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      presetBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedAmount = parseInt(btn.dataset.amount, 10) || 500;
-      if (customInput) customInput.value = '';
-      updatePotSubmitLabel();
-    });
-  });
-
-  // Custom amount input
-  if (customInput) {
-    customInput.addEventListener('input', () => {
-      const val = parseInt(customInput.value, 10);
-      if (val && val > 0) {
-        presetBtns.forEach(b => b.classList.remove('active'));
-        selectedAmount = val;
-      } else {
-        selectedAmount = 500;
-      }
-      updatePotSubmitLabel();
-    });
-  }
-
-  // Global donation handler
-  window.handlePotDonation = function(e) {
-    if (e) e.preventDefault();
-    const donorNameInput = document.getElementById('donor-name');
-    const donorContactInput = document.getElementById('donor-contact');
-    const isAnonymous = document.getElementById('donor-anonymous')?.checked;
-    const donorMsg = document.getElementById('donor-message')?.value || '';
-    const paymentMethod = document.querySelector('input[name="pot_payment"]:checked')?.value || 'GCash';
-
-    const displayName = isAnonymous 
-      ? (currentLang === 'en' ? 'Anonymous Solidarity Ally' : 'Hindi Nagpakilalang Kaalyado')
-      : (donorNameInput?.value?.trim() || (currentLang === 'en' ? 'Community Ally' : 'Kasaping Kaalyado'));
-
-    const receiptRef = 'UDRMM-POT-' + Math.floor(100000 + Math.random() * 900000);
-
-    // Update live counters
-    updateLivePotDisplay(selectedAmount);
-
-    const formCard = document.querySelector('.donation-form-card');
-    if (formCard) {
-      formCard.innerHTML = `
-        <div class="success-card" style="text-align: center; padding: 1rem 0;">
-          <div class="success-icon-badge" style="background: var(--ph-red); color: #FFFFFF; font-size: 1.6rem; width: 56px; height: 56px; margin: 0 auto 1.25rem;">✊</div>
-          <h3 style="font-size: 1.45rem; font-weight: 900; color: var(--text-main); margin-bottom: 0.4rem;">
-            ${currentLang === 'en' ? 'Solidarity contribution confirmed!' : 'Kumpirmado ang inyong ambag sa unyon!'}
-          </h3>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.4rem;">
-            ${currentLang === 'en' 
-              ? `Thank you, ${displayName}! Your ₱${selectedAmount.toLocaleString()} solidarity gift directly funds our May 1st mobilization and emergency rider mutual aid.`
-              : `Maraming salamat, ${displayName}! Ang inyong ₱${selectedAmount.toLocaleString()} na ambag ay direktang popondo sa pagkilos sa Mayo 1 at tulong-saklolo sa mga rider.`}
-          </p>
-
-          <div class="pot-counter-box" style="text-align: left; margin-bottom: 1.5rem; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border: 1px solid rgba(252, 211, 77, 0.4);">
-            <div style="font-size: 0.75rem; text-transform: uppercase; color: #FCD34D; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 4px;">
-              ★ Official Electronic Receipt
-            </div>
-            <div style="font-size: 1.25rem; font-weight: 900; color: #FFFFFF; margin-bottom: 8px;">
-              ₱${selectedAmount.toLocaleString()} PHP <span style="font-size: 0.85rem; color: #94A3B8; font-weight: normal;">(${selectedFreq} • ${paymentMethod})</span>
-            </div>
-            <div style="font-size: 0.84rem; color: #CBD5E1; margin-bottom: 4px;">
-              <strong>Contributor:</strong> ${displayName}
-            </div>
-            <div style="font-size: 0.84rem; color: #CBD5E1; margin-bottom: 4px;">
-              <strong>Receipt reference:</strong> #${receiptRef}
-            </div>
-            ${donorMsg ? `<div style="font-size: 0.82rem; color: #F8FAFC; font-style: italic; margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1);">"${donorMsg}"</div>` : ''}
-          </div>
-
-          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.45;">
-            🔒 Simulated academic transaction recorded. Every contribution is transparently audited and accounted for by the UDRMM financial governance committee.
-          </div>
-
-          <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" onclick="window.location.reload()">
-            ${currentLang === 'en' ? 'Make another contribution' : 'Mag-ambag muli'}
-          </button>
-        </div>
-      `;
-    }
-  };
-}
 
