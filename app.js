@@ -51,6 +51,8 @@ const translations = {
     pagasaLevelOrange: "Orange Warning (15-30 mm/hr)",
     weatherTitle: "Metro Manila weather & flood risk status",
     weatherDesc: "Active monsoon downpour. Flooding threatening España, Taft, and EDSA corridors. Platforms must suspend automatic delivery time penalties.",
+    weatherMapTitle: "DOST-PAGASA Real-Time Radar • Metro Manila",
+    weatherMapLiveTag: "● Live Doppler rain & cloud reflectivity",
 
     // Protest Section
     protestBadge: "MAY 1, 2027 • LABOR DAY MOBILIZATION",
@@ -344,6 +346,8 @@ const translations = {
     pagasaLevelOrange: "Orange Warning (15-30 mm/oras)",
     weatherTitle: "Lagay ng Panahon at Baha sa Metro Manila",
     weatherDesc: "Malakas na buhos ng habagat. May banta ng baha sa España, Taft, at EDSA. Dapat tanggalin ng mga app platform ang time penalties.",
+    weatherMapTitle: "DOST-PAGASA Real-Time Radar • Metro Manila",
+    weatherMapLiveTag: "● Real-time na radar sa ulan at ulap",
 
     // Protest Section
     protestBadge: "MAYO 1, 2027 • ARAW NG PAGGAWA",

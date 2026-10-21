@@ -58,10 +58,6 @@ html {
   font-size: 16px;
 }
 
-html[data-lang="fil"] {
-  scroll-padding-top: 105px;
-}
-
 body {
   font-family: var(--font-sans);
   background: var(--bg-page-gradient);
@@ -153,20 +149,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 0 clamp(1rem, 2.5vw, 3rem);
+  padding: 0 clamp(0.75rem, 2vw, 3rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: clamp(0.5rem, 1vw, 1.25rem);
   height: 74px;
-  transition: all 0.3s ease;
-}
-
-html[data-lang="fil"] .navbar .nav-container,
-html[data-lang="fil"] .site-header .header-container {
-  min-height: 86px;
-  height: auto;
-  padding: 0.55rem clamp(1rem, 2.5vw, 3rem);
 }
 
 .brand {
@@ -259,49 +247,18 @@ html[data-lang="fil"] .site-header .header-container {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: clamp(0.4rem, 0.7vw, 0.75rem);
+  gap: clamp(0.35rem, 0.6vw, 0.75rem);
   flex-shrink: 0;
-  transition: all 0.25s ease;
-}
-
-.nav-actions-top {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.4rem, 0.7vw, 0.75rem);
 }
 
 .nav-actions .btn-primary.open-membership-btn,
 .nav-actions .header-join-btn {
-  padding: 0.5rem clamp(0.65rem, 0.9vw, 1rem);
-  font-size: clamp(0.8rem, 0.85vw, 0.88rem);
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-/* Filipino Language Specific: Header layout with blue button placed below shopping bag on the right */
-html[data-lang="fil"] .nav-actions {
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 0.35rem;
-}
-
-html[data-lang="fil"] .nav-actions-top {
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-
-html[data-lang="fil"] .nav-actions .btn-primary.open-membership-btn,
-html[data-lang="fil"] .nav-actions .header-join-btn {
-  padding: 0.38rem 0.95rem;
-  font-size: 0.8rem;
+  padding: 0.45rem clamp(0.6rem, 0.75vw, 0.95rem);
+  font-size: clamp(0.76rem, 0.8vw, 0.85rem);
   font-weight: 700;
   white-space: nowrap;
   letter-spacing: -0.01em;
-  line-height: 1.25;
-  margin: 0;
-  align-self: flex-end;
-  box-shadow: 0 3px 8px rgba(0, 56, 168, 0.2);
+  line-height: 1.2;
 }
 
 /* Language Switcher Pill */
@@ -330,12 +287,6 @@ html[data-lang="fil"] .nav-actions .header-join-btn {
   transition: all 0.2s ease;
 }
 
-html[data-lang="fil"] .lang-btn {
-  padding: 4px 10px;
-  font-size: 0.8rem;
-  gap: 4px;
-}
-
 .lang-btn.active {
   background: var(--ph-blue);
   color: #FFFFFF;
@@ -352,8 +303,8 @@ html[data-lang="fil"] .lang-btn {
   position: relative;
   background: #FFFFFF;
   border: 1.5px solid var(--border-subtle);
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -362,11 +313,6 @@ html[data-lang="fil"] .lang-btn {
   color: var(--text-main);
   transition: all 0.2s ease;
   box-shadow: var(--shadow-sm);
-}
-
-html[data-lang="fil"] .cart-btn {
-  width: 38px;
-  height: 38px;
 }
 
 .cart-btn:hover {
@@ -1091,7 +1037,9 @@ html[data-lang="fil"] .cart-btn {
   border: 1.5px solid var(--border-subtle);
   padding: 1.5rem 1.75rem;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 1.75rem;
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -1104,7 +1052,8 @@ html[data-lang="fil"] .cart-btn {
   display: flex;
   align-items: flex-start;
   gap: 1.15rem;
-  width: 100%;
+  padding-right: 1.25rem;
+  border-right: 1.5px solid var(--border-light);
 }
 
 .weather-icon-box {
@@ -1171,56 +1120,110 @@ html[data-lang="fil"] .cart-btn {
   margin: 0;
 }
 
-.weather-advisory {
+/* Weather Real-Time Radar Map Card */
+.weather-map-card {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  background: rgba(255, 245, 247, 0.6);
-  border: 1.5px dashed rgba(206, 17, 38, 0.25);
-  border-radius: 12px;
-  padding: 0.95rem 1.15rem;
+  background: #0B1329;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-.weather-advisory-header {
+.weather-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.9rem;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.map-live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.live-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #10B981;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+  animation: radar-pulse 2s infinite;
+}
+
+@keyframes radar-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.map-header-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ph-blue);
+  letter-spacing: -0.01em;
+}
+
+.map-links {
   display: flex;
   align-items: center;
   gap: 0.45rem;
 }
 
-.wa-shield-icon {
-  font-size: 1rem;
-}
-
-.weather-advisory h5 {
-  font-size: 0.88rem;
-  font-weight: 800;
-  color: var(--ph-blue);
-  margin: 0;
-}
-
-.weather-advisory p {
-  font-size: 0.82rem;
-  color: var(--text-body);
-  line-height: 1.4;
-  margin: 0;
-}
-
-.weather-pledge-btn {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.78rem;
-  font-weight: 800;
-  color: var(--ph-blue);
+.map-ext-link {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
   text-decoration: none;
-  margin-top: 0.2rem;
-  transition: color 0.15s ease, transform 0.15s ease;
+  background: #F1F5F9;
+  padding: 2px 7px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
-.weather-pledge-btn:hover {
-  color: var(--ph-red);
-  transform: translateX(3px);
+.map-ext-link:hover {
+  color: var(--ph-blue);
+  background: var(--ph-blue-light);
+}
+
+.weather-map-frame-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: #0F172A;
+}
+
+.weather-radar-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.weather-map-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0.9rem;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.map-footer-note {
+  font-weight: 700;
+  color: #059669;
+}
+
+.map-footer-coords {
+  font-family: monospace;
+  font-size: 0.7rem;
 }
 
 /* Demand highlight badge */
@@ -2251,26 +2254,18 @@ html[data-lang="fil"] .cart-btn {
 /* RESPONSIVE DESIGN */
 /* Tablet & Mobile: Switch to mobile navigation drawer */
 @media (max-width: 992px) {
-  html,
-  html[data-lang="fil"] {
+  html {
     scroll-padding-top: 75px;
   }
   .navbar .nav-container,
-  .site-header .header-container,
-  html[data-lang="fil"] .navbar .nav-container,
-  html[data-lang="fil"] .site-header .header-container {
+  .site-header .header-container {
     min-height: 68px;
     height: auto;
     padding: 0.5rem 1rem;
   }
-  .nav-actions,
-  html[data-lang="fil"] .nav-actions {
+  .nav-actions {
     flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
-  }
-  .nav-actions-top,
-  html[data-lang="fil"] .nav-actions-top {
     gap: 0.5rem;
   }
   .nav-links {
@@ -2280,9 +2275,7 @@ html[data-lang="fil"] .cart-btn {
     display: flex !important;
   }
   .nav-actions .btn-primary.open-membership-btn,
-  .nav-actions .header-join-btn,
-  html[data-lang="fil"] .nav-actions .btn-primary.open-membership-btn,
-  html[data-lang="fil"] .nav-actions .header-join-btn {
+  .nav-actions .header-join-btn {
     display: none !important; /* Accessible inside mobile drawer to prevent navbar wrapping */
   }
   .hero-grid {
@@ -2306,13 +2299,18 @@ html[data-lang="fil"] .cart-btn {
     grid-template-columns: 1fr 1fr;
   }
   .weather-widget {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
     padding: 1.25rem;
   }
   .weather-status {
     border-right: none;
-    border-bottom: none;
+    border-bottom: 1.5px solid var(--border-light);
     padding-right: 0;
-    padding-bottom: 0;
+    padding-bottom: 1.25rem;
+  }
+  .weather-map-frame-wrapper {
+    height: 220px;
   }
 }
 
@@ -2691,8 +2689,7 @@ html[data-lang="fil"] .cart-btn {
     padding: 0.5rem 0;
   }
   
-  .nav-container,
-  html[data-lang="fil"] .nav-container {
+  .nav-container {
     min-height: 60px;
     height: auto;
     padding: 0 1rem;
@@ -2711,17 +2708,14 @@ html[data-lang="fil"] .cart-btn {
     font-size: 0.68rem;
   }
 
-  .nav-actions,
-  html[data-lang="fil"] .nav-actions {
+  .nav-actions {
     flex-direction: row;
     align-items: center;
     gap: 0.45rem;
   }
 
   .nav-actions .btn-primary.open-membership-btn,
-  .nav-actions .header-join-btn,
-  html[data-lang="fil"] .nav-actions .btn-primary.open-membership-btn,
-  html[data-lang="fil"] .nav-actions .header-join-btn {
+  .nav-actions .header-join-btn {
     display: none !important; /* Shown in mobile drawer to save header space */
   }
 
