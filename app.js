@@ -1015,7 +1015,10 @@ function setupProductVariants() {
       
       // Auto-preview matching sticker image
       if (stickerImg && stickerSwitcher) {
-        if (selectedStickerVariant.includes('Yellow')) {
+        if (selectedStickerVariant.includes('Dual Pack')) {
+          stickerImg.src = 'assets/product-stickers.jpg?v=4';
+          stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('product-stickers')));
+        } else if (selectedStickerVariant.includes('Yellow')) {
           stickerImg.src = 'assets/sticker-yellow-qr.jpg?v=4';
           stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('sticker-yellow-qr')));
         } else if (selectedStickerVariant.includes('Red')) {
@@ -1049,6 +1052,21 @@ function setupProductViewSwitchers() {
             targetImg.style.opacity = '1';
           };
         }
+
+        // Sync sticker pack variant button when clicking view switcher
+        if (targetId === 'stickers-main-img' && newSrc) {
+          const stickerLabel = document.getElementById('selected-sticker-variant-name');
+          const stickerBtns = document.querySelectorAll('.sticker-variant-btn');
+          if (newSrc.includes('sticker-yellow-qr')) {
+            selectedStickerVariant = 'Neon Yellow (2x)';
+          } else if (newSrc.includes('sticker-red-qr')) {
+            selectedStickerVariant = 'Crimson Red (2x)';
+          } else {
+            selectedStickerVariant = 'Dual Pack (Yellow + Red)';
+          }
+          if (stickerLabel) stickerLabel.textContent = selectedStickerVariant;
+          stickerBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-variant') === selectedStickerVariant));
+        }
       });
     });
   });
@@ -1070,6 +1088,12 @@ const productsCatalog = {
     titleFil: 'Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)',
     price: 120,
     img: 'assets/product-stickers.jpg?v=4',
+    getImg: () => {
+      if (selectedStickerVariant.includes('Dual Pack')) return 'assets/product-stickers.jpg?v=4';
+      if (selectedStickerVariant.includes('Yellow')) return 'assets/sticker-yellow-qr.jpg?v=4';
+      if (selectedStickerVariant.includes('Red')) return 'assets/sticker-red-qr.jpg?v=4';
+      return 'assets/product-stickers.jpg?v=4';
+    },
     getVariant: () => selectedStickerVariant
   },
   'cap': {
@@ -1095,6 +1119,7 @@ window.addToCart = function(productId) {
   if (!itemDef) return;
 
   const variant = itemDef.getVariant ? itemDef.getVariant() : '';
+  const itemImg = itemDef.getImg ? itemDef.getImg() : itemDef.img;
   const cartKey = `${productId}-${variant}`;
   
   const existing = cart.find(item => item.key === cartKey);
@@ -1107,7 +1132,7 @@ window.addToCart = function(productId) {
       titleEn: itemDef.titleEn,
       titleFil: itemDef.titleFil,
       price: itemDef.price,
-      img: itemDef.img,
+      img: itemImg,
       variant: variant,
       quantity: 1
     });
