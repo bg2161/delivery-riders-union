@@ -54,7 +54,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 85px;
+  scroll-padding-top: 105px;
   font-size: 16px;
 }
 
@@ -149,12 +149,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 0 clamp(1rem, 2.5vw, 3rem);
+  padding: 0.55rem clamp(1rem, 2.5vw, 3rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  height: 74px;
+  min-height: 86px;
+  height: auto;
 }
 
 .brand {
@@ -246,17 +247,31 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .nav-actions {
   display: flex;
-  align-items: center;
-  gap: clamp(0.4rem, 0.7vw, 0.75rem);
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.35rem;
   flex-shrink: 0;
+}
+
+.nav-actions-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 .nav-actions .btn-primary.open-membership-btn,
 .nav-actions .header-join-btn {
-  padding: 0.5rem clamp(0.65rem, 0.9vw, 1rem);
-  font-size: clamp(0.8rem, 0.85vw, 0.88rem);
+  padding: 0.38rem 0.95rem;
+  font-size: 0.8rem;
   font-weight: 700;
   white-space: nowrap;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 0;
+  align-self: flex-end;
+  box-shadow: 0 3px 8px rgba(0, 56, 168, 0.2);
 }
 
 /* Language Switcher Pill */
@@ -273,15 +288,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .lang-btn {
   border: none;
   background: transparent;
-  padding: 5px 11px;
-  font-size: 0.82rem;
+  padding: 4px 10px;
+  font-size: 0.8rem;
   font-weight: 700;
   border-radius: var(--radius-pill);
   cursor: pointer;
   color: var(--text-muted);
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   transition: all 0.2s ease;
 }
 
@@ -301,8 +316,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   position: relative;
   background: #FFFFFF;
   border: 1.5px solid var(--border-subtle);
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2197,6 +2212,23 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 /* RESPONSIVE DESIGN */
 /* Tablet & Mobile: Switch to mobile navigation drawer */
 @media (max-width: 992px) {
+  html {
+    scroll-padding-top: 75px;
+  }
+  .navbar .nav-container,
+  .site-header .header-container {
+    min-height: 68px;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+  .nav-actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .nav-actions-top {
+    gap: 0.5rem;
+  }
   .nav-links {
     display: none !important;
   }
@@ -2615,7 +2647,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   }
   
   .nav-container {
-    height: 60px;
+    min-height: 60px;
+    height: auto;
     padding: 0 1rem;
   }
   
@@ -2633,6 +2666,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   }
 
   .nav-actions {
+    flex-direction: row;
+    align-items: center;
     gap: 0.45rem;
   }
 
