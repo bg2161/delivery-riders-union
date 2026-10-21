@@ -309,14 +309,14 @@ const translations = {
 
     // Nav
     navHome: "Tahanan",
-    navProtest: "Protesta sa Mayo 1",
-    navDemands: "Aming Hiling",
-    navShop: "Kasapian at Tindahan",
-    navTransparency: "Katapatan at Pondo",
-    navStories: "Kuwento ng Rider",
-    navFundingPot: "Pondo ng Unyon",
-    navAbout: "Tungkol sa Amin",
-    navPetition: "Petisyon (10,000)",
+    navProtest: "Mayo 1",
+    navDemands: "Mga Hiling",
+    navShop: "Tindahan",
+    navTransparency: "Katapatan",
+    navStories: "Mga Kuwento",
+    navFundingPot: "Pondo",
+    navAbout: "Tungkol",
+    navPetition: "Petisyon",
     btnJoinNav: "Sumapi sa UDRMM o mag-ambag",
     
     // Hero
