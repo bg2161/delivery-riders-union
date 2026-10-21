@@ -1886,9 +1886,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.8fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
   margin-bottom: 3rem;
+  align-items: start;
 }
 
 .footer-brand h4 {

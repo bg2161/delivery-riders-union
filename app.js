@@ -9,6 +9,7 @@ const translations = {
     
     // Brand
     brand_subtitle: "United Delivery Riders<br>of Metro Manila",
+    footerBrandSub: "United Delivery Riders of Metro Manila",
 
     // Nav
     navHome: "Home",
@@ -162,10 +163,10 @@ const translations = {
     story1Role: "FoodTiger Rider, Pasig City (4 Years)",
     story2Text: "\"The official high-vis all-weather jacket from UDRMM literally saved my life last month in heavy mist along C-5. Drivers can finally see us. I truly recommend it to anyone working in this field.\"",
     story2Author: "Ate Maria",
-    story2Role: "Courier & Food Delivery Rider, Quezon City",
+    story2Role: "Grab Courier & Food Delivery Rider, Quezon City (3 Years)",
     story3Text: "\"FoodTiger tells us we are 'independent partners'. But partners don't get their pay slashed without a word. On May 1st, 2027, we are not asking for charity—we are asking for dignity.\"",
     story3Author: "Kuya Roland",
-    story3Role: "UDRMM Manila Chapter Leader",
+    story3Role: "FoodTiger Rider & Manila Chapter Leader (5 Years)",
 
     // Community Solidarity Pot (Funding Pot) Section
     fundingBadge: "COMMUNITY SOLIDARITY POT",
@@ -304,6 +305,7 @@ const translations = {
     
     // Brand
     brand_subtitle: "United Delivery Riders<br>of Metro Manila",
+    footerBrandSub: "United Delivery Riders of Metro Manila",
 
     // Nav
     navHome: "Tahanan",
@@ -455,12 +457,12 @@ const translations = {
     story1Text: "\"Noong bagyo ng Hulyo, abot-tuhod ang baha sa España. Na-late ako ng walong minuto sa sopas, binigyan ako ng customer ng 1 star. Nawala ang incentive ko ng isang linggo. Doon ko napagtanto na kailangan namin ng unyon.\"",
     story1Author: "Kuya Jun",
     story1Role: "FoodTiger Rider, Pasig City (4 Taon)",
-    story2Text: "\"Yung opisyal na kapote ng UDRMM ang nagligtas sa akin sa makapal na ambon sa C-5. Nakikita na kami ng mga dambuhalang trak. Talagang inirerekomenda ko ito sa sinumang nagtatrabaho sa larangang ito.\"",
+    story2Text: "\"Yung opisyal na all-weather jacket ng UDRMM ang nagligtas sa akin sa makapal na ambon sa C-5. Nakikita na kami ng mga dambuhalang trak. Talagang inirerekomenda ko ito sa sinumang nagtatrabaho sa larangang ito.\"",
     story2Author: "Ate Maria",
-    story2Role: "Courier at Food Rider, Lungsod Quezon",
+    story2Role: "Grab Courier at Food Delivery Rider, Quezon City (3 Taon)",
     story3Text: "\"Sabi ng FoodTiger 'partner' daw kami. Pero sa totoo lang, walang kapangyarihan ang partner kapag binawasan ang delivery fee nang walang paabiso. Sa Mayo 1, 2027, hindi kami humihingi ng awa—hustisya ang aming sigaw.\"",
     story3Author: "Kuya Roland",
-    story3Role: "Lider ng UDRMM Manila Chapter",
+    story3Role: "FoodTiger Rider at Manila Chapter Leader (5 Taon)",
 
     // Pondo ng Pagkakaisa ng Komunidad
     fundingBadge: "PONDO NG PAGKAKAISA NG KOMUNIDAD",
