@@ -6,7 +6,7 @@
   <title>U.D.R.M.M. | United Delivery Riders of Metro Manila</title>
   <meta name="description" content="Worker-led union fighting for fair pay, rainy-season hazard protection, and safety for Metro Manila delivery riders.">
   <link rel="icon" type="image/png" href="assets/logo.png?v=20261011_pink">
-  <link rel="stylesheet" href="style.css?v=20261013_v9">
+  <link rel="stylesheet" href="style.css?v=20261021_v12">
 </head>
 <body>
 
@@ -45,38 +45,40 @@
 
       <!-- Language Selector & Header Actions -->
       <div class="nav-actions">
-        <!-- Language Switcher Pill -->
-        <div class="lang-selector" role="group" aria-label="Language Selector">
-          <button type="button" class="lang-btn active" data-lang="en" aria-label="Switch to English">
-            <span>🇬🇧</span> EN
+        <div class="nav-actions-top">
+          <!-- Language Switcher Pill -->
+          <div class="lang-selector" role="group" aria-label="Language Selector">
+            <button type="button" class="lang-btn active" data-lang="en" aria-label="Switch to English">
+              <span>🇬🇧</span> EN
+            </button>
+            <button type="button" class="lang-btn" data-lang="fil" aria-label="Lumipat sa Filipino">
+              <span>🇵🇭</span> FIL
+            </button>
+          </div>
+
+          <!-- Cart Drawer Toggle -->
+          <button class="cart-btn" id="open-cart-btn" aria-label="Open Shopping Bag">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count" id="cart-badge-count" style="display: none;">0</span>
           </button>
-          <button type="button" class="lang-btn" data-lang="fil" aria-label="Lumipat sa Filipino">
-            <span>🇵🇭</span> FIL
+
+          <!-- Mobile Menu Toggle Button -->
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
           </button>
         </div>
-
-        <!-- Cart Drawer Toggle -->
-        <button class="cart-btn" id="open-cart-btn" aria-label="Open Shopping Bag">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-          </svg>
-          <span class="cart-count" id="cart-badge-count" style="display: none;">0</span>
-        </button>
 
         <!-- Become Member or Donate CTA -->
         <button class="btn-primary open-membership-btn header-cta-btn" data-i18n="btnJoinNav">
           Join UDRMM or make a donation
-        </button>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
         </button>
       </div>
     </div>
@@ -210,37 +212,6 @@
               <p class="weather-text" data-i18n="weatherDesc">
                 Active monsoon downpour. Flooding threatening España, Taft, and EDSA corridors. Platforms must suspend automatic delivery time penalties.
               </p>
-            </div>
-          </div>
-
-          <!-- Real-Time PAGASA Radar Map of Metro Manila -->
-          <div class="weather-map-card">
-            <div class="weather-map-header">
-              <div class="map-live-indicator">
-                <span class="live-dot" aria-hidden="true"></span>
-                <span class="map-header-title" data-i18n="weatherMapTitle">DOST-PAGASA Real-Time Radar • Metro Manila</span>
-              </div>
-              <div class="map-links">
-                <a href="https://pagasa.dost.gov.ph/" target="_blank" rel="noopener noreferrer" class="map-ext-link" title="Open PAGASA Official Portal">
-                  PAGASA ↗
-                </a>
-                <a href="https://noah.up.edu.ph/" target="_blank" rel="noopener noreferrer" class="map-ext-link" title="Open UP Project NOAH Hazard Map">
-                  NOAH ↗
-                </a>
-              </div>
-            </div>
-            <div class="weather-map-frame-wrapper">
-              <iframe
-                src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=default&metricWind=km%2Fh&zoom=10&overlay=radar&product=radar&level=surface&lat=14.599&lon=121.098"
-                class="weather-radar-iframe"
-                title="PAGASA Live Doppler Radar - Metro Manila"
-                loading="lazy"
-                allow="fullscreen">
-              </iframe>
-            </div>
-            <div class="weather-map-footer">
-              <span class="map-footer-note" data-i18n="weatherMapLiveTag">● Live Doppler rain &amp; cloud reflectivity</span>
-              <span class="map-footer-coords">Metro Manila (14.60° N, 121.03° E)</span>
             </div>
           </div>
         </div>

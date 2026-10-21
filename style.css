@@ -54,8 +54,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 85px;
-  font-size: 16px;
+  scroll-padding-top: 90px;
+  font-size: 17px;
 }
 
 body {
@@ -66,6 +66,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   min-height: 100vh;
+  font-size: 1.02rem;
 }
 
 body.modal-open {
@@ -251,14 +252,54 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   flex-shrink: 0;
 }
 
+.nav-actions-top {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.35rem, 0.6vw, 0.75rem);
+}
+
 .nav-actions .btn-primary.open-membership-btn,
-.nav-actions .header-join-btn {
+.nav-actions .header-join-btn,
+.nav-actions .header-cta-btn {
   padding: 0.45rem clamp(0.6rem, 0.75vw, 0.95rem);
   font-size: clamp(0.76rem, 0.8vw, 0.85rem);
   font-weight: 700;
   white-space: nowrap;
   letter-spacing: -0.01em;
   line-height: 1.2;
+}
+
+/* Filipino Language Specific: Shopping bag stays UP on top row alongside language switcher; blue CTA button sits right under the bag on the right */
+html[data-lang="fil"] .navbar .nav-container,
+html[data-lang="fil"] .site-header .header-container {
+  min-height: 86px;
+  height: auto;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+html[data-lang="fil"] .nav-actions {
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+html[data-lang="fil"] .nav-actions-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+html[data-lang="fil"] .nav-actions .btn-primary.open-membership-btn,
+html[data-lang="fil"] .nav-actions .header-join-btn,
+html[data-lang="fil"] .nav-actions .header-cta-btn {
+  padding: 0.38rem 0.95rem;
+  font-size: 0.8rem;
+  margin: 0;
+  align-self: flex-end;
+  box-shadow: 0 3px 8px rgba(0, 56, 168, 0.2);
 }
 
 /* Language Switcher Pill */
@@ -1037,23 +1078,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   border: 1.5px solid var(--border-subtle);
   padding: 1.5rem 1.75rem;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
-  display: grid;
-  grid-template-columns: 1fr 1.25fr;
-  gap: 1.75rem;
+  display: flex;
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .weather-widget:hover {
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(206, 17, 38, 0.08);
 }
 
 .weather-status {
   display: flex;
   align-items: flex-start;
   gap: 1.15rem;
-  padding-right: 1.25rem;
-  border-right: 1.5px solid var(--border-light);
+  width: 100%;
 }
 
 .weather-icon-box {
@@ -1118,112 +1157,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   color: var(--text-muted);
   line-height: 1.45;
   margin: 0;
-}
-
-/* Weather Real-Time Radar Map Card */
-.weather-map-card {
-  display: flex;
-  flex-direction: column;
-  background: #0B1329;
-  border: 1.5px solid var(--border-subtle);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-}
-
-.weather-map-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.6rem 0.9rem;
-  background: #FFFFFF;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.map-live-indicator {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.live-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #10B981;
-  display: inline-block;
-  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
-  animation: radar-pulse 2s infinite;
-}
-
-@keyframes radar-pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-}
-
-.map-header-title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--ph-blue);
-  letter-spacing: -0.01em;
-}
-
-.map-links {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.map-ext-link {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-decoration: none;
-  background: #F1F5F9;
-  padding: 2px 7px;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-}
-
-.map-ext-link:hover {
-  color: var(--ph-blue);
-  background: var(--ph-blue-light);
-}
-
-.weather-map-frame-wrapper {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  background: #0F172A;
-}
-
-.weather-radar-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-.weather-map-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.45rem 0.9rem;
-  background: #FFFFFF;
-  border-top: 1px solid var(--border-subtle);
-  font-size: 0.72rem;
-  color: var(--text-muted);
-}
-
-.map-footer-note {
-  font-weight: 700;
-  color: #059669;
-}
-
-.map-footer-coords {
-  font-family: monospace;
-  font-size: 0.7rem;
 }
 
 /* Demand highlight badge */
@@ -2264,9 +2197,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     height: auto;
     padding: 0.5rem 1rem;
   }
-  .nav-actions {
+  .nav-actions,
+  html[data-lang="fil"] .nav-actions {
     flex-direction: row;
     align-items: center;
+    gap: 0.5rem;
+  }
+  .nav-actions-top,
+  html[data-lang="fil"] .nav-actions-top {
     gap: 0.5rem;
   }
   .nav-links {
@@ -2276,7 +2214,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     display: flex !important;
   }
   .nav-actions .btn-primary.open-membership-btn,
-  .nav-actions .header-join-btn {
+  .nav-actions .header-join-btn,
+  .nav-actions .header-cta-btn,
+  html[data-lang="fil"] .nav-actions .btn-primary.open-membership-btn,
+  html[data-lang="fil"] .nav-actions .header-join-btn,
+  html[data-lang="fil"] .nav-actions .header-cta-btn {
     display: none !important; /* Accessible inside mobile drawer to prevent navbar wrapping */
   }
   .hero-grid {
@@ -2300,18 +2242,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     grid-template-columns: 1fr 1fr;
   }
   .weather-widget {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
     padding: 1.25rem;
   }
   .weather-status {
-    border-right: none;
-    border-bottom: 1.5px solid var(--border-light);
-    padding-right: 0;
-    padding-bottom: 1.25rem;
-  }
-  .weather-map-frame-wrapper {
-    height: 220px;
+    gap: 1rem;
   }
 }
 
@@ -2709,14 +2643,24 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     font-size: 0.68rem;
   }
 
-  .nav-actions {
+  .nav-actions,
+  html[data-lang="fil"] .nav-actions {
     flex-direction: row;
     align-items: center;
     gap: 0.45rem;
   }
 
+  .nav-actions-top,
+  html[data-lang="fil"] .nav-actions-top {
+    gap: 0.45rem;
+  }
+
   .nav-actions .btn-primary.open-membership-btn,
-  .nav-actions .header-join-btn {
+  .nav-actions .header-join-btn,
+  .nav-actions .header-cta-btn,
+  html[data-lang="fil"] .nav-actions .btn-primary.open-membership-btn,
+  html[data-lang="fil"] .nav-actions .header-join-btn,
+  html[data-lang="fil"] .nav-actions .header-cta-btn {
     display: none !important; /* Shown in mobile drawer to save header space */
   }
 
