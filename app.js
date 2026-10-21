@@ -1370,7 +1370,7 @@ function setupMembershipModal() {
             </div>
 
             <div class="free-poncho-notice" style="text-align: left; margin: 1.5rem 0;">
-              <img src="assets/product-vest.jpg?v=20261012_v8" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover; border-radius: 8px;">
+              <img src="assets/product-poncho.jpg" alt="Official Union Gear" style="width: 56px; height: 56px; object-fit: cover; border-radius: 8px;">
               <div>
                 <strong style="color: var(--ph-blue); font-size: 0.95rem; display: block; margin-bottom: 2px;">
                   🛡️ Official high-vis jacket & stickers package included!
