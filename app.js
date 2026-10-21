@@ -248,8 +248,8 @@ const translations = {
     // About Section
     aboutBadge: "ACADEMIC FRAMEWORK",
     aboutTitle: "Battling Global Giants Locally (B.G.G.L.)",
-    aboutDesc1: "United Delivery Riders of Metro Manila (UDRMM) is a civic project developed by Taskforce 2 for MSM Assignment 2 under the campaign 'Battling Global Giants Locally'. Our goal is to illustrate how grassroots gig workers can organize against multinational platform exploitation.",
-    aboutDesc2: "By blending local cultural solidarity (bayanihan, barangay community networks) with modern digital campaigning and collective bargaining strategies, we prove that no corporate giant is too large to negotiate with organized labor.",
+    aboutDesc1: "<strong>Battling Global Giants Locally (B.G.G.L.)</strong> is our student taskforce crew for university MSM Assignment 2. The name represents our focus on supporting local workers in their struggle against the power of global platform companies, and the acronym <strong>B.G.G.L.</strong> is formed directly from the initials of the four students comprising this taskforce: <strong>B</strong>eatrice, <strong>G</strong>yeong, <strong>G</strong>eorgia, and <strong>L</strong>ouise.",
+    aboutDesc2: "<strong>Academic Framework &amp; Fictional Identity:</strong> This website is an academic prototype created exclusively as a university assignment (MSM Assignment 2). <strong>United Delivery Riders of Metro Manila (UDRMM) is a fictional worker-led union</strong> designed as a case study communication campaign to explore how gig couriers could organize against multinational delivery platforms. All actions, memberships, and campaign initiatives presented on this site are part of this fictional educational simulation.",
     teamHeading: "Taskforce 2 Working Group",
     teamSub: "Ordered following the student initials in B.G.G.L. (Beatrice, Gyeong, Georgia, Louise):",
     roleDesign: "Design",
@@ -545,8 +545,8 @@ const translations = {
     // About Section
     aboutBadge: "AKADEMIKONG BALANGKAS",
     aboutTitle: "Battling Global Giants Locally (B.G.G.L.)",
-    aboutDesc1: "Ang United Delivery Riders of Metro Manila (UDRMM) ay isang proyektong pangkomunikasyon na binuo ng Taskforce 2 para sa MSM Assignment 2 sa ilalim ng temang 'Battling Global Giants Locally'. Layunin nitong ipakita kung paano makakapag-organisa ang mga gig worker laban sa pang-aabuso ng mga multinasyunal na platform.",
-    aboutDesc2: "Sa pamamagitan ng diwa ng bayanihan, tulungan sa barangay, at modernong kampanya sa digital media, pinatutunayan natin na walang kumpanyang higit na makapangyarihan kaysa sa nagkakaisang hanay ng mga manggagawa.",
+    aboutDesc1: "Ang <strong>Battling Global Giants Locally (B.G.G.L.)</strong> ay ang aming student taskforce crew para sa university MSM Assignment 2. Kinakatawan ng pangalan ang pagsuporta sa mga lokal na manggagawa laban sa kapangyarihan ng mga pandaigdigang platform, at ang acronym na <strong>B.G.G.L.</strong> ay nagmula sa mga inisyal ng apat na mag-aaral: nina <strong>B</strong>eatrice, <strong>G</strong>yeong, <strong>G</strong>eorgia, at <strong>L</strong>ouise.",
+    aboutDesc2: "<strong>Akademikong Balangkas at Kathang-Isip na Pagkakakilanlan:</strong> Ang website na ito ay isang akademikong prototype na eksklusibong binuo bilang university assignment (MSM Assignment 2). Ang <strong>United Delivery Riders of Metro Manila (UDRMM) ay isang kathang-isip (fictional) na unyon ng manggagawa</strong> na nilikha bilang case study at senaryo ng kampanyang pangkomunikasyon upang siyasatin kung paano makakapag-organisa ang mga courier laban sa mga multinasyunal na app platform. Ang lahat ng aksyon, pagsapi, at inisyatiba rito ay bahagi ng simulasyong pang-edukasyon.",
     teamHeading: "Taskforce 2 Working Group",
     teamSub: "Nakaayos ayon sa mga inisyal ng mag-aaral sa B.G.G.L. (Beatrice, Gyeong, Georgia, Louise):",
     roleDesign: "Design",
