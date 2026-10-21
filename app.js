@@ -162,9 +162,9 @@ const translations = {
     story2Text: "\"The official high-vis all-weather jacket from UDRMM literally saved my life last month in heavy mist along C-5. Drivers can finally see us. I truly recommend it to anyone working in this field.\"",
     story2Author: "Ate Maria",
     story2Role: "Grab Courier & Food Delivery Rider, Quezon City (3 Years)",
-    story3Text: "\"FoodTiger tells us we are 'independent partners'. But partners don't get their pay slashed without a word. On May 1st, 2027, we are not asking for charity—we are asking for dignity.\"",
+    story3Text: "\"Foodpanda tells us we are 'independent partners'. But partners don't get their pay slashed without a word. On May 1st, 2027, we are not asking for charity—we are asking for dignity.\"",
     story3Author: "Kuya Roland",
-    story3Role: "FoodTiger Rider & Manila Chapter Leader (5 Years)",
+    story3Role: "Foodpanda Rider, Manila (5 Years)",
 
     // Community Solidarity Pot (Funding Pot) Section
     fundingBadge: "COMMUNITY SOLIDARITY POT",
@@ -456,9 +456,9 @@ const translations = {
     story2Text: "\"Yung opisyal na all-weather jacket ng UDRMM ang nagligtas sa akin sa makapal na ambon sa C-5. Nakikita na kami ng mga dambuhalang trak. Talagang inirerekomenda ko ito sa sinumang nagtatrabaho sa larangang ito.\"",
     story2Author: "Ate Maria",
     story2Role: "Grab Courier at Food Delivery Rider, Quezon City (3 Taon)",
-    story3Text: "\"Sabi ng FoodTiger 'partner' daw kami. Pero sa totoo lang, walang kapangyarihan ang partner kapag binawasan ang delivery fee nang walang paabiso. Sa Mayo 1, 2027, hindi kami humihingi ng awa—hustisya ang aming sigaw.\"",
+    story3Text: "\"Sabi ng Foodpanda 'partner' daw kami. Pero sa totoo lang, walang kapangyarihan ang partner kapag binawasan ang delivery fee nang walang paabiso. Sa Mayo 1, 2027, hindi kami humihingi ng awa—hustisya ang aming sigaw.\"",
     story3Author: "Kuya Roland",
-    story3Role: "FoodTiger Rider at Manila Chapter Leader (5 Taon)",
+    story3Role: "Foodpanda Rider, Manila (5 Taon)",
 
     // Pondo ng Pagkakaisa ng Komunidad
     fundingBadge: "PONDO NG PAGKAKAISA NG KOMUNIDAD",
