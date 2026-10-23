@@ -2424,7 +2424,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   height: 100dvh;
   background: #FFF5F7;
   box-shadow: -6px 0 30px rgba(0, 0, 0, 0.2);
-  display: none;
+  display: flex;
   flex-direction: column;
   margin-left: auto;
   transform: translateX(100%);
@@ -2443,7 +2443,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   padding: 1rem 1.25rem;
   background: #FFFFFF;
   border-bottom: 1.5px solid var(--border-light);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
@@ -2452,7 +2452,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 .mobile-nav-brand {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
@@ -2465,7 +2465,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   border-radius: 50%;
   width: 38px;
   height: 38px;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-body);
@@ -2485,7 +2485,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 .mobile-nav-body {
   padding: 1.25rem;
   flex: 1;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
@@ -2494,13 +2494,13 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
 .mobile-nav-link {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0.85rem;
   padding: 0.85rem 1rem;
@@ -2571,7 +2571,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 .mn-cta-header {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0.65rem;
 }
@@ -2582,7 +2582,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 .mobile-nav-lang-section {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding-top: 0.5rem;
@@ -2590,7 +2590,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 .mobile-lang-selector {
-  display: none;
+  display: flex;
   width: 100%;
 }
 
@@ -2665,7 +2665,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   }
 
   .mobile-menu-btn {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     width: 44px;
