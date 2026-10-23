@@ -238,7 +238,7 @@ const translations = {
     fundItem4Title: "Grassroots face-to-face meetings & assemblies",
     fundItem4Desc: "Community hall rentals, sound system logistics, and meeting refreshments for regular local face-to-face rider assemblies across all 16 Metro Manila cities.",
     fundItem5Title: "Campaign materials, education & mobilization",
-    fundItem5Desc: "Printed rider rights primers, leaflets at courier hubs, megaphones, banners, and safety marshal logistics for the May 1st Rider Unity Caravan.",
+    fundItem5Desc: "Printing flyers on rider rights, banners, megaphones, and safety support for the May 1st Rider Unity Caravan.",
     auditNote: "100% of union dues and shop proceeds are directly reinvested in rider welfare and democratic organizing. Audited books are presented at every general assembly.",
     transCard2Title: "Grassroots democracy & community resources",
     transCard2Sub: "Regular face-to-face assemblies and institutional support",
