@@ -248,7 +248,7 @@ const translations = {
     resLaborTitle: "National labour group & local labour-rights NGO",
     resLaborDesc: "We receive legal advice from pro-bono labor attorneys, volunteer support for campaign logistics, dedicated meeting spaces for leadership strategy, and limited financial support for emergency printing and solidarity projects.",
     resBarangayTitle: "Barangay community centers & local networks",
-    resBarangayDesc: "Local barangay covered courts and community halls provide accessible meeting spaces for neighborhood chapter assemblies, while grassroots community networks serve as an essential information relay for severe weather advisories, rest stop staging, and union mobilizations.",
+    resBarangayDesc: "Local barangay community halls provide accessible meeting spaces for neighborhood chapter assemblies, while grassroots community networks serve as an essential information relay for severe weather advisories, rest stop staging, and union mobilizations.",
     resMutualTitle: "Rider-to-rider peer mutual aid",
     resMutualDesc: "Roadside emergency mechanic assistance, flat-tire rescue networks, battery jump-starts, and real-time flood reporting coordinated by riders via Messenger and WhatsApp community broadcast groups.",
 
@@ -564,7 +564,7 @@ const translations = {
     resLaborTitle: "Pambansang grupo ng paggawa at lokal na NGO para sa karapatan",
     resLaborDesc: "Tinatanggap namin ang payong legal mula sa mga volunteer na abogado, suporta sa boluntaryo, espasyo para sa pagpupulong, at limitadong tulong-pinansyal para sa emergency printing.",
     resBarangayTitle: "Mga Barangay community center at lokal na network",
-    resBarangayDesc: "Ang mga covered court at barangay hall ay nagbibigay ng ligtas na espasyo sa pagpupulong, habang ang komunidad ay tumutulong sa pagpapalaganap ng impormasyon ukol sa baha at mga panawagan.",
+    resBarangayDesc: "Ang mga barangay community hall ay nagbibigay ng ligtas na espasyo sa pagpupulong, habang ang komunidad ay tumutulong sa pagpapalaganap ng impormasyon ukol sa baha at mga panawagan.",
     resMutualTitle: "Damayan at tulungan ng kapwa rider",
     resMutualDesc: "Tulong sa sirang motorsiklo sa daan, rescue sa vulcanizing, jump-start ng baterya, at mabilisang ulat sa baha sa pamamagitan ng GCash, Messenger, at WhatsApp broadcast.",
 
