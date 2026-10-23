@@ -162,11 +162,11 @@ const translations = {
     itemVestSizeLbl: "Size:",
 
     itemStickersTitle: "Official weatherproof vinyl sticker pack (Yellow & Red)",
-    itemStickersDesc: "Heavy-duty outdoor laminated vinyl stickers in high-vis neon yellow and deep crimson red. Features the official union emblem and bold typography, ideal for helmets, motorcycle windshields, and delivery boxes.",
+    itemStickersDesc: "Heavy-duty outdoor laminated vinyl stickers in high-vis neon yellow and red. Features the official union emblem and bold typography, ideal for helmets, motorcycle windshields, and delivery boxes.",
     itemStickerVariantLbl: "Pack:",
 
     itemCapTitle: "Official UDRMM embroidered cap",
-    itemCapDesc: "Durable cotton twill cap featuring the Philippine sun badge, scooter emblem, and the embroidered slogan: 'NO DELIVERY IS WORTH A RIDER'S SAFETY'. Available in Royal Blue and Crimson Red.",
+    itemCapDesc: "Durable cotton twill cap featuring the Philippine sun badge, scooter emblem, and the embroidered slogan: 'NO DELIVERY IS WORTH A RIDER'S SAFETY'. Available in Blue and Red.",
     itemCapColorLbl: "Color:",
     
     itemPhoneTitle: "Heavy-duty handlebar phone mount",
@@ -478,11 +478,11 @@ const translations = {
     itemVestSizeLbl: "Sukat:",
 
     itemStickersTitle: "Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)",
-    itemStickersDesc: "Matibay at hindi nababasang outdoor laminated vinyl stickers sa neon yellow at malalim na crimson red. Tampok ang opisyal na sagisag ng unyon at malinaw na disenyo para sa mga helmet, windshield, at delivery box.",
+    itemStickersDesc: "Matibay at hindi nababasang outdoor laminated vinyl stickers sa neon yellow at red. Tampok ang opisyal na sagisag ng unyon at malinaw na disenyo para sa mga helmet, windshield, at delivery box.",
     itemStickerVariantLbl: "Pake:",
 
     itemCapTitle: "Opisyal na Burdadong Sumbrero ng UDRMM",
-    itemCapDesc: "Matibay na cotton twill cap na may sagisag ng araw ng Pilipinas, motorsiklo, at burdadong katagang: 'NO DELIVERY IS WORTH A RIDER'S SAFETY'. May kulay na Royal Blue at Crimson Red.",
+    itemCapDesc: "Matibay na cotton twill cap na may sagisag ng araw ng Pilipinas, motorsiklo, at burdadong katagang: 'NO DELIVERY IS WORTH A RIDER'S SAFETY'. May kulay na Blue at Red.",
     itemCapColorLbl: "Kulay:",
     
     itemPhoneTitle: "Heavy-Duty Handlebar Phone Mount Case",
@@ -1098,9 +1098,9 @@ function setupProductViewSwitchers() {
           const stickerLabel = document.getElementById('selected-sticker-variant-name');
           const stickerBtns = document.querySelectorAll('.sticker-variant-btn');
           if (newSrc.includes('sticker-yellow-qr')) {
-            selectedStickerVariant = 'Neon Yellow (2x)';
+            selectedStickerVariant = 'Yellow (2x)';
           } else if (newSrc.includes('sticker-red-qr')) {
-            selectedStickerVariant = 'Crimson Red (2x)';
+            selectedStickerVariant = 'Red (2x)';
           } else {
             selectedStickerVariant = 'Dual Pack (Yellow + Red)';
           }
