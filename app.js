@@ -99,6 +99,9 @@ const translations = {
     photoBadgeFlood: "KNEE-DEEP FLOODWATERS",
     photoCaptionFlood: "Submerged Manila streets: Wading through floodwaters without rerouting or face instant account deactivation.",
 
+    // Demand Accordion
+    demandAccordionHint: "View Demands vs Reality",
+
     // Demand 1: Flood Navigation
     dem1Title: "Flood navigation & storm hazard pay",
     dem1Badge: "PAGASA & NOAH MAPS",
@@ -484,6 +487,9 @@ const translations = {
     photoCaptionStorm: "Malalakas na buhos ng ulan: Pinipilit ng 25-minutong timer ang mga rider sa gitna ng unos at panganib sa kalsada.",
     photoBadgeFlood: "LUBOG NA MGA KALSADA",
     photoCaptionFlood: "Baha sa Kamaynilaan: Paglusong sa baha nang walang alternatibong ruta o harapin ang biglaang suspensyon.",
+
+    // Demand Accordion
+    demandAccordionHint: "Tingnan ang Hiling vs Realidad",
 
     // Demand 1: Flood Navigation
     dem1Title: "Paiwas sa baha at hazard pay sa bagyo",
