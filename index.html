@@ -402,8 +402,19 @@
         <div class="section-header">
           <span class="section-badge badge-blue" data-i18n="demandsBadge">OUR DEMANDS VS PLATFORM REALITY</span>
           <h2 class="section-title" data-i18n="demandsHeading">What We Are Demanding vs Platform Policy</h2>
+          <p class="section-desc" data-i18n="demandsSubtitle">Compare our key operational demands against current delivery platform reality. Click any topic to open its submenu.</p>
         </div>
 
+        <!-- Demands Accordion Toolbar -->
+        <div class="demands-toolbar">
+          <span class="demands-count-pill">
+            <span class="pill-dot" aria-hidden="true"></span>
+            <span data-i18n="demandsCountText">5 Core Demands &amp; Filings (Click to open)</span>
+          </span>
+          <div class="demands-actions">
+            <button type="button" class="btn-toggle-all" id="btn-toggle-demands" data-i18n="btnExpandAll">Expand All</button>
+          </div>
+        </div>
 
         <!-- Collapsible Submenus (Accordions) for Demands vs Platform Reality -->
         <div class="demands-accordions-container">
@@ -637,37 +648,42 @@
                 </div>
               </div>
             </div>
+          <!-- Accordion 5: FoodTiger Charter -->
+          <details class="demand-accordion demand-accordion-charter">
+            <summary class="demand-accordion-summary">
+              <div class="summary-main">
+                <span class="summary-emoji" aria-hidden="true">📜</span>
+                <h3 class="summary-title" data-i18n="charterHeading">Our Claims to FoodTiger: The Five Claims</h3>
+                <span class="cd-badge badge-charter" data-i18n="charterBadge">OFFICIAL CHARTER</span>
+              </div>
+              <div class="summary-action">
+                <span class="accordion-hint" data-i18n="demandCharterHint">View Charter &amp; Claims</span>
+                <svg class="accordion-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </summary>
+            <div class="demand-accordion-body">
+              <div class="charter-accordion-wrap">
+                <div class="charter-accordion-info">
+                  <p class="charter-desc" data-i18n="charterDesc">
+                    Official union charter formally delivered to FoodTiger management demanding fair pay transparency, weather-adjusted delivery times, safety allowances, and human review for suspensions.
+                  </p>
+                  <blockquote class="charter-quote" data-i18n="charterQuote">
+                    "We want dialogue, not conflict. We are not asking FoodTiger to leave — we are asking FoodTiger to treat Manila's riders with dignity, fair pay, and basic safety."
+                  </blockquote>
+                </div>
+                <div class="charter-accordion-actions">
+                  <a href="assets/docs/udrmm-claims-to-foodtiger.pdf" target="_blank" rel="noopener noreferrer" class="btn-charter-view">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <span data-i18n="btnViewCharter">Read FoodTiger Claims</span>
+                  </a>
+                  <a href="assets/docs/udrmm-claims-to-foodtiger.pdf" download="UDRMM_Our_Claims_to_FoodTiger.pdf" class="btn-charter-download">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span data-i18n="btnDownloadCharter">Download PDF (56 KB)</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </details>
-        </div>
-
-        <!-- FoodTiger Charter Featured Card -->
-        <div class="foodtiger-charter-card">
-          <div class="charter-body">
-            <div class="charter-info">
-              <h3 class="charter-title" data-i18n="charterHeading">Our Claims to FoodTiger: The Five Claims</h3>
-              <p class="charter-desc" data-i18n="charterDesc">
-                Official union charter formally delivered to FoodTiger management demanding fair pay transparency, weather-adjusted delivery times, safety allowances, and human review for suspensions.
-              </p>
-              <blockquote class="charter-quote" data-i18n="charterQuote">
-                "We want dialogue, not conflict. We are not asking FoodTiger to leave — we are asking FoodTiger to treat Manila's riders with dignity, fair pay, and basic safety."
-              </blockquote>
-            </div>
-            <div class="charter-cta-box">
-              <div class="charter-doc-icon" aria-hidden="true">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#CE1126" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-              </div>
-              <div class="charter-actions">
-                <a href="assets/docs/udrmm-claims-to-foodtiger.pdf" target="_blank" rel="noopener noreferrer" class="btn-charter-view">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                  <span data-i18n="btnViewCharter">Read FoodTiger Claims</span>
-                </a>
-                <a href="assets/docs/udrmm-claims-to-foodtiger.pdf" download="UDRMM_Our_Claims_to_FoodTiger.pdf" class="btn-charter-download">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                  <span data-i18n="btnDownloadCharter">Download PDF (56 KB)</span>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
