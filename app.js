@@ -218,7 +218,7 @@ const translations = {
     // Hero Poncho Product
     vestagliaTag: "★ EXCLUSIVE UNION MEMBER BENEFIT",
     vestagliaTitle: "Official all-weather jacket",
-    vestagliaDesc: "Designed specifically for Manila's torrential monsoon conditions. Made with double-sealed Oxford waterproof nylon, 360° neon safety stripes, storm flaps, and the official UDRMM rider chest insignia. Included for all registered union members with paid annual dues.",
+    vestagliaDesc: "Designed specifically for Manila's torrential monsoon conditions. Made with double-sealed Oxford waterproof nylon, 360° neon safety stripes, storm flaps, and the official UDRMM logo. Included for all registered union members with paid annual dues.",
     vf1: "100% storm-proof waterproof fabric",
     vf2: "360° neon & silver reflective safety bands",
     vf3: "Helmet-compatible drawstring hood",
@@ -607,7 +607,7 @@ const translations = {
     // Hero Poncho Product
     vestagliaTag: "★ NATATANGING BENEPISYO NG KASAPING RIDER",
     vestagliaTitle: "Opisyal na all-weather jacket",
-    vestagliaDesc: "Espesyal na idinisenyo para sa malalakas na habagat at bagyo sa Maynila. Gawa sa double-sealed waterproof Oxford nylon, may 360° neon at reflective bands, storm flaps, at burdadong sagisag ng UDRMM. Kasama para sa lahat ng rehistradong miyembro na nagbayad ng taunang butaw.",
+    vestagliaDesc: "Espesyal na idinisenyo para sa malalakas na habagat at bagyo sa Maynila. Gawa sa double-sealed waterproof Oxford nylon, may 360° neon at reflective bands, storm flaps, at opisyal na UDRMM logo. Kasama para sa lahat ng rehistradong miyembro na nagbayad ng taunang butaw.",
     vf1: "100% Hindi Bumabasa kahit Matinding Bagyo",
     vf2: "360° Neon at Silver Reflective Safety Bands",
     vf3: "Kasya sa Helmet ang Tali ng Hood",
