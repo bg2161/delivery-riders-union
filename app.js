@@ -36,7 +36,7 @@ const translations = {
     
     // Hero Card
     heroCardTitle: "United we ride, united we win",
-    heroCardDesc: "Organizing riders from FoodTiger, Grab, Foodpanda, and independent couriers across all 16 cities.",
+    heroCardDesc: "Organizing riders from FoodTiger, Grab, Foodpanda and independent couriers across all 16 cities.",
     perk1: "Official heavy-duty high-vis gear & safety package included",
     perk2: "Legal aid & emergency suspension support",
     perk3: "Barangay solidarity shelters during typhoons",
@@ -385,7 +385,7 @@ const translations = {
     
     // Hero Card
     heroCardTitle: "Sama-Samang Babyahe, Sama-Samang Magtatagumpay",
-    heroCardDesc: "Pinagbubuklod ang mga rider mula FoodTiger, Grab, Foodpanda, at iba pang courier sa buong Kamaynilaan.",
+    heroCardDesc: "Pinagbubuklod ang mga rider mula FoodTiger, Grab, Foodpanda at iba pang courier sa buong Kamaynilaan.",
     perk1: "Kasama ang High-Vis Reflective Safety Vest at Stickers",
     perk2: "Tulong legal at suporta kapag na-suspend ang app account",
     perk3: "Barangay solidarity shelters kapag may bagyo",
