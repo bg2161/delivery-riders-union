@@ -57,7 +57,7 @@ const translations = {
     // Protest Section
     protestBadge: "MAY 1, 2027 • LABOR DAY MOBILIZATION",
     protestTitle: "The May 1st, 2027 Rider Unity March & App freeze",
-    protestDesc: "During the rainy season, platform giants cut pay per order while demanding unchanged dry-season delivery speeds. On May 1st, 2027 (Labor Day), thousands of riders across Metro Manila will unite for a peaceful caravan, dialogue, and 1-hour solidarity app freeze.",
+    protestDesc: "During the rainy season, platform giants cut pay per order while demanding unchanged dry-season delivery speeds. On May 1st, 2027 (Labor Day), thousands of riders across Metro Manila will unite for a caravan, dialogue, and 1-hour solidarity app freeze.",
     countdownHeading: "Countdown to May 1st mobilization",
     countdownSub: "Saturday, May 1, 2027 • Assembly at 09:00 AM",
     lblDays: "Days",
@@ -70,7 +70,7 @@ const translations = {
     sch1Title: "Twin assembly points",
     sch1Desc: "Riders gather at Welcome Rotonda (Quezon City / Manila border) and EDSA Shrine (Ortigas). Distribution of high-vis armbands.",
     sch2Time: "10:00 AM",
-    sch2Title: "Peaceful motorcade caravan",
+    sch2Title: "Motorcade caravan",
     sch2Desc: "Orderly single-lane motorcycle caravan towards corporate headquarters in Bonifacio Global City (BGC) and DOLE NCR.",
     sch3Time: "12:00 PM - 01:00 PM",
     sch3Title: "Silent app freeze (1-hour boycott)",
@@ -193,7 +193,7 @@ const translations = {
 
     docPressBadge: "OFFICIAL PRESS RELEASE",
     docPressTitle: "Press Release: May 1st Labor Day Safety March",
-    docPressDesc: "Official union press statement announcing the May 1st 'Safe Delivery, Fair Delivery' peaceful motorcade, urging FoodTiger and DOLE to address rainy-season hazards and unfair delivery targets.",
+    docPressDesc: "Official union press statement announcing the May 1st 'Safe Delivery, Fair Delivery' motorcade, urging FoodTiger and DOLE to address rainy-season hazards and unfair delivery targets.",
     btnViewPressDoc: "Read Press Release",
     btnDownloadPressDoc: "Download PDF (78 KB)",
 
@@ -451,7 +451,7 @@ const translations = {
     // Protest Section
     protestBadge: "MAYO 1, 2027 • ARAW NG PAGGAWA",
     protestTitle: "Martsa ng Pagkakaisa ng mga Rider sa Mayo 1, 2027",
-    protestDesc: "Tuwing tag-ulan, binabawasan ng FoodTiger ang bayad sa bawat delivery ngunit pareho pa rin ang bilis na hinihingi tulad ng tag-init. Sa Mayo 1, 2027 (Araw ng Paggawa), magsasama-sama ang mga rider para sa payapang motorcade caravan, diyalogo, at 1-oras na pag-logoff sa app.",
+    protestDesc: "Tuwing tag-ulan, binabawasan ng FoodTiger ang bayad sa bawat delivery ngunit pareho pa rin ang bilis na hinihingi tulad ng tag-init. Sa Mayo 1, 2027 (Araw ng Paggawa), magsasama-sama ang mga rider para sa motorcade caravan, diyalogo, at 1-oras na pag-logoff sa app.",
     countdownHeading: "Oras Bago ang Pagkilos sa Mayo 1",
     countdownSub: "Sabado, Mayo 1, 2027 • Tipunan sa ganap na 09:00 AM",
     lblDays: "Araw",
@@ -464,7 +464,7 @@ const translations = {
     sch1Title: "Dalawang Tipunan",
     sch1Desc: "Pagtitipon sa Welcome Rotonda (QC/Manila) at EDSA Shrine (Ortigas). Pamamahagi ng mga high-visibility armband.",
     sch2Time: "10:00 AM",
-    sch2Title: "Payapang Motorcade Caravan",
+    sch2Title: "Motorcade Caravan",
     sch2Desc: "Maayos na motorcade patungong regional headquarters ng FoodTiger sa Bonifacio Global City (BGC) at DOLE NCR.",
     sch3Time: "12:00 PM - 01:00 PM",
     sch3Title: "Tahimik na Pag-freeze ng App (1-Oras)",
@@ -587,7 +587,7 @@ const translations = {
 
     docPressBadge: "OPISYAL NA PAHAYAG SA MEDIA",
     docPressTitle: "Pahayag para sa Media: May 1st Labor Day Safety March",
-    docPressDesc: "Opisyal na pahayag para sa media na nag-aanunsyo ng mapayapang motorcade sa Mayo 1 at panawagan sa FoodTiger at DOLE para sa kaligtasan sa bagyo at makatarungang delivery target.",
+    docPressDesc: "Opisyal na pahayag para sa media na nag-aanunsyo ng motorcade sa Mayo 1 at panawagan sa FoodTiger at DOLE para sa kaligtasan sa bagyo at makatarungang delivery target.",
     btnViewPressDoc: "Basahin ang Press Release",
     btnDownloadPressDoc: "I-download ang PDF (78 KB)",
 
@@ -710,7 +710,7 @@ const translations = {
     fundItem4Title: "Harapang pagpupulong at asamblea sa komunidad",
     fundItem4Desc: "Upa sa bulwagan, sound system, at pagkain para sa regular na harapang pagtitipon ng mga rider sa 16 na lungsod ng Metro Manila.",
     fundItem5Title: "Materyales sa kampanya, edukasyon at pagkilos sa Mayo 1",
-    fundItem5Desc: "Polyeto sa karapatan ng rider, banner, megaphone, at koordinasyon para sa mapayapang Caravan sa Araw ng Paggawa.",
+    fundItem5Desc: "Polyeto sa karapatan ng rider, banner, megaphone, at koordinasyon para sa Caravan sa Araw ng Paggawa.",
     auditNote: "100% ng butaw ay ibinabalik sa kapakanan ng rider at demokratikong pag-oorganisa. Iniuulat ang audited financial report sa bawat asamblea.",
     transCard2Title: "Demokrasya mula sa ibaba at mga yamang pangkomunidad",
     transCard2Sub: "Regular na harapang pagpupulong at suporta ng mga kaalyado",
