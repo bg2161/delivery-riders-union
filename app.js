@@ -90,6 +90,10 @@ const translations = {
     // What We Are Demanding vs Platform Policy (Visual Matrix)
     demandsBadge: "OUR DEMANDS VS PLATFORM REALITY",
     demandsHeading: "What We Are Demanding vs Platform Policy",
+    demandsSubtitle: "Compare our key operational demands against current delivery platform reality. Click any topic to open its submenu.",
+    demandsCountText: "5 Core Demands & Filings (Click to open)",
+    btnExpandAll: "Expand All",
+    btnCollapseAll: "Collapse All",
     demDemandLabel: "✓ UNION DEMAND",
     demRealityLabel: "✕ PLATFORM REALITY",
 
@@ -101,6 +105,7 @@ const translations = {
 
     // Demand Accordion
     demandAccordionHint: "View Demands vs Reality",
+    demandCharterHint: "View Charter & Claims",
 
     // Demand 1: Flood Navigation
     dem1Title: "Flood navigation & storm hazard pay",
@@ -479,6 +484,10 @@ const translations = {
     // What We Are Demanding vs Platform Policy (Visual Matrix)
     demandsBadge: "AMING MGA HILING VS PATAKARAN NG KUMPANYA",
     demandsHeading: "Aming mga Hiling vs Patakaran ng Kumpanya",
+    demandsSubtitle: "Ikumpara ang aming mga hiling laban sa kasalukuyang patakaran ng platform. Pindutin ang bawat paksa para buksan ang sottomenu.",
+    demandsCountText: "5 Pangunahing Hiling at Karta (Pindutin para buksan)",
+    btnExpandAll: "Buksan Lahat",
+    btnCollapseAll: "Isara Lahat",
     demDemandLabel: "✓ HILING NG UNYON",
     demRealityLabel: "✕ KASALUKUYANG PATAKARAN",
 
@@ -490,6 +499,7 @@ const translations = {
 
     // Demand Accordion
     demandAccordionHint: "Tingnan ang Hiling vs Realidad",
+    demandCharterHint: "Tingnan ang Karta at Hiling",
 
     // Demand 1: Flood Navigation
     dem1Title: "Paiwas sa baha at hazard pay sa bagyo",
@@ -808,6 +818,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupProductViewSwitchers();
   setupMobileMenu();
   setupCookieAndPrivacy();
+  setupDemandsAccordions();
 });
 
 // Switch Language
@@ -835,6 +846,14 @@ function applyLanguage(lang) {
       el.innerHTML = dict[key];
     }
   });
+
+  // Update demands expand/collapse toggle button text
+  const btnToggleDemands = document.getElementById('btn-toggle-demands');
+  if (btnToggleDemands) {
+    const accordions = document.querySelectorAll('.demands-accordions-container .demand-accordion');
+    const allOpen = accordions.length > 0 && Array.from(accordions).every(a => a.open);
+    btnToggleDemands.textContent = allOpen ? dict.btnCollapseAll : dict.btnExpandAll;
+  }
 
   // Retain pledged state on RSVP button if already clicked
   if (hasPledged) {
@@ -1885,6 +1904,31 @@ function setupCookieAndPrivacy() {
       showToast(currentLang === 'en' ? 'All local data cleared.' : 'Nabura ang lahat ng nakaimbak na datos.');
     });
   }
+}
+
+// Demands Section Collapsible Submenus Setup
+function setupDemandsAccordions() {
+  const btnToggle = document.getElementById('btn-toggle-demands');
+  const accordions = document.querySelectorAll('.demands-accordions-container .demand-accordion');
+  if (!btnToggle || !accordions.length) return;
+
+  function updateToggleText() {
+    const allOpen = Array.from(accordions).every(a => a.open);
+    const dict = translations[currentLang] || translations.en;
+    btnToggle.textContent = allOpen ? dict.btnCollapseAll : dict.btnExpandAll;
+  }
+
+  btnToggle.addEventListener('click', () => {
+    const anyClosed = Array.from(accordions).some(a => !a.open);
+    accordions.forEach(a => a.open = anyClosed);
+    updateToggleText();
+  });
+
+  accordions.forEach(acc => {
+    acc.addEventListener('toggle', () => {
+      updateToggleText();
+    });
+  });
 }
 
 

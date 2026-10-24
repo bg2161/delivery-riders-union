@@ -936,7 +936,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 /* =========================================================
-   OUR DEMANDS VS PLATFORM REALITY SECTION
+   OUR DEMANDS VS PLATFORM REALITY SECTION (ACCORDIONS)
    ========================================================= */
 .demands-section {
   padding: 3rem 0;
@@ -945,14 +945,65 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 .demands-section .section-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.demands-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.demands-count-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-pill);
+}
+
+.demands-count-pill .pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ph-blue);
+  display: inline-block;
+}
+
+.btn-toggle-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: var(--ph-blue);
+  background: #FFFFFF;
+  border: 1px solid var(--ph-blue-border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-toggle-all:hover {
+  background: var(--ph-blue-light);
+  border-color: var(--ph-blue);
 }
 
 .demands-accordions-container {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-bottom: 2rem;
 }
 
 .demand-accordion {
@@ -973,10 +1024,19 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   box-shadow: var(--shadow-md);
 }
 
+.demand-accordion.demand-accordion-charter {
+  border-left: 4px solid var(--ph-blue);
+}
+
+.demand-accordion.demand-accordion-charter[open] {
+  border-color: var(--ph-blue-border);
+  border-left-color: var(--ph-blue);
+}
+
 .demand-accordion-summary {
   list-style: none;
   cursor: pointer;
-  padding: 1rem 1.25rem;
+  padding: 0.95rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1008,13 +1068,13 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 .summary-emoji {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   line-height: 1;
   flex-shrink: 0;
 }
 
 .summary-title {
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 800;
   color: var(--text-main);
   margin: 0;
@@ -1038,6 +1098,12 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   background: #FEF3C7;
   color: #92400E;
   border-color: #FCD34D;
+}
+
+.cd-badge.badge-charter {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border-color: #93C5FD;
 }
 
 .summary-action {
@@ -1073,34 +1139,14 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 .demand-accordion-body {
-  padding: 1.25rem 1.35rem;
+  padding: 1.15rem 1.25rem;
   background: #FFFFFF;
 }
 
 .demand-compare-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-}
-
-@media (max-width: 768px) {
-  .demand-compare-grid {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
-  }
-  .demand-accordion-summary {
-    padding: 0.85rem 1rem;
-    gap: 0.5rem;
-  }
-  .summary-title {
-    font-size: 0.9rem;
-  }
-  .accordion-hint {
-    display: none;
-  }
-  .demand-accordion-body {
-    padding: 1rem;
-  }
+  gap: 1.15rem;
 }
 
 .cd-box {
@@ -1193,106 +1239,48 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   opacity: 0.95;
 }
 
-/* FoodTiger Charter Featured Card */
-.foodtiger-charter-card {
-  background: #FFFFFF;
-  border: 2px solid var(--ph-blue-border);
-  border-left: 6px solid var(--ph-blue);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.foodtiger-charter-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 56, 168, 0.08);
-}
-
-.charter-badge-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-.charter-badge {
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
-  background: var(--ph-blue-light);
-  color: var(--ph-blue);
-  border: 1px solid var(--ph-blue-border);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.charter-meta-tag {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--text-muted);
-}
-
-.charter-body {
+/* FoodTiger Charter inside Accordion */
+.charter-accordion-wrap {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
+  background: #F8FAFC;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 1.15rem 1.25rem;
 }
 
-@media (max-width: 800px) {
-  .charter-body {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
-.charter-title {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin: 0 0 0.5rem 0;
-  line-height: 1.3;
+.charter-accordion-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .charter-desc {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--text-body);
-  line-height: 1.6;
-  margin: 0 0 1rem 0;
+  line-height: 1.55;
+  margin: 0;
 }
 
 .charter-quote {
   margin: 0;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 0.85rem;
   background: var(--ph-blue-light);
   border-left: 3px solid var(--ph-blue);
   border-radius: 0 6px 6px 0;
   font-style: italic;
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   color: var(--ph-blue-dark);
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
-.charter-cta-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  background: #F8FAFC;
-  border: 1.5px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 1.5rem 1.75rem;
-  min-width: 250px;
-  text-align: center;
-}
-
-.charter-actions {
+.charter-accordion-actions {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  width: 100%;
+  min-width: 220px;
 }
 
 .btn-charter-view,
@@ -1301,12 +1289,13 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  padding: 0.7rem 1.25rem;
-  font-size: 0.85rem;
+  padding: 0.65rem 1.15rem;
+  font-size: 0.82rem;
   font-weight: 700;
   border-radius: var(--radius-pill);
   text-decoration: none;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .btn-charter-view {
@@ -1334,6 +1323,35 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   background: var(--ph-blue-light);
   transform: translateY(-1px);
 }
+
+@media (max-width: 768px) {
+  .demand-compare-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .charter-accordion-wrap {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .charter-accordion-actions {
+    width: 100%;
+    min-width: 0;
+  }
+  .demand-accordion-summary {
+    padding: 0.85rem 1rem;
+    gap: 0.5rem;
+  }
+  .summary-title {
+    font-size: 0.88rem;
+  }
+  .accordion-hint {
+    display: none;
+  }
+  .demand-accordion-body {
+    padding: 0.85rem;
+  }
+}
+
 
 /* =========================================================
    SUPPORT DOCUMENTS & OFFICIAL FILINGS SECTION
