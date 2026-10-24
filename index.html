@@ -419,12 +419,38 @@
         <div class="section-header">
           <span class="section-badge badge-blue" data-i18n="demandsBadge">OUR DEMANDS VS PLATFORM REALITY</span>
           <h2 class="section-title" data-i18n="demandsHeading">What We Are Demanding vs Platform Policy</h2>
-          <p class="section-desc" data-i18n="demandsSubtitle">
-            Clear, side-by-side comparison of our core union demands versus the harsh algorithmic policies delivery platforms enforce today.
-          </p>
         </div>
 
-        <!-- 4 Compact Visual Comparison Cards Grid -->
+        <!-- Documentary Photo Evidence: Severe Weather & Floods -->
+        <div class="demands-photo-evidence">
+          <div class="photo-evidence-card">
+            <div class="photo-wrap">
+              <img src="assets/rider-storm.jpg" alt="Metro Manila courier battling monsoon storm" class="evidence-img" width="800" height="450" loading="lazy" decoding="async">
+              <span class="photo-evidence-badge badge-storm" data-i18n="photoBadgeStorm">MONSOON RAIN RUSH</span>
+            </div>
+            <div class="photo-caption-bar">
+              <span class="photo-icon" aria-hidden="true">🌧️</span>
+              <p class="photo-caption" data-i18n="photoCaptionStorm">
+                <strong>Torrential monsoon conditions:</strong> Dry-season 25-min timers force riders into blinding rainstorms and crash hazards.
+              </p>
+            </div>
+          </div>
+
+          <div class="photo-evidence-card">
+            <div class="photo-wrap">
+              <img src="assets/rider-flood.jpg" alt="Rider navigating flooded Manila avenue" class="evidence-img" width="800" height="450" loading="lazy" decoding="async">
+              <span class="photo-evidence-badge badge-flood" data-i18n="photoBadgeFlood">KNEE-DEEP FLOODWATERS</span>
+            </div>
+            <div class="photo-caption-bar">
+              <span class="photo-icon" aria-hidden="true">🌊</span>
+              <p class="photo-caption" data-i18n="photoCaptionFlood">
+                <strong>Submerged Manila streets:</strong> Wading through floodwaters without rerouting or face instant account deactivation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Visual Comparison Cards Grid with Chips -->
         <div class="demands-compact-grid">
           <!-- Card 1: Flood Navigation -->
           <div class="compact-demand-card">
@@ -437,12 +463,43 @@
             </div>
             <div class="cd-compare">
               <div class="cd-box cd-demand">
-                <span class="cd-pill cd-pill-demand" data-i18n="demDemandLabel">✓ UNION DEMAND</span>
-                <p class="cd-desc" data-i18n="dem1DemandText">Auto-reroute flooded roads via PAGASA/NOAH API, pause speed timers, and guarantee +35% to +50% storm hazard pay.</p>
+                <div class="cd-box-top">
+                  <span class="cd-pill cd-pill-demand" data-i18n="demDemandLabel">✓ UNION DEMAND</span>
+                </div>
+                <div class="cd-chip-list">
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem1D1Title">Live PAGASA/NOAH API:</strong> <span data-i18n="dem1D1Sub">Auto-reroute flooded corridors</span></div>
+                  </div>
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem1D2Title">+35% to +50% Hazard Pay:</strong> <span data-i18n="dem1D2Sub">Fair danger compensation</span></div>
+                  </div>
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem1D3Title">Pause Speed Timers:</strong> <span data-i18n="dem1D3Sub">Halt countdowns on flooded roads</span></div>
+                  </div>
+                </div>
               </div>
+
               <div class="cd-box cd-reality">
-                <span class="cd-pill cd-pill-reality" data-i18n="demRealityLabel">✕ PLATFORM REALITY</span>
-                <p class="cd-desc" data-i18n="dem1RealityText">Blind algorithms route riders into flooded roads and cut wet-weather drop pay by 20%.</p>
+                <div class="cd-box-top">
+                  <span class="cd-pill cd-pill-reality" data-i18n="demRealityLabel">✕ PLATFORM REALITY</span>
+                </div>
+                <div class="cd-chip-list">
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem1R1Title">Blind Routing:</strong> <span data-i18n="dem1R1Sub">Algorithms dispatch into flooded streets</span></div>
+                  </div>
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem1R2Title">-20% Rainy Pay Cut:</strong> <span data-i18n="dem1R2Sub">Earnings slashed during downpours</span></div>
+                  </div>
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem1R3Title">Engine &amp; Health Peril:</strong> <span data-i18n="dem1R3Sub">Flooded engines &amp; leptospirosis risks</span></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -458,12 +515,43 @@
             </div>
             <div class="cd-compare">
               <div class="cd-box cd-demand">
-                <span class="cd-pill cd-pill-demand" data-i18n="demDemandLabel">✓ UNION DEMAND</span>
-                <p class="cd-desc" data-i18n="dem2DemandText">Dynamic delivery time extensions and automatic cancellation of storm-related 1-star ratings.</p>
+                <div class="cd-box-top">
+                  <span class="cd-pill cd-pill-demand" data-i18n="demDemandLabel">✓ UNION DEMAND</span>
+                </div>
+                <div class="cd-chip-list">
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem2D1Title">Weather Time Buffers:</strong> <span data-i18n="dem2D1Sub">Dynamic delivery extensions</span></div>
+                  </div>
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem2D2Title">Cancel 1-Star Demerits:</strong> <span data-i18n="dem2D2Sub">Wipe rain-delay customer ratings</span></div>
+                  </div>
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem2D3Title">Safety Over Speed:</strong> <span data-i18n="dem2D3Sub">Safe driving on wet slippery roads</span></div>
+                  </div>
+                </div>
               </div>
+
               <div class="cd-box cd-reality">
-                <span class="cd-pill cd-pill-reality" data-i18n="demRealityLabel">✕ PLATFORM REALITY</span>
-                <p class="cd-desc" data-i18n="dem2RealityText">Fixed 25-minute timers in knee-deep water lead to unfair rating penalties and income cuts.</p>
+                <div class="cd-box-top">
+                  <span class="cd-pill cd-pill-reality" data-i18n="demRealityLabel">✕ PLATFORM REALITY</span>
+                </div>
+                <div class="cd-chip-list">
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem2R1Title">Fixed 25-Min Timers:</strong> <span data-i18n="dem2R1Sub">Same dry-season rules in knee-deep water</span></div>
+                  </div>
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem2R2Title">Tier Demotions:</strong> <span data-i18n="dem2R2Sub">Bad ratings cut weekly rider income</span></div>
+                  </div>
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem2R3Title">Red-Light Anxiety:</strong> <span data-i18n="dem2R3Sub">Countdown pressure causes crashes</span></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -479,12 +567,43 @@
             </div>
             <div class="cd-compare">
               <div class="cd-box cd-demand">
-                <span class="cd-pill cd-pill-demand" data-i18n="demDemandLabel">✓ UNION DEMAND</span>
-                <p class="cd-desc" data-i18n="dem3DemandText">72-hour formal notice, union representation, and the right to refuse submerged roads without penalty.</p>
+                <div class="cd-box-top">
+                  <span class="cd-pill cd-pill-demand" data-i18n="demDemandLabel">✓ UNION DEMAND</span>
+                </div>
+                <div class="cd-chip-list">
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem3D1Title">72-Hour Formal Notice:</strong> <span data-i18n="dem3D1Sub">Written review before suspension</span></div>
+                  </div>
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem3D2Title">Union Representation:</strong> <span data-i18n="dem3D2Sub">UDRMM advocate at all appeals</span></div>
+                  </div>
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem3D3Title">Safe Refusal Right:</strong> <span data-i18n="dem3D3Sub">No penalty to decline flooded routes</span></div>
+                  </div>
+                </div>
               </div>
+
               <div class="cd-box cd-reality">
-                <span class="cd-pill cd-pill-reality" data-i18n="demRealityLabel">✕ PLATFORM REALITY</span>
-                <p class="cd-desc" data-i18n="dem3RealityText">Instant algorithmic deactivations and automated bot denials when refusing impassable roads.</p>
+                <div class="cd-box-top">
+                  <span class="cd-pill cd-pill-reality" data-i18n="demRealityLabel">✕ PLATFORM REALITY</span>
+                </div>
+                <div class="cd-chip-list">
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem3R1Title">Instant Lockout:</strong> <span data-i18n="dem3R1Sub">Algorithmic ban without human review</span></div>
+                  </div>
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem3R2Title">Chatbot Denial:</strong> <span data-i18n="dem3R2Sub">Automated cookie-cutter rejections</span></div>
+                  </div>
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem3R3Title">Forced Danger:</strong> <span data-i18n="dem3R3Sub">Penalized for refusing submerged streets</span></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -500,12 +619,43 @@
             </div>
             <div class="cd-compare">
               <div class="cd-box cd-demand">
-                <span class="cd-pill cd-pill-demand" data-i18n="demDemandLabel">✓ UNION DEMAND</span>
-                <p class="cd-desc" data-i18n="dem4DemandText">Free company-issued all-weather jackets and an emergency medical clinic fund across all 16 cities.</p>
+                <div class="cd-box-top">
+                  <span class="cd-pill cd-pill-demand" data-i18n="demDemandLabel">✓ UNION DEMAND</span>
+                </div>
+                <div class="cd-chip-list">
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem4D1Title">Free All-Weather Gear:</strong> <span data-i18n="dem4D1Sub">Heavy-duty reflective raincoats</span></div>
+                  </div>
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem4D2Title">16-City Medical Fund:</strong> <span data-i18n="dem4D2Sub">Emergency rider injury clinic aid</span></div>
+                  </div>
+                  <div class="cd-chip chip-demand">
+                    <span class="chip-dot">🟢</span>
+                    <div><strong data-i18n="dem4D3Title">Accident Coverage:</strong> <span data-i18n="dem4D3Sub">100% on-duty hospital support</span></div>
+                  </div>
+                </div>
               </div>
+
               <div class="cd-box cd-reality">
-                <span class="cd-pill cd-pill-reality" data-i18n="demRealityLabel">✕ PLATFORM REALITY</span>
-                <p class="cd-desc" data-i18n="dem4RealityText">100% of rain gear and hospital injury costs are borne entirely out-of-pocket by riders.</p>
+                <div class="cd-box-top">
+                  <span class="cd-pill cd-pill-reality" data-i18n="demRealityLabel">✕ PLATFORM REALITY</span>
+                </div>
+                <div class="cd-chip-list">
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem4R1Title">100% Rider Expense:</strong> <span data-i18n="dem4R1Sub">Riders pay for gear, boots &amp; repairs</span></div>
+                  </div>
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem4R2Title">Zero Medical Aid:</strong> <span data-i18n="dem4R2Sub">No insurance or hospital assistance</span></div>
+                  </div>
+                  <div class="cd-chip chip-reality">
+                    <span class="chip-dot">🔴</span>
+                    <div><strong data-i18n="dem4R3Title">Contractor Dodge:</strong> <span data-i18n="dem4R3Sub">Platforms evade duty of care</span></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -562,7 +712,7 @@
             </div>
             <h3 class="official-doc-title" data-i18n="docPolicyTitle">Policy Brief: Working Conditions of Riders</h3>
             <p class="official-doc-desc" data-i18n="docPolicyDesc">
-              Submitted to DOLE and MMDA proposing safety training, live flood data integration, and an anonymous complaint portal.
+              Submitted to DOLE and MMDA proposing mandatory safety training, live flood and weather route calculator integration, and a co-managed rider healthcare fund.
             </p>
             <div class="official-doc-actions">
               <a href="assets/docs/udrmm-policy-brief-dole-mmda.pdf" target="_blank" rel="noopener noreferrer" class="btn-doc-primary">
@@ -581,9 +731,9 @@
             <div class="doc-card-top">
               <span class="doc-badge-pill badge-press" data-i18n="docPressBadge">OFFICIAL PRESS RELEASE</span>
             </div>
-            <h3 class="official-doc-title" data-i18n="docPressTitle">Press Release: May 1st Caravan &amp; App Freeze</h3>
+            <h3 class="official-doc-title" data-i18n="docPressTitle">Press Release: May 1st Labor Day Safety March</h3>
             <p class="official-doc-desc" data-i18n="docPressDesc">
-              Media release announcing the Labor Day motorcade caravan, assembly points, and 1-hour solidarity app freeze.
+              Official union press statement announcing the May 1st 'Safe Delivery, Fair Delivery' peaceful motorcade, urging FoodTiger and DOLE to address rainy-season hazards and unfair delivery targets.
             </p>
             <div class="official-doc-actions">
               <a href="assets/docs/udrmm-press-release-labor-day.pdf" target="_blank" rel="noopener noreferrer" class="btn-doc-primary">

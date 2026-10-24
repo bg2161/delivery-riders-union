@@ -1049,6 +1049,106 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   border-top: 1px solid var(--border-subtle);
 }
 
+/* Demands Photo Evidence Banner */
+.demands-photo-evidence {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+@media (max-width: 768px) {
+  .demands-photo-evidence {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.photo-evidence-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.photo-evidence-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
+}
+
+.photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111827;
+}
+
+.evidence-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.photo-evidence-card:hover .evidence-img {
+  transform: scale(1.03);
+}
+
+.photo-evidence-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.photo-evidence-badge.badge-storm {
+  background: rgba(0, 56, 168, 0.92);
+  color: #FFFFFF;
+}
+
+.photo-evidence-badge.badge-flood {
+  background: rgba(206, 17, 38, 0.92);
+  color: #FFFFFF;
+}
+
+.photo-caption-bar {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.85rem 1.1rem;
+  background: #FFFFFF;
+}
+
+.photo-icon {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.photo-caption {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text-body);
+  margin: 0;
+}
+
+.photo-caption strong {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
 .demands-compact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1067,7 +1167,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   background: #FFFFFF;
   border: 1.5px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: 1.2rem 1.35rem;
+  padding: 1.15rem 1.25rem;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
@@ -1144,7 +1244,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   padding: 0.75rem 0.85rem;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.55rem;
 }
 
 .cd-box.cd-demand {
@@ -1155,6 +1255,12 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 .cd-box.cd-reality {
   background: #FEF2F2;
   border: 1.5px solid #FCA5A5;
+}
+
+.cd-box-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cd-pill {
@@ -1178,20 +1284,49 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   color: #FFFFFF;
 }
 
-.cd-desc {
-  font-size: 0.83rem;
-  line-height: 1.45;
-  margin: 0;
+.cd-chip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
 }
 
-.cd-demand .cd-desc {
+.cd-chip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.79rem;
+  line-height: 1.35;
+  padding: 0.35rem 0.55rem;
+  border-radius: 5px;
+}
+
+.cd-chip.chip-demand {
+  background: rgba(255, 255, 255, 0.85);
   color: #14532D;
-  font-weight: 500;
+  border: 1px solid rgba(134, 239, 172, 0.7);
 }
 
-.cd-reality .cd-desc {
+.cd-chip.chip-reality {
+  background: rgba(255, 255, 255, 0.85);
   color: #7F1D1D;
+  border: 1px solid rgba(252, 165, 165, 0.7);
+}
+
+.chip-dot {
+  font-size: 0.65rem;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+
+.cd-chip strong {
+  font-weight: 800;
+  color: inherit;
+}
+
+.cd-chip span {
   font-weight: 500;
+  color: inherit;
+  opacity: 0.95;
 }
 
 /* FoodTiger Charter Featured Card */
