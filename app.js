@@ -176,9 +176,9 @@ const translations = {
     btnDownloadCharter: "Download PDF (56 KB)",
 
     // Support Documents & Official Filings Section
-    docsSectionBadge: "OFFICIAL FILINGS & MEDIA",
-    docsSectionTitle: "Support Documents & Official Union Filings",
-    docsSectionDesc: "Official institutional submissions, research briefs, and media releases published by the United Delivery Riders of Metro Manila.",
+    docsSectionBadge: "OFFICIAL DOCUMENTS",
+    docsSectionTitle: "Official Union Documents",
+    docsSectionDesc: "Policy briefs, government submissions, and media releases.",
 
     docPolicyBadge: "POLICY BRIEF (DOLE & MMDA)",
     docPolicyTitle: "Policy Brief: Working Conditions of Riders",
@@ -565,9 +565,9 @@ const translations = {
     btnDownloadCharter: "I-download ang PDF (56 KB)",
 
     // Support Documents & Official Filings Section
-    docsSectionBadge: "MGA OPISYAL NA DOKUMENTO AT MEDIA",
-    docsSectionTitle: "Mga Opisyal na Dokumento at Pagsumite ng Unyon",
-    docsSectionDesc: "Mga orihinal na dokumentong isinumite sa mga sangay ng gobyerno, ulat-pananaliksik, at pahayag sa media ng United Delivery Riders of Metro Manila.",
+    docsSectionBadge: "OPISYAL NA DOKUMENTO",
+    docsSectionTitle: "Mga Opisyal na Dokumento",
+    docsSectionDesc: "Mga panukala sa gobyerno at pahayag sa media.",
 
     docPolicyBadge: "PANUKALA SA REGULATOR (DOLE & MMDA)",
     docPolicyTitle: "Policy Brief: Kalagayan sa Paggawa ng mga Rider",
