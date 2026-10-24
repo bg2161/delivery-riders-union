@@ -904,140 +904,35 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 /* Official May 1st Leaflet Flyer Card */
 .leaflet-card {
   display: flex;
-  flex-direction: column;
-}
-
-.leaflet-card-header {
-  margin-bottom: 1.25rem;
-}
-
-.leaflet-badge {
-  display: inline-block;
-  background: var(--ph-red-light);
-  color: var(--ph-red);
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--ph-red-border);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-
-.leaflet-desc {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin: 0;
-}
-
-.leaflet-preview-wrap {
-  flex: 1;
-  display: flex;
   align-items: center;
   justify-content: center;
-  background: #FFFFFF;
-  border: 1.5px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 0.75rem;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  margin-bottom: 1.25rem;
+  padding: 1.5rem;
 }
 
 .leaflet-img-link {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  border-radius: 6px;
-  overflow: hidden;
-  cursor: pointer;
+  height: 100%;
   text-decoration: none;
 }
 
 .leaflet-img {
   width: 100%;
   height: auto;
-  max-height: 480px;
+  max-height: 520px;
   object-fit: contain;
   display: block;
-  border-radius: 6px;
-  transition: transform 0.3s ease;
-}
-
-.leaflet-zoom-overlay {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: rgba(15, 23, 42, 0.85);
-  color: #FFFFFF;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 6px 12px;
-  border-radius: var(--radius-pill);
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  backdrop-filter: blur(4px);
-  pointer-events: none;
-  transition: background 0.2s ease, transform 0.2s ease;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .leaflet-img-link:hover .leaflet-img {
   transform: scale(1.02);
-}
-
-.leaflet-img-link:hover .leaflet-zoom-overlay {
-  background: rgba(206, 17, 38, 0.95);
-  transform: translateY(-1px);
-}
-
-.leaflet-actions {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.btn-leaflet-view,
-.btn-leaflet-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.65rem 1.2rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border-radius: var(--radius-pill);
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.btn-leaflet-view {
-  background: var(--ph-red);
-  color: #FFFFFF;
-  box-shadow: 0 2px 6px rgba(206, 17, 38, 0.25);
-}
-
-.btn-leaflet-view:hover {
-  background: var(--ph-red-hover);
-  color: #FFFFFF;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(206, 17, 38, 0.35);
-}
-
-.btn-leaflet-download {
-  background: #FFFFFF;
-  border: 1.5px solid var(--border-subtle);
-  color: var(--text-main);
-}
-
-.btn-leaflet-download:hover {
-  border-color: var(--ph-red);
-  color: var(--ph-red);
-  background: var(--ph-red-light);
-  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
 
 /* =========================================================
