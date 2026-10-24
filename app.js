@@ -1056,16 +1056,16 @@ function setupProductVariants() {
       // Auto-preview matching sticker image
       if (stickerImg && stickerSwitcher) {
         if (selectedStickerVariant.includes('Dual Pack')) {
-          stickerImg.src = 'assets/product-stickers.jpg?v=4';
+          stickerImg.src = 'assets/product-stickers.jpg?v=5';
           stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('product-stickers')));
         } else if (selectedStickerVariant.includes('Yellow')) {
-          stickerImg.src = 'assets/sticker-yellow-qr.jpg?v=4';
+          stickerImg.src = 'assets/sticker-yellow-qr.jpg?v=5';
           stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('sticker-yellow-qr')));
         } else if (selectedStickerVariant.includes('Red')) {
-          stickerImg.src = 'assets/sticker-red-qr.jpg?v=4';
+          stickerImg.src = 'assets/sticker-red-qr.jpg?v=5';
           stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('sticker-red-qr')));
         } else {
-          stickerImg.src = 'assets/product-stickers.jpg?v=4';
+          stickerImg.src = 'assets/product-stickers.jpg?v=5';
           stickerSwitcher.querySelectorAll('.view-btn').forEach(b => b.classList.toggle('active', (b.getAttribute('data-img') || '').includes('product-stickers')));
         }
       }
@@ -1127,12 +1127,12 @@ const productsCatalog = {
     titleEn: 'Official weatherproof vinyl sticker pack (Yellow & Red)',
     titleFil: 'Opisyal na Weatherproof Vinyl Sticker Pack (Dilaw at Pula)',
     price: 120,
-    img: 'assets/product-stickers.jpg?v=4',
+    img: 'assets/product-stickers.jpg?v=5',
     getImg: () => {
-      if (selectedStickerVariant.includes('Dual Pack')) return 'assets/product-stickers.jpg?v=4';
-      if (selectedStickerVariant.includes('Yellow')) return 'assets/sticker-yellow-qr.jpg?v=4';
-      if (selectedStickerVariant.includes('Red')) return 'assets/sticker-red-qr.jpg?v=4';
-      return 'assets/product-stickers.jpg?v=4';
+      if (selectedStickerVariant.includes('Dual Pack')) return 'assets/product-stickers.jpg?v=5';
+      if (selectedStickerVariant.includes('Yellow')) return 'assets/sticker-yellow-qr.jpg?v=5';
+      if (selectedStickerVariant.includes('Red')) return 'assets/sticker-red-qr.jpg?v=5';
+      return 'assets/product-stickers.jpg?v=5';
     },
     getVariant: () => selectedStickerVariant
   },

@@ -1632,6 +1632,12 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   transform: scale(1.05);
 }
 
+#stickers-main-img {
+  object-fit: contain !important;
+  background: #ffffff;
+  padding: 6px;
+}
+
 .product-tag {
   position: absolute;
   top: 12px;
