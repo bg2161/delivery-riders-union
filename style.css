@@ -1049,105 +1049,6 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   border-top: 1px solid var(--border-subtle);
 }
 
-/* Demands Photo Evidence Banner */
-.demands-photo-evidence {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2.25rem;
-}
-
-@media (max-width: 768px) {
-  .demands-photo-evidence {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-}
-
-.photo-evidence-card {
-  background: #FFFFFF;
-  border: 1.5px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.photo-evidence-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-medium);
-}
-
-.photo-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: #111827;
-}
-
-.evidence-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease;
-}
-
-.photo-evidence-card:hover .evidence-img {
-  transform: scale(1.03);
-}
-
-.photo-evidence-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-}
-
-.photo-evidence-badge.badge-storm {
-  background: rgba(0, 56, 168, 0.92);
-  color: #FFFFFF;
-}
-
-.photo-evidence-badge.badge-flood {
-  background: rgba(206, 17, 38, 0.92);
-  color: #FFFFFF;
-}
-
-.photo-caption-bar {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
-  padding: 0.85rem 1.1rem;
-  background: #FFFFFF;
-}
-
-.photo-icon {
-  font-size: 1.25rem;
-  line-height: 1.2;
-}
-
-.photo-caption {
-  font-size: 0.82rem;
-  line-height: 1.45;
-  color: var(--text-body);
-  margin: 0;
-}
-
-.photo-caption strong {
-  color: var(--text-main);
-  font-weight: 700;
-}
 
 .demands-compact-grid {
   display: grid;
@@ -2276,12 +2177,36 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   color: #FFFFFF;
 }
 
-/* RIDER STORIES SECTION */
+/* RIDER STORIES SECTION WITH SEMI-TRANSPARENT FLOOD BACKGROUND */
 .stories-section {
-  padding: 4.5rem 0;
-  background: #FFFFFF;
+  position: relative;
+  padding: 5.5rem 0;
+  background-color: #F8FAFC;
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.stories-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("assets/rider-flood.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  opacity: 0.12; /* quasi trasparente */
+  filter: contrast(1.15) grayscale(20%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stories-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .stories-grid {
@@ -2291,13 +2216,23 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 .story-card {
-  background: var(--bg-card-soft);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--radius-lg);
-  border: 1.5px solid var(--border-subtle);
-  padding: 1.75rem;
+  border: 1.5px solid rgba(226, 232, 240, 0.85);
+  padding: 1.85rem;
   display: flex;
   flex-direction: column;
   position: relative;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -10px rgba(0, 56, 168, 0.12);
+  border-color: var(--ph-blue);
 }
 
 .story-quote-mark {
