@@ -1401,9 +1401,33 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
    SUPPORT DOCUMENTS & OFFICIAL FILINGS SECTION
    ========================================================= */
 .docs-section {
+  position: relative;
   padding: 5rem 0;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.docs-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("assets/riders-assembly.jpg");
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  opacity: 0.12; /* molto trasparente */
+  filter: contrast(1.15) grayscale(15%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.docs-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .official-docs-grid {
@@ -1419,8 +1443,10 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
 }
 
 .official-doc-card {
-  background: var(--bg-card-soft);
-  border: 1.5px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
   border-radius: var(--radius-lg);
   padding: 1.5rem 1.75rem;
   box-shadow: var(--shadow-sm);
