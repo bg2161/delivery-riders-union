@@ -1205,8 +1205,67 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   margin-right: 0.25rem;
 }
 
-/* Charter Layout inside Accordion */
-.charter-clean-layout {
+/* FoodTiger Charter Visual Box (Below Demands Accordions) */
+.foodtiger-charter-box {
+  margin-top: 1.5rem;
+  background: #FFFFFF;
+  border: 1.5px solid var(--ph-blue-border);
+  border-left: 5px solid var(--ph-blue);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.6rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.foodtiger-charter-box:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.charter-box-header {
+  margin-bottom: 1rem;
+}
+
+.charter-box-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.charter-box-emoji {
+  font-size: 1.65rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.charter-box-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.charter-box-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #93C5FD;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.charter-box-title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.charter-box-body {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1.75rem;
@@ -1217,7 +1276,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   padding: 1.25rem 1.5rem;
 }
 
-.charter-clean-info {
+.charter-box-info {
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
@@ -1242,7 +1301,7 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
   line-height: 1.5;
 }
 
-.charter-clean-actions {
+.charter-box-actions {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -1295,11 +1354,15 @@ html[data-lang="fil"] .nav-actions .header-cta-btn {
     grid-template-columns: 1fr;
     gap: 0.85rem;
   }
-  .charter-clean-layout {
+  .foodtiger-charter-box {
+    padding: 1.15rem 1rem;
+  }
+  .charter-box-body {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+    padding: 1rem;
   }
-  .charter-clean-actions {
+  .charter-box-actions {
     width: 100%;
     min-width: 0;
   }
