@@ -189,7 +189,7 @@ const translations = {
     docPolicyTitle: "Policy Brief: Working Conditions of Riders",
     docPolicyDesc: "Submitted to DOLE and MMDA proposing mandatory safety training, live flood and weather route calculator integration, and a co-managed rider healthcare fund.",
     btnViewPolicyDoc: "Read Policy Brief",
-    btnDownloadPolicyDoc: "Download PDF (31 KB)",
+    btnDownloadPolicyDoc: "Download PDF (156 KB)",
 
     docPressBadge: "OFFICIAL PRESS RELEASE",
     docPressTitle: "Press Release: May 1st Labor Day Safety March",
@@ -583,7 +583,7 @@ const translations = {
     docPolicyTitle: "Policy Brief: Kalagayan sa Paggawa ng mga Rider",
     docPolicyDesc: "Isinumite sa DOLE at MMDA na nagmumungkahi ng pagsasanay sa kaligtasan, paggamit ng live data sa baha para sa mga ruta, at pondo para sa kalusugan ng rider.",
     btnViewPolicyDoc: "Basahin ang Policy Brief",
-    btnDownloadPolicyDoc: "I-download ang PDF (31 KB)",
+    btnDownloadPolicyDoc: "I-download ang PDF (156 KB)",
 
     docPressBadge: "OPISYAL NA PAHAYAG SA MEDIA",
     docPressTitle: "Pahayag para sa Media: May 1st Labor Day Safety March",
