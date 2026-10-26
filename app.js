@@ -178,7 +178,7 @@ const translations = {
     charterDesc: "Official union charter formally delivered to FoodTiger management demanding fair pay transparency, weather-adjusted delivery times, safety allowances, and human review for suspensions.",
     charterQuote: "\"We want dialogue, not conflict. We are not asking FoodTiger to leave — we are asking FoodTiger to treat Manila's riders with dignity, fair pay, and basic safety.\"",
     btnViewCharter: "Read FoodTiger Claims",
-    btnDownloadCharter: "Download PDF (56 KB)",
+    btnDownloadCharter: "Download PDF (168 KB)",
 
     // Support Documents & Official Filings Section
     docsSectionBadge: "OFFICIAL DOCUMENTS",
@@ -572,7 +572,7 @@ const translations = {
     charterDesc: "Opisyal na manipesto ng unyon na pormal na iniabot sa pamunuan ng FoodTiger para sa patas na sahod, oras sa bagyo, tulong sa kaligtasan, at makatarungang proseso bago ang suspensiyon.",
     charterQuote: "\"Diyalogo ang aming nais, hindi gulo. Hindi namin pinapaalis ang FoodTiger — hinihiling lamang namin na tratuhin ang mga rider ng Maynila nang may dignidad, patas na sahod, at kaligtasan.\"",
     btnViewCharter: "Basahin ang mga Hiling sa FoodTiger",
-    btnDownloadCharter: "I-download ang PDF (56 KB)",
+    btnDownloadCharter: "I-download ang PDF (168 KB)",
 
     // Support Documents & Official Filings Section
     docsSectionBadge: "OPISYAL NA DOKUMENTO",
