@@ -195,7 +195,7 @@ const translations = {
     docPressTitle: "Press Release: May 1st Labor Day Safety March",
     docPressDesc: "Official union press statement announcing the May 1st 'Safe Delivery, Fair Delivery' motorcade, urging FoodTiger and DOLE to address rainy-season hazards and unfair delivery targets.",
     btnViewPressDoc: "Read Press Release",
-    btnDownloadPressDoc: "Download PDF (78 KB)",
+    btnDownloadPressDoc: "Download PDF (186 KB)",
 
     // The 5 Official Pledges & 10,000 Signatures Public Petition
     petitionDeadlineTag: "Deadline: Before the heavy rains start (by June 2027)",
@@ -589,7 +589,7 @@ const translations = {
     docPressTitle: "Pahayag para sa Media: May 1st Labor Day Safety March",
     docPressDesc: "Opisyal na pahayag para sa media na nag-aanunsyo ng motorcade sa Mayo 1 at panawagan sa FoodTiger at DOLE para sa kaligtasan sa bagyo at makatarungang delivery target.",
     btnViewPressDoc: "Basahin ang Press Release",
-    btnDownloadPressDoc: "I-download ang PDF (78 KB)",
+    btnDownloadPressDoc: "I-download ang PDF (186 KB)",
 
     // The 5 Official Pledges & 10,000 Signatures Public Petition
     petitionDeadlineTag: "Takdang Araw: Bago magsimula ang malalakas na ulan (pagsapit ng Hunyo 2027)",
